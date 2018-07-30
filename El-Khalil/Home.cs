@@ -184,6 +184,21 @@ namespace El_Khalil
             Add_Tab("أضافة مادة خام", new Add_Materials());
         }
 
+        private void اضافةموادخامToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("أضافة مادة خام", new Add_Materials());
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            Add_Tab("اضافة منتج نهائى", new Add_Product());
+        }
+
+        private void اضافةتركيبةToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("اضافة منتج نهائى", new Add_Product());
+        }
+
         private void Add_Tab(string Name,Form form)
         {
             TabPage tp = new TabPage(Name);
