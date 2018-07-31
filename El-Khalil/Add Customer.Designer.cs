@@ -292,11 +292,13 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.radioButton2);
             this.panel1.Controls.Add(this.radioButton1);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(233, 37);
+            this.panel1.Location = new System.Drawing.Point(253, 82);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(825, 539);
             this.panel1.TabIndex = 1;

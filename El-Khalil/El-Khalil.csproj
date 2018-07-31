@@ -91,6 +91,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Purchasing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchasing.Designer.cs">
+      <DependentUpon>Purchasing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Shared Class.cs" />
     <EmbeddedResource Include="Add Customer.resx">
       <DependentUpon>Add Customer.cs</DependentUpon>
@@ -114,6 +120,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchasing.resx">
+      <DependentUpon>Purchasing.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

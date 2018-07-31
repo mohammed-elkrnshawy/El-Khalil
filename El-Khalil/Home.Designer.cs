@@ -243,6 +243,7 @@
             this.بياناسعارشراءToolStripMenuItem.Name = "بياناسعارشراءToolStripMenuItem";
             this.بياناسعارشراءToolStripMenuItem.Size = new System.Drawing.Size(194, 24);
             this.بياناسعارشراءToolStripMenuItem.Text = "بيان اسعار / شراء";
+            this.بياناسعارشراءToolStripMenuItem.Click += new System.EventHandler(this.بياناسعارشراءToolStripMenuItem_Click);
             // 
             // مرتجعاتToolStripMenuItem1
             // 
@@ -1051,6 +1052,7 @@
             this.button7.TabIndex = 6;
             this.button7.Text = "بيان اسعار / شراء";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 

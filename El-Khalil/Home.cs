@@ -224,6 +224,16 @@ namespace El_Khalil
             Add_Tab("اضافة عميل / تعديل", new Add_Customer());
         }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Add_Tab("بيان شراء", new Purchasing());
+        }
+
+        private void بياناسعارشراءToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("بيان شراء", new Purchasing()); 
+        }
+
         private void Add_Tab(string Name,Form form)
         {
             TabPage tp = new TabPage(Name);
