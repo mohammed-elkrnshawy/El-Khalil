@@ -270,6 +270,7 @@
             this.اضافةعميلتعديلToolStripMenuItem.Name = "اضافةعميلتعديلToolStripMenuItem";
             this.اضافةعميلتعديلToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.اضافةعميلتعديلToolStripMenuItem.Text = "اضافة عميل / تعديل";
+            this.اضافةعميلتعديلToolStripMenuItem.Click += new System.EventHandler(this.اضافةعميلتعديلToolStripMenuItem_Click);
             // 
             // حسابعميلالتقاريرToolStripMenuItem
             // 
@@ -1250,12 +1251,13 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "اضافة عميل / تعديل";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Image = global::El_Khalil.Properties.Resources.WhatsApp_Image_2018_07_28_at_12_53_12_PM;
-            this.pictureBox1.Location = new System.Drawing.Point(474, 183);
+            this.pictureBox1.Location = new System.Drawing.Point(470, 186);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(400, 302);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

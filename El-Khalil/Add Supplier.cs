@@ -21,6 +21,11 @@ namespace El_Khalil
 
         private void Add_Supplier_Load(object sender, EventArgs e)
         {
+            FillCombo();
+        }
+
+        private void FillCombo()
+        {
             using (dataSet = Ezzat.GetDataSet("selectAllSupplier", "X"))
             {
                 combo_name.DataSource = dataSet.Tables["X"];
@@ -30,6 +35,7 @@ namespace El_Khalil
                 combo_name.SelectedText = "اختار مورد موجود";
             }
         }
+
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
             Graphics v = e.Graphics;
@@ -59,11 +65,14 @@ namespace El_Khalil
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             combo_name.Enabled = true;
+            label4.Text = "تعديل مورد موجود";
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             combo_name.Enabled = false;
+            label4.Text = "اضافة مورد جديد";
+            tb_address.Text = tb_company.Text = tb_name.Text = tb_phone.Text = tb_phone2.Text = "";
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -106,6 +115,7 @@ namespace El_Khalil
             tb_company.Text = tb_address.Text = tb_name.Text = tb_phone.Text = tb_phone2.Text = "";
             combo_name.Text = "";
             combo_name.SelectedText = "اختار مورد موجود";
+            FillCombo();
         }
 
         private void Add_Person()
@@ -119,6 +129,7 @@ namespace El_Khalil
                 );
 
             tb_company.Text = tb_address.Text = tb_name.Text = tb_phone.Text = tb_phone2.Text = "";
+            FillCombo();
         }
 
         private void combo_name_SelectedIndexChanged(object sender, EventArgs e)
