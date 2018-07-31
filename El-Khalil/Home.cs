@@ -72,7 +72,7 @@ namespace El_Khalil
 
         private void اضافةموردتعديلToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            Add_Tab("اضافة مورد / تعديل", new Add_Supplier());
         }
 
         private void Home_Load(object sender, EventArgs e)
@@ -197,6 +197,21 @@ namespace El_Khalil
         private void اضافةتركيبةToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Add_Tab("اضافة منتج نهائى", new Add_Product());
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+            Add_Tab("تعديل منتج نهائى", new Edit_Product());
+        }
+
+        private void تعديلتركيبةToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("تعديل منتج نهائى", new Edit_Product());
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Add_Tab("اضافة مورد / تعديل", new Add_Supplier());
         }
 
         private void Add_Tab(string Name,Form form)

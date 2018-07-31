@@ -68,7 +68,7 @@ namespace El_Khalil
             {
                 e.Handled = true;
             }
-            if (e.KeyChar == (char)Keys.Enter && combo_name.SelectedIndex>=0)
+            if (e.KeyChar == (char)Keys.Enter && combo_name.SelectedIndex>=0&&tb_quantity.Text!="")
             {
                 AddRow();
             }
@@ -76,10 +76,7 @@ namespace El_Khalil
 
         private void combo_name_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (combo_name.Focused == true)
-            {
-                
-            }
+            
         }
 
         private void AddRow()
@@ -144,6 +141,8 @@ namespace El_Khalil
                     , new SqlParameter("@Component_Quantity", float.Parse(item.Cells[2].Value+""))
                     );
             }
+
+            CleanData();
         }
 
         private void tb_per_KeyPress(object sender, KeyPressEventArgs e)
@@ -156,6 +155,14 @@ namespace El_Khalil
             {
                 e.Handled = true;
             }
+        }
+        private void CleanData()
+        {
+            MessageBox.Show("تم الحفظ بنجاح");
+            tb_sell.Text = tb_quantity.Text = tb_per.Text = tb_name.Text = "";
+            combo_name.Text = "";
+            combo_name.SelectedText = "اختار مادة خام";
+            dataGridView1.Rows.Clear();
         }
     }
 }
