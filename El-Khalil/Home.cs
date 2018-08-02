@@ -226,12 +226,37 @@ namespace El_Khalil
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Add_Tab("بيان شراء", new Purchasing());
+            Add_Tab("بيان شراء", new Supplier_Purchasing());
         }
 
         private void بياناسعارشراءToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Add_Tab("بيان شراء", new Purchasing()); 
+            Add_Tab("بيان شراء", new Supplier_Purchasing()); 
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            Add_Tab("بيان شراء", new Supplier_Purchasing());
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Add_Tab("بيان تسديد", new Supplier_Payback());
+        }
+
+        private void تسديدرصيدToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("بيان تسديد", new Supplier_Payback());
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Add_Tab("بيان مرتجع", new SupplierReturned());
+        }
+
+        private void مرتجعاتToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Add_Tab("بيان مرتجع", new SupplierReturned());
         }
 
         private void Add_Tab(string Name,Form form)

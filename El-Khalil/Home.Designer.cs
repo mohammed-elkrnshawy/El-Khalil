@@ -237,6 +237,7 @@
             this.تسديدرصيدToolStripMenuItem.Name = "تسديدرصيدToolStripMenuItem";
             this.تسديدرصيدToolStripMenuItem.Size = new System.Drawing.Size(194, 24);
             this.تسديدرصيدToolStripMenuItem.Text = "تسديد رصيد ";
+            this.تسديدرصيدToolStripMenuItem.Click += new System.EventHandler(this.تسديدرصيدToolStripMenuItem_Click);
             // 
             // بياناسعارشراءToolStripMenuItem
             // 
@@ -250,6 +251,7 @@
             this.مرتجعاتToolStripMenuItem1.Name = "مرتجعاتToolStripMenuItem1";
             this.مرتجعاتToolStripMenuItem1.Size = new System.Drawing.Size(194, 24);
             this.مرتجعاتToolStripMenuItem1.Text = "مرتجعات";
+            this.مرتجعاتToolStripMenuItem1.Click += new System.EventHandler(this.مرتجعاتToolStripMenuItem1_Click);
             // 
             // العملاءToolStripMenuItem1
             // 
@@ -911,6 +913,7 @@
             this.button16.TabIndex = 4;
             this.button16.Text = "بيان اسعار شراء";
             this.button16.UseVisualStyleBackColor = false;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // label5
             // 
@@ -1037,6 +1040,7 @@
             this.button6.TabIndex = 7;
             this.button6.Text = "مرتجعات";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -1068,6 +1072,7 @@
             this.button8.TabIndex = 5;
             this.button8.Text = "تسديد الى مورد";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 

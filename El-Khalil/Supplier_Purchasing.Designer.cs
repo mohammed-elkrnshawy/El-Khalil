@@ -1,6 +1,6 @@
 ﻿namespace El_Khalil
 {
-    partial class Purchasing
+    partial class Supplier_Purchasing
     {
         /// <summary>
         /// Required designer variable.
@@ -139,7 +139,7 @@
             this.tb_render.Name = "tb_render";
             this.tb_render.Size = new System.Drawing.Size(101, 24);
             this.tb_render.TabIndex = 47;
-            this.tb_render.Text = "0";
+            this.tb_render.Text = "0.00";
             this.tb_render.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label11
@@ -161,10 +161,11 @@
             this.tb_payment.Name = "tb_payment";
             this.tb_payment.Size = new System.Drawing.Size(101, 24);
             this.tb_payment.TabIndex = 45;
-            this.tb_payment.Text = "0";
+            this.tb_payment.Text = "0.00";
             this.tb_payment.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_payment.TextChanged += new System.EventHandler(this.tb_payment_TextChanged);
-            this.tb_payment.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_quantity_KeyPress);
+            this.tb_payment.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_payment_KeyPress);
+            this.tb_payment.Leave += new System.EventHandler(this.tb_Discount_Leave);
             // 
             // label10
             // 
@@ -186,7 +187,7 @@
             this.tb_Total.Name = "tb_Total";
             this.tb_Total.Size = new System.Drawing.Size(101, 24);
             this.tb_Total.TabIndex = 43;
-            this.tb_Total.Text = "0";
+            this.tb_Total.Text = "0.00";
             this.tb_Total.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label9
@@ -209,7 +210,7 @@
             this.tb_OldMoney.Name = "tb_OldMoney";
             this.tb_OldMoney.Size = new System.Drawing.Size(101, 24);
             this.tb_OldMoney.TabIndex = 41;
-            this.tb_OldMoney.Text = "0";
+            this.tb_OldMoney.Text = "0.00";
             this.tb_OldMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
@@ -232,7 +233,7 @@
             this.tb_AfterDiscount.Name = "tb_AfterDiscount";
             this.tb_AfterDiscount.Size = new System.Drawing.Size(101, 24);
             this.tb_AfterDiscount.TabIndex = 39;
-            this.tb_AfterDiscount.Text = "0";
+            this.tb_AfterDiscount.Text = "0.00";
             this.tb_AfterDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
@@ -252,12 +253,14 @@
             this.tb_Discount.Font = new System.Drawing.Font("Tahoma", 10F);
             this.tb_Discount.Location = new System.Drawing.Point(630, 10);
             this.tb_Discount.Name = "tb_Discount";
+            this.tb_Discount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tb_Discount.Size = new System.Drawing.Size(101, 24);
             this.tb_Discount.TabIndex = 37;
-            this.tb_Discount.Text = "0";
+            this.tb_Discount.Text = "0.00";
             this.tb_Discount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_Discount.TextChanged += new System.EventHandler(this.tb_Discount_TextChanged);
-            this.tb_Discount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_quantity_KeyPress);
+            this.tb_Discount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Discount_KeyPress);
+            this.tb_Discount.Leave += new System.EventHandler(this.tb_Discount_Leave);
             // 
             // label6
             // 
@@ -279,7 +282,7 @@
             this.tb_BillTotal.Name = "tb_BillTotal";
             this.tb_BillTotal.Size = new System.Drawing.Size(101, 24);
             this.tb_BillTotal.TabIndex = 35;
-            this.tb_BillTotal.Text = "0";
+            this.tb_BillTotal.Text = "0.00";
             this.tb_BillTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
@@ -393,10 +396,11 @@
             // 
             // tb_quantity
             // 
-            this.tb_quantity.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.tb_quantity.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.tb_quantity.Location = new System.Drawing.Point(413, 9);
             this.tb_quantity.Name = "tb_quantity";
-            this.tb_quantity.Size = new System.Drawing.Size(55, 24);
+            this.tb_quantity.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tb_quantity.Size = new System.Drawing.Size(55, 23);
             this.tb_quantity.TabIndex = 33;
             this.tb_quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_quantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_quantity_KeyPress);
@@ -581,7 +585,7 @@
             this.bt_Save.UseVisualStyleBackColor = false;
             this.bt_Save.Click += new System.EventHandler(this.bt_Save_Click);
             // 
-            // Purchasing
+            // Supplier_Purchasing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -590,7 +594,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Purchasing";
+            this.Name = "Supplier_Purchasing";
             this.Text = "Purchasing";
             this.Load += new System.EventHandler(this.Purchasing_Load);
             this.panel2.ResumeLayout(false);

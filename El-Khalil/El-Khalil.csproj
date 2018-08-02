@@ -91,13 +91,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Purchasing.cs">
+    <Compile Include="SupplierReturned.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Purchasing.Designer.cs">
-      <DependentUpon>Purchasing.cs</DependentUpon>
+    <Compile Include="SupplierReturned.Designer.cs">
+      <DependentUpon>SupplierReturned.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier_Purchasing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier_Purchasing.Designer.cs">
+      <DependentUpon>Supplier_Purchasing.cs</DependentUpon>
     </Compile>
     <Compile Include="Shared Class.cs" />
+    <Compile Include="Supplier Payback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier Payback.Designer.cs">
+      <DependentUpon>Supplier Payback.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Add Customer.resx">
       <DependentUpon>Add Customer.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,8 +133,14 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Purchasing.resx">
-      <DependentUpon>Purchasing.cs</DependentUpon>
+    <EmbeddedResource Include="Supplier Payback.resx">
+      <DependentUpon>Supplier Payback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierReturned.resx">
+      <DependentUpon>SupplierReturned.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier_Purchasing.resx">
+      <DependentUpon>Supplier_Purchasing.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

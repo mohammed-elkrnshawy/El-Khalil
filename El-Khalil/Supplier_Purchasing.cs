@@ -11,13 +11,13 @@ using System.Windows.Forms;
 
 namespace El_Khalil
 {
-    public partial class Purchasing : Form
+    public partial class Supplier_Purchasing : Form
     {
         private double Bill_Total;
         private double MaterialPrice;
         private string MaterialUnit;
         private DataSet dataSet;
-        public Purchasing()
+        public Supplier_Purchasing()
         {
             InitializeComponent();
         }
@@ -57,7 +57,7 @@ namespace El_Khalil
 
             object o = Ezzat.ExecutedScalar("selectPurchasing_Bill_ID");
            
-            if (o.Equals(""))
+            if (o == null)
                 label2.Text = "1";
             else
                 label2.Text=(((int)o) + 1) + "";
@@ -170,17 +170,43 @@ namespace El_Khalil
             tb_render.Text= String.Format("{0:0.00}", (double.Parse(tb_Total.Text) - double.Parse(tb_payment.Text)));
         }
 
+        private void tb_payment_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (tb_payment.Text.Contains('.') && e.KeyChar == '.')
+            {
+                e.Handled = true;
+            }
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tb_Discount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (tb_Discount.Text.Contains('.') && e.KeyChar == '.')
+            {
+                e.Handled = true;
+            }
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
         private void tb_Discount_TextChanged(object sender, EventArgs e)
         {
-            if(tb_Discount.Text=="")
-            {
+            if (tb_Discount.Text == ".")
+                tb_Discount.Text = "0.";
+            if (tb_Discount.Text == "")
                 tb_Discount.Text = "0";
-            }
             Calcolate();
         }
 
         private void tb_payment_TextChanged(object sender, EventArgs e)
         {
+            if (tb_payment.Text == ".")
+                tb_payment.Text = "0.";
             if (tb_payment.Text == "")
                 tb_payment.Text = "0";
             Calcolate();
@@ -315,6 +341,7 @@ namespace El_Khalil
                     , new SqlParameter("@Material_Quantity", float.Parse(item.Cells[3].Value + ""))
                     , new SqlParameter("@Unit", item.Cells[4].Value.ToString())
                     , new SqlParameter("@Total", float.Parse(item.Cells[5].Value + ""))
+                    , new SqlParameter("@Bill_Type", true)
                     );
             }
         }
@@ -354,5 +381,10 @@ namespace El_Khalil
             }
         }
 
+        private void tb_Discount_Leave(object sender, EventArgs e)
+        {
+            tb_Discount.Text = String.Format("{0:0.00}", (double.Parse(tb_Discount.Text)));
+            tb_payment.Text = String.Format("{0:0.00}", (double.Parse(tb_payment.Text)));
+        }
     }
 }
