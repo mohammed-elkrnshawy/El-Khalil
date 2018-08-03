@@ -78,11 +78,17 @@
       <DependentUpon>Edit Product.cs</DependentUpon>
     </Compile>
     <Compile Include="Ezzat.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Store.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Store.Designer.cs">
+      <DependentUpon>Store.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier BillDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier BillDetails.Designer.cs">
+      <DependentUpon>Supplier BillDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -137,8 +143,11 @@
     <EmbeddedResource Include="Edit Product.resx">
       <DependentUpon>Edit Product.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Store.resx">
+      <DependentUpon>Store.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier BillDetails.resx">
+      <DependentUpon>Supplier BillDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

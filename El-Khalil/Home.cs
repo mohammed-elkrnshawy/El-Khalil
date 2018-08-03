@@ -269,6 +269,16 @@ namespace El_Khalil
             Add_Tab("حساب مورد", new Supplier_Account());
         }
 
+        private void button15_Click(object sender, EventArgs e)
+        {
+            Add_Tab("مخزون مواد خام / منتج نهائى", new Store());
+        }
+
+        private void مخزونموادخامToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("مخزون مواد خام / منتج نهائى", new Store());
+        }
+
         private void Add_Tab(string Name,Form form)
         {
             TabPage tp = new TabPage(Name);

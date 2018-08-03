@@ -350,8 +350,9 @@
             // مخزونموادخامToolStripMenuItem
             // 
             this.مخزونموادخامToolStripMenuItem.Name = "مخزونموادخامToolStripMenuItem";
-            this.مخزونموادخامToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
-            this.مخزونموادخامToolStripMenuItem.Text = "مخزون مواد خام";
+            this.مخزونموادخامToolStripMenuItem.Size = new System.Drawing.Size(246, 24);
+            this.مخزونموادخامToolStripMenuItem.Text = "مخزون مواد خام / منتج نهائى";
+            this.مخزونموادخامToolStripMenuItem.Click += new System.EventHandler(this.مخزونموادخامToolStripMenuItem_Click);
             // 
             // مخزونتركيباتToolStripMenuItem
             // 
@@ -1142,7 +1143,7 @@
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(394, 33);
             this.button14.TabIndex = 4;
-            this.button14.Text = "مخزون تركيبات";
+            this.button14.Text = "تعاملات المخازن";
             this.button14.UseVisualStyleBackColor = false;
             // 
             // button15
@@ -1157,8 +1158,9 @@
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(394, 33);
             this.button15.TabIndex = 3;
-            this.button15.Text = "مخزون مواد خام";
+            this.button15.Text = "مخزون مواد خام / مخزون منتج نهائى";
             this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // label1
             // 

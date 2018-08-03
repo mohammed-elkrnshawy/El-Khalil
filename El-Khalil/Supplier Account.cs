@@ -199,6 +199,36 @@ namespace El_Khalil
             }
         }
 
+        private void All_Transaction()
+        {
+            if (radioButton1.Checked)
+            {
+                using (dataSet = Ezzat.GetDataSet("_Supplier_SupplierTransaction_Day", "X",
+                new SqlParameter("@Day", DateTime.Parse(dateTimePicker3.Value.ToString())), new SqlParameter("@Supplier_ID", combo_Supliers.SelectedValue)))
+                {
+                    gv_All.DataSource = dataSet.Tables["X"];
+                }
+            }
+            else if (radioButton2.Checked)
+            {
+                using (dataSet = Ezzat.GetDataSet("_Supplier_SupplierTransaction_During", "X",
+               new SqlParameter("@Day", DateTime.Parse(dateTimePicker1.Value.ToString())),
+               new SqlParameter("@Day2", DateTime.Parse(dateTimePicker2.Value.ToString())),
+               new SqlParameter("@Supplier_ID", combo_Supliers.SelectedValue)))
+                {
+                    gv_All.DataSource = dataSet.Tables["X"];
+                }
+            }
+            else
+            {
+                using (dataSet = Ezzat.GetDataSet("_Supplier_SupplierTransaction_All", "X",
+              new SqlParameter("@Supplier_ID", combo_Supliers.SelectedValue)))
+                {
+                    gv_All.DataSource = dataSet.Tables["X"];
+                }
+            }
+        }
+
         private void combo_Supliers_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (combo_Supliers.Focused)
@@ -209,8 +239,29 @@ namespace El_Khalil
                     Payback_Transaction();
                 if (radioButton7.Checked)
                     Returning_Transaction();
+                if (radioButton6.Checked)
+                    All_Transaction();
 
             }
+        }
+
+        private void gv_All_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Form1 Supplier_BillDetails = new Form1((int)gv_All.CurrentRow.Cells[0].Value, gv_All.CurrentRow.Cells[4].Value);
+            if(gv_All.CurrentRow.Cells[4].Value.Equals("شراء")|| gv_All.CurrentRow.Cells[4].Value.Equals("مرتجع"))
+            Supplier_BillDetails.ShowDialog();
+        }
+
+        private void gv_Purchasing_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Form1 Supplier_BillDetails = new Form1((int)gv_Purchasing.CurrentRow.Cells[0].Value, "شراء");
+                Supplier_BillDetails.ShowDialog();
+        }
+
+        private void gv_Returning_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Form1 Supplier_BillDetails = new Form1((int)gv_Returning.CurrentRow.Cells[0].Value, "مرتجع");
+                Supplier_BillDetails.ShowDialog();
         }
     }
 }
