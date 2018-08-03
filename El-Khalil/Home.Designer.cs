@@ -231,6 +231,7 @@
             this.حسابموردتقاريرToolStripMenuItem.Name = "حسابموردتقاريرToolStripMenuItem";
             this.حسابموردتقاريرToolStripMenuItem.Size = new System.Drawing.Size(194, 24);
             this.حسابموردتقاريرToolStripMenuItem.Text = "حساب مورد / تقارير";
+            this.حسابموردتقاريرToolStripMenuItem.Click += new System.EventHandler(this.حسابموردتقاريرToolStripMenuItem_Click);
             // 
             // تسديدرصيدToolStripMenuItem
             // 
@@ -1088,6 +1089,7 @@
             this.button9.TabIndex = 4;
             this.button9.Text = "حساب مورد / التقارير";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 

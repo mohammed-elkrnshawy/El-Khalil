@@ -135,6 +135,7 @@
             this.combo_Materials.TabIndex = 32;
             this.combo_Materials.Tag = "";
             this.combo_Materials.Text = "اختار مادة خام";
+            this.combo_Materials.SelectedIndexChanged += new System.EventHandler(this.combo_Materials_SelectedIndexChanged);
             // 
             // tb_quantity
             // 
@@ -145,6 +146,7 @@
             this.tb_quantity.Size = new System.Drawing.Size(55, 23);
             this.tb_quantity.TabIndex = 33;
             this.tb_quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_quantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_quantity_KeyPress);
             // 
             // label3
             // 
@@ -277,6 +279,7 @@
             this.combo_Supliers.TabIndex = 53;
             this.combo_Supliers.Tag = "";
             this.combo_Supliers.Text = "اختار اسم المورد";
+            this.combo_Supliers.SelectedIndexChanged += new System.EventHandler(this.combo_Supliers_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -314,6 +317,7 @@
             this.bt_Save.TabIndex = 6;
             this.bt_Save.Text = "حفظ";
             this.bt_Save.UseVisualStyleBackColor = false;
+            this.bt_Save.Click += new System.EventHandler(this.bt_Save_Click);
             // 
             // Column2
             // 
@@ -349,6 +353,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1103, 607);
             this.panel2.TabIndex = 20;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel6
             // 
@@ -473,6 +478,8 @@
             this.tb_Discount.TabIndex = 37;
             this.tb_Discount.Text = "0.00";
             this.tb_Discount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_Discount.TextChanged += new System.EventHandler(this.tb_Discount_TextChanged);
+            this.tb_Discount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Discount_KeyPress);
             // 
             // label6
             // 
@@ -538,6 +545,9 @@
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dataGridView1.Size = new System.Drawing.Size(1097, 330);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView1_CellBeginEdit);
+            this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
+            this.dataGridView1.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView1_UserDeletingRow);
             // 
             // Column1
             // 
@@ -556,6 +566,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SupplierReturned";
             this.Text = "SupplierReturned";
+            this.Load += new System.EventHandler(this.SupplierReturned_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);

@@ -259,6 +259,16 @@ namespace El_Khalil
             Add_Tab("بيان مرتجع", new SupplierReturned());
         }
 
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Add_Tab("حساب مورد", new Supplier_Account());
+        }
+
+        private void حسابموردتقاريرToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("حساب مورد", new Supplier_Account());
+        }
+
         private void Add_Tab(string Name,Form form)
         {
             TabPage tp = new TabPage(Name);

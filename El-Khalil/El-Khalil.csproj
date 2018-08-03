@@ -78,6 +78,12 @@
       <DependentUpon>Edit Product.cs</DependentUpon>
     </Compile>
     <Compile Include="Ezzat.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier Account.Designer.cs">
+      <DependentUpon>Supplier Account.cs</DependentUpon>
     </Compile>
     <Compile Include="SupplierReturned.cs">
       <SubType>Form</SubType>
@@ -125,6 +137,9 @@
     <EmbeddedResource Include="Edit Product.resx">
       <DependentUpon>Edit Product.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +147,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier Account.resx">
+      <DependentUpon>Supplier Account.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier Payback.resx">
       <DependentUpon>Supplier Payback.cs</DependentUpon>
