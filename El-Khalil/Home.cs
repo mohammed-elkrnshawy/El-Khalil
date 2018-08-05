@@ -279,6 +279,26 @@ namespace El_Khalil
             Add_Tab("مخزون مواد خام / منتج نهائى", new Store());
         }
 
+        private void button14_Click(object sender, EventArgs e)
+        {
+            Add_Tab("تعاملات المخازن", new StoreTransaction());
+        }
+
+        private void مخزونتركيباتToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("تعاملات المخازن", new StoreTransaction());
+        }
+
+        private void button32_Click(object sender, EventArgs e)
+        {
+            Add_Tab("انتاج منتج نهائى", new Productivity_Product());
+        }
+
+        private void انتاجمنتجنهائىToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("انتاج منتج نهائى", new Productivity_Product());
+        }
+
         private void Add_Tab(string Name,Form form)
         {
             TabPage tp = new TabPage(Name);

@@ -131,6 +131,7 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.انتاجمنتجنهائىToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -357,8 +358,9 @@
             // مخزونتركيباتToolStripMenuItem
             // 
             this.مخزونتركيباتToolStripMenuItem.Name = "مخزونتركيباتToolStripMenuItem";
-            this.مخزونتركيباتToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
-            this.مخزونتركيباتToolStripMenuItem.Text = "مخزون تركيبات";
+            this.مخزونتركيباتToolStripMenuItem.Size = new System.Drawing.Size(246, 24);
+            this.مخزونتركيباتToolStripMenuItem.Text = "تعاملات المخازن";
+            this.مخزونتركيباتToolStripMenuItem.Click += new System.EventHandler(this.مخزونتركيباتToolStripMenuItem_Click);
             // 
             // الخزنةالبنكToolStripMenuItem
             // 
@@ -476,9 +478,10 @@
             // 
             this.تركيباتToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.اضافةتركيبةToolStripMenuItem,
-            this.تعديلتركيبةToolStripMenuItem});
+            this.تعديلتركيبةToolStripMenuItem,
+            this.انتاجمنتجنهائىToolStripMenuItem});
             this.تركيباتToolStripMenuItem.Name = "تركيباتToolStripMenuItem";
-            this.تركيباتToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
+            this.تركيباتToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.تركيباتToolStripMenuItem.Text = "تركيبات";
             // 
             // اضافةتركيبةToolStripMenuItem
@@ -612,6 +615,7 @@
             this.button32.TabIndex = 6;
             this.button32.Text = "بيان تصنيع منتج نهائى";
             this.button32.UseVisualStyleBackColor = false;
+            this.button32.Click += new System.EventHandler(this.button32_Click);
             // 
             // button26
             // 
@@ -1145,6 +1149,7 @@
             this.button14.TabIndex = 4;
             this.button14.Text = "تعاملات المخازن";
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button15
             // 
@@ -1306,6 +1311,13 @@
             this.toolStripStatusLabel3.Size = new System.Drawing.Size(73, 17);
             this.toolStripStatusLabel3.Text = "الحالة :  ادمن ";
             // 
+            // انتاجمنتجنهائىToolStripMenuItem
+            // 
+            this.انتاجمنتجنهائىToolStripMenuItem.Name = "انتاجمنتجنهائىToolStripMenuItem";
+            this.انتاجمنتجنهائىToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.انتاجمنتجنهائىToolStripMenuItem.Text = "انتاج منتج نهائى";
+            this.انتاجمنتجنهائىToolStripMenuItem.Click += new System.EventHandler(this.انتاجمنتجنهائىToolStripMenuItem_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1444,5 +1456,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
+        private System.Windows.Forms.ToolStripMenuItem انتاجمنتجنهائىToolStripMenuItem;
     }
 }

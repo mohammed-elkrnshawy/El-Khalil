@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
@@ -78,11 +81,23 @@
       <DependentUpon>Edit Product.cs</DependentUpon>
     </Compile>
     <Compile Include="Ezzat.cs" />
+    <Compile Include="Productivity Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productivity Product.Designer.cs">
+      <DependentUpon>Productivity Product.cs</DependentUpon>
+    </Compile>
     <Compile Include="Store.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Store.Designer.cs">
       <DependentUpon>Store.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoreTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoreTransaction.Designer.cs">
+      <DependentUpon>StoreTransaction.cs</DependentUpon>
     </Compile>
     <Compile Include="Supplier BillDetails.cs">
       <SubType>Form</SubType>
@@ -128,6 +143,8 @@
     <Compile Include="Supplier Payback.Designer.cs">
       <DependentUpon>Supplier Payback.cs</DependentUpon>
     </Compile>
+    <Compile Include="z_Product Component.cs" />
+    <Compile Include="z_Product Object.cs" />
     <EmbeddedResource Include="Add Customer.resx">
       <DependentUpon>Add Customer.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,8 +160,14 @@
     <EmbeddedResource Include="Edit Product.resx">
       <DependentUpon>Edit Product.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Productivity Product.resx">
+      <DependentUpon>Productivity Product.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Store.resx">
       <DependentUpon>Store.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreTransaction.resx">
+      <DependentUpon>StoreTransaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier BillDetails.resx">
       <DependentUpon>Supplier BillDetails.cs</DependentUpon>
@@ -196,6 +219,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
