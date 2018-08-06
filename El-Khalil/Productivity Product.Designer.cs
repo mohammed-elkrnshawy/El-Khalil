@@ -38,6 +38,10 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.tb_quantity = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,10 +50,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -165,6 +165,54 @@
             this.panel2.Size = new System.Drawing.Size(1154, 270);
             this.panel2.TabIndex = 2;
             // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(813, 26);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(207, 27);
+            this.label6.TabIndex = 66;
+            this.label6.Text = "0000000000";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(813, 64);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(207, 27);
+            this.label5.TabIndex = 65;
+            this.label5.Text = "14 / 10 /1995";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(1007, 64);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(134, 27);
+            this.label3.TabIndex = 64;
+            this.label3.Text = "تاريخ البيان";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(1007, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(134, 27);
+            this.label1.TabIndex = 63;
+            this.label1.Text = "رقم البيان";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
@@ -258,54 +306,6 @@
             this.label4.Text = "تقارير انتاج منتج نهائى";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(1007, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 27);
-            this.label1.TabIndex = 63;
-            this.label1.Text = "رقم البيان";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(1007, 64);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(134, 27);
-            this.label3.TabIndex = 64;
-            this.label3.Text = "تاريخ البيان";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(813, 64);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(207, 27);
-            this.label5.TabIndex = 65;
-            this.label5.Text = "14 / 10 /1995";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(813, 26);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(207, 27);
-            this.label6.TabIndex = 66;
-            this.label6.Text = "0000000000";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Productivity_Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,7 +316,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Productivity_Product";
-            this.RightToLeftLayout = true;
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "Productivity_Product";
             this.Load += new System.EventHandler(this.Productivity_Product_Load);
             this.panel1.ResumeLayout(false);

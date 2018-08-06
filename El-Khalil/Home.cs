@@ -299,6 +299,36 @@ namespace El_Khalil
             Add_Tab("انتاج منتج نهائى", new Productivity_Product());
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Add_Tab("بيان بيع", new Customer_Purchasing());
+        }
+
+        private void بياناسعاربيعToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Add_Tab("بيان بيع", new Customer_Purchasing());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Add_Tab("تسديد من رصيد", new Customer_Payback());
+        }
+
+        private void دفعمنرصيدToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Add_Tab("تسديد من رصيد", new Customer_Payback());
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Add_Tab("بيان مرتجع من عميل", new Customer_Returned());
+        }
+
+        private void مرتجعاتToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("بيان مرتجع من عميل", new Customer_Returned());
+        }
+
         private void Add_Tab(string Name,Form form)
         {
             TabPage tp = new TabPage(Name);

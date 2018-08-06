@@ -74,6 +74,24 @@
     <Compile Include="Add Supplier.Designer.cs">
       <DependentUpon>Add Supplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer Payback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer Payback.Designer.cs">
+      <DependentUpon>Customer Payback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer Purchasing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer Purchasing.Designer.cs">
+      <DependentUpon>Customer Purchasing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer Returned.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer Returned.Designer.cs">
+      <DependentUpon>Customer Returned.cs</DependentUpon>
+    </Compile>
     <Compile Include="Edit Product.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +174,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Add Supplier.resx">
       <DependentUpon>Add Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer Payback.resx">
+      <DependentUpon>Customer Payback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer Purchasing.resx">
+      <DependentUpon>Customer Purchasing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer Returned.resx">
+      <DependentUpon>Customer Returned.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Edit Product.resx">
       <DependentUpon>Edit Product.cs</DependentUpon>
