@@ -282,6 +282,7 @@
             this.حسابعميلالتقاريرToolStripMenuItem.Name = "حسابعميلالتقاريرToolStripMenuItem";
             this.حسابعميلالتقاريرToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.حسابعميلالتقاريرToolStripMenuItem.Text = "حساب عميل / التقارير";
+            this.حسابعميلالتقاريرToolStripMenuItem.Click += new System.EventHandler(this.حسابعميلالتقاريرToolStripMenuItem_Click);
             // 
             // دفعمنرصيدToolStripMenuItem1
             // 
@@ -1265,6 +1266,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "حساب عميل / التقارير";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 

@@ -329,6 +329,16 @@ namespace El_Khalil
             Add_Tab("بيان مرتجع من عميل", new Customer_Returned());
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Add_Tab("حساب عميل", new Customer_Account());
+        }
+
+        private void حسابعميلالتقاريرToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("حساب عميل", new Customer_Account());
+        }
+
         private void Add_Tab(string Name,Form form)
         {
             TabPage tp = new TabPage(Name);

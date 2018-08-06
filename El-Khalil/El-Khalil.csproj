@@ -74,6 +74,12 @@
     <Compile Include="Add Supplier.Designer.cs">
       <DependentUpon>Add Supplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer Account.Designer.cs">
+      <DependentUpon>Customer Account.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer Payback.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Add Supplier.resx">
       <DependentUpon>Add Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer Account.resx">
+      <DependentUpon>Customer Account.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer Payback.resx">
       <DependentUpon>Customer Payback.cs</DependentUpon>

@@ -46,7 +46,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.combo_Supliers = new System.Windows.Forms.ComboBox();
+            this.combo_Customer = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -67,6 +67,7 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.bt_Save = new System.Windows.Forms.Button();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -211,6 +212,7 @@
             this.tb_Discount.TabIndex = 37;
             this.tb_Discount.Text = "0.00";
             this.tb_Discount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_Discount.TextChanged += new System.EventHandler(this.tb_Discount_TextChanged);
             // 
             // label6
             // 
@@ -269,7 +271,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.combo_Supliers);
+            this.panel3.Controls.Add(this.combo_Customer);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(3, 10);
@@ -308,19 +310,20 @@
             this.label13.Text = "تاريج البيان";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // combo_Supliers
+            // combo_Customer
             // 
-            this.combo_Supliers.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.combo_Supliers.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.combo_Supliers.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combo_Supliers.FormattingEnabled = true;
-            this.combo_Supliers.Location = new System.Drawing.Point(68, 11);
-            this.combo_Supliers.Name = "combo_Supliers";
-            this.combo_Supliers.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.combo_Supliers.Size = new System.Drawing.Size(214, 24);
-            this.combo_Supliers.TabIndex = 53;
-            this.combo_Supliers.Tag = "";
-            this.combo_Supliers.Text = "اختار اسم المورد";
+            this.combo_Customer.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.combo_Customer.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.combo_Customer.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combo_Customer.FormattingEnabled = true;
+            this.combo_Customer.Location = new System.Drawing.Point(68, 11);
+            this.combo_Customer.Name = "combo_Customer";
+            this.combo_Customer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.combo_Customer.Size = new System.Drawing.Size(214, 24);
+            this.combo_Customer.TabIndex = 53;
+            this.combo_Customer.Tag = "";
+            this.combo_Customer.Text = "اختار اسم المشترى";
+            this.combo_Customer.SelectedIndexChanged += new System.EventHandler(this.combo_Supliers_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -378,6 +381,7 @@
             this.combo_Materials.TabIndex = 32;
             this.combo_Materials.Tag = "";
             this.combo_Materials.Text = "اختار مادة خام";
+            this.combo_Materials.SelectedIndexChanged += new System.EventHandler(this.combo_Materials_SelectedIndexChanged);
             // 
             // tb_quantity
             // 
@@ -388,6 +392,7 @@
             this.tb_quantity.Size = new System.Drawing.Size(55, 23);
             this.tb_quantity.TabIndex = 33;
             this.tb_quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_quantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_quantity_KeyPress);
             // 
             // label3
             // 
@@ -467,7 +472,8 @@
             this.Column3,
             this.الكمية,
             this.Column4,
-            this.Column5});
+            this.Column5,
+            this.Column6});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -475,6 +481,9 @@
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dataGridView1.Size = new System.Drawing.Size(1097, 330);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView1_CellBeginEdit);
+            this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
+            this.dataGridView1.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView1_UserDeletingRow);
             // 
             // Column1
             // 
@@ -545,6 +554,13 @@
             this.bt_Save.TabIndex = 6;
             this.bt_Save.Text = "حفظ";
             this.bt_Save.UseVisualStyleBackColor = false;
+            this.bt_Save.Click += new System.EventHandler(this.bt_Save_Click);
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Column6";
+            this.Column6.Name = "Column6";
+            this.Column6.Visible = false;
             // 
             // Customer_Returned
             // 
@@ -592,7 +608,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox combo_Supliers;
+        private System.Windows.Forms.ComboBox combo_Customer;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
@@ -613,5 +629,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button bt_Save;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }
