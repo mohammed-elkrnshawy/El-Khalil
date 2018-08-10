@@ -323,24 +323,28 @@
             this.اضافةموظفتعديلToolStripMenuItem.Name = "اضافةموظفتعديلToolStripMenuItem";
             this.اضافةموظفتعديلToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
             this.اضافةموظفتعديلToolStripMenuItem.Text = "اضافة موظف / تعديل ";
+            this.اضافةموظفتعديلToolStripMenuItem.Click += new System.EventHandler(this.اضافةموظفتعديلToolStripMenuItem_Click);
             // 
             // بيانحسابموظفToolStripMenuItem
             // 
             this.بيانحسابموظفToolStripMenuItem.Name = "بيانحسابموظفToolStripMenuItem";
             this.بيانحسابموظفToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
             this.بيانحسابموظفToolStripMenuItem.Text = "بيان حساب موظف";
+            this.بيانحسابموظفToolStripMenuItem.Click += new System.EventHandler(this.بيانحسابموظفToolStripMenuItem_Click);
             // 
             // رواتبالشهرToolStripMenuItem
             // 
             this.رواتبالشهرToolStripMenuItem.Name = "رواتبالشهرToolStripMenuItem";
             this.رواتبالشهرToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
             this.رواتبالشهرToolStripMenuItem.Text = "رواتب الشهر";
+            this.رواتبالشهرToolStripMenuItem.Click += new System.EventHandler(this.رواتبالشهرToolStripMenuItem_Click);
             // 
             // جزاءاتToolStripMenuItem
             // 
             this.جزاءاتToolStripMenuItem.Name = "جزاءاتToolStripMenuItem";
             this.جزاءاتToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
             this.جزاءاتToolStripMenuItem.Text = "جزاءات";
+            this.جزاءاتToolStripMenuItem.Click += new System.EventHandler(this.جزاءاتToolStripMenuItem_Click);
             // 
             // المخازنToolStripMenuItem
             // 
@@ -971,6 +975,7 @@
             this.button21.TabIndex = 3;
             this.button21.Text = "اضافة موظف / تعديل";
             this.button21.UseVisualStyleBackColor = false;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // button18
             // 
@@ -986,6 +991,7 @@
             this.button18.TabIndex = 6;
             this.button18.Text = "جزاءات";
             this.button18.UseVisualStyleBackColor = false;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // button20
             // 
@@ -1001,6 +1007,7 @@
             this.button20.TabIndex = 4;
             this.button20.Text = "حساب موظف / التقارير";
             this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // button19
             // 
@@ -1014,8 +1021,9 @@
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(391, 33);
             this.button19.TabIndex = 5;
-            this.button19.Text = "رواتب شهرية";
+            this.button19.Text = "اضافة رواتب شهرية جديدة";
             this.button19.UseVisualStyleBackColor = false;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // label2
             // 

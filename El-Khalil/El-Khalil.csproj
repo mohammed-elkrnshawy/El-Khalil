@@ -56,6 +56,12 @@
     <Compile Include="Add Customer.Designer.cs">
       <DependentUpon>Add Customer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Add Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Employee.Designer.cs">
+      <DependentUpon>Add Employee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Add Materials.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,30 @@
     </Compile>
     <Compile Include="Edit Product.Designer.cs">
       <DependentUpon>Edit Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee Account.Designer.cs">
+      <DependentUpon>Employee Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee Salaries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee Salaries.Designer.cs">
+      <DependentUpon>Employee Salaries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee Sanctions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee Sanctions.Designer.cs">
+      <DependentUpon>Employee Sanctions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_AccountDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_AccountDetails.Designer.cs">
+      <DependentUpon>Employee_AccountDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Ezzat.cs" />
     <Compile Include="Productivity Product.cs">
@@ -172,6 +202,9 @@
     <EmbeddedResource Include="Add Customer.resx">
       <DependentUpon>Add Customer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Add Employee.resx">
+      <DependentUpon>Add Employee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Add Materials.resx">
       <DependentUpon>Add Materials.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +228,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Edit Product.resx">
       <DependentUpon>Edit Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee Account.resx">
+      <DependentUpon>Employee Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee Salaries.resx">
+      <DependentUpon>Employee Salaries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee Sanctions.resx">
+      <DependentUpon>Employee Sanctions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_AccountDetails.resx">
+      <DependentUpon>Employee_AccountDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Productivity Product.resx">
       <DependentUpon>Productivity Product.cs</DependentUpon>

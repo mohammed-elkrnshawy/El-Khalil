@@ -339,6 +339,46 @@ namespace El_Khalil
             Add_Tab("حساب عميل", new Customer_Account());
         }
 
+        private void button21_Click(object sender, EventArgs e)
+        {
+            Add_Tab("ضافة / تعديل موظف", new Add_Employee());
+        }
+
+        private void اضافةموظفتعديلToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("ضافة / تعديل موظف", new Add_Employee());
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            Add_Tab("اضافة رواتب شهرية جديدة", new Employee_Salaries());
+        }
+
+        private void رواتبالشهرToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("اضافة رواتب شهرية جديدة", new Employee_Salaries());
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            Add_Tab("جزاءات الموظفين", new Employee_Sanctions());
+        }
+
+        private void جزاءاتToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("جزاءات الموظفين", new Employee_Sanctions());
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            Add_Tab("حسابات الموظفين", new Employee_Account());
+        }
+
+        private void بيانحسابموظفToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("حسابات الموظفين", new Employee_Account());
+        }
+
         private void Add_Tab(string Name,Form form)
         {
             TabPage tp = new TabPage(Name);
