@@ -13,21 +13,28 @@ namespace El_Khalil
 {
     public partial class Employee_AccountDetails : Form
     {
+        DataSet dataSet;
+        bool Pure;
         double Employee_Salary;
         string Employee_Name;
         string date;
         int Employee_ID;
-        public Employee_AccountDetails(string Date, int EmployeeId,string EmployeeName,double salary)
+        public Employee_AccountDetails(bool Pure,string Date, int EmployeeId,string EmployeeName,double salary)
         {
             InitializeComponent();
             this.date = Date;
             this.Employee_ID = EmployeeId;
             this.Employee_Name = EmployeeName;
             this.Employee_Salary = salary;
+            this.Pure = Pure;
         }
 
         private void Employee_AccountDetails_Load(object sender, EventArgs e)
         {
+            if (Pure)
+                bt_Save.Enabled = false;
+         
+
             label12.Text = date;
             tb_name.Text = Employee_Name;
             tb_month.Text = String.Format("{0:0.00}", Employee_Salary);
@@ -110,6 +117,28 @@ namespace El_Khalil
                 new SqlParameter("@Report_Money", float.Parse(tb_render.Text)),
                 new SqlParameter("@Report_Notes","")
                 );
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (button1.Text == "اخفاء التفاصيل")
+            {
+                pn_P.Visible = true;
+                pn_S.Visible = false;
+                button1.Text = "تعاملات الشهر";
+            }
+            else
+            {
+                using (dataSet = Ezzat.GetDataSet("select_EmployeeTransaction", "X",
+                    new SqlParameter("@Employee_ID",Employee_ID),new SqlParameter("@Date_Month", label12.Text)
+                    ))
+                {
+                    dataGridView1.DataSource = dataSet.Tables["X"];
+                }
+                    pn_P.Visible = false;
+                pn_S.Visible = true;
+                button1.Text = "اخفاء التفاصيل";
+            }
         }
     }
 }

@@ -68,7 +68,7 @@ namespace El_Khalil
         {
             if(dataGridView1.CurrentCell==dataGridView1.CurrentRow.Cells[3])
             {
-                Employee_AccountDetails k = new Employee_AccountDetails(dataGridView1.CurrentRow.Cells[0].Value.ToString()
+                Employee_AccountDetails k = new Employee_AccountDetails(bool.Parse(dataGridView1.CurrentRow.Cells[2].Value.ToString()), dataGridView1.CurrentRow.Cells[0].Value.ToString()
                     ,(int)combo_Employee.SelectedValue,combo_Employee.Text,double.Parse(dataGridView1.CurrentRow.Cells[1].Value.ToString()));
                 k.ShowDialog();
             } 

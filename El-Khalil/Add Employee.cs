@@ -23,8 +23,6 @@ namespace El_Khalil
         {
             Graphics v = e.Graphics;
             Shared_Class.DrawRoundRect(v, Pens.Black, e.ClipRectangle.Left, e.ClipRectangle.Top, e.ClipRectangle.Width - 1, e.ClipRectangle.Height - 1, 10);
-            //Without rounded corners
-            //e.Graphics.DrawRectangle(Pens.Blue, e.ClipRectangle.Left, e.ClipRectangle.Top, e.ClipRectangle.Width - 1, e.ClipRectangle.Height - 1);
             base.OnPaint(e);
         }
 
@@ -42,14 +40,14 @@ namespace El_Khalil
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            combo_name.Enabled = false;
+            combo_name.Enabled=checkBox1.Visible = false;
             label4.Text = "اضافة موظف جديد";
             tb_address.Text = tb_name.Text = tb_phone.Text = tb_phone2.Text = tb_salary.Text = "";
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            combo_name.Enabled = true;
+            combo_name.Enabled =checkBox1.Visible= true;
             label4.Text = "تعديل موظف موجود";
         }
 
@@ -81,7 +79,7 @@ namespace El_Khalil
                 new SqlParameter("@Emp_Phone1",tb_phone.Text),
                 new SqlParameter("@Emp_Phone2",tb_phone2.Text),
                 new SqlParameter("@Emp_Salary",tb_salary.Text),
-                new SqlParameter("@Begin_Salary", checkBox1.Checked)
+                new SqlParameter("@Begin_Salary", true)
                 );
         }
 
@@ -128,7 +126,7 @@ namespace El_Khalil
                         tb_salary.Text = dataReader["Emp_Salary"].ToString();
                         tb_phone.Text = dataReader["Emp_Phone1"].ToString();
                         tb_phone2.Text = dataReader["Emp_Phone2"].ToString();
-                        checkBox1.Checked = bool.Parse(dataReader["Begin_Salary"].ToString());
+                        checkBox1.Checked = bool.Parse(dataReader["Account"].ToString());
                     }
                 }
                 con.Close();

@@ -37,5 +37,23 @@ namespace El_Khalil
                 dataGridView2.DataSource = dataSet.Tables["X"];
             }
         }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(radioButton1.Checked)
+            {
+                panel3.Visible = true;
+                panel2.Visible = false;
+            }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked)
+            {
+                panel3.Visible = false;
+                panel2.Visible = true;
+            }
+        }
     }
 }

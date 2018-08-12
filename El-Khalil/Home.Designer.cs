@@ -198,6 +198,7 @@
             this.دفعمنرصيدToolStripMenuItem.Name = "دفعمنرصيدToolStripMenuItem";
             this.دفعمنرصيدToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
             this.دفعمنرصيدToolStripMenuItem.Text = "بيان مصروفات";
+            this.دفعمنرصيدToolStripMenuItem.Click += new System.EventHandler(this.دفعمنرصيدToolStripMenuItem_Click);
             // 
             // بياناسعاربيعToolStripMenuItem
             // 
@@ -712,12 +713,13 @@
             this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button29.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button29.ForeColor = System.Drawing.Color.Black;
-            this.button29.Location = new System.Drawing.Point(3, 75);
+            this.button29.Location = new System.Drawing.Point(3, 76);
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(391, 33);
             this.button29.TabIndex = 5;
             this.button29.Text = "تقارير قبض";
             this.button29.UseVisualStyleBackColor = false;
+            this.button29.Click += new System.EventHandler(this.button29_Click);
             // 
             // button30
             // 
@@ -727,12 +729,13 @@
             this.button30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button30.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button30.ForeColor = System.Drawing.Color.Black;
-            this.button30.Location = new System.Drawing.Point(3, 42);
+            this.button30.Location = new System.Drawing.Point(3, 45);
             this.button30.Name = "button30";
             this.button30.Size = new System.Drawing.Size(391, 33);
             this.button30.TabIndex = 4;
             this.button30.Text = "تقارير صرف";
             this.button30.UseVisualStyleBackColor = false;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
             // 
             // button31
             // 
@@ -746,8 +749,9 @@
             this.button31.Name = "button31";
             this.button31.Size = new System.Drawing.Size(391, 33);
             this.button31.TabIndex = 3;
-            this.button31.Text = "تقارير الخزنة";
+            this.button31.Text = "تعاملات الخزنة اليوم";
             this.button31.UseVisualStyleBackColor = false;
+            this.button31.Click += new System.EventHandler(this.button31_Click);
             // 
             // label6
             // 
@@ -850,6 +854,7 @@
             this.button23.TabIndex = 4;
             this.button23.Text = "يداع ف حسابى";
             this.button23.UseVisualStyleBackColor = false;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
             // button24
             // 
@@ -865,6 +870,7 @@
             this.button24.TabIndex = 3;
             this.button24.Text = "اضافة بنك";
             this.button24.UseVisualStyleBackColor = false;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // label4
             // 
@@ -904,6 +910,7 @@
             this.button17.TabIndex = 3;
             this.button17.Text = "بيان اسعار بيع";
             this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.button4_Click);
             // 
             // button12
             // 
@@ -919,6 +926,7 @@
             this.button12.TabIndex = 6;
             this.button12.Text = "بيان اسعار مصروفات";
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button16
             // 

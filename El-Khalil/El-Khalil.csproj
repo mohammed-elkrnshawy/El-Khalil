@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add bank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add bank.Designer.cs">
+      <DependentUpon>Add bank.cs</DependentUpon>
+    </Compile>
     <Compile Include="Add Customer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,12 @@
     </Compile>
     <Compile Include="Add Supplier.Designer.cs">
       <DependentUpon>Add Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bank InAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bank InAccount.Designer.cs">
+      <DependentUpon>Bank InAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer Account.cs">
       <SubType>Form</SubType>
@@ -135,6 +147,12 @@
       <DependentUpon>Employee_AccountDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Ezzat.cs" />
+    <Compile Include="Outlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outlay.Designer.cs">
+      <DependentUpon>Outlay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Productivity Product.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,8 +215,29 @@
     <Compile Include="Supplier Payback.Designer.cs">
       <DependentUpon>Supplier Payback.cs</DependentUpon>
     </Compile>
+    <Compile Include="The InSafe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="The InSafe.Designer.cs">
+      <DependentUpon>The InSafe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="The OutSafe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="The OutSafe.Designer.cs">
+      <DependentUpon>The OutSafe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="The Safe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="The Safe.Designer.cs">
+      <DependentUpon>The Safe.cs</DependentUpon>
+    </Compile>
     <Compile Include="z_Product Component.cs" />
     <Compile Include="z_Product Object.cs" />
+    <EmbeddedResource Include="Add bank.resx">
+      <DependentUpon>Add bank.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Add Customer.resx">
       <DependentUpon>Add Customer.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Add Supplier.resx">
       <DependentUpon>Add Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bank InAccount.resx">
+      <DependentUpon>Bank InAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer Account.resx">
       <DependentUpon>Customer Account.cs</DependentUpon>
@@ -240,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Employee_AccountDetails.resx">
       <DependentUpon>Employee_AccountDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outlay.resx">
+      <DependentUpon>Outlay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Productivity Product.resx">
       <DependentUpon>Productivity Product.cs</DependentUpon>
@@ -272,6 +317,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier_Purchasing.resx">
       <DependentUpon>Supplier_Purchasing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="The InSafe.resx">
+      <DependentUpon>The InSafe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="The OutSafe.resx">
+      <DependentUpon>The OutSafe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="The Safe.resx">
+      <DependentUpon>The Safe.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

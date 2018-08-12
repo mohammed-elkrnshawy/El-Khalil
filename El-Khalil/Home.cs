@@ -379,6 +379,41 @@ namespace El_Khalil
             Add_Tab("حسابات الموظفين", new Employee_Account());
         }
 
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Add_Tab("اضافة مصاريف", new Outlay());
+        }
+
+        private void دفعمنرصيدToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("اضافة مصاريف", new Outlay());
+        }
+
+        private void button31_Click(object sender, EventArgs e)
+        {
+            Add_Tab("تعاملات الخزنة اليوم", new The_Safe());
+        }
+
+        private void button30_Click(object sender, EventArgs e)
+        {
+            Add_Tab("تعاملات الخزنة الصرف", new The_OutSafe());
+        }
+
+        private void button29_Click(object sender, EventArgs e)
+        {
+            Add_Tab("تعاملات الخزنة الايراد", new The_InSafe());
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            Add_Tab("اضافة بنك", new Add_bank());
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            Add_Tab("ايداع ف حساباتى", new Bank_InAccount());
+        }
+
         private void Add_Tab(string Name,Form form)
         {
             TabPage tp = new TabPage(Name);
