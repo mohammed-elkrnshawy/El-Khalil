@@ -241,14 +241,44 @@ namespace El_Khalil
         private void bt_Save_Click(object sender, EventArgs e)
         {
             if(combo_Supliers.SelectedIndex>=0&&dataGridView1.Rows.Count>0)
-                Save();
+            {
+                if (rb_cash.Checked)
+                {
+                    SaveCash();
+                }
+                else
+                {
+                    Supplier_Purchasing_Bank supplier = new Supplier_Purchasing_Bank(
+                        label2.Text,
+                        tb_BillTotal.Text,
+                        tb_Discount.Text,
+                        tb_AfterDiscount.Text,
+                        tb_OldMoney.Text,
+                        tb_Total.Text,
+                        combo_Supliers.Text,
+                        combo_Supliers.SelectedValue
+                        );
+                    supplier.ShowDialog();
+
+                    // اضافة تفاصيل فاتورة الشراء 
+                    AddIMBill_Details(int.Parse(label2.Text));
+
+
+                    // المخازن
+                    EditStore();
+                }
+
+
+                Clear();
+
+            }
             else
-                MessageBox.Show("من فضلك راجع البيانات");
+                MessageBox.Show(Shared_Class.Check_Message);
         }
 
 
 
-        private void Save()
+        private void SaveCash()
         {
             //Suppliers
 
@@ -268,7 +298,8 @@ namespace El_Khalil
                  new SqlParameter("@Total_oldMoney", float.Parse(tb_OldMoney.Text)),
                  new SqlParameter("@Total_Money", float.Parse(tb_Total.Text)),
                  new SqlParameter("@Payment_Money", float.Parse(tb_payment.Text)),
-                 new SqlParameter("@After_Payment", float.Parse(tb_render.Text))
+                 new SqlParameter("@After_Payment", float.Parse(tb_render.Text)),
+                 new SqlParameter("@Bill_Details","")
                 );
 
             //Add IMBill_Details
@@ -385,6 +416,30 @@ namespace El_Khalil
         {
             tb_Discount.Text = String.Format("{0:0.00}", (double.Parse(tb_Discount.Text)));
             tb_payment.Text = String.Format("{0:0.00}", (double.Parse(tb_payment.Text)));
+        }
+
+        private void rb_cash_CheckedChanged(object sender, EventArgs e)
+        {
+                tb_payment.Enabled = rb_cash.Checked;
+        }
+
+
+
+        private void Clear()
+        {
+            label12.Text = String.Format("{0:HH:mm:ss  dd/MM/yyyy}", DateTime.Now);
+            label2.Text = (int.Parse(label2.Text)+1)+"";
+
+            combo_Materials.Text = "";
+            combo_Materials.SelectedText = "اختار مادة خام";
+
+            combo_Supliers.Text = "";
+            combo_Supliers.SelectedText = "اختار اسم المورد";
+
+            dataGridView1.Rows.Clear();
+
+            tb_quantity.Text = "0";
+            tb_payment.Text = tb_OldMoney.Text = tb_Discount.Text = tb_BillTotal.Text = tb_AfterDiscount.Text = tb_render.Text = tb_Total.Text = "0.00";
         }
     }
 }

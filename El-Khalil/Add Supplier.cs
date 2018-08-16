@@ -112,6 +112,8 @@ namespace El_Khalil
                 new SqlParameter("@Supplier_Company", tb_company.Text)
                 );
 
+            MessageBox.Show(Shared_Class.Edit_Message);
+
             tb_company.Text = tb_address.Text = tb_name.Text = tb_phone.Text = tb_phone2.Text = "";
             combo_name.Text = "";
             combo_name.SelectedText = "اختار مورد موجود";
@@ -127,6 +129,8 @@ namespace El_Khalil
                 new SqlParameter("@Supplier_Address", tb_address.Text),
                 new SqlParameter("@Supplier_Company", tb_company.Text)
                 );
+
+            MessageBox.Show(Shared_Class.Add_Message);
 
             tb_company.Text = tb_address.Text = tb_name.Text = tb_phone.Text = tb_phone2.Text = "";
             FillCombo();

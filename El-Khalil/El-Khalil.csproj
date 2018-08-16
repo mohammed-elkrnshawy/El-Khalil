@@ -233,6 +233,12 @@
     <Compile Include="Supplier Payback.Designer.cs">
       <DependentUpon>Supplier Payback.cs</DependentUpon>
     </Compile>
+    <Compile Include="Supplier_Purchasing_Bank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier_Purchasing_Bank.Designer.cs">
+      <DependentUpon>Supplier_Purchasing_Bank.cs</DependentUpon>
+    </Compile>
     <Compile Include="The InSafe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -344,6 +350,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier_Purchasing.resx">
       <DependentUpon>Supplier_Purchasing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier_Purchasing_Bank.resx">
+      <DependentUpon>Supplier_Purchasing_Bank.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="The InSafe.resx">
       <DependentUpon>The InSafe.cs</DependentUpon>

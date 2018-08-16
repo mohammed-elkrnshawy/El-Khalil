@@ -265,9 +265,11 @@ namespace El_Khalil
 
             //الخزنة
             // لو اجمالى المرتجع اكبر من حساب المورد
-            if(double.Parse(tb_render.Text)>0)
-            EditSafe();
-
+            if (double.Parse(tb_render.Text) > 0)
+            {
+                MessageBox.Show(" .... ! تنويه" + "\n"+ "يجب على المورد سداد الباقي الى الخزنة");
+                EditSafe();
+            }
         }
 
         private void AddIMBill_Details(int iD)
