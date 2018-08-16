@@ -105,7 +105,7 @@ namespace El_Khalil
                 (int)combo_Supliers.SelectedValue),
                 new SqlParameter("@Total_Money", float.Parse(tb_AfterPayment.Text)));
 
-
+                
             // اضافة بيان تسديد الى مورد 
             // اضافة تعامل ف التعاملات مع الموردين .... نوعه تسديد
 

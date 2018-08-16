@@ -40,6 +40,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tb_OldMoney = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -47,6 +49,8 @@
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.richTextBox1);
             this.panel1.Controls.Add(this.bt_Print);
             this.panel1.Controls.Add(this.bt_Save);
@@ -64,7 +68,7 @@
             this.richTextBox1.Location = new System.Drawing.Point(127, 237);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(444, 197);
-            this.richTextBox1.TabIndex = 55;
+            this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "لا يوجد ملاحظات";
             // 
             // bt_Print
@@ -95,7 +99,7 @@
             this.bt_Save.Location = new System.Drawing.Point(109, 509);
             this.bt_Save.Name = "bt_Save";
             this.bt_Save.Size = new System.Drawing.Size(75, 28);
-            this.bt_Save.TabIndex = 39;
+            this.bt_Save.TabIndex = 4;
             this.bt_Save.Text = "حفظ";
             this.bt_Save.UseVisualStyleBackColor = false;
             this.bt_Save.Click += new System.EventHandler(this.bt_Save_Click);
@@ -191,10 +195,13 @@
             this.tb_OldMoney.Font = new System.Drawing.Font("Tahoma", 10F);
             this.tb_OldMoney.Location = new System.Drawing.Point(127, 189);
             this.tb_OldMoney.Name = "tb_OldMoney";
+            this.tb_OldMoney.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tb_OldMoney.Size = new System.Drawing.Size(307, 24);
-            this.tb_OldMoney.TabIndex = 49;
+            this.tb_OldMoney.TabIndex = 2;
             this.tb_OldMoney.Text = "0.00";
             this.tb_OldMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_OldMoney.TextChanged += new System.EventHandler(this.tb_OldMoney_TextChanged);
+            this.tb_OldMoney.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_OldMoney_KeyPress);
             // 
             // label4
             // 
@@ -207,6 +214,26 @@
             this.label4.TabIndex = 21;
             this.label4.Text = "بيان مصاريف";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(465, 132);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 27);
+            this.label3.TabIndex = 57;
+            this.label3.Text = "اختار البند";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(127, 136);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(307, 21);
+            this.comboBox1.TabIndex = 1;
             // 
             // Outlay
             // 
@@ -241,5 +268,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tb_OldMoney;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label3;
     }
 }

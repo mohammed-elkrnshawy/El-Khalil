@@ -414,6 +414,22 @@ namespace El_Khalil
             Add_Tab("ايداع ف حساباتى", new Bank_InAccount());
         }
 
+        private void button13_Click(object sender, EventArgs e)
+        {
+            Add_Tab("من عميل الى بنك", new Customer_Bank());
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Add_Tab("من بنك الى مورد", new Supplier_Bank());
+        }
+
+        private void اضافةبندمصروفاتToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Band add_Band = new Add_Band();
+            add_Band.ShowDialog();
+        }
+
         private void Add_Tab(string Name,Form form)
         {
             TabPage tp = new TabPage(Name);

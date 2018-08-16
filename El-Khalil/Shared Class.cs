@@ -10,6 +10,14 @@ namespace El_Khalil
 {
     class Shared_Class
     {
+
+        public static string Check_Message = "من فضلك راجع البيانات";
+        public static string Add_Message = "تمت الاضافة";
+        public static string Successful_Message = "تمت بنجاح";
+        public static string No_Message = "لا يوجد ملاحظات";
+
+
+
         public static void DrawRoundRect(Graphics g, Pen p, float X, float Y, float width, float height, float radius)
         {
             GraphicsPath gp = new GraphicsPath();

@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
+﻿using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 
 public class Ezzat
@@ -13,7 +8,7 @@ public class Ezzat
     static string constr = ConfigurationManager.ConnectionStrings["cnn1"].ConnectionString;
 
 
-    public static DataSet GetDataSet ( string stored_name,string table_name,params SqlParameter []parr)
+    public static DataSet GetDataSet(string stored_name, string table_name, params SqlParameter[] parr)
     {
         SqlConnection con = new SqlConnection(constr);
         SqlCommand cmd = new SqlCommand(stored_name, con);
@@ -31,7 +26,7 @@ public class Ezzat
 
 
 
-    public static SqlDataReader GetDataReader (string stored_name,out SqlConnection conout, params SqlParameter[] parr)
+    public static SqlDataReader GetDataReader(string stored_name, out SqlConnection conout, params SqlParameter[] parr)
     {
         SqlConnection con = new SqlConnection(constr);
         SqlCommand cmd = new SqlCommand(stored_name, con);
@@ -46,6 +41,7 @@ public class Ezzat
         return dr;
     }
 
+
     public static int ExecutedNoneQuery(string Query)
     {
         SqlConnection con = new SqlConnection(constr);
@@ -58,7 +54,6 @@ public class Ezzat
 
     }
 
-
     public static int ExecutedNoneQuery(string stored_name, params SqlParameter[] parr)
     {
         SqlConnection con = new SqlConnection(constr);
@@ -67,10 +62,9 @@ public class Ezzat
         foreach (SqlParameter item in parr)
         {
             cmd.Parameters.Add(item);
-
         }
         con.Open();
-        int x=cmd.ExecuteNonQuery();
+        int x = cmd.ExecuteNonQuery();
         con.Close();
         return x;
     }
@@ -94,7 +88,6 @@ public class Ezzat
         con.Close();
         return x;
     }
-
 
 
 

@@ -13,6 +13,7 @@ namespace El_Khalil
 {
     public partial class Outlay : Form
     {
+        DataSet dataSet;
         public Outlay()
         {
             InitializeComponent();
@@ -27,9 +28,31 @@ namespace El_Khalil
 
         private void bt_Save_Click(object sender, EventArgs e)
         {
-            Save();
-            EditSafe();
+            if (tb_OldMoney.Text != "0.00" && comboBox1.SelectedIndex >= 0)
+            {
+                Save();
+                EditSafe();
+                Clear();
+            }
+            else
+            {
+                MessageBox.Show(Shared_Class.Check_Message);
+            }
         }
+
+        private void Clear()
+        {
+            MessageBox.Show(Shared_Class.Successful_Message);
+            int i = int.Parse(label2.Text);
+            label2.Text = (i + 1) + "";
+            comboBox1.Text = "";
+            comboBox1.SelectedText = "اختار بند مصروفات";
+
+            tb_OldMoney.Text = "0.00";
+            richTextBox1.Text = Shared_Class.No_Message;
+
+        }
+
         private void EditSafe()
         {
             // تعديل المبلغ الموجود ف الخزنة
@@ -53,7 +76,8 @@ namespace El_Khalil
             Ezzat.ExecutedNoneQuery("insert_OutlayTransaction",
                 new SqlParameter("@Report_Total", float.Parse(tb_OldMoney.Text)),
                 new SqlParameter("@Report_Notes", richTextBox1.Text),
-                new SqlParameter("@Report_Date", DateTime.Parse(DateTime.Now.ToString()))
+                new SqlParameter("@Report_Date", DateTime.Parse(DateTime.Now.ToString())),
+                new SqlParameter("@Report_Band",comboBox1.SelectedValue)
                 );
         }
 
@@ -67,6 +91,32 @@ namespace El_Khalil
                 label2.Text = "1";
             else
                 label2.Text = (((int)o) + 1) + "";
+
+            using (dataSet=Ezzat.GetDataSet("select_AllBand", "X"))
+            {
+                comboBox1.DataSource = dataSet.Tables["X"];
+                comboBox1.DisplayMember = "Band_Name";
+                comboBox1.ValueMember = "Band_ID";
+                comboBox1.Text = "";
+                comboBox1.SelectedText = "اختار بند مصروفات";
+            }
+
+        }
+
+        private void tb_OldMoney_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tb_OldMoney_TextChanged(object sender, EventArgs e)
+        {
+            if(tb_OldMoney.Text=="")
+            {
+                tb_OldMoney.Text = "0.00";
+            }
         }
     }
 }

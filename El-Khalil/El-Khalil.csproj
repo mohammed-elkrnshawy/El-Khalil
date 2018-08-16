@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add Band.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Band.Designer.cs">
+      <DependentUpon>Add Band.cs</DependentUpon>
+    </Compile>
     <Compile Include="Add bank.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,12 @@
     </Compile>
     <Compile Include="Customer Account.Designer.cs">
       <DependentUpon>Customer Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer Bank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer Bank.Designer.cs">
+      <DependentUpon>Customer Bank.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer Payback.cs">
       <SubType>Form</SubType>
@@ -171,6 +183,12 @@
     <Compile Include="StoreTransaction.Designer.cs">
       <DependentUpon>StoreTransaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="Supplier Bank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier Bank.Designer.cs">
+      <DependentUpon>Supplier Bank.cs</DependentUpon>
+    </Compile>
     <Compile Include="Supplier BillDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +253,9 @@
     </Compile>
     <Compile Include="z_Product Component.cs" />
     <Compile Include="z_Product Object.cs" />
+    <EmbeddedResource Include="Add Band.resx">
+      <DependentUpon>Add Band.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Add bank.resx">
       <DependentUpon>Add bank.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customer Account.resx">
       <DependentUpon>Customer Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer Bank.resx">
+      <DependentUpon>Customer Bank.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer Payback.resx">
       <DependentUpon>Customer Payback.cs</DependentUpon>
@@ -294,6 +318,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StoreTransaction.resx">
       <DependentUpon>StoreTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier Bank.resx">
+      <DependentUpon>Supplier Bank.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier BillDetails.resx">
       <DependentUpon>Supplier BillDetails.cs</DependentUpon>

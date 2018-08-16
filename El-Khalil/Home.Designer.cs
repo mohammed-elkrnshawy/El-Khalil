@@ -132,6 +132,8 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.الاضافاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.اضافةبندمصروفاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -158,7 +160,8 @@
             this.المخازنToolStripMenuItem,
             this.الخزنةالبنكToolStripMenuItem,
             this.الاصنافToolStripMenuItem,
-            this.المستخدمToolStripMenuItem});
+            this.المستخدمToolStripMenuItem,
+            this.الاضافاتToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -809,6 +812,7 @@
             this.button11.TabIndex = 7;
             this.button11.Text = "تحويل الى مورد من البنك";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button13
             // 
@@ -824,6 +828,7 @@
             this.button13.TabIndex = 6;
             this.button13.Text = "تحويل من عميل الى البنك";
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button22
             // 
@@ -1342,6 +1347,21 @@
             this.toolStripStatusLabel3.Size = new System.Drawing.Size(73, 17);
             this.toolStripStatusLabel3.Text = "الحالة :  ادمن ";
             // 
+            // الاضافاتToolStripMenuItem
+            // 
+            this.الاضافاتToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.اضافةبندمصروفاتToolStripMenuItem});
+            this.الاضافاتToolStripMenuItem.Name = "الاضافاتToolStripMenuItem";
+            this.الاضافاتToolStripMenuItem.Size = new System.Drawing.Size(64, 23);
+            this.الاضافاتToolStripMenuItem.Text = "الاضافات";
+            // 
+            // اضافةبندمصروفاتToolStripMenuItem
+            // 
+            this.اضافةبندمصروفاتToolStripMenuItem.Name = "اضافةبندمصروفاتToolStripMenuItem";
+            this.اضافةبندمصروفاتToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.اضافةبندمصروفاتToolStripMenuItem.Text = "اضافة بند مصروفات";
+            this.اضافةبندمصروفاتToolStripMenuItem.Click += new System.EventHandler(this.اضافةبندمصروفاتToolStripMenuItem_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1481,5 +1501,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         private System.Windows.Forms.ToolStripMenuItem انتاجمنتجنهائىToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem الاضافاتToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem اضافةبندمصروفاتToolStripMenuItem;
     }
 }
