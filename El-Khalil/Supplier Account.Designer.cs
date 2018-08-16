@@ -36,21 +36,22 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pn_All = new System.Windows.Forms.Panel();
-            this.gv_All = new System.Windows.Forms.DataGridView();
-            this.pn_Purchasing = new System.Windows.Forms.Panel();
-            this.gv_Purchasing = new System.Windows.Forms.DataGridView();
-            this.pn_Payback = new System.Windows.Forms.Panel();
-            this.gv_Payback = new System.Windows.Forms.DataGridView();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.pn_Return = new System.Windows.Forms.Panel();
-            this.gv_Returning = new System.Windows.Forms.DataGridView();
+            this.gv = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.pn_today = new System.Windows.Forms.Panel();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
@@ -59,18 +60,18 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.combo_Supliers = new System.Windows.Forms.ComboBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.pn_during.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.pn_All.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gv_All)).BeginInit();
-            this.pn_Purchasing.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gv_Purchasing)).BeginInit();
-            this.pn_Payback.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gv_Payback)).BeginInit();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.pn_Return.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gv_Returning)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gv)).BeginInit();
             this.panel3.SuspendLayout();
             this.pn_today.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -97,9 +98,9 @@
             this.bt_Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Print.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.bt_Print.ForeColor = System.Drawing.Color.White;
-            this.bt_Print.Location = new System.Drawing.Point(60, 559);
+            this.bt_Print.Location = new System.Drawing.Point(8, 530);
             this.bt_Print.Name = "bt_Print";
-            this.bt_Print.Size = new System.Drawing.Size(182, 28);
+            this.bt_Print.Size = new System.Drawing.Size(97, 58);
             this.bt_Print.TabIndex = 38;
             this.bt_Print.Text = "طباعة تقارير";
             this.bt_Print.UseVisualStyleBackColor = false;
@@ -160,9 +161,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.pn_All);
-            this.panel2.Controls.Add(this.pn_Purchasing);
-            this.panel2.Controls.Add(this.pn_Payback);
+            this.panel2.Controls.Add(this.panel6);
+            this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.pn_Return);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.bt_Print);
@@ -173,182 +173,180 @@
             this.panel2.TabIndex = 22;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // pn_All
+            // panel6
             // 
-            this.pn_All.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pn_All.Controls.Add(this.gv_All);
-            this.pn_All.Location = new System.Drawing.Point(3, 98);
-            this.pn_All.Name = "pn_All";
-            this.pn_All.Size = new System.Drawing.Size(1154, 415);
-            this.pn_All.TabIndex = 59;
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel6.Controls.Add(this.label11);
+            this.panel6.Controls.Add(this.label12);
+            this.panel6.Controls.Add(this.panel7);
+            this.panel6.Location = new System.Drawing.Point(199, 517);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(119, 85);
+            this.panel6.TabIndex = 47;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // gv_All
+            // label11
             // 
-            this.gv_All.AllowUserToAddRows = false;
-            this.gv_All.AllowUserToDeleteRows = false;
-            this.gv_All.BackgroundColor = System.Drawing.Color.White;
-            this.gv_All.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gv_All.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gv_All.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
-            this.gv_All.Location = new System.Drawing.Point(0, 0);
-            this.gv_All.Name = "gv_All";
-            this.gv_All.ReadOnly = true;
-            this.gv_All.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gv_All.Size = new System.Drawing.Size(1154, 415);
-            this.gv_All.TabIndex = 0;
-            this.gv_All.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_All_CellClick);
+            this.label11.BackColor = System.Drawing.Color.White;
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label11.Location = new System.Drawing.Point(3, 41);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(113, 30);
+            this.label11.TabIndex = 75;
+            this.label11.Text = "0.00";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pn_Purchasing
+            // label12
             // 
-            this.pn_Purchasing.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pn_Purchasing.Controls.Add(this.gv_Purchasing);
-            this.pn_Purchasing.Location = new System.Drawing.Point(3, 98);
-            this.pn_Purchasing.Name = "pn_Purchasing";
-            this.pn_Purchasing.Size = new System.Drawing.Size(1154, 415);
-            this.pn_Purchasing.TabIndex = 60;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label12.Location = new System.Drawing.Point(15, 13);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(88, 17);
+            this.label12.TabIndex = 74;
+            this.label12.Text = "الرصيد الحالى";
             // 
-            // gv_Purchasing
+            // panel7
             // 
-            this.gv_Purchasing.AllowUserToAddRows = false;
-            this.gv_Purchasing.AllowUserToDeleteRows = false;
-            this.gv_Purchasing.BackgroundColor = System.Drawing.Color.White;
-            this.gv_Purchasing.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gv_Purchasing.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gv_Purchasing.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
-            this.gv_Purchasing.Location = new System.Drawing.Point(0, 0);
-            this.gv_Purchasing.Name = "gv_Purchasing";
-            this.gv_Purchasing.ReadOnly = true;
-            this.gv_Purchasing.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gv_Purchasing.Size = new System.Drawing.Size(1154, 415);
-            this.gv_Purchasing.TabIndex = 0;
-            this.gv_Purchasing.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_Purchasing_CellClick);
+            this.panel7.Location = new System.Drawing.Point(122, 517);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(200, 85);
+            this.panel7.TabIndex = 73;
             // 
-            // pn_Payback
+            // panel5
             // 
-            this.pn_Payback.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pn_Payback.Controls.Add(this.gv_Payback);
-            this.pn_Payback.Location = new System.Drawing.Point(3, 98);
-            this.pn_Payback.Name = "pn_Payback";
-            this.pn_Payback.Size = new System.Drawing.Size(1154, 415);
-            this.pn_Payback.TabIndex = 60;
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel5.Controls.Add(this.label10);
+            this.panel5.Controls.Add(this.label9);
+            this.panel5.Controls.Add(this.label8);
+            this.panel5.Controls.Add(this.label7);
+            this.panel5.Controls.Add(this.label6);
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Location = new System.Drawing.Point(625, 517);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(532, 85);
+            this.panel5.TabIndex = 46;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // gv_Payback
+            // label10
             // 
-            this.gv_Payback.AllowUserToAddRows = false;
-            this.gv_Payback.AllowUserToDeleteRows = false;
-            this.gv_Payback.BackgroundColor = System.Drawing.Color.White;
-            this.gv_Payback.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gv_Payback.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gv_Payback.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
-            this.gv_Payback.Location = new System.Drawing.Point(0, 0);
-            this.gv_Payback.Name = "gv_Payback";
-            this.gv_Payback.ReadOnly = true;
-            this.gv_Payback.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gv_Payback.Size = new System.Drawing.Size(1154, 415);
-            this.gv_Payback.TabIndex = 0;
+            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.label10.Location = new System.Drawing.Point(80, 41);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(92, 30);
+            this.label10.TabIndex = 72;
+            this.label10.Text = "0.00";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Red;
+            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.label9.Location = new System.Drawing.Point(219, 41);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(92, 30);
+            this.label9.TabIndex = 71;
+            this.label9.Text = "0.00";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Lime;
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.label8.Location = new System.Drawing.Point(360, 41);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(92, 30);
+            this.label8.TabIndex = 70;
+            this.label8.Text = "0.00";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label7.Location = new System.Drawing.Point(95, 13);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 17);
+            this.label7.TabIndex = 69;
+            this.label7.Text = "الصافي";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label6.Location = new System.Drawing.Point(241, 13);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(47, 17);
+            this.label6.TabIndex = 68;
+            this.label6.Text = "المدين";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label5.Location = new System.Drawing.Point(381, 13);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(41, 17);
+            this.label5.TabIndex = 67;
+            this.label5.Text = "الداين";
             // 
             // pn_Return
             // 
             this.pn_Return.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pn_Return.Controls.Add(this.gv_Returning);
+            this.pn_Return.Controls.Add(this.gv);
             this.pn_Return.Location = new System.Drawing.Point(3, 98);
             this.pn_Return.Name = "pn_Return";
             this.pn_Return.Size = new System.Drawing.Size(1154, 415);
             this.pn_Return.TabIndex = 45;
-            this.pn_Return.Visible = false;
             // 
-            // gv_Returning
+            // gv
             // 
-            this.gv_Returning.AllowUserToAddRows = false;
-            this.gv_Returning.AllowUserToDeleteRows = false;
-            this.gv_Returning.BackgroundColor = System.Drawing.Color.White;
-            this.gv_Returning.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gv_Returning.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gv_Returning.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
-            this.gv_Returning.Location = new System.Drawing.Point(0, 0);
-            this.gv_Returning.Name = "gv_Returning";
-            this.gv_Returning.ReadOnly = true;
-            this.gv_Returning.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gv_Returning.Size = new System.Drawing.Size(1154, 415);
-            this.gv_Returning.TabIndex = 0;
-            this.gv_Returning.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_Returning_CellClick);
+            this.gv.AllowUserToAddRows = false;
+            this.gv.AllowUserToDeleteRows = false;
+            this.gv.BackgroundColor = System.Drawing.Color.White;
+            this.gv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            this.gv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
+            this.gv.Location = new System.Drawing.Point(0, 0);
+            this.gv.Name = "gv";
+            this.gv.ReadOnly = true;
+            this.gv.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.gv.Size = new System.Drawing.Size(1154, 415);
+            this.gv.TabIndex = 0;
+            this.gv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_CellClick);
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.panel9);
             this.panel1.Location = new System.Drawing.Point(8, 61);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1143, 31);
             this.panel1.TabIndex = 42;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.radioButton7);
-            this.panel9.Controls.Add(this.radioButton4);
-            this.panel9.Controls.Add(this.radioButton5);
-            this.panel9.Controls.Add(this.radioButton6);
-            this.panel9.Location = new System.Drawing.Point(295, 3);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(487, 24);
-            this.panel9.TabIndex = 54;
-            // 
-            // radioButton7
-            // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(19, 3);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(86, 17);
-            this.radioButton7.TabIndex = 43;
-            this.radioButton7.Text = "تقارير المرتجع";
-            this.radioButton7.UseVisualStyleBackColor = true;
-            this.radioButton7.CheckedChanged += new System.EventHandler(this.radioButton7_CheckedChanged);
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(153, 3);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(84, 17);
-            this.radioButton4.TabIndex = 1;
-            this.radioButton4.Text = "تقارير السداد";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(285, 3);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(82, 17);
-            this.radioButton5.TabIndex = 1;
-            this.radioButton5.Text = "تقارير الشراء";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            this.radioButton5.CheckedChanged += new System.EventHandler(this.radioButton5_CheckedChanged);
-            // 
-            // radioButton6
-            // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Checked = true;
-            this.radioButton6.Location = new System.Drawing.Point(402, 3);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(72, 17);
-            this.radioButton6.TabIndex = 0;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "كل التقارير";
-            this.radioButton6.UseVisualStyleBackColor = true;
-            this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
-            // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.pn_today);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.combo_Supliers);
@@ -356,6 +354,20 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1154, 45);
             this.panel3.TabIndex = 35;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::El_Khalil.Properties.Resources.document;
+            this.button1.Location = new System.Drawing.Point(5, 8);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(41, 31);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pn_today
             // 
@@ -436,14 +448,56 @@
             this.combo_Supliers.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.combo_Supliers.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combo_Supliers.FormattingEnabled = true;
-            this.combo_Supliers.Location = new System.Drawing.Point(25, 11);
+            this.combo_Supliers.Location = new System.Drawing.Point(57, 11);
             this.combo_Supliers.Name = "combo_Supliers";
             this.combo_Supliers.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.combo_Supliers.Size = new System.Drawing.Size(214, 24);
+            this.combo_Supliers.Size = new System.Drawing.Size(182, 24);
             this.combo_Supliers.TabIndex = 53;
             this.combo_Supliers.Tag = "";
             this.combo_Supliers.Text = "اختار اسم المورد";
-            this.combo_Supliers.SelectedIndexChanged += new System.EventHandler(this.combo_Supliers_SelectedIndexChanged);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "رقم البيان";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 70;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "الداين";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "المدين";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "تاريخ البيان";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "نوع البيان";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "البيان";
+            this.Column6.HeaderText = "عرض التفاصيل";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column6.Text = "البيان";
+            this.Column6.UseColumnTextForButtonValue = true;
+            this.Column6.Width = 50;
             // 
             // Supplier_Account
             // 
@@ -460,17 +514,12 @@
             this.Load += new System.EventHandler(this.Supplier_Account_Load);
             this.pn_during.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.pn_All.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gv_All)).EndInit();
-            this.pn_Purchasing.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gv_Purchasing)).EndInit();
-            this.pn_Payback.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gv_Payback)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.pn_Return.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gv_Returning)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gv)).EndInit();
             this.panel3.ResumeLayout(false);
             this.pn_today.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -490,19 +539,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pn_Return;
-        private System.Windows.Forms.DataGridView gv_Returning;
-        private System.Windows.Forms.Panel pn_Payback;
-        private System.Windows.Forms.DataGridView gv_Payback;
-        private System.Windows.Forms.Panel pn_Purchasing;
-        private System.Windows.Forms.DataGridView gv_Purchasing;
-        private System.Windows.Forms.Panel pn_All;
-        private System.Windows.Forms.DataGridView gv_All;
+        private System.Windows.Forms.DataGridView gv;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel pn_today;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
@@ -512,5 +550,23 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.ComboBox combo_Supliers;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewButtonColumn Column6;
     }
 }

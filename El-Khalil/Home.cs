@@ -430,6 +430,12 @@ namespace El_Khalil
             add_Band.ShowDialog();
         }
 
+        private void خصمموردToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Supplier_Discount _Discount = new Supplier_Discount();
+            _Discount.ShowDialog();
+        }
+
         private void Add_Tab(string Name,Form form)
         {
             TabPage tp = new TabPage(Name);

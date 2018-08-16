@@ -30,10 +30,10 @@
         {
             this.cb_kilo = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.combo_Supplier = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tb_old = new System.Windows.Forms.TextBox();
@@ -77,51 +77,6 @@
             this.panel3.Size = new System.Drawing.Size(645, 45);
             this.panel3.TabIndex = 37;
             // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(523, 8);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 29);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "رقم البيان";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(423, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 29);
-            this.label2.TabIndex = 39;
-            this.label2.Text = "000000000";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.BackColor = System.Drawing.Color.White;
-            this.label13.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(222, 8);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(113, 29);
-            this.label13.TabIndex = 54;
-            this.label13.Text = "تاريج البيان";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label12
             // 
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -138,6 +93,51 @@
             this.label12.Text = "14 / 10 / 1995 20:04:42 ";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(222, 8);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(113, 29);
+            this.label13.TabIndex = 54;
+            this.label13.Text = "تاريج البيان";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(423, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 29);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "000000000";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(523, 8);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 29);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "رقم البيان";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // combo_Supplier
             // 
             this.combo_Supplier.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
@@ -151,6 +151,7 @@
             this.combo_Supplier.TabIndex = 63;
             this.combo_Supplier.Tag = "";
             this.combo_Supplier.Text = "اختار اسم المورد ";
+            this.combo_Supplier.SelectedIndexChanged += new System.EventHandler(this.combo_Supplier_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -255,6 +256,7 @@
             this.tb_pay.TabIndex = 65;
             this.tb_pay.Text = "0.00";
             this.tb_pay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_pay.TextChanged += new System.EventHandler(this.tb_pay_TextChanged_1);
             // 
             // combo_Bank
             // 

@@ -77,6 +77,8 @@
             this.اضافةمستخدمToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.تعديلمستخدمToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.حذفمستخدمToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.الاضافاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.اضافةبندمصروفاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
@@ -132,8 +134,7 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.الاضافاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.اضافةبندمصروفاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.خصمموردToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -545,6 +546,22 @@
             this.حذفمستخدمToolStripMenuItem.Name = "حذفمستخدمToolStripMenuItem";
             this.حذفمستخدمToolStripMenuItem.Size = new System.Drawing.Size(166, 24);
             this.حذفمستخدمToolStripMenuItem.Text = "حذف مستخدم";
+            // 
+            // الاضافاتToolStripMenuItem
+            // 
+            this.الاضافاتToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.اضافةبندمصروفاتToolStripMenuItem,
+            this.خصمموردToolStripMenuItem});
+            this.الاضافاتToolStripMenuItem.Name = "الاضافاتToolStripMenuItem";
+            this.الاضافاتToolStripMenuItem.Size = new System.Drawing.Size(64, 23);
+            this.الاضافاتToolStripMenuItem.Text = "الاضافات";
+            // 
+            // اضافةبندمصروفاتToolStripMenuItem
+            // 
+            this.اضافةبندمصروفاتToolStripMenuItem.Name = "اضافةبندمصروفاتToolStripMenuItem";
+            this.اضافةبندمصروفاتToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.اضافةبندمصروفاتToolStripMenuItem.Text = "اضافة بند مصروفات";
+            this.اضافةبندمصروفاتToolStripMenuItem.Click += new System.EventHandler(this.اضافةبندمصروفاتToolStripMenuItem_Click);
             // 
             // tabControl1
             // 
@@ -1347,20 +1364,12 @@
             this.toolStripStatusLabel3.Size = new System.Drawing.Size(73, 17);
             this.toolStripStatusLabel3.Text = "الحالة :  ادمن ";
             // 
-            // الاضافاتToolStripMenuItem
+            // خصمموردToolStripMenuItem
             // 
-            this.الاضافاتToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.اضافةبندمصروفاتToolStripMenuItem});
-            this.الاضافاتToolStripMenuItem.Name = "الاضافاتToolStripMenuItem";
-            this.الاضافاتToolStripMenuItem.Size = new System.Drawing.Size(64, 23);
-            this.الاضافاتToolStripMenuItem.Text = "الاضافات";
-            // 
-            // اضافةبندمصروفاتToolStripMenuItem
-            // 
-            this.اضافةبندمصروفاتToolStripMenuItem.Name = "اضافةبندمصروفاتToolStripMenuItem";
-            this.اضافةبندمصروفاتToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.اضافةبندمصروفاتToolStripMenuItem.Text = "اضافة بند مصروفات";
-            this.اضافةبندمصروفاتToolStripMenuItem.Click += new System.EventHandler(this.اضافةبندمصروفاتToolStripMenuItem_Click);
+            this.خصمموردToolStripMenuItem.Name = "خصمموردToolStripMenuItem";
+            this.خصمموردToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.خصمموردToolStripMenuItem.Text = "خصم مورد";
+            this.خصمموردToolStripMenuItem.Click += new System.EventHandler(this.خصمموردToolStripMenuItem_Click);
             // 
             // Home
             // 
@@ -1503,5 +1512,6 @@
         private System.Windows.Forms.ToolStripMenuItem انتاجمنتجنهائىToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem الاضافاتToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem اضافةبندمصروفاتToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem خصمموردToolStripMenuItem;
     }
 }

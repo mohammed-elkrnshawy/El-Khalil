@@ -142,5 +142,19 @@ namespace El_Khalil
             Calcolate();
         }
 
+        private void combo_Supplier_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (combo_Supplier.Focused)
+            {
+                object o = Ezzat.ExecutedScalar("selectTotalMoney", new SqlParameter("@Supplier_ID", (int)combo_Supplier.SelectedValue));
+                tb_old.Text = String.Format("{0:0.00}", o);
+                Calcolate();
+            }
+        }
+
+        private void tb_pay_TextChanged_1(object sender, EventArgs e)
+        {
+            Calcolate();
+        }
     }
 }

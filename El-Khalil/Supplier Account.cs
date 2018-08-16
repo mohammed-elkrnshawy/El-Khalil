@@ -63,205 +63,117 @@ namespace El_Khalil
             }
         }
 
-        private void radioButton6_CheckedChanged(object sender, EventArgs e)
-        {
-            if(radioButton6.Checked)
-            {
-                pn_All.Visible = true;
-                pn_Purchasing.Visible = false;
-                pn_Payback.Visible = false;
-                pn_Return.Visible = false;
-            }
-        }
-
-        private void radioButton5_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton5.Checked)
-            {
-                pn_All.Visible = false;
-                pn_Purchasing.Visible = true;
-                pn_Payback.Visible = false;
-                pn_Return.Visible = false;
-            }
-        }
-
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton4.Checked)
-            {
-                pn_All.Visible = false;
-                pn_Purchasing.Visible = false;
-                pn_Payback.Visible = true;
-                pn_Return.Visible = false;
-            }
-        }
-
-        private void radioButton7_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton7.Checked)
-            {
-                pn_All.Visible = false;
-                pn_Purchasing.Visible = false;
-                pn_Payback.Visible = false;
-                pn_Return.Visible = true;
-            }
-        }
-
-
-
-        private void Purchasing_Transaction()
-        {
-            if(radioButton1.Checked)
-            {
-                using (dataSet = Ezzat.GetDataSet("_Supplier_PurchasingTransaction_Day", "X",
-                new SqlParameter("@Day", DateTime.Parse(dateTimePicker3.Value.ToString())), new SqlParameter("@Supplier_ID", combo_Supliers.SelectedValue)))
-                {
-                    gv_Purchasing.DataSource = dataSet.Tables["X"];
-                }
-            }
-            else if (radioButton2.Checked)
-            {
-                using (dataSet = Ezzat.GetDataSet("_Supplier_PurchasingTransaction_During", "X",
-               new SqlParameter("@Day", DateTime.Parse(dateTimePicker1.Value.ToString())),
-               new SqlParameter("@Day2", DateTime.Parse(dateTimePicker2.Value.ToString())),
-               new SqlParameter("@Supplier_ID", combo_Supliers.SelectedValue)))
-                {
-                    gv_Purchasing.DataSource = dataSet.Tables["X"];
-                }
-            }
-            else
-            {
-                using (dataSet = Ezzat.GetDataSet("_Supplier_PurchasingTransaction_All", "X",
-              new SqlParameter("@Supplier_ID", combo_Supliers.SelectedValue)))
-                {
-                    gv_Purchasing.DataSource = dataSet.Tables["X"];
-                }
-            }
-        }
-
-        private void Payback_Transaction()
-        {
-            if (radioButton1.Checked)
-            {
-                using (dataSet = Ezzat.GetDataSet("_Supplier_PaybackTransaction_Day", "X",
-                new SqlParameter("@Day", DateTime.Parse(dateTimePicker3.Value.ToString())), new SqlParameter("@Supplier_ID", combo_Supliers.SelectedValue)))
-                {
-                    gv_Payback.DataSource = dataSet.Tables["X"];
-                }
-            }
-            else if (radioButton2.Checked)
-            {
-                using (dataSet = Ezzat.GetDataSet("_Supplier_PaybackTransaction_During", "X",
-               new SqlParameter("@Day", DateTime.Parse(dateTimePicker1.Value.ToString())),
-               new SqlParameter("@Day2", DateTime.Parse(dateTimePicker2.Value.ToString())),
-               new SqlParameter("@Supplier_ID", combo_Supliers.SelectedValue)))
-                {
-                    gv_Payback.DataSource = dataSet.Tables["X"];
-                }
-            }
-            else
-            {
-                using (dataSet = Ezzat.GetDataSet("_Supplier_PaybackTransaction_All", "X",
-              new SqlParameter("@Supplier_ID", combo_Supliers.SelectedValue)))
-                {
-                    gv_Payback.DataSource = dataSet.Tables["X"];
-                }
-            }
-        }
-
-        private void Returning_Transaction()
-        {
-            if (radioButton1.Checked)
-            {
-                using (dataSet = Ezzat.GetDataSet("_Supplier_ReturningTransaction_Day", "X",
-                new SqlParameter("@Day", DateTime.Parse(dateTimePicker3.Value.ToString())), new SqlParameter("@Supplier_ID", combo_Supliers.SelectedValue)))
-                {
-                    gv_Returning.DataSource = dataSet.Tables["X"];
-                }
-            }
-            else if (radioButton2.Checked)
-            {
-                using (dataSet = Ezzat.GetDataSet("_Supplier_ReturningTransaction_During", "X",
-               new SqlParameter("@Day", DateTime.Parse(dateTimePicker1.Value.ToString())),
-               new SqlParameter("@Day2", DateTime.Parse(dateTimePicker2.Value.ToString())),
-               new SqlParameter("@Supplier_ID", combo_Supliers.SelectedValue)))
-                {
-                    gv_Returning.DataSource = dataSet.Tables["X"];
-                }
-            }
-            else
-            {
-                using (dataSet = Ezzat.GetDataSet("_Supplier_RetutningTransaction_All", "X",
-              new SqlParameter("@Supplier_ID", combo_Supliers.SelectedValue)))
-                {
-                    gv_Returning.DataSource = dataSet.Tables["X"];
-                }
-            }
-        }
-
         private void All_Transaction()
         {
             if (radioButton1.Checked)
             {
-                using (dataSet = Ezzat.GetDataSet("_Supplier_SupplierTransaction_Day", "X",
-                new SqlParameter("@Day", DateTime.Parse(dateTimePicker3.Value.ToString())), new SqlParameter("@Supplier_ID", combo_Supliers.SelectedValue)))
+                SqlConnection con;
+
+                SqlDataReader dataReader = Ezzat.GetDataReader("_Supplier_SupplierTransaction_Day", out con,
+                new SqlParameter("@Day", DateTime.Parse(dateTimePicker3.Value.ToString())), new SqlParameter("@Supplier_ID", combo_Supliers.SelectedValue));
+
+                if (dataReader.HasRows)
                 {
-                    gv_All.DataSource = dataSet.Tables["X"];
+                    while (dataReader.Read())
+                    {
+                        gv.Rows.Add();
+                        gv[0, gv.Rows.Count - 1].Value = dataReader[0].ToString();
+                        gv[1, gv.Rows.Count - 1].Value = dataReader[1].ToString();
+                        gv[2, gv.Rows.Count - 1].Value = dataReader[2].ToString();
+                        gv[3, gv.Rows.Count - 1].Value = dataReader[3].ToString();
+                        gv[4, gv.Rows.Count - 1].Value = dataReader[4].ToString();
+                    }
                 }
+
+                con.Close();
+
             }
             else if (radioButton2.Checked)
             {
-                using (dataSet = Ezzat.GetDataSet("_Supplier_SupplierTransaction_During", "X",
+
+                SqlConnection con;
+
+                SqlDataReader dataReader = Ezzat.GetDataReader("_Supplier_SupplierTransaction_During", out con,
                new SqlParameter("@Day", DateTime.Parse(dateTimePicker1.Value.ToString())),
                new SqlParameter("@Day2", DateTime.Parse(dateTimePicker2.Value.ToString())),
-               new SqlParameter("@Supplier_ID", combo_Supliers.SelectedValue)))
+               new SqlParameter("@Supplier_ID", combo_Supliers.SelectedValue));
+
+                if (dataReader.HasRows)
                 {
-                    gv_All.DataSource = dataSet.Tables["X"];
+                    while (dataReader.Read())
+                    {
+                        gv.Rows.Add();
+                        gv[0, gv.Rows.Count - 1].Value = dataReader[0].ToString();
+                        gv[1, gv.Rows.Count - 1].Value = dataReader[1].ToString();
+                        gv[2, gv.Rows.Count - 1].Value = dataReader[2].ToString();
+                        gv[3, gv.Rows.Count - 1].Value = dataReader[3].ToString();
+                        gv[4, gv.Rows.Count - 1].Value = dataReader[4].ToString();
+                    }
                 }
+
+                con.Close();
+
             }
             else
             {
-                using (dataSet = Ezzat.GetDataSet("_Supplier_SupplierTransaction_All", "X",
-              new SqlParameter("@Supplier_ID", combo_Supliers.SelectedValue)))
+                SqlConnection con;
+
+                SqlDataReader dataReader = Ezzat.GetDataReader("_Supplier_SupplierTransaction_All", out con,
+              new SqlParameter("@Supplier_ID", combo_Supliers.SelectedValue));
+
+
+                if (dataReader.HasRows)
                 {
-                    gv_All.DataSource = dataSet.Tables["X"];
+                    while (dataReader.Read())
+                    {
+                        gv.Rows.Add();
+                        gv[0, gv.Rows.Count - 1].Value = dataReader[0].ToString();
+                        gv[1, gv.Rows.Count - 1].Value = dataReader[1].ToString();
+                        gv[2, gv.Rows.Count - 1].Value = dataReader[2].ToString();
+                        gv[3, gv.Rows.Count - 1].Value = dataReader[3].ToString();
+                        gv[4, gv.Rows.Count - 1].Value = dataReader[4].ToString();
+                    }
                 }
+
+                con.Close();
+
+
             }
         }
 
-        private void combo_Supliers_SelectedIndexChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            if (combo_Supliers.Focused)
+            if (combo_Supliers.SelectedIndex >= 0)
             {
-                if (radioButton5.Checked)
-                    Purchasing_Transaction();
-                else if (radioButton4.Checked)
-                    Payback_Transaction();
-                if (radioButton7.Checked)
-                    Returning_Transaction();
-                if (radioButton6.Checked)
-                    All_Transaction();
-
+                gv.Rows.Clear();
+                All_Transaction();
+                CalcolateTotal();
+                object o = Ezzat.ExecutedScalar("selectTotalMoney", new SqlParameter("@Supplier_ID", (int)combo_Supliers.SelectedValue));
+                label11.Text = String.Format("{0:0.00}", o);
             }
         }
 
-        private void gv_All_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void CalcolateTotal()
         {
-            Form1 Supplier_BillDetails = new Form1((int)gv_All.CurrentRow.Cells[0].Value, gv_All.CurrentRow.Cells[4].Value);
-            if(gv_All.CurrentRow.Cells[4].Value.Equals("شراء")|| gv_All.CurrentRow.Cells[4].Value.Equals("مرتجع"))
-            Supplier_BillDetails.ShowDialog();
+            double Total = 0, debit = 0;
+            foreach (DataGridViewRow item in gv.Rows)
+            {
+                Total += double.Parse(item.Cells[1].Value.ToString());
+                debit += double.Parse(item.Cells[2].Value.ToString());
+            }
+
+            label8.Text = Total + "";
+            label9.Text = debit + "";
+            label10.Text = (Total - debit) + "";
         }
 
-        private void gv_Purchasing_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void gv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Form1 Supplier_BillDetails = new Form1((int)gv_Purchasing.CurrentRow.Cells[0].Value, "شراء");
-                Supplier_BillDetails.ShowDialog();
-        }
-
-        private void gv_Returning_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            Form1 Supplier_BillDetails = new Form1((int)gv_Returning.CurrentRow.Cells[0].Value, "مرتجع");
-                Supplier_BillDetails.ShowDialog();
+            if(gv.CurrentCell==gv.CurrentRow.Cells[5])
+            {
+                Form1 BillDetails=new Form1(int.Parse(gv.CurrentRow.Cells[0].Value.ToString()), gv.CurrentRow.Cells[4].Value);
+                BillDetails.ShowDialog();
+            }
         }
     }
 }
