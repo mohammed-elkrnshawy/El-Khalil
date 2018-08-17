@@ -72,144 +72,113 @@ namespace El_Khalil
             }
         }
 
-        private void combo_Customer_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (combo_Customer.Focused)
-            {
-                if (radioButton5.Checked)
-                    Purchasing_Transaction();
-                else if (radioButton4.Checked)
-                    Payback_Transaction();
-                if (radioButton7.Checked)
-                    Returning_Transaction();
-                if (radioButton6.Checked)
-                    All_Transaction();
-
-            }
-        }
-
-
-
-
-        private void Purchasing_Transaction()
-        {
-            if (radioButton1.Checked)
-            {
-                using (dataSet = Ezzat.GetDataSet("_Customer_PurchasingTransaction_Day", "X",
-                new SqlParameter("@Day", DateTime.Parse(dateTimePicker3.Value.ToString())), new SqlParameter("@Supplier_ID", combo_Customer.SelectedValue)))
-                {
-                    dataGridView1.DataSource = dataSet.Tables["X"];
-                }
-            }
-            else if (radioButton2.Checked)
-            {
-                using (dataSet = Ezzat.GetDataSet("_Customer_PurchasingTransaction_During", "X",
-               new SqlParameter("@Day", DateTime.Parse(dateTimePicker1.Value.ToString())),
-               new SqlParameter("@Day2", DateTime.Parse(dateTimePicker2.Value.ToString())),
-               new SqlParameter("@Supplier_ID", combo_Customer.SelectedValue)))
-                {
-                    dataGridView1.DataSource = dataSet.Tables["X"];
-                }
-            }
-            else
-            {
-                using (dataSet = Ezzat.GetDataSet("_Customer_PurchasingTransaction_All", "X",
-              new SqlParameter("@Supplier_ID", combo_Customer.SelectedValue)))
-                {
-                    dataGridView1.DataSource = dataSet.Tables["X"];
-                }
-            }
-        }
-
-        private void Payback_Transaction()
-        {
-            if (radioButton1.Checked)
-            {
-                using (dataSet = Ezzat.GetDataSet("_Customer_PaybackTransaction_Day", "X",
-                new SqlParameter("@Day", DateTime.Parse(dateTimePicker3.Value.ToString())), new SqlParameter("@Supplier_ID", combo_Customer.SelectedValue)))
-                {
-                    dataGridView1.DataSource = dataSet.Tables["X"];
-                }
-            }
-            else if (radioButton2.Checked)
-            {
-                using (dataSet = Ezzat.GetDataSet("_Customer_PaybackTransaction_During", "X",
-               new SqlParameter("@Day", DateTime.Parse(dateTimePicker1.Value.ToString())),
-               new SqlParameter("@Day2", DateTime.Parse(dateTimePicker2.Value.ToString())),
-               new SqlParameter("@Supplier_ID", combo_Customer.SelectedValue)))
-                {
-                    dataGridView1.DataSource = dataSet.Tables["X"];
-                }
-            }
-            else
-            {
-                using (dataSet = Ezzat.GetDataSet("_Customer_PaybackTransaction_All", "X",
-              new SqlParameter("@Supplier_ID", combo_Customer.SelectedValue)))
-                {
-                    dataGridView1.DataSource = dataSet.Tables["X"];
-                }
-            }
-        }
-
-        private void Returning_Transaction()
-        {
-            if (radioButton1.Checked)
-            {
-                using (dataSet = Ezzat.GetDataSet("_Customer_ReturningTransaction_Day", "X",
-                new SqlParameter("@Day", DateTime.Parse(dateTimePicker3.Value.ToString())), new SqlParameter("@Supplier_ID", combo_Customer.SelectedValue)))
-                {
-                    dataGridView1.DataSource = dataSet.Tables["X"];
-                }
-            }
-            else if (radioButton2.Checked)
-            {
-                using (dataSet = Ezzat.GetDataSet("_Customer_ReturningTransaction_During", "X",
-               new SqlParameter("@Day", DateTime.Parse(dateTimePicker1.Value.ToString())),
-               new SqlParameter("@Day2", DateTime.Parse(dateTimePicker2.Value.ToString())),
-               new SqlParameter("@Supplier_ID", combo_Customer.SelectedValue)))
-                {
-                    dataGridView1.DataSource = dataSet.Tables["X"];
-                }
-            }
-            else
-            {
-                using (dataSet = Ezzat.GetDataSet("_Customer_RetutningTransaction_All", "X",
-              new SqlParameter("@Supplier_ID", combo_Customer.SelectedValue)))
-                {
-                    dataGridView1.DataSource = dataSet.Tables["X"];
-                }
-            }
-        }
+       
 
         private void All_Transaction()
         {
+
+
             if (radioButton1.Checked)
             {
-                using (dataSet = Ezzat.GetDataSet("_Customer_SupplierTransaction_Day", "X",
-                new SqlParameter("@Day", DateTime.Parse(dateTimePicker3.Value.ToString())), new SqlParameter("@Supplier_ID", combo_Customer.SelectedValue)))
+                SqlConnection con;
+
+                SqlDataReader dataReader = Ezzat.GetDataReader("_Customer_SupplierTransaction_Day", out con,
+                new SqlParameter("@Day", DateTime.Parse(dateTimePicker3.Value.ToString())), new SqlParameter("@Supplier_ID", combo_Customer.SelectedValue));
+
+                if (dataReader.HasRows)
                 {
-                    dataGridView1.DataSource = dataSet.Tables["X"];
+                    while (dataReader.Read())
+                    {
+                        dataGridView1.Rows.Add();
+                        dataGridView1[0, dataGridView1.Rows.Count - 1].Value = dataReader[0].ToString();
+                        dataGridView1[1, dataGridView1.Rows.Count - 1].Value = dataReader[1].ToString();
+                        dataGridView1[2, dataGridView1.Rows.Count - 1].Value = dataReader[2].ToString();
+                        dataGridView1[3, dataGridView1.Rows.Count - 1].Value = dataReader[3].ToString();
+                        dataGridView1[4, dataGridView1.Rows.Count - 1].Value = dataReader[4].ToString();
+                    }
                 }
+
+                con.Close();
+
+
             }
             else if (radioButton2.Checked)
             {
-                using (dataSet = Ezzat.GetDataSet("_Customer_SupplierTransaction_During", "X",
-               new SqlParameter("@Day", DateTime.Parse(dateTimePicker1.Value.ToString())),
-               new SqlParameter("@Day2", DateTime.Parse(dateTimePicker2.Value.ToString())),
-               new SqlParameter("@Supplier_ID", combo_Customer.SelectedValue)))
+                SqlConnection con;
+
+                SqlDataReader dataReader = Ezzat.GetDataReader("_Customer_SupplierTransaction_During", out con,
+                new SqlParameter("@Day", DateTime.Parse(dateTimePicker1.Value.ToString())),
+                new SqlParameter("@Day2", DateTime.Parse(dateTimePicker2.Value.ToString())),
+                new SqlParameter("@Supplier_ID", combo_Customer.SelectedValue));
+
+
+                if (dataReader.HasRows)
                 {
-                    dataGridView1.DataSource = dataSet.Tables["X"];
+                    while (dataReader.Read())
+                    {
+                        dataGridView1.Rows.Add();
+                        dataGridView1[0, dataGridView1.Rows.Count - 1].Value = dataReader[0].ToString();
+                        dataGridView1[1, dataGridView1.Rows.Count - 1].Value = dataReader[1].ToString();
+                        dataGridView1[2, dataGridView1.Rows.Count - 1].Value = dataReader[2].ToString();
+                        dataGridView1[3, dataGridView1.Rows.Count - 1].Value = dataReader[3].ToString();
+                        dataGridView1[4, dataGridView1.Rows.Count - 1].Value = dataReader[4].ToString();
+                    }
                 }
+
+                con.Close();
+
+
             }
             else
             {
-                using (dataSet = Ezzat.GetDataSet("_Customer_SupplierTransaction_All", "X",
-              new SqlParameter("@Supplier_ID", combo_Customer.SelectedValue)))
+                SqlConnection con;
+
+                SqlDataReader dataReader = Ezzat.GetDataReader("_Customer_SupplierTransaction_All", out con,
+              new SqlParameter("@Supplier_ID", combo_Customer.SelectedValue));
+
+                if (dataReader.HasRows)
                 {
-                    dataGridView1.DataSource = dataSet.Tables["X"];
+                    while (dataReader.Read())
+                    {
+                        dataGridView1.Rows.Add();
+                        dataGridView1[0, dataGridView1.Rows.Count - 1].Value = dataReader[0].ToString();
+                        dataGridView1[1, dataGridView1.Rows.Count - 1].Value = dataReader[1].ToString();
+                        dataGridView1[2, dataGridView1.Rows.Count - 1].Value = dataReader[2].ToString();
+                        dataGridView1[3, dataGridView1.Rows.Count - 1].Value = dataReader[3].ToString();
+                        dataGridView1[4, dataGridView1.Rows.Count - 1].Value = dataReader[4].ToString();
+                    }
                 }
+
+                con.Close();
+
+
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (combo_Customer.SelectedIndex >= 0)
+            {
+                dataGridView1.Rows.Clear();
+                All_Transaction();
+                CalcolateTotal();
+                object o = Ezzat.ExecutedScalar("selectTotalMoney_Customer", new SqlParameter("@Supplier_ID", (int)combo_Customer.SelectedValue));
+                label11.Text = String.Format("{0:0.00}", o);
+            }
+        }
+
+        private void CalcolateTotal()
+        {
+            double Total = 0, debit = 0;
+            foreach (DataGridViewRow item in dataGridView1.Rows)
+            {
+                Total += double.Parse(item.Cells[1].Value.ToString());
+                debit += double.Parse(item.Cells[2].Value.ToString());
+            }
+
+            label8.Text = Total + "";
+            label9.Text = debit + "";
+            label10.Text = (Total - debit) + "";
+        }
     }
 }

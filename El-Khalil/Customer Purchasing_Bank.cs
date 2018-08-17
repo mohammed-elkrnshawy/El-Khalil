@@ -26,6 +26,10 @@ namespace El_Khalil
                 MessageBox.Show(Shared_Class.Successful_Message);
                 this.Close();
             }
+            else
+            {
+                MessageBox.Show(Shared_Class.Check_Message);
+            }
         }
 
         private void SaveCheck()

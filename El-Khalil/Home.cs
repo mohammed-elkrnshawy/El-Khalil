@@ -436,6 +436,12 @@ namespace El_Khalil
             _Discount.ShowDialog();
         }
 
+        private void خصمعميلToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Customer_Discount _Discount = new Customer_Discount();
+            _Discount.ShowDialog();
+        }
+
         private void Add_Tab(string Name,Form form)
         {
             TabPage tp = new TabPage(Name);

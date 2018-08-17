@@ -28,31 +28,23 @@ namespace El_Khalil
 
         private void Store_Load(object sender, EventArgs e)
         {
-            using (dataSet = Ezzat.GetDataSet("store_select_AllMaterial", "X"))
-            {
-                dataGridView1.DataSource = dataSet.Tables["X"];
-            }
-            using (dataSet = Ezzat.GetDataSet("store_select_AllProduct", "X"))
-            {
-                dataGridView2.DataSource = dataSet.Tables["X"];
-            }
+
+            radioButton1_CheckedChanged(sender, e);
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if(radioButton1.Checked)
+            using (dataSet = Ezzat.GetDataSet("store_select_AllProduct", "X"))
             {
-                panel3.Visible = true;
-                panel2.Visible = false;
+                dataGridView1.DataSource = dataSet.Tables["X"];
             }
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton2.Checked)
+            using (dataSet = Ezzat.GetDataSet("store_select_AllMaterial", "X"))
             {
-                panel3.Visible = false;
-                panel2.Visible = true;
+                dataGridView1.DataSource = dataSet.Tables["X"];
             }
         }
     }
