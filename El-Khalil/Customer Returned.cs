@@ -302,8 +302,10 @@ namespace El_Khalil
             //الخزنة
             // لو اجمالى المرتجع اكبر من حساب المورد
             if (double.Parse(tb_render.Text) > 0)
+            {
+                MessageBox.Show(" .... ! تنويه" + "\n" + "يجب على العميل صرف الباقي من الخزنة");
                 EditSafe();
-
+            }
         }
 
         private void AddIMBill_Details(int iD)
@@ -339,8 +341,8 @@ namespace El_Khalil
                 else
                 {
                     Ezzat.ExecutedNoneQuery("updateProductQuantity_Increase"
-                  , new SqlParameter("@Material_ID", int.Parse(item.Cells[0].Value.ToString()))
-                  , new SqlParameter("@Material_Quantity", float.Parse(item.Cells[3].Value + ""))
+                  , new SqlParameter("@Product_ID", int.Parse(item.Cells[0].Value.ToString()))
+                  , new SqlParameter("@Product_Quantity", float.Parse(item.Cells[3].Value + ""))
                   );
                 }
             }
