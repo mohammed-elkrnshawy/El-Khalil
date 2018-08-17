@@ -71,6 +71,10 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.rb_check = new System.Windows.Forms.RadioButton();
+            this.rb_cash = new System.Windows.Forms.RadioButton();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -78,6 +82,7 @@
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -333,6 +338,7 @@
             // 
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.Controls.Add(this.panel7);
             this.panel6.Controls.Add(this.label14);
             this.panel6.Controls.Add(this.tb_render);
             this.panel6.Controls.Add(this.label11);
@@ -358,7 +364,7 @@
             this.label14.BackColor = System.Drawing.Color.White;
             this.label14.Font = new System.Drawing.Font("Tahoma", 10F);
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(43, 58);
+            this.label14.Location = new System.Drawing.Point(46, 42);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(256, 27);
             this.label14.TabIndex = 49;
@@ -612,6 +618,50 @@
             this.Column6.ReadOnly = true;
             this.Column6.Visible = false;
             // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.rb_check);
+            this.panel7.Controls.Add(this.rb_cash);
+            this.panel7.Controls.Add(this.label15);
+            this.panel7.Location = new System.Drawing.Point(45, 79);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(257, 27);
+            this.panel7.TabIndex = 50;
+            // 
+            // rb_check
+            // 
+            this.rb_check.AutoSize = true;
+            this.rb_check.Location = new System.Drawing.Point(9, 5);
+            this.rb_check.Name = "rb_check";
+            this.rb_check.Size = new System.Drawing.Size(49, 17);
+            this.rb_check.TabIndex = 44;
+            this.rb_check.Text = "بنكى";
+            this.rb_check.UseVisualStyleBackColor = true;
+            // 
+            // rb_cash
+            // 
+            this.rb_cash.AutoSize = true;
+            this.rb_cash.Checked = true;
+            this.rb_cash.Location = new System.Drawing.Point(71, 5);
+            this.rb_cash.Name = "rb_cash";
+            this.rb_cash.Size = new System.Drawing.Size(50, 17);
+            this.rb_cash.TabIndex = 1;
+            this.rb_cash.TabStop = true;
+            this.rb_cash.Text = "نقدى";
+            this.rb_cash.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.BackColor = System.Drawing.Color.White;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(135, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(93, 27);
+            this.label15.TabIndex = 43;
+            this.label15.Text = "طريقة الدفع";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Customer_Purchasing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -635,6 +685,8 @@
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -684,5 +736,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.RadioButton rb_check;
+        private System.Windows.Forms.RadioButton rb_cash;
+        private System.Windows.Forms.Label label15;
     }
 }

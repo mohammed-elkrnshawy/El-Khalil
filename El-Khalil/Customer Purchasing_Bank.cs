@@ -11,19 +11,11 @@ using System.Windows.Forms;
 
 namespace El_Khalil
 {
-    public partial class Supplier_Purchasing_Bank : Form
+    public partial class Customer_Purchasing_Bank : Form
     {
         DataSet dataSet;
 
-        string Report_ID,Bill_Total,Bill_Discount,Bill_AfterDiscount,OldAcount,Total,SupplierName;
-        int SupplierID;
-
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics v = e.Graphics;
-            Shared_Class.DrawRoundRect(v, Pens.Black, e.ClipRectangle.Left, e.ClipRectangle.Top, e.ClipRectangle.Width - 1, e.ClipRectangle.Height - 1, 10);
-            base.OnPaint(e);
-        }
+        string Report_ID, Bill_Total, Bill_Discount, Bill_AfterDiscount, OldAcount, Total, SupplierName;
 
         private void bt_Save_Click(object sender, EventArgs e)
         {
@@ -41,12 +33,13 @@ namespace El_Khalil
             //Suppliers
 
             // تعديل حساب المورد النهائى
-            Ezzat.ExecutedNoneQuery("updateTotalMoney", new SqlParameter("@Supplier_ID", SupplierID)
+            Ezzat.ExecutedNoneQuery("updateTotalMoney_Customer"
+                , new SqlParameter("@Supplier_ID", SupplierID)
                 , new SqlParameter("@Total_Money", float.Parse(tb_after.Text)));
 
             // اضافة فاتورة شراء من المورد
             // اضافة تعامل ف حساب تعاملات المورد
-            Ezzat.ExecutedNoneQuery("insertPurchasingBill",
+            Ezzat.ExecutedNoneQuery("insertEXPurchasingBill",
                  new SqlParameter("@Purchasing_ID", int.Parse(label2.Text)),
                  new SqlParameter("@Supplier_ID", SupplierID),
                  new SqlParameter("@Bill_Date", DateTime.Parse(DateTime.Now.ToString())),
@@ -58,20 +51,39 @@ namespace El_Khalil
                  new SqlParameter("@Total_Money", float.Parse(tb_old.Text)),
                  new SqlParameter("@Payment_Money", float.Parse(tb_pay.Text)),
                  new SqlParameter("@After_Payment", float.Parse(tb_after.Text)),
-                 new SqlParameter("@Bill_Details",richTextBox1.Text)
+                  new SqlParameter("@Bill_Details", "")
                 );
 
-           
 
         }
 
-        private void tb_pay_TextChanged(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
-            Calcolate();
+            Graphics v = e.Graphics;
+            Shared_Class.DrawRoundRect(v, Pens.Black, e.ClipRectangle.Left, e.ClipRectangle.Top, e.ClipRectangle.Width - 1, e.ClipRectangle.Height - 1, 10);
+            base.OnPaint(e);
         }
 
-        private void Supplier_Purchasing_Bank_Load(object sender, EventArgs e)
+        int SupplierID;
+        public Customer_Purchasing_Bank(string Report_id, string BillTotal, string Discount, string After, string Old, string Total, string Name, object ID)
+        {
+            InitializeComponent();
+            this.Report_ID = Report_id;
+            this.Bill_Total = BillTotal;
+            this.Bill_Discount = Discount;
+            this.Bill_AfterDiscount = After;
+            this.OldAcount = Old;
+            this.Total = Total;
+            this.SupplierName = Name;
+            this.SupplierID = (int)ID;
+        }
+
+        private void Calcolate()
+        {
+            tb_after.Text = String.Format("{0:0.00}", (double.Parse(tb_old.Text) - double.Parse(tb_pay.Text)));
+        }
+
+        private void Customer_Purchasing_Bank_Load(object sender, EventArgs e)
         {
             label2.Text = Report_ID;
             tb_BillTotal.Text = Bill_Total;
@@ -91,39 +103,21 @@ namespace El_Khalil
                 combo_Bank.Text = "";
                 combo_Bank.SelectedText = "اختار بنك للايداع";
             }
-
         }
 
-        public Supplier_Purchasing_Bank(string Report_id,string BillTotal,string Discount,string After, string Old,string Total,string Name,object ID)
+
+        private void tb_pay_TextChanged(object sender, EventArgs e)
         {
-            InitializeComponent();
-            this.Report_ID = Report_id;
-            this.Bill_Total = BillTotal;
-            this.Bill_Discount = Discount;
-            this.Bill_AfterDiscount = After;
-            this.OldAcount = Old;
-            this.Total = Total;
-            this.SupplierName = Name;
-            this.SupplierID = (int)ID;
+
+            Calcolate();
         }
 
-        private void Calcolate()
-        {
-            tb_after.Text = String.Format("{0:0.00}", (double.Parse(tb_old.Text) - double.Parse(tb_pay.Text)));
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics v = e.Graphics;
-            Shared_Class.DrawRoundRect(v, Pens.Black, e.ClipRectangle.Left, e.ClipRectangle.Top, e.ClipRectangle.Width - 1, e.ClipRectangle.Height - 1, 10);
-            base.OnPaint(e);
-        }
 
         private void Edit_BankAccount()
         {
 
             //تعديل حساب البنك
-            Ezzat.ExecutedNoneQuery("updateBankAccount_Decrease",
+            Ezzat.ExecutedNoneQuery("updateBankAccount_Increase",
                 new SqlParameter("@Bank_ID", combo_Bank.SelectedValue),
                 new SqlParameter("@Money", double.Parse(tb_pay.Text))
                 );
@@ -134,10 +128,11 @@ namespace El_Khalil
                 new SqlParameter("@Bank_ID", combo_Bank.SelectedValue),
                 new SqlParameter("@MoneyQuantity", double.Parse(tb_pay.Text)),
                 new SqlParameter("@Notes", "دفع من عمليه شراء"),
-                new SqlParameter("@Report_Type", false),
-                new SqlParameter("@Report_From", combo_Bank.Text),
-                new SqlParameter("@Report_To", "مورد " + SupplierName)
+                new SqlParameter("@Report_Type", true),
+                new SqlParameter("@Report_From", "عميل " + SupplierName),
+                new SqlParameter("@Report_To", combo_Bank.Text)
                 );
         }
+
     }
 }

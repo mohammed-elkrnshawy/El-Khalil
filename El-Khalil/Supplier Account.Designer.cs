@@ -49,7 +49,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pn_Return = new System.Windows.Forms.Panel();
             this.gv = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.pn_today = new System.Windows.Forms.Panel();
@@ -60,12 +65,6 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.combo_Supliers = new System.Windows.Forms.ComboBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.pn_during.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -164,7 +163,6 @@
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.pn_Return);
-            this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.bt_Print);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(88, 42);
@@ -304,9 +302,9 @@
             this.pn_Return.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pn_Return.Controls.Add(this.gv);
-            this.pn_Return.Location = new System.Drawing.Point(3, 98);
+            this.pn_Return.Location = new System.Drawing.Point(3, 61);
             this.pn_Return.Name = "pn_Return";
-            this.pn_Return.Size = new System.Drawing.Size(1154, 415);
+            this.pn_Return.Size = new System.Drawing.Size(1154, 452);
             this.pn_Return.TabIndex = 45;
             // 
             // gv
@@ -328,19 +326,52 @@
             this.gv.Name = "gv";
             this.gv.ReadOnly = true;
             this.gv.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gv.Size = new System.Drawing.Size(1154, 415);
+            this.gv.Size = new System.Drawing.Size(1154, 452);
             this.gv.TabIndex = 0;
             this.gv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_CellClick);
             // 
-            // panel1
+            // Column1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Location = new System.Drawing.Point(8, 61);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1143, 31);
-            this.panel1.TabIndex = 42;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.Column1.HeaderText = "رقم البيان";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 70;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "الداين";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "المدين";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "تاريخ البيان";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "نوع البيان";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "البيان";
+            this.Column6.HeaderText = "عرض التفاصيل";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column6.Text = "البيان";
+            this.Column6.UseColumnTextForButtonValue = true;
+            this.Column6.Width = 50;
             // 
             // panel3
             // 
@@ -456,49 +487,6 @@
             this.combo_Supliers.Tag = "";
             this.combo_Supliers.Text = "اختار اسم المورد";
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "رقم البيان";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 70;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "الداين";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "المدين";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "تاريخ البيان";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "نوع البيان";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "البيان";
-            this.Column6.HeaderText = "عرض التفاصيل";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column6.Text = "البيان";
-            this.Column6.UseColumnTextForButtonValue = true;
-            this.Column6.Width = 50;
-            // 
             // Supplier_Account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -540,7 +528,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pn_Return;
         private System.Windows.Forms.DataGridView gv;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel pn_today;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;

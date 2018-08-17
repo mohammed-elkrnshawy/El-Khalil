@@ -283,7 +283,8 @@ namespace El_Khalil
             //Suppliers
 
             // تعديل حساب المورد النهائى
-            Ezzat.ExecutedNoneQuery("updateTotalMoney", new SqlParameter("@Supplier_ID", (int)combo_Supliers.SelectedValue), new SqlParameter("@Total_Money", float.Parse(tb_render.Text)));
+            Ezzat.ExecutedNoneQuery("updateTotalMoney", new SqlParameter("@Supplier_ID", (int)combo_Supliers.SelectedValue),
+                new SqlParameter("@Total_Money", float.Parse(tb_render.Text)));
 
             // اضافة فاتورة شراء من المورد
             // اضافة تعامل ف حساب تعاملات المورد
