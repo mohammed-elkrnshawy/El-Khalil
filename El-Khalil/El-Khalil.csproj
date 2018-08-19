@@ -80,12 +80,6 @@
     <Compile Include="Add Materials.Designer.cs">
       <DependentUpon>Add Materials.cs</DependentUpon>
     </Compile>
-    <Compile Include="Add Product.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Add Product.Designer.cs">
-      <DependentUpon>Add Product.cs</DependentUpon>
-    </Compile>
     <Compile Include="Add Supplier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,12 +133,6 @@
     </Compile>
     <Compile Include="Customer Returned.Designer.cs">
       <DependentUpon>Customer Returned.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edit Product.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit Product.Designer.cs">
-      <DependentUpon>Edit Product.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee Account.cs">
       <SubType>Form</SubType>
@@ -292,9 +280,6 @@
     <EmbeddedResource Include="Add Materials.resx">
       <DependentUpon>Add Materials.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Add Product.resx">
-      <DependentUpon>Add Product.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Add Supplier.resx">
       <DependentUpon>Add Supplier.cs</DependentUpon>
     </EmbeddedResource>
@@ -321,9 +306,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customer Returned.resx">
       <DependentUpon>Customer Returned.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edit Product.resx">
-      <DependentUpon>Edit Product.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee Account.resx">
       <DependentUpon>Employee Account.cs</DependentUpon>
@@ -423,6 +405,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addition-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addition-sign %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-disk %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-disk %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-can.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

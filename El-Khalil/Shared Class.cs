@@ -14,6 +14,7 @@ namespace El_Khalil
         public static string Check_Message = "من فضلك راجع البيانات";
         public static string Add_Message = "تمت الاضافة";
         public static string Edit_Message = "تمت التعديل";
+        public static string Delete_Message = "تمت الحذف";
         public static string Successful_Message = "تمت بنجاح";
         public static string No_Message = "لا يوجد ملاحظات";
 

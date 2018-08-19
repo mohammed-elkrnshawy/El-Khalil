@@ -80,13 +80,12 @@
             this.الاضافاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.اضافةبندمصروفاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.خصمموردToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.خصمعميلToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.button32 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
             this.addMaterial = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -135,7 +134,6 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.خصمعميلToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -561,16 +559,23 @@
             // اضافةبندمصروفاتToolStripMenuItem
             // 
             this.اضافةبندمصروفاتToolStripMenuItem.Name = "اضافةبندمصروفاتToolStripMenuItem";
-            this.اضافةبندمصروفاتToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.اضافةبندمصروفاتToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.اضافةبندمصروفاتToolStripMenuItem.Text = "اضافة بند مصروفات";
             this.اضافةبندمصروفاتToolStripMenuItem.Click += new System.EventHandler(this.اضافةبندمصروفاتToolStripMenuItem_Click);
             // 
             // خصمموردToolStripMenuItem
             // 
             this.خصمموردToolStripMenuItem.Name = "خصمموردToolStripMenuItem";
-            this.خصمموردToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.خصمموردToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.خصمموردToolStripMenuItem.Text = "خصم مورد";
             this.خصمموردToolStripMenuItem.Click += new System.EventHandler(this.خصمموردToolStripMenuItem_Click);
+            // 
+            // خصمعميلToolStripMenuItem
+            // 
+            this.خصمعميلToolStripMenuItem.Name = "خصمعميلToolStripMenuItem";
+            this.خصمعميلToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.خصمعميلToolStripMenuItem.Text = "خصم عميل";
+            this.خصمعميلToolStripMenuItem.Click += new System.EventHandler(this.خصمعميلToolStripMenuItem_Click);
             // 
             // tabControl1
             // 
@@ -637,8 +642,6 @@
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.Controls.Add(this.button32);
-            this.panel8.Controls.Add(this.button26);
-            this.panel8.Controls.Add(this.button27);
             this.panel8.Controls.Add(this.addMaterial);
             this.panel8.Location = new System.Drawing.Point(12, 437);
             this.panel8.Name = "panel8";
@@ -661,38 +664,6 @@
             this.button32.Text = "بيان تصنيع منتج نهائى";
             this.button32.UseVisualStyleBackColor = false;
             this.button32.Click += new System.EventHandler(this.button32_Click);
-            // 
-            // button26
-            // 
-            this.button26.BackColor = System.Drawing.Color.White;
-            this.button26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button26.FlatAppearance.BorderSize = 0;
-            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button26.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button26.ForeColor = System.Drawing.Color.Black;
-            this.button26.Location = new System.Drawing.Point(3, 75);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(391, 33);
-            this.button26.TabIndex = 5;
-            this.button26.Text = "تعديل تركيبة منتج نهائى";
-            this.button26.UseVisualStyleBackColor = false;
-            this.button26.Click += new System.EventHandler(this.button26_Click);
-            // 
-            // button27
-            // 
-            this.button27.BackColor = System.Drawing.Color.White;
-            this.button27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button27.FlatAppearance.BorderSize = 0;
-            this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button27.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button27.ForeColor = System.Drawing.Color.Black;
-            this.button27.Location = new System.Drawing.Point(3, 42);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(391, 33);
-            this.button27.TabIndex = 4;
-            this.button27.Text = "اضافة منتج نهائى و تركيباته";
-            this.button27.UseVisualStyleBackColor = false;
-            this.button27.Click += new System.EventHandler(this.button27_Click);
             // 
             // addMaterial
             // 
@@ -1373,13 +1344,6 @@
             this.toolStripStatusLabel3.Size = new System.Drawing.Size(73, 17);
             this.toolStripStatusLabel3.Text = "الحالة :  ادمن ";
             // 
-            // خصمعميلToolStripMenuItem
-            // 
-            this.خصمعميلToolStripMenuItem.Name = "خصمعميلToolStripMenuItem";
-            this.خصمعميلToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.خصمعميلToolStripMenuItem.Text = "خصم عميل";
-            this.خصمعميلToolStripMenuItem.Click += new System.EventHandler(this.خصمعميلToolStripMenuItem_Click);
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1507,8 +1471,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button button32;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Button button27;
         private System.Windows.Forms.Button addMaterial;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripMenuItem المستخدمToolStripMenuItem;

@@ -217,22 +217,22 @@ namespace El_Khalil
 
         private void button27_Click(object sender, EventArgs e)
         {
-            Add_Tab("اضافة منتج نهائى", new Add_Product());
+           
         }
 
         private void اضافةتركيبةToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Add_Tab("اضافة منتج نهائى", new Add_Product());
+            
         }
 
         private void button26_Click(object sender, EventArgs e)
         {
-            Add_Tab("تعديل منتج نهائى", new Edit_Product());
+           
         }
 
         private void تعديلتركيبةToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Add_Tab("تعديل منتج نهائى", new Edit_Product());
+            
         }
 
         private void button10_Click(object sender, EventArgs e)
