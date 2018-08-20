@@ -171,6 +171,8 @@ namespace El_Khalil
             }
         }
 
+
+
         private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Supplier_ID = (int)dataGridView2.CurrentRow.Cells[0].Value;

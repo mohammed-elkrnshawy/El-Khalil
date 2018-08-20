@@ -13,46 +13,26 @@ namespace El_Khalil
 {
     public partial class Add_Customer : Form
     {
+        int Customer_ID;
         DataSet dataSet;
         public Add_Customer()
         {
             InitializeComponent();
         }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void RefForm()
         {
-            Graphics v = e.Graphics;
-            Shared_Class.DrawRoundRect(v, Pens.Black, e.ClipRectangle.Left, e.ClipRectangle.Top, e.ClipRectangle.Width - 1, e.ClipRectangle.Height - 1, 10);
-            //Without rounded corners
-            //e.Graphics.DrawRectangle(Pens.Blue, e.ClipRectangle.Left, e.ClipRectangle.Top, e.ClipRectangle.Width - 1, e.ClipRectangle.Height - 1);
-            base.OnPaint(e);
-        }
+            tb_id.Enabled = true;
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-            base.OnPaint(e);
-            using (Graphics g = e.Graphics)
-            {
-                var p = new Pen(Color.Black, 1);
-                var point1 = new Point(0, 0);
-                var point2 = new Point(5000, 0);
-                g.DrawLine(p, point1, point2);
-            }
-        }
+            dataGridView1.Rows.Clear();
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            combo_name.Enabled = false;
-            label4.Text = "اضافة عميل جديد";
-            tb_address.Text = tb_company.Text = tb_name.Text = tb_phone.Text = tb_phone2.Text=tb_max.Text = "";
-        }
+            tb_address.Text = tb_bankName.Text = tb_Bank_number.Text = tb_company.Text = tb_day.Text = tb_name.Text
+                = tb_phone.Text = tb_phone2.Text = textBox2.Text=tb_id.Text=tb_max.Text = "";
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            combo_name.Enabled = true;
-            label4.Text = "تعديل عميل موجود";
+            bt_edit.Enabled = button1.Enabled = false;
+            bt_Save.Enabled = true;
+            FillCombo();
+            tb_day.Enabled = radioButton4.Checked;
         }
-
         private void tb_phone_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
@@ -60,41 +40,74 @@ namespace El_Khalil
                 e.Handled = true;
             }
         }
-
-        private void cb_kilo_Click(object sender, EventArgs e)
+        private string PaymentMethod()
         {
-            if (tb_name.Text != "" && tb_address.Text != "" && tb_company.Text != ""&&tb_max.Text!="")
+            if (radioButton3.Checked)
+                return "نقدى او شيك";
+            else if (radioButton4.Checked)
+                return "دفع اجل";
+            else
+                return "حد ائتمان";
+        }
+        private void PaymentMethod(string value)
+        {
+            if (value == "نقدى او شيك")
+                radioButton3.Checked = true;
+            else if (value == "دفع اجل")
+                radioButton4.Checked = true;
+            else if (value == "حد ائتمان")
+                radioButton5.Checked = true;
+            else
+                radioButton3.Checked = radioButton4.Checked = radioButton5.Checked = false;
+        }
+        private bool IsValidText(TextBox textBox)
+        {
+            if (textBox.Text != "")
+                return true;
+            else
+                return false;
+        }
+        private void FillCombo()
+        {
+            using (dataSet = Ezzat.GetDataSet("selectAllCustomer2", "X"))
             {
-                if (radioButton1.Checked)
-                {
-                    Add_Person();
-                }
-                else
-                {
-                    EditPerson();
-                }
+                dataGridView2.DataSource = dataSet.Tables["X"];
+            }
+        }
+        private void Add_Customer_Load(object sender, EventArgs e)
+        {
+            RefForm();
+        }
+        private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        {
+            tb_day.Enabled = radioButton5.Checked;
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "")
+            {
+                FillCombo();
             }
             else
             {
-                MessageBox.Show("من فضلك راجع البيانات");
+                using (dataSet = Ezzat.GetDataSet("selectAllCustomer2_Search", "X", new SqlParameter("@Supplier_Name", textBox2.Text)))
+                {
+                    dataGridView2.DataSource = dataSet.Tables["X"];
+                }
             }
         }
-        private void EditPerson()
-        {
-            Ezzat.ExecutedNoneQuery("updateCusomer",
-                new SqlParameter("@Customer_ID", (int)combo_name.SelectedValue),
-                new SqlParameter("@Customer_Name", tb_name.Text),
-                new SqlParameter("@Customer_Phone", tb_phone.Text),
-                new SqlParameter("@Customer_Phone2", tb_phone2.Text),
-                new SqlParameter("@Customer_Address", tb_address.Text),
-                new SqlParameter("@Customer_Company", tb_company.Text),
-                new SqlParameter("@Customer_Max", tb_max.Text)
-                );
 
-            tb_company.Text = tb_address.Text = tb_name.Text = tb_phone.Text = tb_phone2.Text = tb_max.Text = "";
-            combo_name.Text = "";
-            combo_name.SelectedText = "اختار مورد موجود";
-            FillCombo();
+        private void bt_Save_Click(object sender, EventArgs e)
+        {
+            if (IsValidText(tb_address) && IsValidText(tb_company) && IsValidText(tb_name) && IsValidText(tb_phone) && IsValidText(tb_id))
+            {
+                Add_Person();
+                MessageBox.Show(Shared_Class.Add_Message);
+                RefForm();
+            }
+            else
+                MessageBox.Show(Shared_Class.Check_Message);
         }
 
         private void Add_Person()
@@ -105,55 +118,146 @@ namespace El_Khalil
                 new SqlParameter("@Customer_Phone2", tb_phone2.Text),
                 new SqlParameter("@Customer_Address", tb_address.Text),
                 new SqlParameter("@Customer_Company", tb_company.Text),
-                new SqlParameter("@Customer_Max", float.Parse(tb_max.Text))
+                new SqlParameter("@Customer_Max", float.Parse(tb_max.Text)),
+                new SqlParameter("@Payment_Method", PaymentMethod()),
+                new SqlParameter("@Day_Number", tb_day.Text),
+                new SqlParameter("@ID", tb_id.Text)
                 );
 
-            tb_company.Text = tb_address.Text = tb_name.Text = tb_phone.Text = tb_phone2.Text=tb_max.Text = "";
-            FillCombo();
+           
+            Customer_ID = (int)Ezzat.ExecutedScalar("select_CustomerID");
+            if (dataGridView1.Rows.Count > 0)
+                Add_Account();
+
         }
-
-        private void Add_Customer_Load(object sender, EventArgs e)
+        private void Add_Account()
         {
-            FillCombo();
-        }
-
-        private void combo_name_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SqlConnection con;
-
-            if (combo_name.SelectedIndex >= 0 && combo_name.Focused == true)
+            foreach (DataGridViewRow item in dataGridView1.Rows)
             {
-
-
-                tb_name.Focus();
-
-                SqlDataReader dataReader = Ezzat.GetDataReader("selectSpasific_Customer", out con, new SqlParameter("@Customer_Id", (int)combo_name.SelectedValue));
-
-
-                if (dataReader.HasRows)
-                {
-                    while (dataReader.Read())
-                    {
-                        tb_name.Text = dataReader["Customer_Name"].ToString();
-                        tb_address.Text = dataReader["Customer_Address"].ToString();
-                        tb_company.Text = dataReader["Customer_Company"].ToString();
-                        tb_phone.Text = dataReader["Customer_Phone"].ToString();
-                        tb_phone2.Text = dataReader["Customer_Phone2"].ToString();
-                        tb_max.Text = dataReader["Customer_Max"].ToString();
-                    }
-                }
-                con.Close();
+                Ezzat.ExecutedNoneQuery("insert_CustomerAccountsBank",
+                    new SqlParameter("@Customer_ID", Customer_ID),
+                    new SqlParameter("@Bank_Name", item.Cells[0].Value),
+                    new SqlParameter("@Bank_Number", item.Cells[1].Value)
+                    );
             }
         }
-        private void FillCombo()
+        private void AddRow()
         {
-            using (dataSet = Ezzat.GetDataSet("selectAllCustomer", "X"))
+            if (IsValidText(tb_bankName) && IsValidText(tb_Bank_number))
             {
-                combo_name.DataSource = dataSet.Tables["X"];
-                combo_name.DisplayMember = "Customer_Name";
-                combo_name.ValueMember = "Customer_ID";
-                combo_name.Text = "";
-                combo_name.SelectedText = "اختار عميل موجود";
+                dataGridView1.Rows.Add();
+                dataGridView1[0, dataGridView1.Rows.Count - 1].Value = tb_bankName.Text;
+                dataGridView1[1, dataGridView1.Rows.Count - 1].Value = tb_Bank_number.Text;
+                tb_bankName.Text = tb_Bank_number.Text = "";
+            }
+            else
+            {
+                MessageBox.Show(Shared_Class.Check_Message);
+            }
+        }
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            AddRow();
+        }
+
+
+
+        private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Customer_ID = (int)dataGridView2.CurrentRow.Cells[0].Value;
+            ShowDetails(Customer_ID);
+        }
+        private void ShowDetails(int value)
+        {
+            bt_edit.Enabled = button1.Enabled = true;
+            bt_Save.Enabled=tb_id.Enabled = false;
+
+            SqlConnection con;
+            SqlDataReader dataReader = Ezzat.GetDataReader("selectSpasific_Customer", out con, new SqlParameter("@Customer_Id", value));
+
+
+            if (dataReader.HasRows)
+            {
+                while (dataReader.Read())
+                {
+                    tb_name.Text = dataReader["Customer_Name"].ToString();
+                    tb_address.Text = dataReader["Customer_Address"].ToString();
+                    tb_company.Text = dataReader["Customer_Company"].ToString();
+                    tb_phone.Text = dataReader["Customer_Phone"].ToString();
+                    tb_phone2.Text = dataReader["Customer_Phone2"].ToString();
+                    tb_day.Text = dataReader["Number_Day"].ToString();
+                    tb_id.Text = dataReader["National_ID"].ToString();
+                    tb_max.Text = dataReader["Customer_Max"].ToString();
+                    PaymentMethod(dataReader["Payment_Method"].ToString());
+                    
+                }
+            }
+            con.Close();
+
+            FillBankAccounts(value);
+
+        }
+        private void FillBankAccounts(int value)
+        {
+            dataGridView1.Rows.Clear();
+            SqlConnection con;
+            SqlDataReader dataReader = Ezzat.GetDataReader("select_CustomerBankAccounts", out con, new SqlParameter("@Customer_ID", value));
+
+
+            if (dataReader.HasRows)
+            {
+                while (dataReader.Read())
+                {
+                    dataGridView1.Rows.Add();
+                    dataGridView1[0, dataGridView1.Rows.Count - 1].Value = dataReader[2].ToString();
+                    dataGridView1[1, dataGridView1.Rows.Count - 1].Value = dataReader[3].ToString();
+                }
+            }
+            con.Close();
+        }
+
+        private void bt_edit_Click(object sender, EventArgs e)
+        {
+            if (IsValidText(tb_address) && IsValidText(tb_company) && IsValidText(tb_name) && IsValidText(tb_phone) && IsValidText(tb_id))
+            {
+                EditPerson();
+                DeleteBankAccounts();
+                Add_Account();
+                MessageBox.Show(Shared_Class.Edit_Message);
+                RefForm();
+            }
+            else
+                MessageBox.Show(Shared_Class.Check_Message);
+        }
+        private void DeleteBankAccounts()
+        {
+            Ezzat.ExecutedNoneQuery("deleteBankAccount_Customer", new SqlParameter("@Supplier_ID", Customer_ID));
+        }
+        private void EditPerson()
+        {
+            Ezzat.ExecutedNoneQuery("updateCusomer",
+                new SqlParameter("@Customer_ID",Customer_ID),
+                new SqlParameter("@Customer_Name", tb_name.Text),
+                new SqlParameter("@Customer_Phone", tb_phone.Text),
+                new SqlParameter("@Customer_Phone2", tb_phone2.Text),
+                new SqlParameter("@Customer_Address", tb_address.Text),
+                new SqlParameter("@Customer_Company", tb_company.Text),
+                new SqlParameter("@Customer_Max", tb_max.Text),
+                new SqlParameter("@Payment_Method", PaymentMethod()),
+                new SqlParameter("@Number_Day", tb_day.Text)
+                );
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            RefForm();
+        }
+
+        private void tb_Bank_number_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                AddRow();
             }
         }
     }

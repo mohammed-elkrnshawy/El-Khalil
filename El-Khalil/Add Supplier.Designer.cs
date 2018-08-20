@@ -249,6 +249,7 @@
             this.panel2.Controls.Add(this.tb_address);
             this.panel2.Controls.Add(this.tb_name);
             this.panel2.Controls.Add(this.tb_company);
+            this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(645, 535);
