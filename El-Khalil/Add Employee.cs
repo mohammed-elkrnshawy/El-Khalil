@@ -43,7 +43,7 @@ namespace El_Khalil
 
         private void bt_Save_Click(object sender, EventArgs e)
         {
-            if(IsValidText(tb_address)&& IsValidText(tb_ID) && IsValidText(tb_job) && IsValidText(tb_name) && IsValidText(tb_phone)
+            if(IsValidText(tb_address)&& IsValidText(tb_ID) && tb_job.Text!="" && IsValidText(tb_name) && IsValidText(tb_phone)
                 && IsValidText(tb_salary))
             {
                 AddEmployee();
@@ -70,12 +70,24 @@ namespace El_Khalil
 
         private void RefreshForm()
         {
+
+            getData();
+
             tb_address.Text = tb_ID.Text = tb_job.Text = tb_name.Text = tb_phone.Text = tb_phone2.Text = tb_salary.Text = textBox2.Text = "";
             tb_ID.Enabled=bt_Save.Enabled = true;
 
             bt_edit.Enabled = button1.Enabled = false;
 
             FillCombo();
+        }
+
+        private void getData()
+        {
+            using (dataSet=Ezzat.GetDataSet("select_AllJobtitle","X"))
+            {
+                tb_job.DataSource = dataSet.Tables["X"];
+                tb_job.DisplayMember = "Job_Name";
+            }
         }
 
         private void FillCombo()
@@ -127,7 +139,7 @@ namespace El_Khalil
 
         private void bt_edit_Click(object sender, EventArgs e)
         {
-            if (IsValidText(tb_address) && IsValidText(tb_ID) && IsValidText(tb_job) && IsValidText(tb_name) && IsValidText(tb_phone)
+            if (IsValidText(tb_address) && IsValidText(tb_ID) && tb_job.Text!="" && IsValidText(tb_name) && IsValidText(tb_phone)
                 && IsValidText(tb_salary))
             {
                 EditEmployee();

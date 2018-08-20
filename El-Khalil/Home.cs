@@ -468,6 +468,12 @@ namespace El_Khalil
             _Discount.ShowDialog();
         }
 
+        private void اضافةمسميوظيفيToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_JobTitle add = new Add_JobTitle();
+            add.ShowDialog();
+        }
+
         private void Add_Tab(string Name,Form form)
         {
             TabPage tp = new TabPage(Name);

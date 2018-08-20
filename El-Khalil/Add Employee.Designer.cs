@@ -40,7 +40,6 @@
             this.bt_edit = new System.Windows.Forms.Button();
             this.bt_Save = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tb_job = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tb_ID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -58,6 +57,7 @@
             this.tb_phone = new System.Windows.Forms.TextBox();
             this.tb_address = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.tb_job = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -242,15 +242,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(645, 535);
             this.panel2.TabIndex = 0;
-            // 
-            // tb_job
-            // 
-            this.tb_job.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.tb_job.Location = new System.Drawing.Point(50, 252);
-            this.tb_job.Name = "tb_job";
-            this.tb_job.Size = new System.Drawing.Size(315, 24);
-            this.tb_job.TabIndex = 45;
-            this.tb_job.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
             // 
@@ -458,6 +449,16 @@
             this.label5.Text = "اضافة و تعديل موظفين";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tb_job
+            // 
+            this.tb_job.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.tb_job.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.tb_job.FormattingEnabled = true;
+            this.tb_job.Location = new System.Drawing.Point(50, 254);
+            this.tb_job.Name = "tb_job";
+            this.tb_job.Size = new System.Drawing.Size(315, 21);
+            this.tb_job.TabIndex = 47;
+            // 
             // Add_Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -509,7 +510,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.TextBox tb_job;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tb_ID;
         private System.Windows.Forms.Label label6;
@@ -518,5 +518,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.ComboBox tb_job;
     }
 }
