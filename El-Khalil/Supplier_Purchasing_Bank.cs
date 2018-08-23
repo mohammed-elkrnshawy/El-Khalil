@@ -65,6 +65,11 @@ namespace El_Khalil
 
         }
 
+        private void combo_Bank_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void tb_pay_TextChanged(object sender, EventArgs e)
         {
 
