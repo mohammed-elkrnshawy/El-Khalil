@@ -17,6 +17,7 @@ namespace El_Khalil
         public static string Delete_Message = "تمت الحذف";
         public static string Successful_Message = "تمت بنجاح";
         public static string No_Message = "لا يوجد ملاحظات";
+        public static string Exsisting_Message = "هذا الصنف موجود مسبقا";
 
 
 

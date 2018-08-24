@@ -22,7 +22,7 @@ namespace El_Khalil
             InitializeComponent();
         }
 
-        private void SupplierReturned_Load(object sender, EventArgs e)
+        private void RefreshForm()
         {
             label12.Text = String.Format("{0:HH:mm:ss  dd/MM/yyyy}", DateTime.Now);
 
@@ -31,8 +31,8 @@ namespace El_Khalil
             using (dataSet = Ezzat.GetDataSet("selectMaterials", "X"))
             {
                 combo_Materials.DataSource = dataSet.Tables["X"];
-                combo_Materials.DisplayMember = "Material_Name";
-                combo_Materials.ValueMember = "Material_ID";
+                combo_Materials.DisplayMember = "Product_Name";
+                combo_Materials.ValueMember = "Product_ID";
                 combo_Materials.Text = "";
                 combo_Materials.SelectedText = "اختار مادة خام";
             }
@@ -52,15 +52,29 @@ namespace El_Khalil
                 label2.Text = "1";
             else
                 label2.Text = (((int)o) + 1) + "";
+
+
+            dataGridView1.Rows.Clear();
+            richTextBox1.Text = "اكتب بيان الفااتورة";
+            tb_details.Text = "اكتب بيان الصنف";
+            textBox1.Text = "";
+            tb_quantity.Text = "0";
+            tb_AfterDiscount.Text=tb_BillTotal.Text=tb_Discount.Text=tb_OldMoney.Text=tb_price.Text=tb_Total.Text="0.00";
+            Bill_Total = 0;
+
+
+        }
+
+        private void SupplierReturned_Load(object sender, EventArgs e)
+        {
+            RefreshForm();
         }
 
         private void combo_Supliers_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (combo_Supliers.Focused)
             {
-                object o = Ezzat.ExecutedScalar("selectTotalMoney", new SqlParameter("@Supplier_ID", (int)combo_Supliers.SelectedValue));
-                tb_OldMoney.Text = String.Format("{0:0.00}", o);
-                Calcolate();
+                ShowDetails_Supplier((int)combo_Supliers.SelectedValue);
             }
         }
 
@@ -70,166 +84,29 @@ namespace El_Khalil
             Shared_Class.DrawRoundRect(v, Pens.Black, e.ClipRectangle.Left, e.ClipRectangle.Top, e.ClipRectangle.Width - 1, e.ClipRectangle.Height - 1, 10);
             base.OnPaint(e);
         }
-        private void Calcolate()
-        {
-            tb_BillTotal.Text = String.Format("{0:0.00}", Bill_Total);
-
-            tb_AfterDiscount.Text = String.Format("{0:0.00}", (double.Parse(tb_BillTotal.Text) - double.Parse(tb_Discount.Text)));
-            
-            tb_Total.Text = String.Format("{0:0.00}", (double.Parse(tb_OldMoney.Text) - double.Parse(tb_AfterDiscount.Text)));
-            
-            if(double.Parse(tb_AfterDiscount.Text)>double.Parse(tb_OldMoney.Text))
-            {
-                tb_Total.Text = "0.00";
-                tb_render.Text = String.Format("{0:0.00}", (double.Parse(tb_AfterDiscount.Text) - double.Parse(tb_OldMoney.Text)));
-            }
-            else
-                tb_render.Text = "0.00";
-
-        }
-
-
-        private void tb_quantity_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
-            {
-                e.Handled = true;
-            }
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                AddRow();
-            }
-        }
-        private void AddRow()
-        {
-            if (tb_quantity.Text != "" && int.Parse(tb_quantity.Text) > 0 && combo_Materials.SelectedIndex >= 0)
-            {
-                dataGridView1.Rows.Add();
-                dataGridView1[0, dataGridView1.Rows.Count - 1].Value = combo_Materials.SelectedValue;
-                dataGridView1[1, dataGridView1.Rows.Count - 1].Value = combo_Materials.Text;
-                dataGridView1[2, dataGridView1.Rows.Count - 1].Value = MaterialPrice + "/" + MaterialUnit;
-                dataGridView1[3, dataGridView1.Rows.Count - 1].Value = tb_quantity.Text;
-                dataGridView1[4, dataGridView1.Rows.Count - 1].Value = checkUnit();
-                dataGridView1[5, dataGridView1.Rows.Count - 1].Value = String.Format("{0:0.00}", Math.Round(ConvertUnits(MaterialPrice, tb_quantity.Text), 2));
-
-                Bill_Total += Math.Round(ConvertUnits(MaterialPrice, tb_quantity.Text), 2);
-                Calcolate();
-            }
-            else
-                MessageBox.Show("من فضلك راجع البيانات");
-        }
-
-        //بترجع السعر عشان الفاتورة
-        private double ConvertUnits(double MaterialPrice, string tb_quantity)
-        {
-            if (MaterialUnit.Contains("كجم"))
-            {
-                if (checkUnit().Equals("طن"))
-                {
-                    return (double.Parse(tb_quantity) * 1000 * MaterialPrice);
-                }
-                else if (checkUnit().Equals("كجم"))
-                {
-                    return (double.Parse(tb_quantity) * MaterialPrice);
-                }
-                else
-                {
-                    return (double.Parse(tb_quantity) / 1000 * MaterialPrice);
-                }
-            }
-            else
-            {
-                if (checkUnit().Equals("طن"))
-                {
-                    return (double.Parse(tb_quantity) * 1000 * 1000 * MaterialPrice);
-                }
-                else if (checkUnit().Equals("كجم"))
-                {
-                    return (double.Parse(tb_quantity) * 1000 * MaterialPrice);
-                }
-                else
-                {
-                    return (double.Parse(tb_quantity) * MaterialPrice);
-                }
-            }
-        }
-
-        private string checkUnit()
-        {
-            if (radioButton4.Checked)
-                return radioButton4.Text;
-            else if (radioButton1.Checked)
-                return radioButton1.Text;
-            else
-                return radioButton2.Text;
-        }
 
         private void combo_Materials_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (combo_Materials.Focused)
             {
-                object o = Ezzat.ExecutedScalar("selectMaterial_price_unit", new SqlParameter("@Material_ID", (int)combo_Materials.SelectedValue));
-                String[] ar = o.ToString().Split('_');
-                MaterialPrice = double.Parse(ar[0]);
-                MaterialUnit = ar[1];
+                ShowDetails_Material((int)combo_Materials.SelectedValue);
             }
         }
 
-        private void tb_Discount_KeyPress(object sender, KeyPressEventArgs e)
+        private void Calcolate()
         {
-            if (tb_Discount.Text.Contains('.') && e.KeyChar == '.')
-            {
-                e.Handled = true;
-            }
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != (char)Keys.Back)
-            {
-                e.Handled = true;
-            }
+            tb_BillTotal.Text = String.Format("{0:0.00}", Bill_Total);
+
+            tb_AfterDiscount.Text = String.Format("{0:0.00}", (double.Parse(tb_BillTotal.Text) - double.Parse(tb_Discount.Text)));
+
+            tb_Total.Text = String.Format("{0:0.00}", (double.Parse(tb_OldMoney.Text) - double.Parse(tb_AfterDiscount.Text)));
         }
 
-        private void tb_Discount_TextChanged(object sender, EventArgs e)
-        {
-            if (tb_Discount.Text == ".")
-                tb_Discount.Text = "0.";
-            if (tb_Discount.Text == "")
-                tb_Discount.Text = "0";
-            Calcolate();
-        }
-
-
-
-        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-
-            string[] a = dataGridView1.CurrentRow.Cells[2].Value.ToString().Split('/');
-
-            dataGridView1.CurrentRow.Cells[5].Value = String.Format("{0:0.00}", ConvertUnits(
-                double.Parse(a[0]), dataGridView1.CurrentRow.Cells[3].Value.ToString()
-                ));
-
-
-
-            Bill_Total += double.Parse(dataGridView1.CurrentRow.Cells[5].Value.ToString());
-            Calcolate();
-        }
-
-        private void dataGridView1_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
-        {
-            Bill_Total -= double.Parse(dataGridView1.CurrentRow.Cells[5].Value.ToString());
-        }
 
         private void dataGridView1_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
             Bill_Total -= double.Parse(dataGridView1.CurrentRow.Cells[5].Value.ToString());
             Calcolate();
-        }
-
-        private void bt_Save_Click(object sender, EventArgs e)
-        {
-            if (combo_Supliers.SelectedIndex >= 0 && dataGridView1.Rows.Count > 0)
-                Save();
-            else
-                MessageBox.Show("من فضلك راجع البيانات");
         }
 
         private void Save()
@@ -252,7 +129,9 @@ namespace El_Khalil
                  new SqlParameter("@After_Discount", float.Parse(tb_AfterDiscount.Text)),
                  new SqlParameter("@Total_oldMoney", float.Parse(tb_OldMoney.Text)),
                  new SqlParameter("@Total_Money", float.Parse(tb_Total.Text)),
-                 new SqlParameter("@Payment_Money", float.Parse(tb_render.Text))
+                 new SqlParameter("@Payment_Money", double.Parse("0.00")),
+                 new SqlParameter("@Bill_Details", richTextBox1.Text),
+                 new SqlParameter("@Bill_Number_Supplier",textBox1.Text)
                 );
 
             // اضافة تفاصيل فاتورة الشراء 
@@ -261,15 +140,6 @@ namespace El_Khalil
 
             // المخازن
             EditStore();
-
-
-            //الخزنة
-            // لو اجمالى المرتجع اكبر من حساب المورد
-            if (double.Parse(tb_render.Text) > 0)
-            {
-                MessageBox.Show(" .... ! تنويه" + "\n"+ "يجب على المورد سداد الباقي الى الخزنة");
-                EditSafe();
-            }
         }
 
         private void AddIMBill_Details(int iD)
@@ -285,6 +155,7 @@ namespace El_Khalil
                     , new SqlParameter("@Unit", item.Cells[4].Value.ToString())
                     , new SqlParameter("@Total", float.Parse(item.Cells[5].Value + ""))
                     , new SqlParameter("@Bill_Type", false)
+                    , new SqlParameter("@Material_Details", item.Cells[6].Value.ToString())
                     );
             }
         }
@@ -298,8 +169,7 @@ namespace El_Khalil
             {
                 Ezzat.ExecutedNoneQuery("updateMaterialQuantity_Decrease"
                     , new SqlParameter("@Material_ID", int.Parse(item.Cells[0].Value.ToString()))
-                    , new SqlParameter("@Material_Quantity",
-                    CalcolateQuantity(float.Parse(item.Cells[3].Value + ""), item.Cells[2].Value.ToString(), item.Cells[4].Value.ToString()))
+                    , new SqlParameter("@Material_Quantity", item.Cells[3].Value.ToString())
                     );
             }
 
@@ -309,59 +179,126 @@ namespace El_Khalil
                 new SqlParameter("@Report_Date", DateTime.Now.ToString()),
                 new SqlParameter("@Bill_ID", int.Parse(label2.Text)),
                 new SqlParameter("@Bill_Type", "مرتجع الى مورد"),
-                new SqlParameter("@Report_Notes", combo_Supliers.Text)
+                new SqlParameter("@Report_Notes", richTextBox1.Text)
                 );
         }
 
-        private float CalcolateQuantity(float MaterialQuantity, String MaterialUnit, String PurchasingUint)
+
+
+
+
+
+
+        private void ShowDetails_Supplier(int ID)
         {
-            if (MaterialUnit.Contains("كجم"))
+
+            SqlConnection con;
+            SqlDataReader dr = Ezzat.GetDataReader("selectSpasific_Supplier", out con, new SqlParameter("@Supplier_ID", ID));
+
+            if (dr.HasRows)
             {
-                if (PurchasingUint.Equals("طن"))
+                while (dr.Read())
                 {
-                    return MaterialQuantity * 1000;
+                    //Days_Number = int.Parse(dr["Number_Day"].ToString());
+                    //tb_PaymentMethod.Text = dr["Payment_Method"].ToString();
+                    tb_OldMoney.Text = dr["Total_Money"].ToString();
+                    Calcolate();
                 }
-                else if (checkUnit().Equals("كجم"))
+            }
+            con.Close();
+        }
+
+        private void ShowDetails_Material(int ID)
+        {
+
+            SqlConnection con;
+            SqlDataReader dr = Ezzat.GetDataReader("selectSpasificProduct", out con, new SqlParameter("@Product_ID", ID));
+
+            if (dr.HasRows)
+            {
+                while (dr.Read())
                 {
-                    return MaterialQuantity;
+
+                    MaterialPrice = double.Parse(dr[6].ToString());
+                    MaterialUnit = dr[4].ToString();
+                    tb_price.Text = String.Format("{0:0.00}", MaterialPrice);
+                    if (dr[4].ToString() == "كجم")
+                        rb_Kilo.Checked = true;
+                    else if (dr[4].ToString() == "جم")
+                        rb_Gram.Checked = true;
+                }
+            }
+            con.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (FoundBefore())
+                AddRow();
+        }
+
+        private bool FoundBefore()
+        {
+
+            foreach (DataGridViewRow item in dataGridView1.Rows)
+            {
+                if (item.Cells[0].Value.Equals(combo_Materials.SelectedValue))
+                {
+                    MessageBox.Show(Shared_Class.Exsisting_Message);
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        private void AddRow()
+        {
+            if (IsValidText(tb_price) && IsValidText(tb_quantity) && combo_Materials.SelectedIndex >= 0)
+            {
+                dataGridView1.Rows.Add();
+                dataGridView1[0, dataGridView1.Rows.Count - 1].Value = combo_Materials.SelectedValue;
+                dataGridView1[1, dataGridView1.Rows.Count - 1].Value = combo_Materials.Text;
+                dataGridView1[2, dataGridView1.Rows.Count - 1].Value = tb_price.Text + "/" + MaterialUnit;
+                dataGridView1[3, dataGridView1.Rows.Count - 1].Value = tb_quantity.Text;
+                dataGridView1[4, dataGridView1.Rows.Count - 1].Value = MaterialUnit;
+                dataGridView1[5, dataGridView1.Rows.Count - 1].Value = String.Format("{0:0.00}", Math.Round((double.Parse(tb_quantity.Text) * double.Parse(tb_price.Text)), 2));
+                dataGridView1[6, dataGridView1.Rows.Count - 1].Value = tb_details.Text;
+                Bill_Total += double.Parse(dataGridView1[5, dataGridView1.Rows.Count - 1].Value.ToString());
+                Calcolate();
+            }
+            else
+                MessageBox.Show(Shared_Class.Check_Message);
+        }
+
+        private bool IsValidText(TextBox textBox)
+        {
+            if (textBox.Text == "")
+                return false;
+            else
+                return true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if(double.Parse(tb_Total.Text)>=0)
+            {
+                if (combo_Supliers.SelectedIndex >= 0 && dataGridView1.Rows.Count > 0)
+                {
+                    Save();
                 }
                 else
-                {
-                    return MaterialQuantity / 1000;
-                }
+                    MessageBox.Show(Shared_Class.Check_Message);
             }
             else
             {
-                if (checkUnit().Equals("طن"))
-                {
-                    return MaterialQuantity * 1000 * 1000;
-                }
-                else if (checkUnit().Equals("كجم"))
-                {
-                    return MaterialQuantity * 1000;
-                }
-                else
-                {
-                    return MaterialQuantity;
-                }
+                MessageBox.Show("المرتجع اكبر من حساب المورد");
             }
         }
 
-        private void EditSafe()
+        private void button2_Click(object sender, EventArgs e)
         {
-            // تعديل المبلغ الموجود ف الخزنة
-            Ezzat.ExecutedNoneQuery("updateSafe_Increase", new SqlParameter("@Money_Quantity", float.Parse(tb_render.Text)));
-
-            // عمل بيان توريد من المورد للخزنة
-            Ezzat.ExecutedNoneQuery("insert_TheSaveTransaction",
-                new SqlParameter("@Report_Type", true),
-                new SqlParameter("@Bill_ID", int.Parse(label2.Text)),
-                new SqlParameter("@Bill_Type", "باقى مبلغ مرتجع الى مورد"),
-                new SqlParameter("@Report_Date", DateTime.Parse(DateTime.Now.ToString())),
-                new SqlParameter("@Report_Money", float.Parse(tb_render.Text)),
-                new SqlParameter("@Report_Notes", "مبلغ من مرتجع الى مورد")
-                );
+            RefreshForm();
         }
-
     }
 }

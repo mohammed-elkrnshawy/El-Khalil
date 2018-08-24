@@ -110,6 +110,12 @@
     <Compile Include="Customer Bank.Designer.cs">
       <DependentUpon>Customer Bank.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer BillDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer BillDetails.Designer.cs">
+      <DependentUpon>Customer BillDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer Discount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,12 +251,6 @@
     <Compile Include="Supplier Payback.Designer.cs">
       <DependentUpon>Supplier Payback.cs</DependentUpon>
     </Compile>
-    <Compile Include="Supplier_Purchasing_Bank.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Supplier_Purchasing_Bank.Designer.cs">
-      <DependentUpon>Supplier_Purchasing_Bank.cs</DependentUpon>
-    </Compile>
     <Compile Include="The InSafe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -300,6 +300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customer Bank.resx">
       <DependentUpon>Customer Bank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer BillDetails.resx">
+      <DependentUpon>Customer BillDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer Discount.resx">
       <DependentUpon>Customer Discount.cs</DependentUpon>
@@ -368,9 +371,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier_Purchasing.resx">
       <DependentUpon>Supplier_Purchasing.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Supplier_Purchasing_Bank.resx">
-      <DependentUpon>Supplier_Purchasing_Bank.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="The InSafe.resx">
       <DependentUpon>The InSafe.cs</DependentUpon>
@@ -447,6 +447,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cancel %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print-black-printer-tool-symbol.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

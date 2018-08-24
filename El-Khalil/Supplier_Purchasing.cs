@@ -180,6 +180,7 @@ namespace El_Khalil
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            if(FoundBefore())
             AddRow();
         }
         private void combo_Supliers_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -358,7 +359,7 @@ namespace El_Khalil
             {
                 Ezzat.ExecutedNoneQuery("updateMaterialQuantity_Increase"
                     , new SqlParameter("@Material_ID", int.Parse(item.Cells[0].Value.ToString()))
-                    , new SqlParameter("@Material_Quantity",tb_quantity2.Text)
+                    , new SqlParameter("@Material_Quantity", item.Cells[3].Value.ToString())
                     );
             }
 
@@ -459,15 +460,17 @@ namespace El_Khalil
                 new SqlParameter("@Money", double.Parse(tb_payment.Text))
                 );
 
+           
             // اضافة تعاملات للبنك
             Ezzat.ExecutedNoneQuery("insert_BankTransaction",
                 new SqlParameter("@Report_Date", DateTime.Parse(DateTime.Now.ToString())),
                 new SqlParameter("@Bank_ID", combo_Bank.SelectedValue),
                 new SqlParameter("@MoneyQuantity", double.Parse(tb_payment.Text)),
-                new SqlParameter("@Notes", "دفع من عمليه شراء "+richTextBox1.Text),
+                new SqlParameter("@Notes", richTextBox1.Text),
                 new SqlParameter("@Report_Type", false),
-                new SqlParameter("@Report_From", combo_Bank.Text),
-                new SqlParameter("@Report_To", "مورد " + combo_Supliers.Text)
+                new SqlParameter("@Report_Details", "دفع من شراء"),
+                new SqlParameter("@ID", label2.Text),
+                new SqlParameter("@Check_Number", tb_number.Text)
                 );
         }
 
@@ -529,21 +532,25 @@ namespace El_Khalil
         }
 
        
-        private void ConvertInt(TextBox textBox)
-        {
-            try
-            {
-                int.Parse(textBox.Text);
-            }
-            catch
-            {
-                textBox.Text = "0,00";
-            }
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
             RefreshForm();
+        }
+
+        private bool FoundBefore()
+        {
+
+            foreach (DataGridViewRow item in dataGridView1.Rows)
+            {
+                if(item.Cells[0].Value.Equals(combo_Materials.SelectedValue))
+                {
+                    MessageBox.Show(Shared_Class.Exsisting_Message);
+                    return false;
+                }
+            }
+
+            return true;
         }
     }
 }

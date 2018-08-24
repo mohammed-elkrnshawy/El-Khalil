@@ -78,10 +78,12 @@ namespace El_Khalil
                     {
                         gv.Rows.Add();
                         gv[0, gv.Rows.Count - 1].Value = dataReader[0].ToString();
-                        gv[1, gv.Rows.Count - 1].Value = dataReader[1].ToString();
-                        gv[2, gv.Rows.Count - 1].Value = dataReader[2].ToString();
-                        gv[3, gv.Rows.Count - 1].Value = dataReader[3].ToString();
-                        gv[4, gv.Rows.Count - 1].Value = dataReader[4].ToString();
+                        gv[1, gv.Rows.Count - 1].Value = dataReader[2].ToString();
+                        gv[2, gv.Rows.Count - 1].Value = dataReader[1].ToString();
+                        gv[3, gv.Rows.Count - 1].Value = (double.Parse(dataReader[2].ToString()) - double.Parse(dataReader[1].ToString()));
+                        gv[4, gv.Rows.Count - 1].Value = dataReader[3].ToString();
+                        gv[5, gv.Rows.Count - 1].Value = dataReader[5].ToString();
+                        gv[6, gv.Rows.Count - 1].Value = dataReader[4].ToString();
                     }
                 }
 
@@ -104,10 +106,12 @@ namespace El_Khalil
                     {
                         gv.Rows.Add();
                         gv[0, gv.Rows.Count - 1].Value = dataReader[0].ToString();
-                        gv[1, gv.Rows.Count - 1].Value = dataReader[1].ToString();
-                        gv[2, gv.Rows.Count - 1].Value = dataReader[2].ToString();
-                        gv[3, gv.Rows.Count - 1].Value = dataReader[3].ToString();
-                        gv[4, gv.Rows.Count - 1].Value = dataReader[4].ToString();
+                        gv[1, gv.Rows.Count - 1].Value = dataReader[2].ToString();
+                        gv[2, gv.Rows.Count - 1].Value = dataReader[1].ToString();
+                        gv[3, gv.Rows.Count - 1].Value = (double.Parse(dataReader[2].ToString()) - double.Parse(dataReader[1].ToString()));
+                        gv[4, gv.Rows.Count - 1].Value = dataReader[3].ToString();
+                        gv[5, gv.Rows.Count - 1].Value = dataReader[5].ToString();
+                        gv[6, gv.Rows.Count - 1].Value = dataReader[4].ToString();
                     }
                 }
 
@@ -128,10 +132,12 @@ namespace El_Khalil
                     {
                         gv.Rows.Add();
                         gv[0, gv.Rows.Count - 1].Value = dataReader[0].ToString();
-                        gv[1, gv.Rows.Count - 1].Value = dataReader[1].ToString();
-                        gv[2, gv.Rows.Count - 1].Value = dataReader[2].ToString();
-                        gv[3, gv.Rows.Count - 1].Value = dataReader[3].ToString();
-                        gv[4, gv.Rows.Count - 1].Value = dataReader[4].ToString();
+                        gv[1, gv.Rows.Count - 1].Value = dataReader[2].ToString();
+                        gv[2, gv.Rows.Count - 1].Value = dataReader[1].ToString();
+                        gv[3, gv.Rows.Count - 1].Value = (double.Parse(dataReader[2].ToString()) - double.Parse(dataReader[1].ToString()));
+                        gv[4, gv.Rows.Count - 1].Value = dataReader[3].ToString();
+                        gv[5, gv.Rows.Count - 1].Value = dataReader[5].ToString();
+                        gv[6, gv.Rows.Count - 1].Value = dataReader[4].ToString();
                     }
                 }
 
@@ -162,16 +168,16 @@ namespace El_Khalil
                 debit += double.Parse(item.Cells[2].Value.ToString());
             }
 
-            label8.Text = Total + "";
-            label9.Text = debit + "";
+            label9.Text = Total + "";
+            label8.Text = debit + "";
             label10.Text = (Total - debit) + "";
         }
 
         private void gv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(gv.CurrentCell==gv.CurrentRow.Cells[5])
+            if(gv.CurrentCell==gv.CurrentRow.Cells[7])
             {
-                Form1 BillDetails=new Form1(int.Parse(gv.CurrentRow.Cells[0].Value.ToString()), gv.CurrentRow.Cells[4].Value);
+                Form1 BillDetails=new Form1(int.Parse(gv.CurrentRow.Cells[0].Value.ToString()), gv.CurrentRow.Cells[6].Value);
                 BillDetails.ShowDialog();
             }
         }

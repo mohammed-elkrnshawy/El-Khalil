@@ -58,6 +58,8 @@ namespace El_Khalil
                         tb_render.Text = dataReader[10].ToString();
                         textBox1.Text = dataReader[3].ToString();
                         textBox2.Text = dataReader[11].ToString();
+                        tb_number.Text= dataReader[12].ToString();
+                        tb_owner.Text= dataReader[13].ToString();
                     }
                 }
 
@@ -67,6 +69,7 @@ namespace El_Khalil
             }
             else if (Bill_Type.ToString().Contains("مرتجع"))
             {
+                label10.Visible = label11.Visible = label14.Visible=label3.Visible = tb_payment.Visible = tb_render.Visible = textBox1.Visible = textBox2.Visible = false;
                 panel4.Visible = false;
                 using (dataSet = Ezzat.GetDataSet("select_Supplier_BillDetails", "X",
                      new SqlParameter("@Bill_ID", Bill_ID),
@@ -92,8 +95,9 @@ namespace El_Khalil
                         tb_OldMoney.Text = dataReader[7].ToString();
                         tb_Total.Text = dataReader[8].ToString();
                         tb_payment.Text = dataReader[9].ToString();
-                        textBox2.Visible=label3.Visible= tb_render.Visible=label11.Visible = false;
                         textBox1.Text = dataReader[3].ToString();
+                        tb_number.Text = dataReader[10].ToString();
+                        tb_owner.Text = dataReader[11].ToString();
                     }
                 }
 
@@ -112,12 +116,15 @@ namespace El_Khalil
                 {
                     while (dataReader.Read())
                     {
-                        label16.Text = dataReader[0].ToString();
-                        label4.Text = dataReader[1].ToString();
-                        textBox3.Text = dataReader[6].ToString();
-                        tb_old.Text = dataReader[12].ToString();
-                        tb_pay.Text = dataReader[13].ToString();
-                        tb_after.Text = dataReader[14].ToString();
+                        label21.Text = dataReader[0].ToString();
+                        label16.Text = dataReader[2].ToString();
+                        tb_old.Text = dataReader[4].ToString();
+                        tb_pay.Text = dataReader[5].ToString();
+                        tb_after.Text = dataReader[6].ToString();
+                        richTextBox1.Text = dataReader[7].ToString();
+                        textBox5.Text = dataReader[8].ToString();
+                        textBox4.Text = dataReader[9].ToString();
+                        textBox3.Text = dataReader[10].ToString();
                     }
                 }
 
@@ -136,12 +143,15 @@ namespace El_Khalil
                 {
                     while (dataReader.Read())
                     {
-                        label16.Text = dataReader[0].ToString();
-                        label4.Text = dataReader[2].ToString();
-                        textBox3.Visible = label22.Visible = false;
+                        label21.Text = dataReader[0].ToString();
+                        label16.Text = dataReader[2].ToString();
                         tb_old.Text = dataReader[4].ToString();
                         tb_pay.Text = dataReader[5].ToString();
                         tb_after.Text = dataReader[6].ToString();
+                        richTextBox1.Text = dataReader[7].ToString();
+                        textBox5.Text = dataReader[8].ToString();
+                        textBox4.Visible = label24.Visible = false;
+                        textBox3.Text = dataReader[10].ToString();
                     }
                 }
 
@@ -160,12 +170,15 @@ namespace El_Khalil
                 {
                     while (dataReader.Read())
                     {
-                        label16.Text = dataReader[0].ToString();
-                        label4.Text = dataReader[2].ToString();
-                        textBox3.Visible = label22.Visible = false;
+                        label21.Text = dataReader[0].ToString();
+                        label16.Text = dataReader[2].ToString();
                         tb_old.Text = dataReader[3].ToString();
                         tb_pay.Text = dataReader[4].ToString();
                         tb_after.Text = dataReader[5].ToString();
+                        richTextBox1.Text = dataReader[6].ToString();
+                        textBox5.Text = dataReader[7].ToString();
+                        textBox4.Visible = label24.Visible = false;
+                        textBox3.Text = dataReader[8].ToString();
                     }
                 }
 

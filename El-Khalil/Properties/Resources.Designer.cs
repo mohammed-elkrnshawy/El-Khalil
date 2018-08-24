@@ -143,6 +143,16 @@ namespace El_Khalil.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap print_black_printer_tool_symbol {
+            get {
+                object obj = ResourceManager.GetObject("print-black-printer-tool-symbol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap save_disk {
             get {
                 object obj = ResourceManager.GetObject("save-disk", resourceCulture);
