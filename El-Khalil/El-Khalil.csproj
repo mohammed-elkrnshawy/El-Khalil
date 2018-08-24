@@ -195,12 +195,6 @@
     <Compile Include="StoreTransaction.Designer.cs">
       <DependentUpon>StoreTransaction.cs</DependentUpon>
     </Compile>
-    <Compile Include="Supplier Bank.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Supplier Bank.Designer.cs">
-      <DependentUpon>Supplier Bank.cs</DependentUpon>
-    </Compile>
     <Compile Include="Supplier BillDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,12 +225,6 @@
     </Compile>
     <Compile Include="SupplierReturned.Designer.cs">
       <DependentUpon>SupplierReturned.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Supplier_Discount.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Supplier_Discount.Designer.cs">
-      <DependentUpon>Supplier_Discount.cs</DependentUpon>
     </Compile>
     <Compile Include="Supplier_Purchasing.cs">
       <SubType>Form</SubType>
@@ -343,9 +331,6 @@
     <EmbeddedResource Include="StoreTransaction.resx">
       <DependentUpon>StoreTransaction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Supplier Bank.resx">
-      <DependentUpon>Supplier Bank.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Supplier BillDetails.resx">
       <DependentUpon>Supplier BillDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -365,9 +350,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SupplierReturned.resx">
       <DependentUpon>SupplierReturned.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Supplier_Discount.resx">
-      <DependentUpon>Supplier_Discount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier_Purchasing.resx">
       <DependentUpon>Supplier_Purchasing.cs</DependentUpon>

@@ -359,7 +359,7 @@ namespace El_Khalil
             {
                 Ezzat.ExecutedNoneQuery("updateMaterialQuantity_Increase"
                     , new SqlParameter("@Material_ID", int.Parse(item.Cells[0].Value.ToString()))
-                    , new SqlParameter("@Material_Quantity", item.Cells[3].Value.ToString())
+                    , new SqlParameter("@Material_Quantity", item.Cells[6].Value.ToString())
                     );
             }
 
