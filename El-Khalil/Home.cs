@@ -442,7 +442,7 @@ namespace El_Khalil
 
         private void button13_Click(object sender, EventArgs e)
         {
-            Add_Tab("من عميل الى بنك", new Customer_Bank());
+           
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -463,8 +463,7 @@ namespace El_Khalil
 
         private void خصمعميلToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Customer_Discount _Discount = new Customer_Discount();
-            _Discount.ShowDialog();
+            
         }
 
         private void اضافةمسميوظيفيToolStripMenuItem_Click(object sender, EventArgs e)
