@@ -79,7 +79,7 @@ namespace El_Khalil
         private void Home_Load(object sender, EventArgs e)
         {
 
-            StartQuantity();
+            //StartQuantity();
 
 
             Size mysize = new System.Drawing.Size(20, 20); // co anh chen vao
@@ -96,26 +96,26 @@ namespace El_Khalil
             tabControl1.Padding = new Point(30);
         }
 
-        private void StartQuantity()
-        {
-            SqlConnection con;
+        //private void StartQuantity()
+        //{
+        //    SqlConnection con;
 
-            SqlDataReader dataReader = Ezzat.GetDataReader("Select_All", out con);
+        //    SqlDataReader dataReader = Ezzat.GetDataReader("Select_All", out con);
 
-            if (dataReader.HasRows)
-            {
-                while (dataReader.Read())
-                {
-                    Ezzat.ExecutedNoneQuery("update_StartQuantity",
-                        new SqlParameter("@Product_ID", dataReader[0].ToString()),
-                        new SqlParameter("@StartDate",DateTime.Parse(DateTime.Now.ToString())),
-                        new SqlParameter("@ProductType", dataReader[3].ToString())
-                        );
-                }
-            }
+        //    if (dataReader.HasRows)
+        //    {
+        //        while (dataReader.Read())
+        //        {
+        //            Ezzat.ExecutedNoneQuery("update_StartQuantity",
+        //                new SqlParameter("@Product_ID", dataReader[0].ToString()),
+        //                new SqlParameter("@StartDate",DateTime.Parse(DateTime.Now.ToString())),
+        //                new SqlParameter("@ProductType", dataReader[3].ToString())
+        //                );
+        //        }
+        //    }
 
-            con.Close();
-        }
+        //    con.Close();
+        //}
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {

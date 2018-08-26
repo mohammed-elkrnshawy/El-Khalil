@@ -16,8 +16,10 @@ namespace El_Khalil
 
         private List<z_Product_Object> product_ObjectsList = new List<z_Product_Object>();
 
-        private string Product_QuqntityPerUnit, Product_Unit;
+
         private DataSet ds;
+        private double Product_PerUnit;
+
         public Productivity_Product()
         {
             InitializeComponent();
@@ -53,28 +55,26 @@ namespace El_Khalil
 
         private void combo_Products_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SqlConnection con;
-            if (combo_Products.Focused)
+           if(combo_Products.Focused)
             {
-                using (ds = Ezzat.GetDataSet("selectComponent", "X", new SqlParameter("@Prpduct_ID", int.Parse(combo_Products.SelectedValue + ""))))
-                {
-                    dataGridView1.DataSource = ds.Tables["X"];
-                }
+                Product_PerUnit = (double)Ezzat.ExecutedScalar("select_Product_Perunit", new SqlParameter("@Product_ID",combo_Products.SelectedValue));
 
-                SqlDataReader dataReader = Ezzat.GetDataReader("selectSpasificProduct", out con, new SqlParameter("@Product_ID", (int)combo_Products.SelectedValue));
-
-                if (dataReader.HasRows)
+                dataGridView1.Rows.Clear();
+                SqlConnection con;
+                SqlDataReader dr = Ezzat.GetDataReader("selectComponent", out con, new SqlParameter("@Prpduct_ID", combo_Products.SelectedValue));
+                if (dr.HasRows)
                 {
-                    while (dataReader.Read())
+                    while (dr.Read())
                     {
-                        Product_Unit = dataReader["Product_Unit"].ToString();
-                        Product_QuqntityPerUnit = dataReader["Product_QuqntityPerUnit"].ToString();
+                        dataGridView1.Rows.Add();
+                        dataGridView1[0, dataGridView1.Rows.Count - 1].Value = dr[0].ToString();
+                        dataGridView1[1, dataGridView1.Rows.Count - 1].Value = dr[1].ToString();
+                        dataGridView1[2, dataGridView1.Rows.Count - 1].Value = dr[2].ToString();
+                        dataGridView1[3, dataGridView1.Rows.Count - 1].Value = dr[3].ToString();
                     }
                 }
                 con.Close();
-
             }
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -102,17 +102,15 @@ namespace El_Khalil
                     dataGridView2.Rows.Add();
                     dataGridView2[0, dataGridView2.Rows.Count - 1].Value = combo_Products.SelectedValue;
                     dataGridView2[1, dataGridView2.Rows.Count - 1].Value = combo_Products.Text;
-                    dataGridView2[2, dataGridView2.Rows.Count - 1].Value = Product_QuqntityPerUnit + "/" + Product_Unit;
+                    dataGridView2[2, dataGridView2.Rows.Count - 1].Value = Product_PerUnit + "/" + "كجم";
                     dataGridView2[3, dataGridView2.Rows.Count - 1].Value = tb_quantity.Text;
-                    dataGridView2[4, dataGridView2.Rows.Count - 1].Value = Product_Unit;
+                    dataGridView2[4, dataGridView2.Rows.Count - 1].Value = "كجم";
                 }
 
             }
             else
                 MessageBox.Show("من فضلك راجع البيانات");
         }
-
-
 
         private bool isValidItem()
         {
@@ -132,18 +130,13 @@ namespace El_Khalil
             return Valid;
         }
 
-        private void dataGridView2_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
-        {
-            DeleteFromCalcolateReqireQuantitiy((int)dataGridView2.CurrentRow.Cells[0].Value);
-        }
-
         private bool CalcolateReqireQuantitiy()
         {
             bool Valid = true;
 
             List<z_Product_Component> componentList = new List<z_Product_Component>();
-            
-            double p = double.Parse(tb_quantity.Text) / double.Parse(Product_QuqntityPerUnit);
+
+            double p = double.Parse(tb_quantity.Text) / Product_PerUnit;
 
 
             foreach (DataGridViewRow item in dataGridView1.Rows)
@@ -157,23 +150,28 @@ namespace El_Khalil
 
 
 
-            List<z_Product_Component> zs= z_Product_Object.SumOfMaterial(product_ObjectsList);
+            List<z_Product_Component> zs = z_Product_Object.SumOfMaterial(product_ObjectsList);
 
-            foreach(z_Product_Component item in zs)
+            foreach (z_Product_Component item in zs)
             {
-               double quantity=(double)Ezzat.ExecutedScalar("selectMaterialQuantity", new SqlParameter("@Material_Name", item.MatrialName));
+                double quantity = (double)Ezzat.ExecutedScalar("selectMaterialQuantity_Name", new SqlParameter("@Material_Name", item.MatrialName));
                 if (quantity >= item.Quantitiy)
-                    Valid=true;
+                    Valid = true;
                 else
                 {
                     DeleteFromCalcolateReqireQuantitiy((int)combo_Products.SelectedValue);
-                    MessageBox.Show(" لا يوجد كمية من المادة الخام "+item.MatrialName);
-                    Valid=false;
+                    MessageBox.Show(" لا يوجد كمية من المادة الخام " + item.MatrialName);
+                    Valid = false;
                     break;
                 }
             }
 
             return Valid;
+        }
+
+        private void dataGridView2_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            DeleteFromCalcolateReqireQuantitiy((int)dataGridView2.CurrentRow.Cells[0].Value);
         }
 
         private void DeleteFromCalcolateReqireQuantitiy(int product_ID)
@@ -203,12 +201,16 @@ namespace El_Khalil
 
         private void Add_ProductionTransaction()
         {
-            Ezzat.ExecutedNoneQuery("insert_ProductionTransaction", new SqlParameter("@Report_date",DateTime.Parse(DateTime.Now.ToString())));
+            Ezzat.ExecutedNoneQuery("insert_ProductionTransaction", 
+                new SqlParameter("@Report_date",DateTime.Parse(DateTime.Now.ToString())),
+                new SqlParameter("@ReportNotes", richTextBox1.Text)
+                );
         }
 
         private void editStore()
         {
             // تعديل الكميات ف المخازن
+
             // تعديل كمية المواد الخام ف المخازن 
             foreach (z_Product_Component item in z_Product_Object.SumOfMaterial(product_ObjectsList))
             {
@@ -223,7 +225,6 @@ namespace El_Khalil
                     ,new SqlParameter("@Material_Name",item.MatrialName)
                     ,new SqlParameter("@Material_Quantity",item.Quantitiy)
                     );
-
 
             }
 
@@ -247,24 +248,29 @@ namespace El_Khalil
 
             }
 
+
+
             //اضافة تعامل ف المخازن
 
-            // صرف مواد خام
+
+            // اضافة تعاملات ف المخازن
             Ezzat.ExecutedNoneQuery("insertStoreTransaction",
                 new SqlParameter("@Report_Type", false),
                 new SqlParameter("@Report_Date", DateTime.Now.ToString()),
                 new SqlParameter("@Bill_ID", int.Parse(label6.Text)),
-                new SqlParameter("@Bill_Type", "صرف مواد خام"),
-                new SqlParameter("@Report_Notes", "صرف مواد خام لانتاج منتج نهائى")
+                new SqlParameter("@Bill_Type", "صرف مواد خام امر تشعيل"),
+                new SqlParameter("@Report_Notes", richTextBox1.Text)
                 );
+
+           
 
             // اضافة منتج نهائى
             Ezzat.ExecutedNoneQuery("insertStoreTransaction",
                 new SqlParameter("@Report_Type", true),
                 new SqlParameter("@Report_Date", DateTime.Now.ToString()),
                 new SqlParameter("@Bill_ID", int.Parse(label6.Text)),
-                new SqlParameter("@Bill_Type", "زيادة منتج نهائى"),
-                new SqlParameter("@Report_Notes", "انتاج منتج نهائى")
+                new SqlParameter("@Bill_Type", "زيادة منتج نهائى امر تشغيل"),
+                new SqlParameter("@Report_Notes", richTextBox1.Text)
                 );
 
         }

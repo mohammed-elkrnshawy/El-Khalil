@@ -159,6 +159,7 @@
             this.bt_edit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bt_edit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bt_edit.UseVisualStyleBackColor = false;
+            this.bt_edit.Click += new System.EventHandler(this.bt_edit_Click);
             // 
             // bt_Save
             // 
