@@ -28,6 +28,8 @@ namespace El_Khalil
 
         private void button1_Click(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = null;
+            dataGridView1.Columns.Clear();
             StoreAllTransactions();
         }
 
@@ -49,15 +51,6 @@ namespace El_Khalil
             }
         }
 
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton3.Checked)
-            {
-                pn_today.Visible = false;
-                pn_during.Visible = false;
-            }
-        }
-
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
             Graphics v = e.Graphics;
@@ -66,126 +59,51 @@ namespace El_Khalil
         }
         private void StoreAllTransactions()
         {
-            if (radioButton3.Checked)
+            if (radioButton2.Checked)
             {
-                FillGrid_ALL();
-                using (dataSet = Ezzat.GetDataSet("_Store_AllTransaction_All", "X"))
-                {
-                    dataGridView1.DataSource = dataSet.Tables["X"];
-                }
-            }
-            else if (radioButton2.Checked)
-            {
-                dataGridView2.Rows.Clear();
-                FillGrid_During(dateTimePicker1.Value, dateTimePicker2.Value);
                 using (dataSet = Ezzat.GetDataSet("_Store_AllTransaction_DUring", "X",
                     new SqlParameter("@Day", DateTime.Parse(dateTimePicker1.Value.ToString())),
                     new SqlParameter("@Day2", DateTime.Parse(dateTimePicker2.Value.ToString()))))
                 {
                     dataGridView1.DataSource = dataSet.Tables["X"];
+                    Add_GridButtun();
                 }
 
+                FillGrid_During(dateTimePicker1.Value, dateTimePicker2.Value);
             }
             else if (radioButton1.Checked)
             {
-                
-                dataGridView2.Rows.Clear();
-                dataGridView1.Rows.Clear();
+
+                using (dataSet = Ezzat.GetDataSet("_Store_AllTransaction_Day", "X",
+                    new SqlParameter("@Day", DateTime.Parse(dateTimePicker3.Value.ToString()))))
+                {
+                    dataGridView1.DataSource = dataSet.Tables["X"];
+                    Add_GridButtun();
+                }
+
                 FillGrid_During(dateTimePicker3.Value, dateTimePicker3.Value);
-
-                SqlConnection con;
-                SqlDataReader dataReader = Ezzat.GetDataReader("_Store_AllTransaction_Day", out con,
-                    new SqlParameter("@Day", DateTime.Parse(dateTimePicker3.Value.ToString())));
-                if (dataReader.HasRows)
-                {
-                    while (dataReader.Read())
-                    {
-                        dataGridView1.Rows.Add();
-                        dataGridView1[0, dataGridView1.Rows.Count - 1].Value = dataReader[0].ToString();
-                        dataGridView1[1, dataGridView1.Rows.Count - 1].Value = dataReader[1].ToString();
-                        dataGridView1[2, dataGridView1.Rows.Count - 1].Value = dataReader[2].ToString();
-                        dataGridView1[3, dataGridView1.Rows.Count - 1].Value = dataReader[3].ToString();
-                    }
-                        
-                }
-                con.Close();
             }
         }
-        //private void FillGrid_Day()
-        //{
-        //    SqlConnection con;
-        //    SqlDataReader dataReader = Ezzat.GetDataReader("fillGrid_Quantity", out con, new SqlParameter("@StartDate", StartDateTime));
 
-        //    if (dataReader.HasRows)
-        //    {
-        //        while (dataReader.Read())
-        //        {
-        //            dataGridView2.Rows.Add();
-        //            dataGridView2[0, dataGridView2.Rows.Count - 1].Value = dataReader[1].ToString();
-        //            dataGridView2[1, dataGridView2.Rows.Count - 1].Value = dataReader[6].ToString();
-        //            dataGridView2[2, dataGridView2.Rows.Count - 1].Value = dataReader[3].ToString()+"  "+ dataReader[7].ToString();
-        //            if (dataReader[4].ToString()=="")
-        //                dataGridView2[3, dataGridView2.Rows.Count - 1].Value ="؟   "+ dataReader[7].ToString();
-        //            else
-        //                dataGridView2[3, dataGridView2.Rows.Count - 1].Value = dataReader[4].ToString() + "  " + dataReader[7].ToString();
-
-        //        }
-        //    }
-
-        //    con.Close();
-
-        //}
-
-        private void FillGrid_During(DateTime StartDateTime,DateTime EndDateTime)
+        private void Add_GridButtun()
         {
-            object ob;
-            SqlConnection con;
-
-            SqlDataReader dataReader = Ezzat.GetDataReader("Select_All", out con);
-           
-
-            if (dataReader.HasRows)
+            DataGridViewButtonColumn uninstallButtonColumn = new DataGridViewButtonColumn();
+            uninstallButtonColumn.Name = "عرض التفاصيل";
+            uninstallButtonColumn.Text = "عرض التفاصيل";
+            uninstallButtonColumn.ToolTipText = "عرض التفاصيل";
+            uninstallButtonColumn.HeaderText = "عرض التفاصيل";
+            uninstallButtonColumn.DataPropertyName = "عرض التفاصيل";
+            uninstallButtonColumn.UseColumnTextForButtonValue = true;
+            int columnIndex = 5;
+            if (dataGridView1.Columns["عرض التفاصيل"] == null)
             {
-                while (dataReader.Read())
-                {
-                    dataGridView2.Rows.Add();
-                    dataGridView2[0, dataGridView2.Rows.Count - 1].Value = dataReader[0].ToString();
-                    dataGridView2[1, dataGridView2.Rows.Count - 1].Value = dataReader[1].ToString();
-                    
-
-                    ob = Ezzat.ExecutedScalar("select_StartQuantity",
-                        new SqlParameter("@startDate", StartDateTime),
-                        new SqlParameter("@Product_ID", dataReader[0].ToString()),
-                        new SqlParameter("@Product_type", dataReader[3].ToString())
-                        );
-                    if (ob == null)
-                        dataGridView2[2, dataGridView2.Rows.Count - 1].Value = "؟   " + dataReader[4].ToString();
-                    else
-                        dataGridView2[2, dataGridView2.Rows.Count - 1].Value = ob + "  " + dataReader[4].ToString();
-
-
-                    ob = Ezzat.ExecutedScalar("select_EndQuantity",
-                        new SqlParameter("@EndDate", EndDateTime),
-                        new SqlParameter("@Product_ID", dataReader[0].ToString()),
-                        new SqlParameter("@Product_type", dataReader[3].ToString())
-                        );
-                    if (ob == null)
-                        dataGridView2[3, dataGridView2.Rows.Count - 1].Value = "؟   " + dataReader[4].ToString();
-                    else
-                        dataGridView2[3, dataGridView2.Rows.Count - 1].Value = ob + "  " + dataReader[4].ToString();
-
-                }
+                dataGridView1.Columns.Insert(columnIndex, uninstallButtonColumn);
             }
-
-            
-
-            con.Close();
-
         }
 
-        private void FillGrid_ALL()
+        private void FillGrid_During(DateTime StartDateTime, DateTime EndDateTime)
         {
-            object ob;
+            dataGridView2.Rows.Clear();
             SqlConnection con;
 
             SqlDataReader dataReader = Ezzat.GetDataReader("Select_All", out con);
@@ -198,28 +116,69 @@ namespace El_Khalil
                     dataGridView2.Rows.Add();
                     dataGridView2[0, dataGridView2.Rows.Count - 1].Value = dataReader[0].ToString();
                     dataGridView2[1, dataGridView2.Rows.Count - 1].Value = dataReader[1].ToString();
-                    dataGridView2[2, dataGridView2.Rows.Count - 1].Value = "0  " + dataReader[4].ToString();
-                    if(dataReader[3].ToString()== "مادة خام")
-                    {
-                        ob = Ezzat.ExecutedScalar("selectMaterialQuantity",
-                        new SqlParameter("@Material_Name", dataReader[1].ToString())
-                        );
-                        dataGridView2[3, dataGridView2.Rows.Count - 1].Value = ob + "  " + dataReader[4].ToString();
-                    }
-                    else if(dataReader[3].ToString() == "منتج نهائى")
-                    {
-                        ob = Ezzat.ExecutedScalar("selectProductQuantity",
-                        new SqlParameter("@Material_Name", dataReader[1].ToString())
-                        );
-                        dataGridView2[3, dataGridView2.Rows.Count - 1].Value = ob + "  " + dataReader[4].ToString();
-                    }
+                    dataGridView2[2, dataGridView2.Rows.Count - 1].Value = CalcolateEnd(dataReader[0].ToString(), EndDateTime);
+                    dataGridView2[3, dataGridView2.Rows.Count - 1].Value = CalcolateStart(dataReader[0].ToString(), StartDateTime);
+                    dataGridView2[4, dataGridView2.Rows.Count - 1].Value = double.Parse(dataGridView2[2, dataGridView2.Rows.Count - 1].Value+"") 
+                                                                            - double.Parse(dataGridView2[3, dataGridView2.Rows.Count - 1].Value+"");
                 }
             }
-
-
-
-            con.Close();
-
         }
+
+        private string CalcolateStart(string v, DateTime startDateTime)
+        {
+            object o=Ezzat.ExecutedScalar("select_StartQuantity",
+                new SqlParameter("@startDate",startDateTime),
+                new SqlParameter("@Product_ID",int.Parse(v)));
+            if (o == null)
+                return "0";
+            else
+            return o+"";
+        }
+
+        private string CalcolateEnd(string v, DateTime endDateTime)
+        {
+            object Day_Num = Ezzat.ExecutedScalar("select_EndQuantity_Day_Number",
+                new SqlParameter("@EndDate", endDateTime));
+            if(Day_Num==null)
+            {
+                return "0";
+            }
+            else
+            {
+                int d = int.Parse(Day_Num.ToString());
+                d++;
+                Day_Num = d;
+
+                object o = Ezzat.ExecutedScalar("select_EndQuantity",
+                new SqlParameter("@Day_Number", Day_Num),
+                new SqlParameter("@Product_ID", int.Parse(v))
+                );
+
+                if(o==null)
+                {
+                    object q = Ezzat.ExecutedScalar("select_EndQuantity_Today", new SqlParameter("@Product_ID", int.Parse(v)));
+                    return q + "";
+                }
+                else
+                {
+                    return o + "";
+                }
+
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dataGridView1.CurrentCell==dataGridView1.CurrentRow.Cells[5])
+            {
+                Store_BillDetails store_ = new Store_BillDetails(dataGridView1.CurrentRow.Cells[0].Value.ToString(),
+                                                                 dataGridView1.CurrentRow.Cells[1].Value.ToString(),
+                                                                 dataGridView1.CurrentRow.Cells[3].Value.ToString(),
+                                                                 dataGridView1.CurrentRow.Cells[4].Value.ToString()
+                    );
+                store_.ShowDialog();
+            }
+        }
+        
     }
 }

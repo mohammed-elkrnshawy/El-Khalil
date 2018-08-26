@@ -165,6 +165,12 @@
     <Compile Include="Productivity Product.Designer.cs">
       <DependentUpon>Productivity Product.cs</DependentUpon>
     </Compile>
+    <Compile Include="Store BillDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Store BillDetails.Designer.cs">
+      <DependentUpon>Store BillDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Store.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -297,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Productivity Product.resx">
       <DependentUpon>Productivity Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Store BillDetails.resx">
+      <DependentUpon>Store BillDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Store.resx">
       <DependentUpon>Store.cs</DependentUpon>
