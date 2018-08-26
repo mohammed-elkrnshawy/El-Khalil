@@ -50,7 +50,7 @@ namespace El_Khalil
             if (radioButton1.Checked)
             {
                 pn_today.Visible = true;
-                panel5.Visible = false;
+                pn_during.Visible = false;
             }
         }
 
@@ -59,7 +59,7 @@ namespace El_Khalil
             if (radioButton2.Checked)
             {
                 pn_today.Visible = false;
-                panel5.Visible = true;
+                pn_during.Visible = true;
             }
         }
 
@@ -68,7 +68,7 @@ namespace El_Khalil
             if (radioButton3.Checked)
             {
                 pn_today.Visible = false;
-                panel5.Visible = false;
+                pn_during.Visible = false;
             }
         }
 
@@ -93,8 +93,10 @@ namespace El_Khalil
                         dataGridView1[0, dataGridView1.Rows.Count - 1].Value = dataReader[0].ToString();
                         dataGridView1[1, dataGridView1.Rows.Count - 1].Value = dataReader[1].ToString();
                         dataGridView1[2, dataGridView1.Rows.Count - 1].Value = dataReader[2].ToString();
-                        dataGridView1[3, dataGridView1.Rows.Count - 1].Value = dataReader[3].ToString();
-                        dataGridView1[4, dataGridView1.Rows.Count - 1].Value = dataReader[4].ToString();
+                        dataGridView1[3, dataGridView1.Rows.Count - 1].Value = (double.Parse(dataReader[2].ToString()) - double.Parse(dataReader[1].ToString()));
+                        dataGridView1[4, dataGridView1.Rows.Count - 1].Value = dataReader[3].ToString();
+                        dataGridView1[5, dataGridView1.Rows.Count - 1].Value = dataReader[5].ToString();
+                        dataGridView1[6, dataGridView1.Rows.Count - 1].Value = dataReader[4].ToString();
                     }
                 }
 
@@ -120,8 +122,10 @@ namespace El_Khalil
                         dataGridView1[0, dataGridView1.Rows.Count - 1].Value = dataReader[0].ToString();
                         dataGridView1[1, dataGridView1.Rows.Count - 1].Value = dataReader[1].ToString();
                         dataGridView1[2, dataGridView1.Rows.Count - 1].Value = dataReader[2].ToString();
-                        dataGridView1[3, dataGridView1.Rows.Count - 1].Value = dataReader[3].ToString();
-                        dataGridView1[4, dataGridView1.Rows.Count - 1].Value = dataReader[4].ToString();
+                        dataGridView1[3, dataGridView1.Rows.Count - 1].Value = (double.Parse(dataReader[2].ToString()) - double.Parse(dataReader[1].ToString()));
+                        dataGridView1[4, dataGridView1.Rows.Count - 1].Value = dataReader[3].ToString();
+                        dataGridView1[5, dataGridView1.Rows.Count - 1].Value = dataReader[5].ToString();
+                        dataGridView1[6, dataGridView1.Rows.Count - 1].Value = dataReader[4].ToString();
                     }
                 }
 
@@ -144,8 +148,10 @@ namespace El_Khalil
                         dataGridView1[0, dataGridView1.Rows.Count - 1].Value = dataReader[0].ToString();
                         dataGridView1[1, dataGridView1.Rows.Count - 1].Value = dataReader[1].ToString();
                         dataGridView1[2, dataGridView1.Rows.Count - 1].Value = dataReader[2].ToString();
-                        dataGridView1[3, dataGridView1.Rows.Count - 1].Value = dataReader[3].ToString();
-                        dataGridView1[4, dataGridView1.Rows.Count - 1].Value = dataReader[4].ToString();
+                        dataGridView1[3, dataGridView1.Rows.Count - 1].Value = (double.Parse(dataReader[2].ToString()) - double.Parse(dataReader[1].ToString()));
+                        dataGridView1[4, dataGridView1.Rows.Count - 1].Value = dataReader[3].ToString();
+                        dataGridView1[5, dataGridView1.Rows.Count - 1].Value = dataReader[5].ToString();
+                        dataGridView1[6, dataGridView1.Rows.Count - 1].Value = dataReader[4].ToString();
                     }
                 }
 
@@ -179,6 +185,18 @@ namespace El_Khalil
             label8.Text = Total + "";
             label9.Text = debit + "";
             label10.Text = (Total - debit) + "";
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dataGridView1.CurrentCell==dataGridView1.CurrentRow.Cells[7])
+            {
+                Customer_BillDetails BillDetails = new Customer_BillDetails(int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString())
+                                                                             , dataGridView1.CurrentRow.Cells[6].Value
+                                                                             ,dataGridView1.CurrentRow.Cells[5].Value
+                                                                             );
+                BillDetails.ShowDialog();
+            }
         }
     }
 }
