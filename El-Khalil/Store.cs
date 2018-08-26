@@ -28,7 +28,6 @@ namespace El_Khalil
 
         private void Store_Load(object sender, EventArgs e)
         {
-
             radioButton1_CheckedChanged(sender, e);
         }
 

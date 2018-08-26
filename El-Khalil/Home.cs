@@ -79,7 +79,7 @@ namespace El_Khalil
         private void Home_Load(object sender, EventArgs e)
         {
 
-            //StartQuantity();
+            StartQuantity();
 
 
             Size mysize = new System.Drawing.Size(20, 20); // co anh chen vao
@@ -96,26 +96,47 @@ namespace El_Khalil
             tabControl1.Padding = new Point(30);
         }
 
-        //private void StartQuantity()
-        //{
-        //    SqlConnection con;
+        private void StartQuantity()
+        {
 
-        //    SqlDataReader dataReader = Ezzat.GetDataReader("Select_All", out con);
+            object o = Ezzat.ExecutedScalar("select_DayNumber", new SqlParameter("@DayDate",DateTime.Parse(DateTime.Now.ToString())));
+            if (o == null)
+            {
+                o = Ezzat.ExecutedScalar("select_DayNumber_ID");
+                if (o == null)
+                    o = "1";
+                else
+                {
+                    int i = int.Parse(o.ToString());
+                    i++;
+                    o = i;
+                }
+                    
 
-        //    if (dataReader.HasRows)
-        //    {
-        //        while (dataReader.Read())
-        //        {
-        //            Ezzat.ExecutedNoneQuery("update_StartQuantity",
-        //                new SqlParameter("@Product_ID", dataReader[0].ToString()),
-        //                new SqlParameter("@StartDate",DateTime.Parse(DateTime.Now.ToString())),
-        //                new SqlParameter("@ProductType", dataReader[3].ToString())
-        //                );
-        //        }
-        //    }
 
-        //    con.Close();
-        //}
+                SqlConnection con;
+
+                SqlDataReader dataReader = Ezzat.GetDataReader("Select_All2", out con);
+
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                    {
+                        Ezzat.ExecutedNoneQuery("insert_StartQuantity",
+                            new SqlParameter("@Day_Number",o),
+                            new SqlParameter("@Product_ID", dataReader[0].ToString()),
+                            new SqlParameter("@StartDate", DateTime.Parse(DateTime.Now.ToString())),
+                            new SqlParameter("@StartQuantity", dataReader[1].ToString()),
+                            new SqlParameter("@Product_Type", dataReader[2].ToString()),
+                            new SqlParameter("@Product_Name", dataReader[3].ToString()),
+                            new SqlParameter("@Product_Unit", dataReader[4].ToString())
+                            );
+                    }
+                }
+
+                con.Close();
+            }
+        }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
