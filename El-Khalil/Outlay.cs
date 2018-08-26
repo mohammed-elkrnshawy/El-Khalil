@@ -65,7 +65,7 @@ namespace El_Khalil
                 new SqlParameter("@Bill_Type", "مصاريف"),
                 new SqlParameter("@Report_Date", DateTime.Parse(DateTime.Now.ToString())),
                 new SqlParameter("@Report_Money", float.Parse(tb_OldMoney.Text)),
-                new SqlParameter("@Report_Notes", "مصاريف نقدية")
+                new SqlParameter("@Report_Notes", richTextBox1.Text)
                 );
         }
 

@@ -81,6 +81,7 @@
             this.اضافةبندمصروفاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.خصمموردToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.خصمعميلToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.اضافةمسميوظيفيToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
@@ -134,7 +135,7 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.اضافةمسميوظيفيToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.حركةالمصروفاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -553,7 +554,8 @@
             this.اضافةبندمصروفاتToolStripMenuItem,
             this.خصمموردToolStripMenuItem,
             this.خصمعميلToolStripMenuItem,
-            this.اضافةمسميوظيفيToolStripMenuItem});
+            this.اضافةمسميوظيفيToolStripMenuItem,
+            this.حركةالمصروفاتToolStripMenuItem});
             this.الاضافاتToolStripMenuItem.Name = "الاضافاتToolStripMenuItem";
             this.الاضافاتToolStripMenuItem.Size = new System.Drawing.Size(64, 23);
             this.الاضافاتToolStripMenuItem.Text = "الاضافات";
@@ -578,6 +580,13 @@
             this.خصمعميلToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.خصمعميلToolStripMenuItem.Text = "خصم عميل";
             this.خصمعميلToolStripMenuItem.Click += new System.EventHandler(this.خصمعميلToolStripMenuItem_Click);
+            // 
+            // اضافةمسميوظيفيToolStripMenuItem
+            // 
+            this.اضافةمسميوظيفيToolStripMenuItem.Name = "اضافةمسميوظيفيToolStripMenuItem";
+            this.اضافةمسميوظيفيToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.اضافةمسميوظيفيToolStripMenuItem.Text = "اضافة مسمي وظيفي";
+            this.اضافةمسميوظيفيToolStripMenuItem.Click += new System.EventHandler(this.اضافةمسميوظيفيToolStripMenuItem_Click);
             // 
             // tabControl1
             // 
@@ -1346,12 +1355,12 @@
             this.toolStripStatusLabel3.Size = new System.Drawing.Size(73, 17);
             this.toolStripStatusLabel3.Text = "الحالة :  ادمن ";
             // 
-            // اضافةمسميوظيفيToolStripMenuItem
+            // حركةالمصروفاتToolStripMenuItem
             // 
-            this.اضافةمسميوظيفيToolStripMenuItem.Name = "اضافةمسميوظيفيToolStripMenuItem";
-            this.اضافةمسميوظيفيToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.اضافةمسميوظيفيToolStripMenuItem.Text = "اضافة مسمي وظيفي";
-            this.اضافةمسميوظيفيToolStripMenuItem.Click += new System.EventHandler(this.اضافةمسميوظيفيToolStripMenuItem_Click);
+            this.حركةالمصروفاتToolStripMenuItem.Name = "حركةالمصروفاتToolStripMenuItem";
+            this.حركةالمصروفاتToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.حركةالمصروفاتToolStripMenuItem.Text = "حركة المصروفات";
+            this.حركةالمصروفاتToolStripMenuItem.Click += new System.EventHandler(this.حركةالمصروفاتToolStripMenuItem_Click);
             // 
             // Home
             // 
@@ -1495,5 +1504,6 @@
         private System.Windows.Forms.ToolStripMenuItem خصمموردToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem خصمعميلToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem اضافةمسميوظيفيToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem حركةالمصروفاتToolStripMenuItem;
     }
 }

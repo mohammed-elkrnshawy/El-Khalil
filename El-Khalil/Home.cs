@@ -493,6 +493,11 @@ namespace El_Khalil
             add.ShowDialog();
         }
 
+        private void حركةالمصروفاتToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("حركة المصروفات", new Outlay_Account());
+        }
+
         private void Add_Tab(string Name,Form form)
         {
             TabPage tp = new TabPage(Name);
