@@ -276,6 +276,7 @@
             this.combo_Employee.Size = new System.Drawing.Size(295, 24);
             this.combo_Employee.TabIndex = 56;
             this.combo_Employee.Tag = "";
+            this.combo_Employee.SelectedIndexChanged += new System.EventHandler(this.combo_Employee_SelectedIndexChanged);
             // 
             // label4
             // 
