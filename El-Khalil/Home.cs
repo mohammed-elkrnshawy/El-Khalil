@@ -498,6 +498,11 @@ namespace El_Khalil
             Add_Tab("حركة المصروفات", new Outlay_Account());
         }
 
+        private void button22_Click(object sender, EventArgs e)
+        {
+            Add_Tab("تحويل من عميل الى مورد", new Bank_Cus_To_Sup());
+        }
+
         private void Add_Tab(string Name,Form form)
         {
             TabPage tp = new TabPage(Name);

@@ -82,6 +82,7 @@
             this.خصمموردToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.خصمعميلToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.اضافةمسميوظيفيToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.حركةالمصروفاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
@@ -96,8 +97,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.button25 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
@@ -135,7 +134,6 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.حركةالمصروفاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -588,6 +586,13 @@
             this.اضافةمسميوظيفيToolStripMenuItem.Text = "اضافة مسمي وظيفي";
             this.اضافةمسميوظيفيToolStripMenuItem.Click += new System.EventHandler(this.اضافةمسميوظيفيToolStripMenuItem_Click);
             // 
+            // حركةالمصروفاتToolStripMenuItem
+            // 
+            this.حركةالمصروفاتToolStripMenuItem.Name = "حركةالمصروفاتToolStripMenuItem";
+            this.حركةالمصروفاتToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.حركةالمصروفاتToolStripMenuItem.Text = "حركة المصروفات";
+            this.حركةالمصروفاتToolStripMenuItem.Click += new System.EventHandler(this.حركةالمصروفاتToolStripMenuItem_Click);
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -780,8 +785,6 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.button25);
-            this.panel6.Controls.Add(this.button11);
-            this.panel6.Controls.Add(this.button13);
             this.panel6.Controls.Add(this.button22);
             this.panel6.Controls.Add(this.button23);
             this.panel6.Controls.Add(this.button24);
@@ -806,38 +809,6 @@
             this.button25.Text = "تقارير البنك";
             this.button25.UseVisualStyleBackColor = false;
             // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.White;
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.Black;
-            this.button11.Location = new System.Drawing.Point(3, 138);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(391, 33);
-            this.button11.TabIndex = 7;
-            this.button11.Text = "تحويل الى مورد من البنك";
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // button13
-            // 
-            this.button13.BackColor = System.Drawing.Color.White;
-            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.ForeColor = System.Drawing.Color.Black;
-            this.button13.Location = new System.Drawing.Point(3, 108);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(391, 33);
-            this.button13.TabIndex = 6;
-            this.button13.Text = "تحويل من عميل الى البنك";
-            this.button13.UseVisualStyleBackColor = false;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
-            // 
             // button22
             // 
             this.button22.BackColor = System.Drawing.Color.White;
@@ -852,6 +823,7 @@
             this.button22.TabIndex = 5;
             this.button22.Text = "تحويل من عميل الى مورد";
             this.button22.UseVisualStyleBackColor = false;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // button23
             // 
@@ -1355,13 +1327,6 @@
             this.toolStripStatusLabel3.Size = new System.Drawing.Size(73, 17);
             this.toolStripStatusLabel3.Text = "الحالة :  ادمن ";
             // 
-            // حركةالمصروفاتToolStripMenuItem
-            // 
-            this.حركةالمصروفاتToolStripMenuItem.Name = "حركةالمصروفاتToolStripMenuItem";
-            this.حركةالمصروفاتToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.حركةالمصروفاتToolStripMenuItem.Text = "حركة المصروفات";
-            this.حركةالمصروفاتToolStripMenuItem.Click += new System.EventHandler(this.حركةالمصروفاتToolStripMenuItem_Click);
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1475,8 +1440,6 @@
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button23;
         private System.Windows.Forms.Button button24;

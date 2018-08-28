@@ -41,8 +41,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tb_payment = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.combo_Supliers = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -55,6 +53,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.combo_Supliers = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -237,33 +237,6 @@
             this.panel5.Size = new System.Drawing.Size(645, 171);
             this.panel5.TabIndex = 23;
             // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(490, 78);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(150, 27);
-            this.label5.TabIndex = 55;
-            this.label5.Text = "اسم العمبل";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // combo_Supliers
-            // 
-            this.combo_Supliers.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.combo_Supliers.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.combo_Supliers.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combo_Supliers.FormattingEnabled = true;
-            this.combo_Supliers.Location = new System.Drawing.Point(293, 80);
-            this.combo_Supliers.Name = "combo_Supliers";
-            this.combo_Supliers.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.combo_Supliers.Size = new System.Drawing.Size(191, 24);
-            this.combo_Supliers.TabIndex = 53;
-            this.combo_Supliers.Tag = "";
-            this.combo_Supliers.Text = "اختار اسم المورد";
-            this.combo_Supliers.SelectedIndexChanged += new System.EventHandler(this.combo_Supliers_SelectedIndexChanged);
-            // 
             // comboBox1
             // 
             this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
@@ -429,6 +402,33 @@
             this.label4.Text = "بيان تسديد الى مورد";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // combo_Supliers
+            // 
+            this.combo_Supliers.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.combo_Supliers.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.combo_Supliers.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combo_Supliers.FormattingEnabled = true;
+            this.combo_Supliers.Location = new System.Drawing.Point(293, 80);
+            this.combo_Supliers.Name = "combo_Supliers";
+            this.combo_Supliers.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.combo_Supliers.Size = new System.Drawing.Size(191, 24);
+            this.combo_Supliers.TabIndex = 53;
+            this.combo_Supliers.Tag = "";
+            this.combo_Supliers.Text = "اختار اسم المورد";
+            this.combo_Supliers.SelectedIndexChanged += new System.EventHandler(this.combo_Supliers_SelectedIndexChanged);
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(490, 78);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(150, 27);
+            this.label5.TabIndex = 55;
+            this.label5.Text = "اسم العمبل";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Customer_Payback
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -467,8 +467,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tb_payment;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox combo_Supliers;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel4;
@@ -481,5 +479,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox combo_Supliers;
     }
 }
