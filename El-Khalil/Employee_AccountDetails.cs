@@ -15,11 +15,10 @@ namespace El_Khalil
     {
         DataSet dataSet;
         bool Pure;
-        double Employee_Salary;
-        string Employee_Name;
-        string date;
+        double Employee_Salary,Reword,San,Render,After;
+        string Employee_Name,date;
         int Employee_ID;
-        public Employee_AccountDetails(bool Pure,string Date, int EmployeeId,string EmployeeName,double salary)
+        public Employee_AccountDetails(bool Pure,string Date, int EmployeeId,string EmployeeName,double salary,double Reword,double San, double Render, double After)
         {
             InitializeComponent();
             this.date = Date;
@@ -27,43 +26,36 @@ namespace El_Khalil
             this.Employee_Name = EmployeeName;
             this.Employee_Salary = salary;
             this.Pure = Pure;
+            this.Reword = Reword;
+            this.San = San;
+            this.Render = Render;
+            this.After = After;
         }
 
         private void Employee_AccountDetails_Load(object sender, EventArgs e)
         {
             if (Pure)
-                bt_Save.Enabled = false;
-         
+                bt_Save.Enabled=richTextBox1.Enabled = false;
+
 
             label12.Text = date;
             tb_name.Text = Employee_Name;
-            tb_month.Text = String.Format("{0:0.00}", Employee_Salary);
-
-            //اجمالى القبض التقدى ف الشهر دا
-            object o = Ezzat.ExecutedScalar("select_Sumofmoney",
-                new SqlParameter("@Emp_id",Employee_ID),
-                new SqlParameter("@details_month",date)
-                );
-
-            tb_money.Text = String.Format("{0:0.00}", o);
-
-
-            //اجمالى الخصومات ف الشهر دا
-             o = Ezzat.ExecutedScalar("select_Sumofsnach",
-                new SqlParameter("@Emp_id", Employee_ID),
-                new SqlParameter("@details_month", date)
-                );
-
-            tb_sna.Text = String.Format("{0:0.00}", o);
-
-            if (tb_sna.Text == "")
-                tb_sna.Text = "0.00";
-            if (tb_money.Text == "")
-                tb_money.Text = "0.00";
+            tb_salary.Text = String.Format("{0:0.00}", Employee_Salary);
+            tb_reword.Text = String.Format("{0:0.00}", Reword);
+            tb_san.Text = String.Format("{0:0.00}", San);
+            tb_render.Text = String.Format("{0:0.00}", Render);
+            tb_after.Text = String.Format("{0:0.00}", After);
 
 
 
-            tb_render.Text= String.Format("{0:0.00}", (double.Parse(tb_month.Text))-(double.Parse(tb_sna.Text)+double.Parse(tb_money.Text)));
+            object o = Ezzat.ExecutedScalar("selectEmployeeTransaction_Bill_ID");
+
+            if (o == null)
+                label8.Text = "1";
+            else
+                label8.Text = (((int)o) + 1) + "";
+
+
         }
 
         private void bt_Save_Click(object sender, EventArgs e)
@@ -74,29 +66,31 @@ namespace El_Khalil
             Ezzat.ExecutedNoneQuery("insertEmployee_Transaction",
                 new SqlParameter("@Employee_ID",Employee_ID),
                 new SqlParameter("@Month", label12.Text),
-                new SqlParameter("@Money", double.Parse(tb_render.Text)),
-                new SqlParameter("@Report_Notes", ""),
+                new SqlParameter("@Money", double.Parse(tb_after.Text)),
+                new SqlParameter("@Report_Notes", richTextBox1.Text),
                 new SqlParameter("@Report_Date", DateTime.Parse(DateTime.Now.ToString())),
                 new SqlParameter("@Report_Type","قبض الشهر")
                 );
+
+
             Edit_Safe();
 
 
             //تعديل حساب موظف ف شهر معين
             Edit_Account();
 
+            MessageBox.Show(Shared_Class.Successful_Message);
 
+            bt_Save.Enabled = false;
         }
 
         private void Edit_Account()
         {
             string[] ar = label12.Text.Split('-');
             Ezzat.ExecutedNoneQuery("update_EmployeeAccount",
-                new SqlParameter("@Employee_ID",Employee_ID),
-                new SqlParameter("@DateMonth",ar[0]),
-                new SqlParameter("@DateYear",ar[1]),
-                new SqlParameter("@Month_Sanctions",double.Parse(tb_sna.Text)),
-                new SqlParameter("@Month_Seizure",double.Parse(tb_money.Text))
+                new SqlParameter("@Employee_ID", Employee_ID),
+                new SqlParameter("@DateMonth", ar[0]),
+                new SqlParameter("@DateYear", ar[1])
                 );
         }
 
@@ -104,18 +98,18 @@ namespace El_Khalil
         {
   
             // تعديل المبلغ الموجود ف الخزنة
-            Ezzat.ExecutedNoneQuery("updateSafe_Decrease", new SqlParameter("@Money_Quantity", float.Parse(tb_render.Text)));
+            Ezzat.ExecutedNoneQuery("updateSafe_Decrease", new SqlParameter("@Money_Quantity", float.Parse(tb_after.Text)));
 
             
 
             // عمل بيان صرف مبلغ من الخزنة للخزنة
             Ezzat.ExecutedNoneQuery("insert_TheSaveTransaction",
                 new SqlParameter("@Report_Type", false),
-                new SqlParameter("@Bill_ID", "0"),
+                new SqlParameter("@Bill_ID",label8.Text),
                 new SqlParameter("@Bill_Type", "قبض شهرية موظف"),
                 new SqlParameter("@Report_Date", DateTime.Parse(DateTime.Now.ToString())),
                 new SqlParameter("@Report_Money", float.Parse(tb_render.Text)),
-                new SqlParameter("@Report_Notes","")
+                new SqlParameter("@Report_Notes",richTextBox1.Text)
                 );
         }
 
@@ -135,7 +129,7 @@ namespace El_Khalil
                 {
                     dataGridView1.DataSource = dataSet.Tables["X"];
                 }
-                    pn_P.Visible = false;
+                pn_P.Visible = false;
                 pn_S.Visible = true;
                 button1.Text = "اخفاء التفاصيل";
             }

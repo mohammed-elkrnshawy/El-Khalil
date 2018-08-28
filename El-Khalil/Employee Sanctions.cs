@@ -108,7 +108,7 @@ namespace El_Khalil
             // اضافة تعامل موظف
             Ezzat.ExecutedNoneQuery("insertEmployee_Transaction",
                 new SqlParameter("@Employee_ID", combo_Employee.SelectedValue),
-                new SqlParameter("@Month", String.Format("{0: MM/yyyy}", DateTime.Now)),
+                new SqlParameter("@Month", String.Format("{0:MM/yyyy}", DateTime.Now)),
                 new SqlParameter("@Money", double.Parse(tb_Money.Text)),
                 new SqlParameter("@Report_Notes", richTextBox1.Text),
                 new SqlParameter("@Report_Date", DateTime.Now),
@@ -118,8 +118,8 @@ namespace El_Khalil
             if(radioButton1.Checked)
             {
                 Ezzat.ExecutedNoneQuery("insert_Sanctions",
-                                new SqlParameter("@Month", int.Parse(String.Format("{0:MM}", DateTime.Now))),
-                                new SqlParameter("@Year", int.Parse(String.Format("{0:yyyy}", DateTime.Now))),
+                                new SqlParameter("@Month", String.Format("{0:MM}", DateTime.Now)),
+                                new SqlParameter("@Year", String.Format("{0:yyyy}", DateTime.Now)),
                                 new SqlParameter("@Employee_ID", combo_Employee.SelectedValue),
                                 new SqlParameter("@Money", tb_Money.Text)
                     );
@@ -127,8 +127,8 @@ namespace El_Khalil
             else if (radioButton2.Checked)
             {
                 Ezzat.ExecutedNoneQuery("insert_Seizure",
-                                new SqlParameter("@Month", int.Parse(String.Format("{0:MM}", DateTime.Now))),
-                                new SqlParameter("@Year", int.Parse(String.Format("{0:yyyy}", DateTime.Now))),
+                                new SqlParameter("@Month", String.Format("{0:MM}", DateTime.Now)),
+                                new SqlParameter("@Year", String.Format("{0:yyyy}", DateTime.Now)),
                                 new SqlParameter("@Employee_ID", combo_Employee.SelectedValue),
                                 new SqlParameter("@Money", tb_Money.Text)
                     );
@@ -136,8 +136,8 @@ namespace El_Khalil
             else if (radioButton3.Checked)
             {
                 Ezzat.ExecutedNoneQuery("insert_Render",
-                                new SqlParameter("@Month", int.Parse(String.Format("{0:MM}", DateTime.Now))),
-                                new SqlParameter("@Year", int.Parse(String.Format("{0:yyyy}", DateTime.Now))),
+                                new SqlParameter("@Month",String.Format("{0:MM}", DateTime.Now)),
+                                new SqlParameter("@Year", String.Format("{0:yyyy}", DateTime.Now)),
                                 new SqlParameter("@Employee_ID", combo_Employee.SelectedValue),
                                 new SqlParameter("@Money", tb_Money.Text)
                     );
@@ -169,8 +169,8 @@ namespace El_Khalil
         private bool IsExsisted()
         {
             object o = Ezzat.ExecutedScalar("select_EmployiesAndData",
-                               new SqlParameter("@Month", int.Parse(String.Format("{0:MM}", DateTime.Now))),
-                               new SqlParameter("@Year", int.Parse(String.Format("{0:yyyy}", DateTime.Now))),
+                               new SqlParameter("@Month", String.Format("{0:MM}", DateTime.Now)),
+                               new SqlParameter("@Year", String.Format("{0:yyyy}", DateTime.Now)),
                                new SqlParameter("@Employee_ID", combo_Employee.SelectedValue)
                    );
             if (o == null)
@@ -186,8 +186,8 @@ namespace El_Khalil
 
             //بيجيب لو فيه موطفين ف الشهر دا و يعدل عليهم
             SqlDataReader dr = Ezzat.GetDataReader("select_EmployiesAndDataAllData", out con,
-                                new SqlParameter("@Month", int.Parse(String.Format("{0:MM}", DateTime.Now))),
-                                new SqlParameter("@Year", int.Parse(String.Format("{0:yyyy}", DateTime.Now))),
+                                new SqlParameter("@Month", String.Format("{0:MM}", DateTime.Now)),
+                                new SqlParameter("@Year", String.Format("{0:yyyy}", DateTime.Now)),
                                 new SqlParameter("@Employee_ID", combo_Employee.SelectedValue)
                 );
 

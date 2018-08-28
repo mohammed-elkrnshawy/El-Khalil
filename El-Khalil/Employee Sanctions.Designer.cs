@@ -107,6 +107,7 @@
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.label2);
@@ -127,7 +128,7 @@
             this.label12.Location = new System.Drawing.Point(125, 8);
             this.label12.Name = "label12";
             this.label12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label12.Size = new System.Drawing.Size(182, 29);
+            this.label12.Size = new System.Drawing.Size(180, 27);
             this.label12.TabIndex = 55;
             this.label12.Text = "14 / 10 / 1995 20:04:42 ";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -142,7 +143,7 @@
             this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(313, 8);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(78, 29);
+            this.label13.Size = new System.Drawing.Size(76, 27);
             this.label13.TabIndex = 54;
             this.label13.Text = "تاريج البيان";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -157,7 +158,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(425, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 29);
+            this.label2.Size = new System.Drawing.Size(83, 27);
             this.label2.TabIndex = 39;
             this.label2.Text = "000000000";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -172,7 +173,7 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(516, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 29);
+            this.label1.Size = new System.Drawing.Size(80, 27);
             this.label1.TabIndex = 22;
             this.label1.Text = "رقم البيان";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

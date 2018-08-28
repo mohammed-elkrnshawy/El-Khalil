@@ -22,7 +22,7 @@ namespace El_Khalil
 
         private void Employee_Salaries_Load(object sender, EventArgs e)
         {
-            label12.Text = String.Format("{0:MM/yyyy}", DateTime.Now);
+            label12.Text = String.Format("{0:MM-yyyy}", DateTime.Now);
 
 
             SqlConnection con;
@@ -55,8 +55,8 @@ namespace El_Khalil
             foreach (DataGridViewRow item in dataGridView1.Rows)
             {
                 o = Ezzat.ExecutedScalar("select_EmployiesAndData",
-                                new SqlParameter("@Month", int.Parse(String.Format("{0:MM}", DateTime.Now))),
-                                new SqlParameter("@Year", int.Parse(String.Format("{0:yyyy}", DateTime.Now))),
+                                new SqlParameter("@Month", String.Format("{0:MM}", DateTime.Now)),
+                                new SqlParameter("@Year", String.Format("{0:yyyy}", DateTime.Now)),
                                 new SqlParameter("@Employee_ID", item.Cells[0].Value)
                     );
                 if (o == null)
@@ -102,8 +102,8 @@ namespace El_Khalil
         private void Delete()
         {
             Ezzat.ExecutedNoneQuery("delete_EmployiesAndData",
-                                new SqlParameter("@Month", int.Parse(String.Format("{0:MM}", DateTime.Now))),
-                                new SqlParameter("@Year", int.Parse(String.Format("{0:yyyy}", DateTime.Now))),
+                                new SqlParameter("@Month", String.Format("{0:MM}", DateTime.Now)),
+                                new SqlParameter("@Year", String.Format("{0:yyyy}", DateTime.Now)),
                                 new SqlParameter("@Employee_ID", dataGridView1.CurrentRow.Cells[0].Value)
                 );
         }
@@ -115,8 +115,8 @@ namespace El_Khalil
 
             //بيجيب لو فيه موطفين ف الشهر دا و يعدل عليهم
             SqlDataReader dr = Ezzat.GetDataReader("select_EmployiesAndDataAllData", out con,
-                                new SqlParameter("@Month", int.Parse(String.Format("{0:MM}", DateTime.Now))),
-                                new SqlParameter("@Year", int.Parse(String.Format("{0:yyyy}", DateTime.Now))),
+                                new SqlParameter("@Month", String.Format("{0:MM}", DateTime.Now)),
+                                new SqlParameter("@Year", String.Format("{0:yyyy}", DateTime.Now)),
                                 new SqlParameter("@Employee_ID", dataGridView1.CurrentRow.Cells[0].Value)
                 );
 
@@ -140,8 +140,8 @@ namespace El_Khalil
                        new SqlParameter("@Emplyee_ID", int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString())),
                        new SqlParameter("@Employee_Name", dataGridView1.CurrentRow.Cells[1].Value.ToString()),
                        new SqlParameter("@Employee_Salary", double.Parse(dataGridView1.CurrentRow.Cells[2].Value.ToString())),
-                       new SqlParameter("@Month", int.Parse(String.Format("{0:MM}", DateTime.Now))),
-                       new SqlParameter("@Year", int.Parse(String.Format("{0:yyyy}", DateTime.Now))),
+                       new SqlParameter("@Month", String.Format("{0:MM}", DateTime.Now)),
+                       new SqlParameter("@Year", String.Format("{0:yyyy}", DateTime.Now)),
                        new SqlParameter("@Status", false),
                        new SqlParameter("@InList", bool.Parse(dataGridView1.CurrentRow.Cells[4].Value.ToString()))
                        );

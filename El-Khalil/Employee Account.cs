@@ -54,10 +54,15 @@ namespace El_Khalil
                     {
 
                         dataGridView1.Rows.Add();
-                        dataGridView1[2, dataGridView1.Rows.Count - 1].ReadOnly = bool.Parse(dataReader[10].ToString());
                         dataGridView1[0, dataGridView1.Rows.Count - 1].Value = dataReader[1].ToString()+"-"+dataReader[2].ToString();
                         dataGridView1[1, dataGridView1.Rows.Count - 1].Value = dataReader[6].ToString();
-                        dataGridView1[2, dataGridView1.Rows.Count - 1].Value = dataReader[10].ToString();
+                        dataGridView1[2, dataGridView1.Rows.Count - 1].Value = dataReader[8].ToString();
+                        dataGridView1[3, dataGridView1.Rows.Count - 1].Value = dataReader[7].ToString();
+                        dataGridView1[4, dataGridView1.Rows.Count - 1].Value = dataReader[9].ToString();
+                        dataGridView1[5, dataGridView1.Rows.Count - 1].Value =
+                            ((double.Parse(dataReader[6].ToString()) +double.Parse(dataReader[8].ToString()))
+                            -(double.Parse(dataReader[7].ToString()) +double.Parse(dataReader[9].ToString())));
+                        dataGridView1[6, dataGridView1.Rows.Count - 1].Value = dataReader[10].ToString();
                     }
                 }
                 con.Close();
@@ -66,10 +71,18 @@ namespace El_Khalil
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(dataGridView1.CurrentCell==dataGridView1.CurrentRow.Cells[3])
+            if(dataGridView1.CurrentCell==dataGridView1.CurrentRow.Cells[7])
             {
-                Employee_AccountDetails k = new Employee_AccountDetails(bool.Parse(dataGridView1.CurrentRow.Cells[2].Value.ToString()), dataGridView1.CurrentRow.Cells[0].Value.ToString()
-                    ,(int)combo_Employee.SelectedValue,combo_Employee.Text,double.Parse(dataGridView1.CurrentRow.Cells[1].Value.ToString()));
+                Employee_AccountDetails k = new Employee_AccountDetails(
+                    bool.Parse(dataGridView1.CurrentRow.Cells[6].Value.ToString())
+                 , dataGridView1.CurrentRow.Cells[0].Value.ToString()
+                 , (int)combo_Employee.SelectedValue, combo_Employee.Text
+                 , double.Parse(dataGridView1.CurrentRow.Cells[1].Value.ToString())
+                 , double.Parse(dataGridView1.CurrentRow.Cells[2].Value.ToString())
+                 , double.Parse(dataGridView1.CurrentRow.Cells[3].Value.ToString())
+                 , double.Parse(dataGridView1.CurrentRow.Cells[4].Value.ToString())
+                 , double.Parse(dataGridView1.CurrentRow.Cells[5].Value.ToString())
+                 );
                 k.ShowDialog();
             } 
         }
