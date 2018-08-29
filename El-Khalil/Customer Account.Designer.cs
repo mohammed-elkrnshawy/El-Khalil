@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.combo_Customer = new System.Windows.Forms.ComboBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -67,6 +66,7 @@
             this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.bt_Print = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.panel4.SuspendLayout();
             this.pn_today.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -91,17 +91,6 @@
             this.combo_Customer.TabIndex = 53;
             this.combo_Customer.Tag = "";
             this.combo_Customer.Text = "اختار اسم المورد";
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(22, 3);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(45, 17);
-            this.radioButton3.TabIndex = 1;
-            this.radioButton3.Text = "الكل";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -505,6 +494,17 @@
             this.label4.Text = "بيان حساب عميل";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(22, 3);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(45, 17);
+            this.radioButton3.TabIndex = 1;
+            this.radioButton3.Text = "الكل";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            // 
             // Customer_Account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -536,7 +536,6 @@
         #endregion
 
         private System.Windows.Forms.ComboBox combo_Customer;
-        private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.RadioButton radioButton1;
@@ -574,5 +573,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewButtonColumn Column6;
+        private System.Windows.Forms.RadioButton radioButton3;
     }
 }

@@ -92,6 +92,12 @@
     <Compile Include="Add Supplier.Designer.cs">
       <DependentUpon>Add Supplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bank BillDetaails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bank BillDetaails.Designer.cs">
+      <DependentUpon>Bank BillDetaails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Bank Cus To Sup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,12 @@
     </Compile>
     <Compile Include="Bank InAccount.Designer.cs">
       <DependentUpon>Bank InAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bank Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bank Account.Designer.cs">
+      <DependentUpon>Bank Account.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer Account.cs">
       <SubType>Form</SubType>
@@ -280,11 +292,17 @@
     <EmbeddedResource Include="Add Supplier.resx">
       <DependentUpon>Add Supplier.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Bank BillDetaails.resx">
+      <DependentUpon>Bank BillDetaails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Bank Cus To Sup.resx">
       <DependentUpon>Bank Cus To Sup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Bank InAccount.resx">
       <DependentUpon>Bank InAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bank Account.resx">
+      <DependentUpon>Bank Account.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer Account.resx">
       <DependentUpon>Customer Account.cs</DependentUpon>

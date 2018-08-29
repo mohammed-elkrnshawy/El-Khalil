@@ -808,6 +808,7 @@
             this.button25.TabIndex = 8;
             this.button25.Text = "تقارير البنك";
             this.button25.UseVisualStyleBackColor = false;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
             // button22
             // 

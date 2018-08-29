@@ -503,6 +503,11 @@ namespace El_Khalil
             Add_Tab("تحويل من عميل الى مورد", new Bank_Cus_To_Sup());
         }
 
+        private void button25_Click(object sender, EventArgs e)
+        {
+            Add_Tab("تعاملات البنك", new Bank_Account());
+        }
+
         private void Add_Tab(string Name,Form form)
         {
             TabPage tp = new TabPage(Name);
