@@ -111,7 +111,7 @@ namespace El_Khalil
                 con.Close();
 
             }
-            else if (Bill_Type.ToString().Contains("تحويل"))
+            else if (Bill_Type.ToString().Contains("تحويل بنكى"))
             {
 
                 SqlConnection con;
@@ -188,6 +188,30 @@ namespace El_Khalil
 
                 con.Close();
 
+            }
+            else if (Bill_Type.ToString().Contains("تحويل الى مورد"))
+            {
+                SqlConnection con;
+
+                SqlDataReader dataReader = Ezzat.GetDataReader("select_EXBillDeteils_Trans", out con,
+                new SqlParameter("@Bill_ID", Bill_ID));
+
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                    {
+                        label21.Text = dataReader[0].ToString();
+                        label16.Text = dataReader[2].ToString();
+                        tb_old.Text = dataReader[4].ToString();
+                        tb_pay.Text = dataReader[5].ToString();
+                        tb_after.Text = dataReader[6].ToString();
+                        richTextBox2.Text = dataReader[7].ToString();
+                        textBox4.Text = dataReader[8].ToString();
+                        textBox3.Text = dataReader[9].ToString();
+                    }
+                }
+
+                con.Close();
             }
 
         }
