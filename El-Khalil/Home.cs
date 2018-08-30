@@ -80,6 +80,8 @@ namespace El_Khalil
         {
 
             StartQuantity();
+            StartBankMoney();
+            StartSafeMoney();
 
 
             Size mysize = new System.Drawing.Size(20, 20); // co anh chen vao
@@ -94,6 +96,54 @@ namespace El_Khalil
             Bitmap btm2 = new Bitmap(bt2, mysize);
             closeImage = btm2;
             tabControl1.Padding = new Point(30);
+        }
+
+        private void StartSafeMoney()
+        {
+            object o = Ezzat.ExecutedScalar("select_StartSafe_ID", new SqlParameter("@Day", DateTime.Parse(DateTime.Now.ToString())));
+            if(o==null)
+            {
+                Ezzat.ExecutedNoneQuery("insert_StartSafe", new SqlParameter("@Day", DateTime.Parse(DateTime.Now.ToString())));
+            }
+        }
+
+        private void StartBankMoney()
+        {
+            object o = Ezzat.ExecutedScalar("select_DayNumber_Bank", new SqlParameter("@DayDate", DateTime.Parse(DateTime.Now.ToString())));
+            if (o == null)
+            {
+                o = Ezzat.ExecutedScalar("select_DayNumber_ID_Bank");
+                if (o == null)
+                    o = "1";
+                else
+                {
+                    int i = int.Parse(o.ToString());
+                    i++;
+                    o = i;
+                }
+
+
+
+                SqlConnection con;
+
+                SqlDataReader dataReader = Ezzat.GetDataReader("Select_All2_Bank", out con);
+
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                    {
+                        Ezzat.ExecutedNoneQuery("insert_StartQuantity_Bank",
+                            new SqlParameter("@Day_Number", o),
+                            new SqlParameter("@Bank_ID", dataReader[0].ToString()),
+                            new SqlParameter("@StartDate", DateTime.Parse(DateTime.Now.ToString())),
+                            new SqlParameter("@StartMoney", dataReader[1].ToString()),
+                            new SqlParameter("@Bank_Name", dataReader[2].ToString())
+                            );
+                    }
+                }
+
+                con.Close();
+            }
         }
 
         private void StartQuantity()
@@ -438,17 +488,17 @@ namespace El_Khalil
 
         private void button31_Click(object sender, EventArgs e)
         {
-            Add_Tab("تعاملات الخزنة اليوم", new The_Safe());
+            Add_Tab("تعاملات الخزنة اليوم", new The_InSafe());
         }
 
         private void button30_Click(object sender, EventArgs e)
         {
-            Add_Tab("تعاملات الخزنة الصرف", new The_OutSafe());
+            
         }
 
         private void button29_Click(object sender, EventArgs e)
         {
-            Add_Tab("تعاملات الخزنة الايراد", new The_InSafe());
+           
         }
 
         private void button24_Click(object sender, EventArgs e)

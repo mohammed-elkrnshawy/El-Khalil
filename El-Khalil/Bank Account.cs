@@ -158,13 +158,16 @@ namespace El_Khalil
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(dataGridView1.CurrentRow.Cells[7]==dataGridView1.CurrentCell)
+            if (dataGridView1.CurrentRow.Cells[7] == dataGridView1.CurrentCell)
             {
-                Bank_BillDetaails BillDetails = new Bank_BillDetaails(int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString())
-                                                                             , dataGridView1.CurrentRow.Cells[6].Value
-                                                                             , dataGridView1.CurrentRow.Cells[5].Value
-                                                                             );
-                BillDetails.ShowDialog();
+                if (dataGridView1.CurrentRow.Cells[6].Value.ToString() != "ايداع الى البنك")
+                {
+                    Bank_BillDetaails BillDetails = new Bank_BillDetaails(int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString())
+                                                                                 , dataGridView1.CurrentRow.Cells[6].Value
+                                                                                 , dataGridView1.CurrentRow.Cells[5].Value
+                                                                                 );
+                    BillDetails.ShowDialog();
+                }
             }
         }
     }

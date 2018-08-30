@@ -251,23 +251,11 @@
     <Compile Include="Supplier Payback.Designer.cs">
       <DependentUpon>Supplier Payback.cs</DependentUpon>
     </Compile>
-    <Compile Include="The InSafe.cs">
+    <Compile Include="TheSafe Account.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="The InSafe.Designer.cs">
-      <DependentUpon>The InSafe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="The OutSafe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="The OutSafe.Designer.cs">
-      <DependentUpon>The OutSafe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="The Safe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="The Safe.Designer.cs">
-      <DependentUpon>The Safe.cs</DependentUpon>
+    <Compile Include="TheSafe Account.Designer.cs">
+      <DependentUpon>TheSafe Account.cs</DependentUpon>
     </Compile>
     <Compile Include="z_Product Component.cs" />
     <Compile Include="z_Product Object.cs" />
@@ -372,14 +360,8 @@
     <EmbeddedResource Include="Supplier_Purchasing.resx">
       <DependentUpon>Supplier_Purchasing.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="The InSafe.resx">
-      <DependentUpon>The InSafe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="The OutSafe.resx">
-      <DependentUpon>The OutSafe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="The Safe.resx">
-      <DependentUpon>The Safe.cs</DependentUpon>
+    <EmbeddedResource Include="TheSafe Account.resx">
+      <DependentUpon>TheSafe Account.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
