@@ -33,23 +33,6 @@ namespace El_Khalil
             StoreAllTransactions();
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton1.Checked)
-            {
-                pn_today.Visible = true;
-                pn_during.Visible = false;
-            }
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton2.Checked)
-            {
-                pn_today.Visible = false;
-                pn_during.Visible = true;
-            }
-        }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -59,30 +42,15 @@ namespace El_Khalil
         }
         private void StoreAllTransactions()
         {
-            if (radioButton2.Checked)
+            using (dataSet = Ezzat.GetDataSet("_Store_AllTransaction_DUring", "X",
+                   new SqlParameter("@Day", DateTime.Parse(dateTimePicker1.Value.ToString())),
+                   new SqlParameter("@Day2", DateTime.Parse(dateTimePicker2.Value.ToString()))))
             {
-                using (dataSet = Ezzat.GetDataSet("_Store_AllTransaction_DUring", "X",
-                    new SqlParameter("@Day", DateTime.Parse(dateTimePicker1.Value.ToString())),
-                    new SqlParameter("@Day2", DateTime.Parse(dateTimePicker2.Value.ToString()))))
-                {
-                    dataGridView1.DataSource = dataSet.Tables["X"];
-                    Add_GridButtun();
-                }
-
-                FillGrid_During(dateTimePicker1.Value, dateTimePicker2.Value);
+                dataGridView1.DataSource = dataSet.Tables["X"];
+                Add_GridButtun();
             }
-            else if (radioButton1.Checked)
-            {
 
-                using (dataSet = Ezzat.GetDataSet("_Store_AllTransaction_Day", "X",
-                    new SqlParameter("@Day", DateTime.Parse(dateTimePicker3.Value.ToString()))))
-                {
-                    dataGridView1.DataSource = dataSet.Tables["X"];
-                    Add_GridButtun();
-                }
-
-                FillGrid_During(dateTimePicker3.Value, dateTimePicker3.Value);
-            }
+            FillGrid_During(dateTimePicker1.Value, dateTimePicker2.Value);
         }
 
         private void Add_GridButtun()
@@ -120,6 +88,16 @@ namespace El_Khalil
                     dataGridView2[3, dataGridView2.Rows.Count - 1].Value = CalcolateStart(dataReader[0].ToString(), StartDateTime);
                     dataGridView2[4, dataGridView2.Rows.Count - 1].Value = double.Parse(dataGridView2[2, dataGridView2.Rows.Count - 1].Value+"") 
                                                                             - double.Parse(dataGridView2[3, dataGridView2.Rows.Count - 1].Value+"");
+                    dataGridView2[6, dataGridView2.Rows.Count - 1].Value = Ezzat.ExecutedScalar("select_SUMofProduct__IM"
+                                                        , new SqlParameter("@Day", dateTimePicker1.Value)
+                                                        ,new SqlParameter("@Day2",dateTimePicker2.Value)
+                                                        ,new SqlParameter("@product_ID", dataReader[0])
+                                                        );
+                    dataGridView2[7, dataGridView2.Rows.Count - 1].Value = Ezzat.ExecutedScalar("select_SUMofProduct__EX"
+                                                        , new SqlParameter("@Day", dateTimePicker1.Value)
+                                                        , new SqlParameter("@Day2", dateTimePicker2.Value)
+                                                        , new SqlParameter("@product_ID", dataReader[0])
+                                                        );
                 }
             }
         }
