@@ -45,67 +45,11 @@ namespace El_Khalil
             }
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton1.Checked)
-            {
-                pn_today.Visible = true;
-                pn_during.Visible = false;
-            }
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton2.Checked)
-            {
-                pn_today.Visible = false;
-                pn_during.Visible = true;
-            }
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton3.Checked)
-            {
-                pn_today.Visible = false;
-                pn_during.Visible = false;
-            }
-        }
-
-       
-
         private void All_Transaction()
         {
 
 
-            if (radioButton1.Checked)
-            {
-                SqlConnection con;
-
-                SqlDataReader dataReader = Ezzat.GetDataReader("_Customer_SupplierTransaction_Day", out con,
-                new SqlParameter("@Day", DateTime.Parse(dateTimePicker3.Value.ToString())), new SqlParameter("@Supplier_ID", combo_Customer.SelectedValue));
-
-                if (dataReader.HasRows)
-                {
-                    while (dataReader.Read())
-                    {
-                        dataGridView1.Rows.Add();
-                        dataGridView1[0, dataGridView1.Rows.Count - 1].Value = dataReader[0].ToString();
-                        dataGridView1[1, dataGridView1.Rows.Count - 1].Value = dataReader[1].ToString();
-                        dataGridView1[2, dataGridView1.Rows.Count - 1].Value = dataReader[2].ToString();
-                        dataGridView1[3, dataGridView1.Rows.Count - 1].Value = (double.Parse(dataReader[2].ToString()) - double.Parse(dataReader[1].ToString()));
-                        dataGridView1[4, dataGridView1.Rows.Count - 1].Value = dataReader[3].ToString();
-                        dataGridView1[5, dataGridView1.Rows.Count - 1].Value = dataReader[5].ToString();
-                        dataGridView1[6, dataGridView1.Rows.Count - 1].Value = dataReader[4].ToString();
-                    }
-                }
-
-                con.Close();
-
-
-            }
-            else if (radioButton2.Checked)
-            {
+           
                 SqlConnection con;
 
                 SqlDataReader dataReader = Ezzat.GetDataReader("_Customer_SupplierTransaction_During", out con,
@@ -132,33 +76,9 @@ namespace El_Khalil
                 con.Close();
 
 
-            }
-            else
-            {
-                SqlConnection con;
+           
 
-                SqlDataReader dataReader = Ezzat.GetDataReader("_Customer_SupplierTransaction_All", out con,
-              new SqlParameter("@Supplier_ID", combo_Customer.SelectedValue));
-
-                if (dataReader.HasRows)
-                {
-                    while (dataReader.Read())
-                    {
-                        dataGridView1.Rows.Add();
-                        dataGridView1[0, dataGridView1.Rows.Count - 1].Value = dataReader[0].ToString();
-                        dataGridView1[1, dataGridView1.Rows.Count - 1].Value = dataReader[1].ToString();
-                        dataGridView1[2, dataGridView1.Rows.Count - 1].Value = dataReader[2].ToString();
-                        dataGridView1[3, dataGridView1.Rows.Count - 1].Value = (double.Parse(dataReader[2].ToString()) - double.Parse(dataReader[1].ToString()));
-                        dataGridView1[4, dataGridView1.Rows.Count - 1].Value = dataReader[3].ToString();
-                        dataGridView1[5, dataGridView1.Rows.Count - 1].Value = dataReader[5].ToString();
-                        dataGridView1[6, dataGridView1.Rows.Count - 1].Value = dataReader[4].ToString();
-                    }
-                }
-
-                con.Close();
-
-
-            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -169,7 +89,15 @@ namespace El_Khalil
                 All_Transaction();
                 CalcolateTotal();
                 object o = Ezzat.ExecutedScalar("selectTotalMoney_Customer", new SqlParameter("@Supplier_ID", (int)combo_Customer.SelectedValue));
+                if ((o + "").Length == 0) o = 0;
                 label11.Text = String.Format("{0:0.00}", o);
+                o = Ezzat.ExecutedScalar("customer_Start", new SqlParameter("@Customer_ID", (int)combo_Customer.SelectedValue),new SqlParameter("@Day",dateTimePicker1.Value));
+                if ((o + "").Length == 0) o = 0;
+                label5.Text = String.Format("{0:0.00}", o);
+                o = Ezzat.ExecutedScalar("customer_End", new SqlParameter("@Customer_ID", (int)combo_Customer.SelectedValue), new SqlParameter("@Day", dateTimePicker2.Value));
+                if ((o + "").Length == 0) o = 0;
+                label1.Text = String.Format("{0:0.00}", o);
+
             }
         }
 

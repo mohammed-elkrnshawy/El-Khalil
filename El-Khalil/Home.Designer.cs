@@ -82,9 +82,9 @@
             this.خصمموردToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.خصمعميلToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.اضافةمسميوظيفيToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.حركةالمصروفاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.حساباتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.حسابالعملاءToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.حسابالموردينToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
@@ -136,7 +136,8 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.حسابالموردينToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.حسابالمصروفاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.حساباتالبنوكToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -556,7 +557,6 @@
             this.خصمموردToolStripMenuItem,
             this.خصمعميلToolStripMenuItem,
             this.اضافةمسميوظيفيToolStripMenuItem,
-            this.حركةالمصروفاتToolStripMenuItem,
             this.حساباتToolStripMenuItem});
             this.الاضافاتToolStripMenuItem.Name = "الاضافاتToolStripMenuItem";
             this.الاضافاتToolStripMenuItem.Size = new System.Drawing.Size(64, 23);
@@ -590,18 +590,13 @@
             this.اضافةمسميوظيفيToolStripMenuItem.Text = "اضافة مسمي وظيفي";
             this.اضافةمسميوظيفيToolStripMenuItem.Click += new System.EventHandler(this.اضافةمسميوظيفيToolStripMenuItem_Click);
             // 
-            // حركةالمصروفاتToolStripMenuItem
-            // 
-            this.حركةالمصروفاتToolStripMenuItem.Name = "حركةالمصروفاتToolStripMenuItem";
-            this.حركةالمصروفاتToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.حركةالمصروفاتToolStripMenuItem.Text = "حركة المصروفات";
-            this.حركةالمصروفاتToolStripMenuItem.Click += new System.EventHandler(this.حركةالمصروفاتToolStripMenuItem_Click);
-            // 
             // حساباتToolStripMenuItem
             // 
             this.حساباتToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.حسابالعملاءToolStripMenuItem,
-            this.حسابالموردينToolStripMenuItem});
+            this.حسابالموردينToolStripMenuItem,
+            this.حسابالمصروفاتToolStripMenuItem,
+            this.حساباتالبنوكToolStripMenuItem});
             this.حساباتToolStripMenuItem.Name = "حساباتToolStripMenuItem";
             this.حساباتToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.حساباتToolStripMenuItem.Text = "حسابات";
@@ -612,6 +607,13 @@
             this.حسابالعملاءToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.حسابالعملاءToolStripMenuItem.Text = "حساب العملاء";
             this.حسابالعملاءToolStripMenuItem.Click += new System.EventHandler(this.حسابالعملاءToolStripMenuItem_Click);
+            // 
+            // حسابالموردينToolStripMenuItem
+            // 
+            this.حسابالموردينToolStripMenuItem.Name = "حسابالموردينToolStripMenuItem";
+            this.حسابالموردينToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.حسابالموردينToolStripMenuItem.Text = "حساب الموردين";
+            this.حسابالموردينToolStripMenuItem.Click += new System.EventHandler(this.حسابالموردينToolStripMenuItem_Click);
             // 
             // tabControl1
             // 
@@ -1348,12 +1350,19 @@
             this.toolStripStatusLabel3.Size = new System.Drawing.Size(73, 17);
             this.toolStripStatusLabel3.Text = "الحالة :  ادمن ";
             // 
-            // حسابالموردينToolStripMenuItem
+            // حسابالمصروفاتToolStripMenuItem
             // 
-            this.حسابالموردينToolStripMenuItem.Name = "حسابالموردينToolStripMenuItem";
-            this.حسابالموردينToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.حسابالموردينToolStripMenuItem.Text = "حساب الموردين";
-            this.حسابالموردينToolStripMenuItem.Click += new System.EventHandler(this.حسابالموردينToolStripMenuItem_Click);
+            this.حسابالمصروفاتToolStripMenuItem.Name = "حسابالمصروفاتToolStripMenuItem";
+            this.حسابالمصروفاتToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.حسابالمصروفاتToolStripMenuItem.Text = "حساب المصروفات";
+            this.حسابالمصروفاتToolStripMenuItem.Click += new System.EventHandler(this.حسابالمصروفاتToolStripMenuItem_Click);
+            // 
+            // حساباتالبنوكToolStripMenuItem
+            // 
+            this.حساباتالبنوكToolStripMenuItem.Name = "حساباتالبنوكToolStripMenuItem";
+            this.حساباتالبنوكToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.حساباتالبنوكToolStripMenuItem.Text = "حسابات البنوك";
+            this.حساباتالبنوكToolStripMenuItem.Click += new System.EventHandler(this.حساباتالبنوكToolStripMenuItem_Click);
             // 
             // Home
             // 
@@ -1495,9 +1504,10 @@
         private System.Windows.Forms.ToolStripMenuItem خصمموردToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem خصمعميلToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem اضافةمسميوظيفيToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem حركةالمصروفاتToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem حساباتToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem حسابالعملاءToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem حسابالموردينToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem حسابالمصروفاتToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem حساباتالبنوكToolStripMenuItem;
     }
 }

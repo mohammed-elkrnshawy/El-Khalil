@@ -30,11 +30,6 @@
         {
             this.label4 = new System.Windows.Forms.Label();
             this.bt_Print = new System.Windows.Forms.Button();
-            this.pn_during = new System.Windows.Forms.Panel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
@@ -59,23 +54,29 @@
             this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.pn_today = new System.Windows.Forms.Panel();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.combo_Supliers = new System.Windows.Forms.ComboBox();
-            this.pn_during.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.pn_during = new System.Windows.Forms.Panel();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.pn_Return.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv)).BeginInit();
             this.panel3.SuspendLayout();
-            this.pn_today.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.pn_during.SuspendLayout();
             this.SuspendLayout();
             // 
             // label4
@@ -106,62 +107,14 @@
             this.bt_Print.Text = "طباعة تقارير";
             this.bt_Print.UseVisualStyleBackColor = false;
             // 
-            // pn_during
-            // 
-            this.pn_during.Controls.Add(this.dateTimePicker2);
-            this.pn_during.Controls.Add(this.dateTimePicker1);
-            this.pn_during.Controls.Add(this.label3);
-            this.pn_during.Controls.Add(this.label2);
-            this.pn_during.Location = new System.Drawing.Point(353, 62);
-            this.pn_during.Name = "pn_during";
-            this.pn_during.Size = new System.Drawing.Size(520, 24);
-            this.pn_during.TabIndex = 56;
-            this.pn_during.Visible = false;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(21, 4);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(154, 20);
-            this.dateTimePicker2.TabIndex = 59;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(272, 4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(154, 20);
-            this.dateTimePicker1.TabIndex = 57;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(181, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 24);
-            this.label3.TabIndex = 58;
-            this.label3.Text = "الى تاريخ";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(432, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 24);
-            this.label2.TabIndex = 42;
-            this.label2.Text = "من تاريخ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.pn_Return);
@@ -187,10 +140,11 @@
             // 
             // label11
             // 
-            this.label11.BackColor = System.Drawing.Color.White;
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
             this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label11.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(3, 41);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(113, 30);
@@ -394,9 +348,8 @@
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.pn_during);
             this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.pn_today);
-            this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.combo_Supliers);
             this.panel3.Location = new System.Drawing.Point(3, 10);
             this.panel3.Name = "panel3";
@@ -417,79 +370,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pn_today
-            // 
-            this.pn_today.Controls.Add(this.dateTimePicker3);
-            this.pn_today.Controls.Add(this.label1);
-            this.pn_today.Location = new System.Drawing.Point(262, 11);
-            this.pn_today.Name = "pn_today";
-            this.pn_today.Size = new System.Drawing.Size(520, 24);
-            this.pn_today.TabIndex = 55;
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(81, 0);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker3.TabIndex = 47;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(332, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 19);
-            this.label1.TabIndex = 42;
-            this.label1.Text = "تاريخ اليوم";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.radioButton3);
-            this.panel4.Controls.Add(this.radioButton2);
-            this.panel4.Controls.Add(this.radioButton1);
-            this.panel4.Location = new System.Drawing.Point(841, 11);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(274, 24);
-            this.panel4.TabIndex = 54;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(22, 3);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(45, 17);
-            this.radioButton3.TabIndex = 1;
-            this.radioButton3.Text = "الكل";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(102, 3);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(71, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.Text = "فترة زمنية";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(215, 3);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(47, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "اليوم";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
             // combo_Supliers
             // 
             this.combo_Supliers.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
@@ -504,20 +384,151 @@
             this.combo_Supliers.Tag = "";
             this.combo_Supliers.Text = "اختار اسم المورد";
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.panel9);
+            this.panel1.Location = new System.Drawing.Point(375, 517);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(119, 85);
+            this.panel1.TabIndex = 67;
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label13.Location = new System.Drawing.Point(3, 41);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(113, 30);
+            this.label13.TabIndex = 75;
+            this.label13.Text = "0.00";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label15.Location = new System.Drawing.Point(3, 13);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(113, 17);
+            this.label15.TabIndex = 74;
+            this.label15.Text = "الرصيد نهاية الفترة";
+            // 
+            // panel9
+            // 
+            this.panel9.Location = new System.Drawing.Point(122, 517);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(200, 85);
+            this.panel9.TabIndex = 73;
+            // 
+            // panel8
+            // 
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.label14);
+            this.panel8.Controls.Add(this.label16);
+            this.panel8.Controls.Add(this.panel10);
+            this.panel8.Location = new System.Drawing.Point(500, 517);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(119, 85);
+            this.panel8.TabIndex = 66;
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.White;
+            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label14.Location = new System.Drawing.Point(3, 41);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(113, 30);
+            this.label14.TabIndex = 75;
+            this.label14.Text = "0.00";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label16.Location = new System.Drawing.Point(3, 13);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(112, 17);
+            this.label16.TabIndex = 74;
+            this.label16.Text = "الرصيد بداية الفترة";
+            // 
+            // panel10
+            // 
+            this.panel10.Location = new System.Drawing.Point(122, 517);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(200, 85);
+            this.panel10.TabIndex = 73;
+            // 
+            // pn_during
+            // 
+            this.pn_during.Controls.Add(this.dateTimePicker2);
+            this.pn_during.Controls.Add(this.dateTimePicker1);
+            this.pn_during.Controls.Add(this.label3);
+            this.pn_during.Controls.Add(this.label2);
+            this.pn_during.Location = new System.Drawing.Point(317, 10);
+            this.pn_during.Name = "pn_during";
+            this.pn_during.Size = new System.Drawing.Size(520, 24);
+            this.pn_during.TabIndex = 57;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(21, 4);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(154, 20);
+            this.dateTimePicker2.TabIndex = 59;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(272, 4);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(154, 20);
+            this.dateTimePicker1.TabIndex = 57;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(181, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 24);
+            this.label3.TabIndex = 58;
+            this.label3.Text = "الى تاريخ";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(432, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 24);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "من تاريخ";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Supplier_Account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1336, 671);
-            this.Controls.Add(this.pn_during);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Supplier_Account";
             this.Text = "Supplier_Account";
             this.Load += new System.EventHandler(this.Supplier_Account_Load);
-            this.pn_during.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
@@ -526,9 +537,11 @@
             this.pn_Return.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gv)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.pn_today.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.pn_during.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -538,21 +551,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button bt_Print;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel pn_during;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pn_Return;
         private System.Windows.Forms.DataGridView gv;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel pn_today;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.ComboBox combo_Supliers;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel6;
@@ -574,5 +575,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewButtonColumn Column6;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel pn_during;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

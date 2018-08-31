@@ -553,11 +553,6 @@ namespace El_Khalil
             add.ShowDialog();
         }
 
-        private void حركةالمصروفاتToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Add_Tab("حركة المصروفات", new Outlay_Account());
-        }
-
         private void button22_Click(object sender, EventArgs e)
         {
             Add_Tab("تحويل من عميل الى مورد", new Bank_Cus_To_Sup());
@@ -576,6 +571,16 @@ namespace El_Khalil
         private void حسابالموردينToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Add_Tab("حساب الموردين", new Supplier());
+        }
+
+        private void حسابالمصروفاتToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("حساب المصروفات", new Outlay_Account());
+        }
+
+        private void حساباتالبنوكToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("حساب البنوك", new Bank());
         }
 
         private void Add_Tab(string Name,Form form)

@@ -40,12 +40,12 @@ namespace El_Khalil
                 combo_Supliers.SelectedText = "اختار اسم المورد";
             }
 
-            panel3.Visible = false;
+            panel3.Visible=panel6.Visible = false;
             textBox1.Text = tb_Number.Text=richTextBox1.Text = "";
 
             tb_AfterPayment.Text = tb_OldMoney.Text = tb_payment.Text = "0.00";
 
-            
+            radioButton2.Checked = true;
 
         }
 
@@ -63,11 +63,12 @@ namespace El_Khalil
             else
                 label2.Text = (((int)o) + 1) + "";
             panel3.Visible = false;
-
+            panel6.Visible = true;
         }
 
         private void LoadDiscount()
         {
+            panel6.Visible = false;
             panel3.Visible = false;
             object o = Ezzat.ExecutedScalar("selectDiscount_Bill_ID");
 
@@ -79,6 +80,7 @@ namespace El_Khalil
 
         private void LoadBank()
         {
+            panel6.Visible = true;
             object o = Ezzat.ExecutedScalar("selectBayback_Bill_ID");
 
             if (o == null)
@@ -238,19 +240,54 @@ namespace El_Khalil
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex == 1)
+
+            if (radioButton1.Checked)
             {
-                SavePaypack();
+                if (textBox2.Text != "")
+                {
+                    if (comboBox1.SelectedIndex == 1)
+                    {
+                        SavePaypack();
+                    }
+                    else if (comboBox1.SelectedIndex == 2)
+                    {
+                        SaveBank();
+                    }
+                    else if (comboBox1.SelectedIndex == 0)
+                    {
+                        SaveDiscount();
+                    }
+                    ChangeCreditLimit();
+                    RefreshForm();
+                }
+                else
+                {
+                    MessageBox.Show("اختار فاتورة حد ائتمان");
+                }
             }
-            else if (comboBox1.SelectedIndex == 2)
+            else
             {
-                SaveBank();
+                if (comboBox1.SelectedIndex == 1)
+                {
+                    SavePaypack();
+                }
+                else if (comboBox1.SelectedIndex == 2)
+                {
+                    SaveBank();
+                }
+                else if (comboBox1.SelectedIndex == 0)
+                {
+                    SaveDiscount();
+                }
+                RefreshForm();
             }
-            else if (comboBox1.SelectedIndex == 0)
-            {
-                SaveDiscount();
-            }
-            RefreshForm();
+        }
+
+        private void ChangeCreditLimit()
+        {
+            int row = Ezzat.ExecutedNoneQuery("update_CreditLimit", new SqlParameter("@Bill_ID", textBox2.Text), new SqlParameter("@Type", false), new SqlParameter("@ownerID", combo_Supliers.SelectedValue));
+            if (row == 0)
+                MessageBox.Show("كان لا يوجد فاتورة حد ائتمان بهذا الرقم تستحق التسديد");
         }
 
         private void Edit_CustomerAccount()
@@ -307,6 +344,57 @@ namespace El_Khalil
         private void button2_Click(object sender, EventArgs e)
         {
             RefreshForm();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked)
+            {
+
+                if (combo_Supliers.SelectedIndex >= 0)
+                {
+
+                }
+                else
+                {
+                    radioButton1.Checked = false;
+                    radioButton2.Checked = true;
+                    MessageBox.Show("اختر العميل اولا");
+                }
+
+            }
+            else
+            {
+                textBox2.ReadOnly = true;
+            }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked)
+                panel7.Visible = !radioButton2.Checked;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked)
+            {
+                panel7.Visible = true;
+                using (dataSet = Ezzat.GetDataSet("select_SpasificCreditLimit", "X", new SqlParameter("@ownerID", combo_Supliers.SelectedValue), new SqlParameter("@Type", false)))
+                {
+                    dataGridView1.DataSource = dataSet.Tables["X"];
+                }
+            }
+            else
+            {
+                MessageBox.Show("افتح خيار سداد من فاتورة حد ائتمان");
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBox2.Text = dataGridView1.CurrentRow.Cells[0].Value + "";
+            panel7.Visible = false;
         }
     }
 }

@@ -116,6 +116,12 @@
     <Compile Include="Bank Account.Designer.cs">
       <DependentUpon>Bank Account.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bank.Designer.cs">
+      <DependentUpon>Bank.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer Account.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -303,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Bank Account.resx">
       <DependentUpon>Bank Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bank.resx">
+      <DependentUpon>Bank.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer Account.resx">
       <DependentUpon>Customer Account.cs</DependentUpon>
