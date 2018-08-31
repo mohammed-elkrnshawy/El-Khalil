@@ -83,7 +83,6 @@ namespace El_Khalil
             StartBankMoney();
             StartSafeMoney();
 
-
             Size mysize = new System.Drawing.Size(20, 20); // co anh chen vao
             Bitmap bt = new Bitmap(Properties.Resources.close);
             // anh nay ban dau minh da them vao
@@ -96,6 +95,17 @@ namespace El_Khalil
             Bitmap btm2 = new Bitmap(bt2, mysize);
             closeImage = btm2;
             tabControl1.Padding = new Point(30);
+
+            ReturnCriditLimit();
+        }
+
+        private void ReturnCriditLimit()
+        {
+            object o= Ezzat.ExecutedScalar("select_IfCreditLimit", new SqlParameter("@Day", DateTime.Now));
+            if(o!=null)
+            {
+                MessageBox.Show("يوجد فواتير للتحصيل");
+            }
         }
 
         private void StartSafeMoney()
@@ -556,6 +566,16 @@ namespace El_Khalil
         private void button25_Click(object sender, EventArgs e)
         {
             Add_Tab("تعاملات البنك", new Bank_Account());
+        }
+
+        private void حسابالعملاءToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("حساب العملاء", new Customer());
+        }
+
+        private void حسابالموردينToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("حساب الموردين", new Supplier());
         }
 
         private void Add_Tab(string Name,Form form)

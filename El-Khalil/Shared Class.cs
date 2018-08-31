@@ -5,6 +5,7 @@ using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace El_Khalil
 {
@@ -35,6 +36,31 @@ namespace El_Khalil
             gp.CloseFigure();
             g.DrawPath(p, gp);
             gp.Dispose();
+        }
+
+        public static void KeyPress(TextBox textBox, KeyPressEventArgs e)
+        {
+            if (textBox.Text.Contains('.') && e.KeyChar == '.')
+            {
+                e.Handled = true;
+            }
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        public static void Leave(TextBox textBox)
+        {
+            textBox.Text = String.Format("{0:0.00}", (double.Parse(textBox.Text)));
+        }
+
+        public static void Change(TextBox textBox)
+        {
+            if (textBox.Text == ".")
+                textBox.Text = "0.";
+            if (textBox.Text == "")
+                textBox.Text = "0";
         }
     }
 }

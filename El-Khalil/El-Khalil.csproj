@@ -146,6 +146,12 @@
     <Compile Include="Customer Returned.Designer.cs">
       <DependentUpon>Customer Returned.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee Account.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +238,12 @@
     <Compile Include="Supplier Account.Designer.cs">
       <DependentUpon>Supplier Account.cs</DependentUpon>
     </Compile>
+    <Compile Include="Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier.Designer.cs">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="SupplierReturned.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -307,6 +319,9 @@
     <EmbeddedResource Include="Customer Returned.resx">
       <DependentUpon>Customer Returned.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Employee Account.resx">
       <DependentUpon>Employee Account.cs</DependentUpon>
     </EmbeddedResource>
@@ -353,6 +368,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier Payback.resx">
       <DependentUpon>Supplier Payback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier.resx">
+      <DependentUpon>Supplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SupplierReturned.resx">
       <DependentUpon>SupplierReturned.cs</DependentUpon>

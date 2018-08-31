@@ -17,6 +17,7 @@ namespace El_Khalil
         public Customer_Payback()
         {
             InitializeComponent();
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -40,7 +41,7 @@ namespace El_Khalil
                 combo_Supliers.SelectedText = "اختار اسم العميل";
             }
 
-            panel3.Visible = false;
+            panel3.Visible=panel6.Visible = false;
             tb_Number.Text = richTextBox1.Text = "";
 
             tb_AfterPayment.Text = tb_OldMoney.Text = tb_payment.Text = "0.00";
@@ -63,7 +64,7 @@ namespace El_Khalil
             else
                 label2.Text = (((int)o) + 1) + "";
             panel3.Visible = false;
-
+            panel6.Visible = true;
         }
 
         private void LoadDiscount()
@@ -74,6 +75,9 @@ namespace El_Khalil
                 label2.Text = "1";
             else
                 label2.Text = (((int)o) + 1) + "";
+
+            radioButton2.Checked = true;
+            panel6.Visible = false;
         }
 
         private void LoadBank()
@@ -94,6 +98,8 @@ namespace El_Khalil
                 combo_Bank.Text = "";
                 combo_Bank.SelectedText = "اختار بنك للايداع";
             }
+
+            panel6.Visible = true;
         }
 
         private void combo_Supliers_SelectedIndexChanged(object sender, EventArgs e)
@@ -113,28 +119,18 @@ namespace El_Khalil
 
         private void tb_payment_TextChanged(object sender, EventArgs e)
         {
-            if (tb_payment.Text == ".")
-                tb_payment.Text = "0.";
-            if (tb_payment.Text == "")
-                tb_payment.Text = "0";
+            Shared_Class.Change(tb_payment);
             Calcolate();
         }
 
         private void tb_payment_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (tb_payment.Text.Contains('.') && e.KeyChar == '.')
-            {
-                e.Handled = true;
-            }
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != (char)Keys.Back)
-            {
-                e.Handled = true;
-            }
+            Shared_Class.KeyPress(tb_payment, e);
         }
 
         private void tb_payment_Leave(object sender, EventArgs e)
         {
-            tb_payment.Text = String.Format("{0:0.00}", (double.Parse(tb_payment.Text)));
+            Shared_Class.Leave(tb_payment);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -158,19 +154,53 @@ namespace El_Khalil
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex == 1)
+            if(radioButton1.Checked)
             {
-                SavePaypack();
+                if(textBox1.Text!="")
+                {
+                    if (comboBox1.SelectedIndex == 1)
+                    {
+                        SavePaypack();
+                    }
+                    else if (comboBox1.SelectedIndex == 2)
+                    {
+                        SaveBank();
+                    }
+                    else if (comboBox1.SelectedIndex == 0)
+                    {
+                        SaveDiscount();
+                    }
+                    ChangeCreditLimit();
+                    RefreshForm();
+                }
+                else
+                {
+                    MessageBox.Show("اختار فاتورة حد ائتمان");
+                }
             }
-            else if (comboBox1.SelectedIndex == 2)
+            else
             {
-                SaveBank();
-            }
-            else if (comboBox1.SelectedIndex == 0)
-            {
-                SaveDiscount();
-            }
-            RefreshForm();
+                if (comboBox1.SelectedIndex == 1)
+                {
+                    SavePaypack();
+                }
+                else if (comboBox1.SelectedIndex == 2)
+                {
+                    SaveBank();
+                }
+                else if (comboBox1.SelectedIndex == 0)
+                {
+                    SaveDiscount();
+                }
+                RefreshForm();
+            }   
+        }
+
+        private void ChangeCreditLimit()
+        {
+                int row = Ezzat.ExecutedNoneQuery("update_CreditLimit",new SqlParameter("@Bill_ID", textBox1.Text),new SqlParameter("@Type", true),new SqlParameter("@ownerID",combo_Supliers.SelectedValue));
+                if(row==0)
+                    MessageBox.Show("كان لا يوجد فاتورة حد ائتمان بهذا الرقم تستحق التسديد");
         }
 
         private void SavePaypack()
@@ -296,5 +326,58 @@ namespace El_Khalil
                 );
         }
 
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+           
+
+            if(radioButton1.Checked)
+            {
+
+                if (combo_Supliers.SelectedIndex >= 0)
+                {
+                    
+                }
+                else
+                {
+                    radioButton1.Checked = false;
+                    radioButton2.Checked = true;
+                    MessageBox.Show("اختر العميل اولا");
+                }
+
+            }
+            else
+            {
+                textBox1.ReadOnly = true;
+            }
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if(radioButton1.Checked)
+            {
+                panel7.Visible = true;
+                using (dataSet = Ezzat.GetDataSet("select_SpasificCreditLimit", "X", new SqlParameter("@ownerID", combo_Supliers.SelectedValue), new SqlParameter("@Type", true)))
+                {
+                    dataGridView1.DataSource = dataSet.Tables["X"];
+                }
+            }
+            else
+            {
+                MessageBox.Show("افتح خيار سداد من فاتورة حد ائتمان");
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value + "";
+            panel7.Visible = false;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if(radioButton2.Checked)
+            panel7.Visible = !radioButton2.Checked;
+        }
     }
 }

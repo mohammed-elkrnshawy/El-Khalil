@@ -44,6 +44,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pn_Return = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.bt_Print = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,8 +54,6 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.bt_Print = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.pn_during.SuspendLayout();
             this.pn_today.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -250,6 +250,34 @@
             this.dataGridView1.Size = new System.Drawing.Size(1154, 452);
             this.dataGridView1.TabIndex = 2;
             // 
+            // bt_Print
+            // 
+            this.bt_Print.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.bt_Print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
+            this.bt_Print.FlatAppearance.BorderSize = 0;
+            this.bt_Print.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(84)))), ((int)(((byte)(102)))));
+            this.bt_Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_Print.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.bt_Print.ForeColor = System.Drawing.Color.White;
+            this.bt_Print.Location = new System.Drawing.Point(60, 559);
+            this.bt_Print.Name = "bt_Print";
+            this.bt_Print.Size = new System.Drawing.Size(182, 28);
+            this.bt_Print.TabIndex = 38;
+            this.bt_Print.Text = "طباعة تقارير";
+            this.bt_Print.UseVisualStyleBackColor = false;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(897, 21);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(247, 27);
+            this.label4.TabIndex = 67;
+            this.label4.Text = "تعاملات الخزنة الايراد";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Column1
             // 
             this.Column1.HeaderText = "رقم البيان";
@@ -258,13 +286,13 @@
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "ايداع فى حساب البنك";
+            this.Column3.HeaderText = "ايداع فى حساب الخزنة";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "صرف من حساب البنك";
+            this.Column2.HeaderText = "صرف من حساب الخزنة";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
@@ -310,34 +338,6 @@
             this.Column6.UseColumnTextForButtonValue = true;
             this.Column6.Width = 60;
             // 
-            // bt_Print
-            // 
-            this.bt_Print.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.bt_Print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
-            this.bt_Print.FlatAppearance.BorderSize = 0;
-            this.bt_Print.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(84)))), ((int)(((byte)(102)))));
-            this.bt_Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_Print.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.bt_Print.ForeColor = System.Drawing.Color.White;
-            this.bt_Print.Location = new System.Drawing.Point(60, 559);
-            this.bt_Print.Name = "bt_Print";
-            this.bt_Print.Size = new System.Drawing.Size(182, 28);
-            this.bt_Print.TabIndex = 38;
-            this.bt_Print.Text = "طباعة تقارير";
-            this.bt_Print.UseVisualStyleBackColor = false;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(897, 21);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(247, 27);
-            this.label4.TabIndex = 67;
-            this.label4.Text = "تعاملات الخزنة الايراد";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // The_InSafe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -380,6 +380,7 @@
         private System.Windows.Forms.Button bt_Print;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -388,6 +389,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewButtonColumn Column6;
-        private System.Windows.Forms.Button button1;
     }
 }
