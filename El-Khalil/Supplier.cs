@@ -13,6 +13,7 @@ namespace El_Khalil
 {
     public partial class Supplier : Form
     {
+        object o;
         public Supplier()
         {
             InitializeComponent();
@@ -76,6 +77,7 @@ namespace El_Khalil
 
         private void FillCustomerAccount()
         {
+           
             dataGridView2.Rows.Clear();
             SqlConnection con;
             SqlDataReader dr, dr1;
@@ -105,6 +107,12 @@ namespace El_Khalil
                             dataGridView2[2, dataGridView2.Rows.Count - 1].Value = dr1[2].ToString();
                             dataGridView2[3, dataGridView2.Rows.Count - 1].Value = dr1[3].ToString();
                             dataGridView2[4, dataGridView2.Rows.Count - 1].Value = (double.Parse(dr1[2].ToString()) - double.Parse(dr1[3].ToString()));
+                            o = Ezzat.ExecutedScalar("Supplier_Start", new SqlParameter("@Customer_ID", (int)dr1[0]), new SqlParameter("@Day", dateTimePicker1.Value));
+                            if ((o + "").Length == 0) o = 0;
+                            dataGridView2[6, dataGridView2.Rows.Count - 1].Value = o;
+                            o = Ezzat.ExecutedScalar("Supplier_End", new SqlParameter("@Customer_ID", (int)dr1[0]), new SqlParameter("@Day", dateTimePicker2.Value));
+                            if ((o + "").Length == 0) o = 0;
+                            dataGridView2[7, dataGridView2.Rows.Count - 1].Value = o;
                         }
                     }
 

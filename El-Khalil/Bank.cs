@@ -112,6 +112,14 @@ namespace El_Khalil
                             if (o == null) o = 0.0000;
                             dataGridView2[3, dataGridView2.Rows.Count - 1].Value = o; 
                             dataGridView2[4, dataGridView2.Rows.Count - 1].Value = (double.Parse(dr1[3].ToString()) - double.Parse(dr1[2].ToString()));
+
+
+                            o = Ezzat.ExecutedScalar("Bank_Start", new SqlParameter("@Customer_ID", (int)dr1[0]), new SqlParameter("@Day", dateTimePicker1.Value));
+                            if ((o + "").Length == 0) o = 0;
+                            dataGridView2[6, dataGridView2.Rows.Count - 1].Value = String.Format("{0:0.00}", o);
+                            o = Ezzat.ExecutedScalar("Bank_END", new SqlParameter("@Customer_ID", (int)dr1[0]), new SqlParameter("@Day", dateTimePicker2.Value));
+                            if ((o + "").Length == 0) o = 0;
+                            dataGridView2[7, dataGridView2.Rows.Count - 1].Value = String.Format("{0:0.00}", o);
                         }
                     }
 
