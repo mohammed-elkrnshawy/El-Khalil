@@ -85,6 +85,8 @@
             this.حساباتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.حسابالعملاءToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.حسابالموردينToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.حسابالمصروفاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.حساباتالبنوكToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
@@ -93,7 +95,6 @@
             this.addMaterial = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button29 = new System.Windows.Forms.Button();
             this.button30 = new System.Windows.Forms.Button();
             this.button31 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -136,8 +137,7 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.حسابالمصروفاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.حساباتالبنوكToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button29 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -604,16 +604,30 @@
             // حسابالعملاءToolStripMenuItem
             // 
             this.حسابالعملاءToolStripMenuItem.Name = "حسابالعملاءToolStripMenuItem";
-            this.حسابالعملاءToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.حسابالعملاءToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.حسابالعملاءToolStripMenuItem.Text = "حساب العملاء";
             this.حسابالعملاءToolStripMenuItem.Click += new System.EventHandler(this.حسابالعملاءToolStripMenuItem_Click);
             // 
             // حسابالموردينToolStripMenuItem
             // 
             this.حسابالموردينToolStripMenuItem.Name = "حسابالموردينToolStripMenuItem";
-            this.حسابالموردينToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.حسابالموردينToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.حسابالموردينToolStripMenuItem.Text = "حساب الموردين";
             this.حسابالموردينToolStripMenuItem.Click += new System.EventHandler(this.حسابالموردينToolStripMenuItem_Click);
+            // 
+            // حسابالمصروفاتToolStripMenuItem
+            // 
+            this.حسابالمصروفاتToolStripMenuItem.Name = "حسابالمصروفاتToolStripMenuItem";
+            this.حسابالمصروفاتToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.حسابالمصروفاتToolStripMenuItem.Text = "حساب المصروفات";
+            this.حسابالمصروفاتToolStripMenuItem.Click += new System.EventHandler(this.حسابالمصروفاتToolStripMenuItem_Click);
+            // 
+            // حساباتالبنوكToolStripMenuItem
+            // 
+            this.حساباتالبنوكToolStripMenuItem.Name = "حساباتالبنوكToolStripMenuItem";
+            this.حساباتالبنوكToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.حساباتالبنوكToolStripMenuItem.Text = "حسابات البنوك";
+            this.حساباتالبنوكToolStripMenuItem.Click += new System.EventHandler(this.حساباتالبنوكToolStripMenuItem_Click);
             // 
             // tabControl1
             // 
@@ -734,7 +748,6 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Controls.Add(this.button29);
             this.panel7.Controls.Add(this.button30);
             this.panel7.Controls.Add(this.button31);
             this.panel7.Location = new System.Drawing.Point(12, 274);
@@ -742,22 +755,6 @@
             this.panel7.Size = new System.Drawing.Size(397, 130);
             this.panel7.TabIndex = 17;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
-            // 
-            // button29
-            // 
-            this.button29.BackColor = System.Drawing.Color.White;
-            this.button29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button29.FlatAppearance.BorderSize = 0;
-            this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button29.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button29.ForeColor = System.Drawing.Color.Black;
-            this.button29.Location = new System.Drawing.Point(3, 76);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(391, 33);
-            this.button29.TabIndex = 5;
-            this.button29.Text = "تقارير قبض";
-            this.button29.UseVisualStyleBackColor = false;
-            this.button29.Click += new System.EventHandler(this.button29_Click);
             // 
             // button30
             // 
@@ -1162,6 +1159,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.button29);
             this.panel3.Controls.Add(this.button14);
             this.panel3.Controls.Add(this.button15);
             this.panel3.Location = new System.Drawing.Point(474, 509);
@@ -1178,7 +1176,7 @@
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.Color.Black;
-            this.button14.Location = new System.Drawing.Point(3, 59);
+            this.button14.Location = new System.Drawing.Point(3, 42);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(394, 33);
             this.button14.TabIndex = 4;
@@ -1194,7 +1192,7 @@
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.Color.Black;
-            this.button15.Location = new System.Drawing.Point(3, 15);
+            this.button15.Location = new System.Drawing.Point(2, 11);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(394, 33);
             this.button15.TabIndex = 3;
@@ -1350,19 +1348,21 @@
             this.toolStripStatusLabel3.Size = new System.Drawing.Size(73, 17);
             this.toolStripStatusLabel3.Text = "الحالة :  ادمن ";
             // 
-            // حسابالمصروفاتToolStripMenuItem
+            // button29
             // 
-            this.حسابالمصروفاتToolStripMenuItem.Name = "حسابالمصروفاتToolStripMenuItem";
-            this.حسابالمصروفاتToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.حسابالمصروفاتToolStripMenuItem.Text = "حساب المصروفات";
-            this.حسابالمصروفاتToolStripMenuItem.Click += new System.EventHandler(this.حسابالمصروفاتToolStripMenuItem_Click);
-            // 
-            // حساباتالبنوكToolStripMenuItem
-            // 
-            this.حساباتالبنوكToolStripMenuItem.Name = "حساباتالبنوكToolStripMenuItem";
-            this.حساباتالبنوكToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.حساباتالبنوكToolStripMenuItem.Text = "حسابات البنوك";
-            this.حساباتالبنوكToolStripMenuItem.Click += new System.EventHandler(this.حساباتالبنوكToolStripMenuItem_Click);
+            this.button29.BackColor = System.Drawing.Color.White;
+            this.button29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button29.FlatAppearance.BorderSize = 0;
+            this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button29.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button29.ForeColor = System.Drawing.Color.Black;
+            this.button29.Location = new System.Drawing.Point(3, 70);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(391, 33);
+            this.button29.TabIndex = 6;
+            this.button29.Text = "حركات منتج";
+            this.button29.UseVisualStyleBackColor = false;
+            this.button29.Click += new System.EventHandler(this.button29_Click_1);
             // 
             // Home
             // 
@@ -1483,7 +1483,6 @@
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button button29;
         private System.Windows.Forms.Button button30;
         private System.Windows.Forms.Button button31;
         private System.Windows.Forms.Label label8;
@@ -1509,5 +1508,6 @@
         private System.Windows.Forms.ToolStripMenuItem حسابالموردينToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem حسابالمصروفاتToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem حساباتالبنوكToolStripMenuItem;
+        private System.Windows.Forms.Button button29;
     }
 }

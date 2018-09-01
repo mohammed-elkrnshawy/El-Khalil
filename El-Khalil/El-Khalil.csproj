@@ -195,6 +195,12 @@
     <Compile Include="Outlay.Designer.cs">
       <DependentUpon>Outlay.cs</DependentUpon>
     </Compile>
+    <Compile Include="Product Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product Account.Designer.cs">
+      <DependentUpon>Product Account.cs</DependentUpon>
+    </Compile>
     <Compile Include="Productivity Product.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -348,6 +354,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Outlay.resx">
       <DependentUpon>Outlay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product Account.resx">
+      <DependentUpon>Product Account.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Productivity Product.resx">
       <DependentUpon>Productivity Product.cs</DependentUpon>

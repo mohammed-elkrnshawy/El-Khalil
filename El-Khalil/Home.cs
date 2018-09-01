@@ -583,6 +583,11 @@ namespace El_Khalil
             Add_Tab("حساب البنوك", new Bank());
         }
 
+        private void button29_Click_1(object sender, EventArgs e)
+        {
+            Add_Tab("حساب الصنف", new Product_Account());
+        }
+
         private void Add_Tab(string Name,Form form)
         {
             TabPage tp = new TabPage(Name);
