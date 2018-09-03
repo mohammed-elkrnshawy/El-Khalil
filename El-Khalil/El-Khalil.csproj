@@ -92,6 +92,12 @@
     <Compile Include="Add Supplier.Designer.cs">
       <DependentUpon>Add Supplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="Add Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Users.Designer.cs">
+      <DependentUpon>Add Users.cs</DependentUpon>
+    </Compile>
     <Compile Include="Bank BillDetaails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,12 @@
       <DependentUpon>Employee_AccountDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Ezzat.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Outlay Account.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,6 +293,12 @@
     <Compile Include="TheSafe Account.Designer.cs">
       <DependentUpon>TheSafe Account.cs</DependentUpon>
     </Compile>
+    <Compile Include="Total Profit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Total Profit.Designer.cs">
+      <DependentUpon>Total Profit.cs</DependentUpon>
+    </Compile>
     <Compile Include="z_Product Component.cs" />
     <Compile Include="z_Product Object.cs" />
     <EmbeddedResource Include="Add Band.resx">
@@ -303,6 +321,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Add Supplier.resx">
       <DependentUpon>Add Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Users.resx">
+      <DependentUpon>Add Users.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Bank BillDetaails.resx">
       <DependentUpon>Bank BillDetaails.cs</DependentUpon>
@@ -348,6 +369,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Employee_AccountDetails.resx">
       <DependentUpon>Employee_AccountDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Outlay Account.resx">
       <DependentUpon>Outlay Account.cs</DependentUpon>
@@ -398,6 +422,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TheSafe Account.resx">
       <DependentUpon>TheSafe Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Total Profit.resx">
+      <DependentUpon>Total Profit.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -588,6 +588,16 @@ namespace El_Khalil
             Add_Tab("حساب الصنف", new Product_Account());
         }
 
+        private void اجمالىالربحToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("اجمالى الربح", new Total_Profit());
+        }
+
+        private void اضافةمستخدمToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("اضافة مستخدمين", new Add_Users());
+        }
+
         private void Add_Tab(string Name,Form form)
         {
             TabPage tp = new TabPage(Name);

@@ -87,6 +87,7 @@
             this.حسابالموردينToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.حسابالمصروفاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.حساباتالبنوكToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.اجمالىالربحToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
@@ -123,6 +124,7 @@
             this.button10 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button29 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -137,7 +139,6 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.button29 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -535,19 +536,20 @@
             // اضافةمستخدمToolStripMenuItem
             // 
             this.اضافةمستخدمToolStripMenuItem.Name = "اضافةمستخدمToolStripMenuItem";
-            this.اضافةمستخدمToolStripMenuItem.Size = new System.Drawing.Size(166, 24);
+            this.اضافةمستخدمToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.اضافةمستخدمToolStripMenuItem.Text = "اضافة مستخدم";
+            this.اضافةمستخدمToolStripMenuItem.Click += new System.EventHandler(this.اضافةمستخدمToolStripMenuItem_Click);
             // 
             // تعديلمستخدمToolStripMenuItem
             // 
             this.تعديلمستخدمToolStripMenuItem.Name = "تعديلمستخدمToolStripMenuItem";
-            this.تعديلمستخدمToolStripMenuItem.Size = new System.Drawing.Size(166, 24);
+            this.تعديلمستخدمToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.تعديلمستخدمToolStripMenuItem.Text = "تعديل مستخدم";
             // 
             // حذفمستخدمToolStripMenuItem
             // 
             this.حذفمستخدمToolStripMenuItem.Name = "حذفمستخدمToolStripMenuItem";
-            this.حذفمستخدمToolStripMenuItem.Size = new System.Drawing.Size(166, 24);
+            this.حذفمستخدمToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.حذفمستخدمToolStripMenuItem.Text = "حذف مستخدم";
             // 
             // الاضافاتToolStripMenuItem
@@ -596,7 +598,8 @@
             this.حسابالعملاءToolStripMenuItem,
             this.حسابالموردينToolStripMenuItem,
             this.حسابالمصروفاتToolStripMenuItem,
-            this.حساباتالبنوكToolStripMenuItem});
+            this.حساباتالبنوكToolStripMenuItem,
+            this.اجمالىالربحToolStripMenuItem});
             this.حساباتToolStripMenuItem.Name = "حساباتToolStripMenuItem";
             this.حساباتToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.حساباتToolStripMenuItem.Text = "حسابات";
@@ -628,6 +631,13 @@
             this.حساباتالبنوكToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.حساباتالبنوكToolStripMenuItem.Text = "حسابات البنوك";
             this.حساباتالبنوكToolStripMenuItem.Click += new System.EventHandler(this.حساباتالبنوكToolStripMenuItem_Click);
+            // 
+            // اجمالىالربحToolStripMenuItem
+            // 
+            this.اجمالىالربحToolStripMenuItem.Name = "اجمالىالربحToolStripMenuItem";
+            this.اجمالىالربحToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.اجمالىالربحToolStripMenuItem.Text = "اجمالى الربح";
+            this.اجمالىالربحToolStripMenuItem.Click += new System.EventHandler(this.اجمالىالربحToolStripMenuItem_Click);
             // 
             // tabControl1
             // 
@@ -1168,6 +1178,22 @@
             this.panel3.TabIndex = 7;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // button29
+            // 
+            this.button29.BackColor = System.Drawing.Color.White;
+            this.button29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button29.FlatAppearance.BorderSize = 0;
+            this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button29.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button29.ForeColor = System.Drawing.Color.Black;
+            this.button29.Location = new System.Drawing.Point(3, 70);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(391, 33);
+            this.button29.TabIndex = 6;
+            this.button29.Text = "حركات منتج";
+            this.button29.UseVisualStyleBackColor = false;
+            this.button29.Click += new System.EventHandler(this.button29_Click_1);
+            // 
             // button14
             // 
             this.button14.BackColor = System.Drawing.Color.White;
@@ -1348,22 +1374,6 @@
             this.toolStripStatusLabel3.Size = new System.Drawing.Size(73, 17);
             this.toolStripStatusLabel3.Text = "الحالة :  ادمن ";
             // 
-            // button29
-            // 
-            this.button29.BackColor = System.Drawing.Color.White;
-            this.button29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button29.FlatAppearance.BorderSize = 0;
-            this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button29.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button29.ForeColor = System.Drawing.Color.Black;
-            this.button29.Location = new System.Drawing.Point(3, 70);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(391, 33);
-            this.button29.TabIndex = 6;
-            this.button29.Text = "حركات منتج";
-            this.button29.UseVisualStyleBackColor = false;
-            this.button29.Click += new System.EventHandler(this.button29_Click_1);
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1509,5 +1519,6 @@
         private System.Windows.Forms.ToolStripMenuItem حسابالمصروفاتToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem حساباتالبنوكToolStripMenuItem;
         private System.Windows.Forms.Button button29;
+        private System.Windows.Forms.ToolStripMenuItem اجمالىالربحToolStripMenuItem;
     }
 }
