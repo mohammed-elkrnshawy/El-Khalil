@@ -28,7 +28,7 @@ namespace El_Khalil
             tb_address.Text = tb_bankName.Text = tb_Bank_number.Text = tb_company.Text = tb_day.Text = tb_name.Text
                 = tb_phone.Text = tb_phone2.Text = textBox2.Text=tb_id.Text=tb_max.Text = "";
 
-            bt_edit.Enabled = button1.Enabled = false;
+            bt_edit.Enabled =  false;
             bt_Save.Enabled = true;
             FillCombo();
             tb_day.Enabled = radioButton4.Checked;
@@ -169,7 +169,7 @@ namespace El_Khalil
         }
         private void ShowDetails(int value)
         {
-            bt_edit.Enabled = button1.Enabled = true;
+            bt_edit.Enabled  = true;
             bt_Save.Enabled=tb_id.Enabled = false;
 
             SqlConnection con;

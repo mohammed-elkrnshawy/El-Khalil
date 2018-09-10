@@ -255,7 +255,7 @@ namespace El_Khalil
                 {
                     SaveLater();
                 }
-                //RefreshForm();
+                RefreshForm();
             }
             else
                 MessageBox.Show(Shared_Class.Check_Message);
@@ -530,7 +530,49 @@ namespace El_Khalil
             }
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            if (combo_Customer.SelectedIndex >= 0 && dataGridView1.Rows.Count > 0)
+            {
+
+
+                if (tb_PaymentMethod.Text.Contains("نقدى او شيك"))
+                {
+                    if (radioButton1.Checked)
+                    {
+                        // دفع نقدى
+                        SaveCash();
+                    }
+                    else if (radioButton2.Checked)
+                    {
+                        // دفع شيك
+                        SaveCheck();
+                    }
+                }
+                else if (tb_PaymentMethod.Text.Contains("حد ائتمان"))
+                {
+                    SaveCreditLimit();
+                }
+                else if (tb_PaymentMethod.Text.Contains("دفع اجل"))
+                {
+                    SaveLater();
+                }
+                Customer_Print print = new Customer_Print(int.Parse(label2.Text),
+                                                      combo_Customer.Text,
+                                                      richTextBox1.Text,
+                                                      double.Parse(tb_BillTotal.Text),
+                                                      double.Parse(tb_Discount.Text),
+                                                      double.Parse(tb_OldMoney.Text),
+                                                      double.Parse(tb_payment.Text)
+                                                      );
+                print.ShowDialog();
+                RefreshForm();
+            }
+            else
+                MessageBox.Show(Shared_Class.Check_Message);
+
+        }
 
         private void tb_payment_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -549,6 +591,5 @@ namespace El_Khalil
             tb_Discount.Text = String.Format("{0:0.00}", (double.Parse(tb_Discount.Text)));
             tb_payment.Text = String.Format("{0:0.00}", (double.Parse(tb_payment.Text)));
         }
-
     }
 }

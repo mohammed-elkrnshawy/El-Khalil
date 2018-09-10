@@ -63,6 +63,16 @@ namespace El_Khalil.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _212011110_copy {
+            get {
+                object obj = ResourceManager.GetObject("212011110 copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap addition_sign {
             get {
                 object obj = ResourceManager.GetObject("addition-sign", resourceCulture);

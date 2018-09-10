@@ -79,24 +79,22 @@
             this.حذفمستخدمToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.الاضافاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.اضافةبندمصروفاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.خصمموردToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.خصمعميلToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.اضافةمسميوظيفيToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.حساباتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.حسابالعملاءToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.حسابالموردينToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.حسابالمصروفاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.حساباتالبنوكToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.اجمالىالربحToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.button27 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button26 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.button32 = new System.Windows.Forms.Button();
             this.addMaterial = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button30 = new System.Windows.Forms.Button();
+            this.button28 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
             this.button31 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -134,14 +132,15 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -150,8 +149,8 @@
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -536,30 +535,27 @@
             // اضافةمستخدمToolStripMenuItem
             // 
             this.اضافةمستخدمToolStripMenuItem.Name = "اضافةمستخدمToolStripMenuItem";
-            this.اضافةمستخدمToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.اضافةمستخدمToolStripMenuItem.Size = new System.Drawing.Size(166, 24);
             this.اضافةمستخدمToolStripMenuItem.Text = "اضافة مستخدم";
             this.اضافةمستخدمToolStripMenuItem.Click += new System.EventHandler(this.اضافةمستخدمToolStripMenuItem_Click);
             // 
             // تعديلمستخدمToolStripMenuItem
             // 
             this.تعديلمستخدمToolStripMenuItem.Name = "تعديلمستخدمToolStripMenuItem";
-            this.تعديلمستخدمToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.تعديلمستخدمToolStripMenuItem.Size = new System.Drawing.Size(166, 24);
             this.تعديلمستخدمToolStripMenuItem.Text = "تعديل مستخدم";
             // 
             // حذفمستخدمToolStripMenuItem
             // 
             this.حذفمستخدمToolStripMenuItem.Name = "حذفمستخدمToolStripMenuItem";
-            this.حذفمستخدمToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.حذفمستخدمToolStripMenuItem.Size = new System.Drawing.Size(166, 24);
             this.حذفمستخدمToolStripMenuItem.Text = "حذف مستخدم";
             // 
             // الاضافاتToolStripMenuItem
             // 
             this.الاضافاتToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.اضافةبندمصروفاتToolStripMenuItem,
-            this.خصمموردToolStripMenuItem,
-            this.خصمعميلToolStripMenuItem,
-            this.اضافةمسميوظيفيToolStripMenuItem,
-            this.حساباتToolStripMenuItem});
+            this.اضافةمسميوظيفيToolStripMenuItem});
             this.الاضافاتToolStripMenuItem.Name = "الاضافاتToolStripMenuItem";
             this.الاضافاتToolStripMenuItem.Size = new System.Drawing.Size(64, 23);
             this.الاضافاتToolStripMenuItem.Text = "الاضافات";
@@ -571,73 +567,12 @@
             this.اضافةبندمصروفاتToolStripMenuItem.Text = "اضافة بند مصروفات";
             this.اضافةبندمصروفاتToolStripMenuItem.Click += new System.EventHandler(this.اضافةبندمصروفاتToolStripMenuItem_Click);
             // 
-            // خصمموردToolStripMenuItem
-            // 
-            this.خصمموردToolStripMenuItem.Name = "خصمموردToolStripMenuItem";
-            this.خصمموردToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.خصمموردToolStripMenuItem.Text = "خصم مورد";
-            this.خصمموردToolStripMenuItem.Click += new System.EventHandler(this.خصمموردToolStripMenuItem_Click);
-            // 
-            // خصمعميلToolStripMenuItem
-            // 
-            this.خصمعميلToolStripMenuItem.Name = "خصمعميلToolStripMenuItem";
-            this.خصمعميلToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.خصمعميلToolStripMenuItem.Text = "خصم عميل";
-            this.خصمعميلToolStripMenuItem.Click += new System.EventHandler(this.خصمعميلToolStripMenuItem_Click);
-            // 
             // اضافةمسميوظيفيToolStripMenuItem
             // 
             this.اضافةمسميوظيفيToolStripMenuItem.Name = "اضافةمسميوظيفيToolStripMenuItem";
             this.اضافةمسميوظيفيToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.اضافةمسميوظيفيToolStripMenuItem.Text = "اضافة مسمي وظيفي";
             this.اضافةمسميوظيفيToolStripMenuItem.Click += new System.EventHandler(this.اضافةمسميوظيفيToolStripMenuItem_Click);
-            // 
-            // حساباتToolStripMenuItem
-            // 
-            this.حساباتToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.حسابالعملاءToolStripMenuItem,
-            this.حسابالموردينToolStripMenuItem,
-            this.حسابالمصروفاتToolStripMenuItem,
-            this.حساباتالبنوكToolStripMenuItem,
-            this.اجمالىالربحToolStripMenuItem});
-            this.حساباتToolStripMenuItem.Name = "حساباتToolStripMenuItem";
-            this.حساباتToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.حساباتToolStripMenuItem.Text = "حسابات";
-            // 
-            // حسابالعملاءToolStripMenuItem
-            // 
-            this.حسابالعملاءToolStripMenuItem.Name = "حسابالعملاءToolStripMenuItem";
-            this.حسابالعملاءToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.حسابالعملاءToolStripMenuItem.Text = "حساب العملاء";
-            this.حسابالعملاءToolStripMenuItem.Click += new System.EventHandler(this.حسابالعملاءToolStripMenuItem_Click);
-            // 
-            // حسابالموردينToolStripMenuItem
-            // 
-            this.حسابالموردينToolStripMenuItem.Name = "حسابالموردينToolStripMenuItem";
-            this.حسابالموردينToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.حسابالموردينToolStripMenuItem.Text = "حساب الموردين";
-            this.حسابالموردينToolStripMenuItem.Click += new System.EventHandler(this.حسابالموردينToolStripMenuItem_Click);
-            // 
-            // حسابالمصروفاتToolStripMenuItem
-            // 
-            this.حسابالمصروفاتToolStripMenuItem.Name = "حسابالمصروفاتToolStripMenuItem";
-            this.حسابالمصروفاتToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.حسابالمصروفاتToolStripMenuItem.Text = "حساب المصروفات";
-            this.حسابالمصروفاتToolStripMenuItem.Click += new System.EventHandler(this.حسابالمصروفاتToolStripMenuItem_Click);
-            // 
-            // حساباتالبنوكToolStripMenuItem
-            // 
-            this.حساباتالبنوكToolStripMenuItem.Name = "حساباتالبنوكToolStripMenuItem";
-            this.حساباتالبنوكToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.حساباتالبنوكToolStripMenuItem.Text = "حسابات البنوك";
-            this.حساباتالبنوكToolStripMenuItem.Click += new System.EventHandler(this.حساباتالبنوكToolStripMenuItem_Click);
-            // 
-            // اجمالىالربحToolStripMenuItem
-            // 
-            this.اجمالىالربحToolStripMenuItem.Name = "اجمالىالربحToolStripMenuItem";
-            this.اجمالىالربحToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.اجمالىالربحToolStripMenuItem.Text = "اجمالى الربح";
-            this.اجمالىالربحToolStripMenuItem.Click += new System.EventHandler(this.اجمالىالربحToolStripMenuItem_Click);
             // 
             // tabControl1
             // 
@@ -661,6 +596,9 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.panel9);
+            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.panel8);
             this.tabPage1.Controls.Add(this.label7);
@@ -677,7 +615,6 @@
             this.tabPage1.Controls.Add(this.panel3);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.panel1);
-            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.tabPage1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
@@ -688,12 +625,84 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "الرئيسية";
             // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(300, 494);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(92, 23);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "الاضافات";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.Controls.Add(this.button27);
+            this.panel9.Controls.Add(this.button13);
+            this.panel9.Controls.Add(this.button26);
+            this.panel9.Location = new System.Drawing.Point(12, 509);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(397, 139);
+            this.panel9.TabIndex = 22;
+            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button27
+            // 
+            this.button27.BackColor = System.Drawing.Color.White;
+            this.button27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button27.FlatAppearance.BorderSize = 0;
+            this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button27.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button27.ForeColor = System.Drawing.Color.Black;
+            this.button27.Location = new System.Drawing.Point(3, 95);
+            this.button27.Name = "button27";
+            this.button27.Size = new System.Drawing.Size(391, 33);
+            this.button27.TabIndex = 7;
+            this.button27.Text = "حسابات البنوك";
+            this.button27.UseVisualStyleBackColor = false;
+            this.button27.Click += new System.EventHandler(this.button27_Click_1);
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.White;
+            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.ForeColor = System.Drawing.Color.Black;
+            this.button13.Location = new System.Drawing.Point(3, 50);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(391, 33);
+            this.button13.TabIndex = 6;
+            this.button13.Text = "حسابات الموردين";
+            this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click_1);
+            // 
+            // button26
+            // 
+            this.button26.BackColor = System.Drawing.Color.White;
+            this.button26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button26.FlatAppearance.BorderSize = 0;
+            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button26.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button26.ForeColor = System.Drawing.Color.Black;
+            this.button26.Location = new System.Drawing.Point(3, 11);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(391, 33);
+            this.button26.TabIndex = 3;
+            this.button26.Text = "حسابات العملاء";
+            this.button26.UseVisualStyleBackColor = false;
+            this.button26.Click += new System.EventHandler(this.button26_Click_1);
+            // 
             // label8
             // 
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(297, 422);
+            this.label8.Location = new System.Drawing.Point(300, 363);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(92, 23);
             this.label8.TabIndex = 20;
@@ -705,9 +714,9 @@
             this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.Controls.Add(this.button32);
             this.panel8.Controls.Add(this.addMaterial);
-            this.panel8.Location = new System.Drawing.Point(12, 437);
+            this.panel8.Location = new System.Drawing.Point(12, 378);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(397, 195);
+            this.panel8.Size = new System.Drawing.Size(397, 106);
             this.panel8.TabIndex = 19;
             this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
@@ -719,7 +728,7 @@
             this.button32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button32.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button32.ForeColor = System.Drawing.Color.Black;
-            this.button32.Location = new System.Drawing.Point(3, 114);
+            this.button32.Location = new System.Drawing.Point(3, 50);
             this.button32.Name = "button32";
             this.button32.Size = new System.Drawing.Size(391, 33);
             this.button32.TabIndex = 6;
@@ -735,7 +744,7 @@
             this.addMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addMaterial.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addMaterial.ForeColor = System.Drawing.Color.Black;
-            this.addMaterial.Location = new System.Drawing.Point(3, 15);
+            this.addMaterial.Location = new System.Drawing.Point(3, 11);
             this.addMaterial.Name = "addMaterial";
             this.addMaterial.Size = new System.Drawing.Size(391, 33);
             this.addMaterial.TabIndex = 3;
@@ -748,7 +757,7 @@
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(297, 259);
+            this.label7.Location = new System.Drawing.Point(293, 209);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 23);
             this.label7.TabIndex = 18;
@@ -758,29 +767,46 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Controls.Add(this.button30);
+            this.panel7.Controls.Add(this.button28);
+            this.panel7.Controls.Add(this.button11);
             this.panel7.Controls.Add(this.button31);
-            this.panel7.Location = new System.Drawing.Point(12, 274);
+            this.panel7.Location = new System.Drawing.Point(12, 225);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(397, 130);
             this.panel7.TabIndex = 17;
             this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
-            // button30
+            // button28
             // 
-            this.button30.BackColor = System.Drawing.Color.White;
-            this.button30.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button30.FlatAppearance.BorderSize = 0;
-            this.button30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button30.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button30.ForeColor = System.Drawing.Color.Black;
-            this.button30.Location = new System.Drawing.Point(3, 45);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(391, 33);
-            this.button30.TabIndex = 4;
-            this.button30.Text = "تقارير صرف";
-            this.button30.UseVisualStyleBackColor = false;
-            this.button30.Click += new System.EventHandler(this.button30_Click);
+            this.button28.BackColor = System.Drawing.Color.White;
+            this.button28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button28.FlatAppearance.BorderSize = 0;
+            this.button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button28.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button28.ForeColor = System.Drawing.Color.Black;
+            this.button28.Location = new System.Drawing.Point(3, 89);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(391, 33);
+            this.button28.TabIndex = 7;
+            this.button28.Text = "اجمالى المصروفات";
+            this.button28.UseVisualStyleBackColor = false;
+            this.button28.Click += new System.EventHandler(this.button28_Click);
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.White;
+            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.ForeColor = System.Drawing.Color.Black;
+            this.button11.Location = new System.Drawing.Point(3, 50);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(391, 33);
+            this.button11.TabIndex = 4;
+            this.button11.Text = "اجمالى الربح";
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click_1);
             // 
             // button31
             // 
@@ -790,7 +816,7 @@
             this.button31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button31.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button31.ForeColor = System.Drawing.Color.Black;
-            this.button31.Location = new System.Drawing.Point(3, 15);
+            this.button31.Location = new System.Drawing.Point(3, 11);
             this.button31.Name = "button31";
             this.button31.Size = new System.Drawing.Size(391, 33);
             this.button31.TabIndex = 3;
@@ -819,7 +845,7 @@
             this.panel6.Controls.Add(this.button24);
             this.panel6.Location = new System.Drawing.Point(12, 21);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(397, 226);
+            this.panel6.Size = new System.Drawing.Size(397, 171);
             this.panel6.TabIndex = 15;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
@@ -831,7 +857,7 @@
             this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button25.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button25.ForeColor = System.Drawing.Color.Black;
-            this.button25.Location = new System.Drawing.Point(3, 177);
+            this.button25.Location = new System.Drawing.Point(3, 128);
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(391, 33);
             this.button25.TabIndex = 8;
@@ -847,7 +873,7 @@
             this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button22.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button22.ForeColor = System.Drawing.Color.Black;
-            this.button22.Location = new System.Drawing.Point(3, 75);
+            this.button22.Location = new System.Drawing.Point(3, 89);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(391, 33);
             this.button22.TabIndex = 5;
@@ -863,7 +889,7 @@
             this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button23.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button23.ForeColor = System.Drawing.Color.Black;
-            this.button23.Location = new System.Drawing.Point(3, 42);
+            this.button23.Location = new System.Drawing.Point(3, 50);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(391, 33);
             this.button23.TabIndex = 4;
@@ -879,7 +905,7 @@
             this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button24.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button24.ForeColor = System.Drawing.Color.Black;
-            this.button24.Location = new System.Drawing.Point(3, 15);
+            this.button24.Location = new System.Drawing.Point(3, 11);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(391, 33);
             this.button24.TabIndex = 3;
@@ -919,7 +945,7 @@
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button17.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button17.ForeColor = System.Drawing.Color.Black;
-            this.button17.Location = new System.Drawing.Point(3, 15);
+            this.button17.Location = new System.Drawing.Point(3, 11);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(394, 33);
             this.button17.TabIndex = 3;
@@ -935,7 +961,7 @@
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.Color.Black;
-            this.button12.Location = new System.Drawing.Point(3, 93);
+            this.button12.Location = new System.Drawing.Point(3, 89);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(394, 33);
             this.button12.TabIndex = 6;
@@ -951,7 +977,7 @@
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button16.ForeColor = System.Drawing.Color.Black;
-            this.button16.Location = new System.Drawing.Point(3, 54);
+            this.button16.Location = new System.Drawing.Point(3, 50);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(394, 33);
             this.button16.TabIndex = 4;
@@ -964,7 +990,7 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(1214, 455);
+            this.label5.Location = new System.Drawing.Point(1214, 461);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 23);
             this.label5.TabIndex = 12;
@@ -978,9 +1004,9 @@
             this.panel5.Controls.Add(this.button18);
             this.panel5.Controls.Add(this.button20);
             this.panel5.Controls.Add(this.button19);
-            this.panel5.Location = new System.Drawing.Point(937, 469);
+            this.panel5.Location = new System.Drawing.Point(937, 475);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(397, 163);
+            this.panel5.Size = new System.Drawing.Size(397, 173);
             this.panel5.TabIndex = 11;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
@@ -992,7 +1018,7 @@
             this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button21.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button21.ForeColor = System.Drawing.Color.Black;
-            this.button21.Location = new System.Drawing.Point(3, 21);
+            this.button21.Location = new System.Drawing.Point(3, 12);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(391, 33);
             this.button21.TabIndex = 3;
@@ -1008,7 +1034,7 @@
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button18.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button18.ForeColor = System.Drawing.Color.Black;
-            this.button18.Location = new System.Drawing.Point(3, 110);
+            this.button18.Location = new System.Drawing.Point(3, 90);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(391, 33);
             this.button18.TabIndex = 6;
@@ -1024,7 +1050,7 @@
             this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button20.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button20.ForeColor = System.Drawing.Color.Black;
-            this.button20.Location = new System.Drawing.Point(3, 51);
+            this.button20.Location = new System.Drawing.Point(3, 129);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(391, 33);
             this.button20.TabIndex = 4;
@@ -1040,7 +1066,7 @@
             this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button19.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button19.ForeColor = System.Drawing.Color.Black;
-            this.button19.Location = new System.Drawing.Point(3, 80);
+            this.button19.Location = new System.Drawing.Point(3, 51);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(391, 33);
             this.button19.TabIndex = 5;
@@ -1070,7 +1096,7 @@
             this.panel2.Controls.Add(this.button10);
             this.panel2.Location = new System.Drawing.Point(937, 250);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(397, 194);
+            this.panel2.Size = new System.Drawing.Size(397, 208);
             this.panel2.TabIndex = 9;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -1082,7 +1108,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(3, 138);
+            this.button6.Location = new System.Drawing.Point(3, 128);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(391, 33);
             this.button6.TabIndex = 7;
@@ -1098,7 +1124,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Location = new System.Drawing.Point(3, 108);
+            this.button7.Location = new System.Drawing.Point(3, 50);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(391, 33);
             this.button7.TabIndex = 6;
@@ -1114,7 +1140,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.Black;
-            this.button8.Location = new System.Drawing.Point(3, 81);
+            this.button8.Location = new System.Drawing.Point(3, 89);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(391, 33);
             this.button8.TabIndex = 5;
@@ -1130,7 +1156,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.Black;
-            this.button9.Location = new System.Drawing.Point(3, 50);
+            this.button9.Location = new System.Drawing.Point(3, 167);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(391, 33);
             this.button9.TabIndex = 4;
@@ -1146,7 +1172,7 @@
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.Black;
-            this.button10.Location = new System.Drawing.Point(3, 16);
+            this.button10.Location = new System.Drawing.Point(3, 11);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(391, 33);
             this.button10.TabIndex = 3;
@@ -1174,7 +1200,7 @@
             this.panel3.Controls.Add(this.button15);
             this.panel3.Location = new System.Drawing.Point(474, 509);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(400, 123);
+            this.panel3.Size = new System.Drawing.Size(400, 139);
             this.panel3.TabIndex = 7;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -1186,7 +1212,7 @@
             this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button29.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button29.ForeColor = System.Drawing.Color.Black;
-            this.button29.Location = new System.Drawing.Point(3, 70);
+            this.button29.Location = new System.Drawing.Point(3, 95);
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(391, 33);
             this.button29.TabIndex = 6;
@@ -1202,7 +1228,7 @@
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.Color.Black;
-            this.button14.Location = new System.Drawing.Point(3, 42);
+            this.button14.Location = new System.Drawing.Point(3, 56);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(394, 33);
             this.button14.TabIndex = 4;
@@ -1218,7 +1244,7 @@
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.Color.Black;
-            this.button15.Location = new System.Drawing.Point(2, 11);
+            this.button15.Location = new System.Drawing.Point(3, 17);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(394, 33);
             this.button15.TabIndex = 3;
@@ -1248,7 +1274,7 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(937, 21);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(397, 200);
+            this.panel1.Size = new System.Drawing.Size(397, 210);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -1260,7 +1286,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(3, 138);
+            this.button5.Location = new System.Drawing.Point(3, 128);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(391, 33);
             this.button5.TabIndex = 7;
@@ -1276,7 +1302,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(3, 108);
+            this.button4.Location = new System.Drawing.Point(3, 50);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(391, 33);
             this.button4.TabIndex = 6;
@@ -1292,11 +1318,11 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(3, 75);
+            this.button3.Location = new System.Drawing.Point(3, 89);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(391, 33);
             this.button3.TabIndex = 5;
-            this.button3.Text = "دفع من رصيد";
+            this.button3.Text = "تسديد من عميل ";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -1308,7 +1334,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(3, 42);
+            this.button2.Location = new System.Drawing.Point(3, 167);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(391, 33);
             this.button2.TabIndex = 4;
@@ -1324,24 +1350,13 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(3, 15);
+            this.button1.Location = new System.Drawing.Point(3, 11);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(391, 33);
             this.button1.TabIndex = 3;
             this.button1.Text = "اضافة عميل / تعديل";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Image = global::El_Khalil.Properties.Resources.WhatsApp_Image_2018_07_28_at_12_53_12_PM;
-            this.pictureBox1.Location = new System.Drawing.Point(470, 186);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(400, 302);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // statusStrip1
             // 
@@ -1374,6 +1389,17 @@
             this.toolStripStatusLabel3.Size = new System.Drawing.Size(73, 17);
             this.toolStripStatusLabel3.Text = "الحالة :  ادمن ";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = global::El_Khalil.Properties.Resources._212011110_copy;
+            this.pictureBox1.Location = new System.Drawing.Point(471, 183);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(400, 302);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1391,6 +1417,7 @@
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
@@ -1399,9 +1426,9 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1455,7 +1482,6 @@
         private System.Windows.Forms.ToolStripMenuItem تركيباتToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem اضافةتركيبةToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem تعديلتركيبةToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button5;
@@ -1493,7 +1519,6 @@
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button button30;
         private System.Windows.Forms.Button button31;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel8;
@@ -1510,15 +1535,15 @@
         private System.Windows.Forms.ToolStripMenuItem انتاجمنتجنهائىToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem الاضافاتToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem اضافةبندمصروفاتToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem خصمموردToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem خصمعميلToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem اضافةمسميوظيفيToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem حساباتToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem حسابالعملاءToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem حسابالموردينToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem حسابالمصروفاتToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem حساباتالبنوكToolStripMenuItem;
         private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.ToolStripMenuItem اجمالىالربحToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button27;
+        private System.Windows.Forms.Button button28;
     }
 }

@@ -598,6 +598,36 @@ namespace El_Khalil
             Add_Tab("اضافة مستخدمين", new Add_Users());
         }
 
+        private void حساباتToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button26_Click_1(object sender, EventArgs e)
+        {
+            Add_Tab("حساب العملاء", new Customer());
+        }
+
+        private void button13_Click_1(object sender, EventArgs e)
+        {
+            Add_Tab("حساب الموردين", new Supplier());
+        }
+
+        private void button28_Click(object sender, EventArgs e)
+        {
+            Add_Tab("حساب المصروفات", new Outlay_Account());
+        }
+
+        private void button11_Click_1(object sender, EventArgs e)
+        {
+            Add_Tab("اجمالى الربح", new Total_Profit());
+        }
+
+        private void button27_Click_1(object sender, EventArgs e)
+        {
+            Add_Tab("حساب البنوك", new Bank());
+        }
+
         private void Add_Tab(string Name,Form form)
         {
             TabPage tp = new TabPage(Name);

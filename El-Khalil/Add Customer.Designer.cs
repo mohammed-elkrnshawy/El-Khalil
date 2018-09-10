@@ -36,7 +36,6 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel9 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.bt_edit = new System.Windows.Forms.Button();
             this.bt_Save = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -154,7 +153,6 @@
             // 
             this.panel9.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel9.Controls.Add(this.button2);
-            this.panel9.Controls.Add(this.button1);
             this.panel9.Controls.Add(this.bt_edit);
             this.panel9.Controls.Add(this.bt_Save);
             this.panel9.Location = new System.Drawing.Point(0, 550);
@@ -171,7 +169,7 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = global::El_Khalil.Properties.Resources.cancel__1_;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(294, 7);
+            this.button2.Location = new System.Drawing.Point(213, 8);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 37);
             this.button2.TabIndex = 12;
@@ -180,24 +178,6 @@
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(84)))), ((int)(((byte)(102)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::El_Khalil.Properties.Resources.trash_can;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(213, 7);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 37);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "حذف";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // bt_edit
             // 
@@ -687,7 +667,6 @@
         private System.Windows.Forms.TextBox tb_id;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button bt_edit;
         private System.Windows.Forms.Button bt_Save;
         private System.Windows.Forms.Panel panel6;
