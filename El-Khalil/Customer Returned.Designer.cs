@@ -46,7 +46,13 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.tb_number = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.combo_Bank = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.tb_payment = new System.Windows.Forms.TextBox();
@@ -80,17 +86,12 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.combo_Materials = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.tb_number = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.combo_Bank = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -99,7 +100,6 @@
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // button3
@@ -304,6 +304,63 @@
             this.panel7.TabIndex = 50;
             this.panel7.Visible = false;
             // 
+            // panel5
+            // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.richTextBox2);
+            this.panel5.Controls.Add(this.tb_number);
+            this.panel5.Controls.Add(this.label14);
+            this.panel5.Controls.Add(this.combo_Bank);
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(384, 129);
+            this.panel5.TabIndex = 50;
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(7, 87);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.richTextBox2.Size = new System.Drawing.Size(369, 37);
+            this.richTextBox2.TabIndex = 81;
+            this.richTextBox2.Text = "لا يوجد ملاحظات";
+            // 
+            // tb_number
+            // 
+            this.tb_number.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.tb_number.Location = new System.Drawing.Point(7, 48);
+            this.tb_number.Name = "tb_number";
+            this.tb_number.Size = new System.Drawing.Size(223, 24);
+            this.tb_number.TabIndex = 80;
+            this.tb_number.Text = "0";
+            this.tb_number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.White;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(236, 46);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(140, 27);
+            this.label14.TabIndex = 79;
+            this.label14.Text = "رقم الايصال";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // combo_Bank
+            // 
+            this.combo_Bank.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.combo_Bank.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.combo_Bank.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combo_Bank.FormattingEnabled = true;
+            this.combo_Bank.Location = new System.Drawing.Point(7, 3);
+            this.combo_Bank.Name = "combo_Bank";
+            this.combo_Bank.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.combo_Bank.Size = new System.Drawing.Size(369, 24);
+            this.combo_Bank.TabIndex = 78;
+            this.combo_Bank.Tag = "";
+            this.combo_Bank.Text = "اختار بنك للايداع";
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.radioButton3);
@@ -313,6 +370,20 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(307, 23);
             this.panel4.TabIndex = 49;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Checked = true;
+            this.radioButton3.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.radioButton3.Location = new System.Drawing.Point(167, 1);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(83, 21);
+            this.radioButton3.TabIndex = 31;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "عدم الدفع";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -538,6 +609,7 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel9
             // 
@@ -727,76 +799,6 @@
             this.label3.Text = "الكمية";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Checked = true;
-            this.radioButton3.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.radioButton3.Location = new System.Drawing.Point(167, 1);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(83, 21);
-            this.radioButton3.TabIndex = 31;
-            this.radioButton3.Text = "عدم الدفع";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
-            // 
-            // panel5
-            // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.richTextBox2);
-            this.panel5.Controls.Add(this.tb_number);
-            this.panel5.Controls.Add(this.label14);
-            this.panel5.Controls.Add(this.combo_Bank);
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(384, 129);
-            this.panel5.TabIndex = 50;
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Location = new System.Drawing.Point(7, 87);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.richTextBox2.Size = new System.Drawing.Size(369, 37);
-            this.richTextBox2.TabIndex = 81;
-            this.richTextBox2.Text = "لا يوجد ملاحظات";
-            // 
-            // tb_number
-            // 
-            this.tb_number.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.tb_number.Location = new System.Drawing.Point(7, 48);
-            this.tb_number.Name = "tb_number";
-            this.tb_number.Size = new System.Drawing.Size(223, 24);
-            this.tb_number.TabIndex = 80;
-            this.tb_number.Text = "0";
-            this.tb_number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label14
-            // 
-            this.label14.BackColor = System.Drawing.Color.White;
-            this.label14.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(236, 46);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(140, 27);
-            this.label14.TabIndex = 79;
-            this.label14.Text = "رقم الايصال";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // combo_Bank
-            // 
-            this.combo_Bank.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.combo_Bank.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.combo_Bank.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combo_Bank.FormattingEnabled = true;
-            this.combo_Bank.Location = new System.Drawing.Point(7, 3);
-            this.combo_Bank.Name = "combo_Bank";
-            this.combo_Bank.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.combo_Bank.Size = new System.Drawing.Size(369, 24);
-            this.combo_Bank.TabIndex = 78;
-            this.combo_Bank.Tag = "";
-            this.combo_Bank.Text = "اختار بنك للايداع";
-            // 
             // Customer_Returned
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -819,6 +821,8 @@
             this.panel3.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -829,8 +833,6 @@
             this.panel10.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }

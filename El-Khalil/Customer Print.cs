@@ -14,10 +14,11 @@ namespace El_Khalil
 {
     public partial class Customer_Print : Form
     {
+        bool typep;
         int Bill_ID;
         string custome_name, Bill_Details;
         double Bill_Total, Discout, old, payment;
-        public Customer_Print(int bill_ID,string customername,string BillDetails,double billtotal,double discount,double old,double payment)
+        public Customer_Print(int bill_ID,string customername,string BillDetails,double billtotal,double discount,double old,double payment,bool type)
         {
             InitializeComponent();
             this.Bill_ID = bill_ID;
@@ -27,118 +28,228 @@ namespace El_Khalil
             this.Discout = discount;
             this.old = old;
             this.payment = payment;
+            this.typep = type;
         }
 
         private void Customer_Print_Load(object sender, EventArgs e)
         {
+            if (typep)
+            {
+                ReportDocument cryRpt = new ReportDocument();
+                cryRpt.Load(@"C:\Users\3ZT\source\repos\El-Khalil\El-Khalil\Customer Bill Report Returning.rpt");
 
-            ReportDocument cryRpt = new ReportDocument();
-            cryRpt.Load(@"C:\Users\3ZT\source\repos\El-Khalil\El-Khalil\Customer Bill Rport.rpt");
-
-            ParameterFieldDefinitions crParameterFieldDefinitions;
-            ParameterFieldDefinition crParameterFieldDefinition;
-            ParameterValues crParameterValues = new ParameterValues();
-            ParameterDiscreteValue crParameterDiscreteValue = new ParameterDiscreteValue();
-
-
-
-
-            crParameterDiscreteValue.Value = Bill_ID;
-            crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
-            crParameterFieldDefinition = crParameterFieldDefinitions["@Bill_ID"];
-            crParameterValues = crParameterFieldDefinition.CurrentValues;
-            crParameterValues.Clear();
-            crParameterValues.Add(crParameterDiscreteValue);
-            crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
+                ParameterFieldDefinitions crParameterFieldDefinitions;
+                ParameterFieldDefinition crParameterFieldDefinition;
+                ParameterValues crParameterValues = new ParameterValues();
+                ParameterDiscreteValue crParameterDiscreteValue = new ParameterDiscreteValue();
 
 
 
 
-            crParameterDiscreteValue.Value = false;
-            crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
-            crParameterFieldDefinition = crParameterFieldDefinitions["@Bill_Type"];
-            crParameterValues = crParameterFieldDefinition.CurrentValues;
-            crParameterValues.Clear();
-            crParameterValues.Add(crParameterDiscreteValue);
-            crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
-
-
-
-            crParameterDiscreteValue.Value = custome_name;
-            crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
-            crParameterFieldDefinition = crParameterFieldDefinitions["Customer_Name"];
-            crParameterValues = crParameterFieldDefinition.CurrentValues;
-            crParameterValues.Clear();
-            crParameterValues.Add(crParameterDiscreteValue);
-            crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
+                crParameterDiscreteValue.Value = Bill_ID;
+                crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
+                crParameterFieldDefinition = crParameterFieldDefinitions["@Bill_ID"];
+                crParameterValues = crParameterFieldDefinition.CurrentValues;
+                crParameterValues.Clear();
+                crParameterValues.Add(crParameterDiscreteValue);
+                crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
 
 
 
 
-            crParameterDiscreteValue.Value = Bill_Details;
-            crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
-            crParameterFieldDefinition = crParameterFieldDefinitions["Bill_Details"];
-            crParameterValues = crParameterFieldDefinition.CurrentValues;
-            crParameterValues.Clear();
-            crParameterValues.Add(crParameterDiscreteValue);
-            crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
+                crParameterDiscreteValue.Value = typep;
+                crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
+                crParameterFieldDefinition = crParameterFieldDefinitions["@Bill_Type"];
+                crParameterValues = crParameterFieldDefinition.CurrentValues;
+                crParameterValues.Clear();
+                crParameterValues.Add(crParameterDiscreteValue);
+                crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
+
+
+
+                crParameterDiscreteValue.Value = custome_name;
+                crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
+                crParameterFieldDefinition = crParameterFieldDefinitions["Customer_Name"];
+                crParameterValues = crParameterFieldDefinition.CurrentValues;
+                crParameterValues.Clear();
+                crParameterValues.Add(crParameterDiscreteValue);
+                crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
 
 
 
 
-            crParameterDiscreteValue.Value = Bill_ID;
-            crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
-            crParameterFieldDefinition = crParameterFieldDefinitions["ID"];
-            crParameterValues = crParameterFieldDefinition.CurrentValues;
-            crParameterValues.Clear();
-            crParameterValues.Add(crParameterDiscreteValue);
-            crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
+                crParameterDiscreteValue.Value = Bill_Details;
+                crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
+                crParameterFieldDefinition = crParameterFieldDefinitions["Bill_Details"];
+                crParameterValues = crParameterFieldDefinition.CurrentValues;
+                crParameterValues.Clear();
+                crParameterValues.Add(crParameterDiscreteValue);
+                crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
 
 
 
 
-            crParameterDiscreteValue.Value = Bill_Total;
-            crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
-            crParameterFieldDefinition = crParameterFieldDefinitions["Bill_Total"];
-            crParameterValues = crParameterFieldDefinition.CurrentValues;
-            crParameterValues.Clear();
-            crParameterValues.Add(crParameterDiscreteValue);
-            crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
-
-
-
-            crParameterDiscreteValue.Value = Discout;
-            crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
-            crParameterFieldDefinition = crParameterFieldDefinitions["Discout"];
-            crParameterValues = crParameterFieldDefinition.CurrentValues;
-            crParameterValues.Clear();
-            crParameterValues.Add(crParameterDiscreteValue);
-            crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
+                crParameterDiscreteValue.Value = Bill_ID;
+                crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
+                crParameterFieldDefinition = crParameterFieldDefinitions["ID"];
+                crParameterValues = crParameterFieldDefinition.CurrentValues;
+                crParameterValues.Clear();
+                crParameterValues.Add(crParameterDiscreteValue);
+                crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
 
 
 
 
-            crParameterDiscreteValue.Value = old;
-            crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
-            crParameterFieldDefinition = crParameterFieldDefinitions["old"];
-            crParameterValues = crParameterFieldDefinition.CurrentValues;
-            crParameterValues.Clear();
-            crParameterValues.Add(crParameterDiscreteValue);
-            crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
-
-            crParameterDiscreteValue.Value = payment;
-            crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
-            crParameterFieldDefinition = crParameterFieldDefinitions["payment"];
-            crParameterValues = crParameterFieldDefinition.CurrentValues;
-            crParameterValues.Clear();
-            crParameterValues.Add(crParameterDiscreteValue);
-            crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
+                crParameterDiscreteValue.Value = Bill_Total;
+                crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
+                crParameterFieldDefinition = crParameterFieldDefinitions["Bill_Total"];
+                crParameterValues = crParameterFieldDefinition.CurrentValues;
+                crParameterValues.Clear();
+                crParameterValues.Add(crParameterDiscreteValue);
+                crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
 
 
-            crystalReportViewer1.ReportSource = cryRpt;
-            crystalReportViewer1.Refresh();
 
-            
+                crParameterDiscreteValue.Value = Discout;
+                crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
+                crParameterFieldDefinition = crParameterFieldDefinitions["Discout"];
+                crParameterValues = crParameterFieldDefinition.CurrentValues;
+                crParameterValues.Clear();
+                crParameterValues.Add(crParameterDiscreteValue);
+                crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
+
+
+
+
+                crParameterDiscreteValue.Value = old;
+                crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
+                crParameterFieldDefinition = crParameterFieldDefinitions["old"];
+                crParameterValues = crParameterFieldDefinition.CurrentValues;
+                crParameterValues.Clear();
+                crParameterValues.Add(crParameterDiscreteValue);
+                crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
+
+                crParameterDiscreteValue.Value = payment;
+                crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
+                crParameterFieldDefinition = crParameterFieldDefinitions["payment"];
+                crParameterValues = crParameterFieldDefinition.CurrentValues;
+                crParameterValues.Clear();
+                crParameterValues.Add(crParameterDiscreteValue);
+                crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
+
+
+                crystalReportViewer1.ReportSource = cryRpt;
+                crystalReportViewer1.Refresh();
+            }
+            else
+            {
+                ReportDocument cryRpt = new ReportDocument();
+                cryRpt.Load(@"C:\Users\3ZT\source\repos\El-Khalil\El-Khalil\Customer Bill Rport.rpt");
+
+                ParameterFieldDefinitions crParameterFieldDefinitions;
+                ParameterFieldDefinition crParameterFieldDefinition;
+                ParameterValues crParameterValues = new ParameterValues();
+                ParameterDiscreteValue crParameterDiscreteValue = new ParameterDiscreteValue();
+
+
+
+
+                crParameterDiscreteValue.Value = Bill_ID;
+                crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
+                crParameterFieldDefinition = crParameterFieldDefinitions["@Bill_ID"];
+                crParameterValues = crParameterFieldDefinition.CurrentValues;
+                crParameterValues.Clear();
+                crParameterValues.Add(crParameterDiscreteValue);
+                crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
+
+
+
+
+                crParameterDiscreteValue.Value = typep;
+                crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
+                crParameterFieldDefinition = crParameterFieldDefinitions["@Bill_Type"];
+                crParameterValues = crParameterFieldDefinition.CurrentValues;
+                crParameterValues.Clear();
+                crParameterValues.Add(crParameterDiscreteValue);
+                crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
+
+
+
+                crParameterDiscreteValue.Value = custome_name;
+                crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
+                crParameterFieldDefinition = crParameterFieldDefinitions["Customer_Name"];
+                crParameterValues = crParameterFieldDefinition.CurrentValues;
+                crParameterValues.Clear();
+                crParameterValues.Add(crParameterDiscreteValue);
+                crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
+
+
+
+
+                crParameterDiscreteValue.Value = Bill_Details;
+                crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
+                crParameterFieldDefinition = crParameterFieldDefinitions["Bill_Details"];
+                crParameterValues = crParameterFieldDefinition.CurrentValues;
+                crParameterValues.Clear();
+                crParameterValues.Add(crParameterDiscreteValue);
+                crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
+
+
+
+
+                crParameterDiscreteValue.Value = Bill_ID;
+                crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
+                crParameterFieldDefinition = crParameterFieldDefinitions["ID"];
+                crParameterValues = crParameterFieldDefinition.CurrentValues;
+                crParameterValues.Clear();
+                crParameterValues.Add(crParameterDiscreteValue);
+                crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
+
+
+
+
+                crParameterDiscreteValue.Value = Bill_Total;
+                crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
+                crParameterFieldDefinition = crParameterFieldDefinitions["Bill_Total"];
+                crParameterValues = crParameterFieldDefinition.CurrentValues;
+                crParameterValues.Clear();
+                crParameterValues.Add(crParameterDiscreteValue);
+                crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
+
+
+
+                crParameterDiscreteValue.Value = Discout;
+                crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
+                crParameterFieldDefinition = crParameterFieldDefinitions["Discout"];
+                crParameterValues = crParameterFieldDefinition.CurrentValues;
+                crParameterValues.Clear();
+                crParameterValues.Add(crParameterDiscreteValue);
+                crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
+
+
+
+
+                crParameterDiscreteValue.Value = old;
+                crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
+                crParameterFieldDefinition = crParameterFieldDefinitions["old"];
+                crParameterValues = crParameterFieldDefinition.CurrentValues;
+                crParameterValues.Clear();
+                crParameterValues.Add(crParameterDiscreteValue);
+                crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
+
+                crParameterDiscreteValue.Value = payment;
+                crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
+                crParameterFieldDefinition = crParameterFieldDefinitions["payment"];
+                crParameterValues = crParameterFieldDefinition.CurrentValues;
+                crParameterValues.Clear();
+                crParameterValues.Add(crParameterDiscreteValue);
+                crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
+
+
+                crystalReportViewer1.ReportSource = cryRpt;
+                crystalReportViewer1.Refresh();
+
+            }
         }
    
     }

@@ -406,6 +406,49 @@ namespace El_Khalil
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (combo_Customer.SelectedIndex >= 0 && dataGridView1.Rows.Count > 0)
+            {
+                if (double.Parse(tb_OldMoney.Text) >= double.Parse(tb_AfterDiscount.Text))
+                {
+                    SaveNormal();
+                }
+                else
+                {
+                    if (radioButton3.Checked)
+                    {
+                        SaveNormal();
+                    }
+                    else if (radioButton1.Checked)
+                    {
+                        SaveCash();
+                    }
+                    else if (radioButton2.Checked)
+                    {
+                        SaveCheck();
+                    }
+                }
+                MessageBox.Show(Shared_Class.Successful_Message);
+
+                Customer_Print print = new Customer_Print(int.Parse(label2.Text),
+                                                          combo_Customer.Text,
+                                                          richTextBox1.Text,
+                                                          double.Parse(tb_BillTotal.Text),
+                                                          double.Parse(tb_Discount.Text),
+                                                          double.Parse(tb_OldMoney.Text),
+                                                          double.Parse(tb_payment.Text),
+                                                          true
+                                                          );
+                print.ShowDialog();
+                RefreshForm();
+            }
+            else
+            {
+                MessageBox.Show(Shared_Class.Check_Message);
+            }
+        }
+
         private void EditStore()
         {
             //تعديل الكميات ف المخازن

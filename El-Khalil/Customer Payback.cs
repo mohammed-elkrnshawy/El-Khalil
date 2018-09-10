@@ -379,5 +379,57 @@ namespace El_Khalil
             if(radioButton2.Checked)
             panel7.Visible = !radioButton2.Checked;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked)
+            {
+                if (textBox1.Text != "")
+                {
+                    if (comboBox1.SelectedIndex == 1)
+                    {
+                        SavePaypack();
+                    }
+                    else if (comboBox1.SelectedIndex == 2)
+                    {
+                        SaveBank();
+                    }
+                    else if (comboBox1.SelectedIndex == 0)
+                    {
+                        SaveDiscount();
+                    }
+                    ChangeCreditLimit();
+                    openPrinter();
+                    RefreshForm();
+                }
+                else
+                {
+                    MessageBox.Show("اختار فاتورة حد ائتمان");
+                }
+            }
+            else
+            {
+                if (comboBox1.SelectedIndex == 1)
+                {
+                    SavePaypack();
+                }
+                else if (comboBox1.SelectedIndex == 2)
+                {
+                    SaveBank();
+                }
+                else if (comboBox1.SelectedIndex == 0)
+                {
+                    SaveDiscount();
+                }
+                openPrinter();
+                RefreshForm();
+            }
+        }
+
+        private void openPrinter()
+        {
+            Customrt_Payback_Print report = new Customrt_Payback_Print(combo_Supliers.Text,richTextBox1.Text,double.Parse(tb_OldMoney.Text),double.Parse(tb_payment.Text),int.Parse(label2.Text),comboBox1.Text);
+            report.ShowDialog();
+        }
     }
 }
