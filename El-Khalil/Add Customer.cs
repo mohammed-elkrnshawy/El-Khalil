@@ -255,10 +255,7 @@ namespace El_Khalil
 
         private void tb_Bank_number_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                AddRow();
-            }
+
         }
     }
 }

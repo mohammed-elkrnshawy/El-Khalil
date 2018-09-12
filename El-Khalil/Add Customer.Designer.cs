@@ -373,6 +373,7 @@
             this.tb_phone2.Size = new System.Drawing.Size(145, 24);
             this.tb_phone2.TabIndex = 5;
             this.tb_phone2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_phone2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_phone_KeyPress);
             // 
             // panel8
             // 
@@ -446,7 +447,7 @@
             this.tb_Bank_number.Size = new System.Drawing.Size(293, 24);
             this.tb_Bank_number.TabIndex = 11;
             this.tb_Bank_number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tb_Bank_number.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Bank_number_KeyPress);
+            this.tb_Bank_number.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_phone_KeyPress);
             // 
             // dataGridView1
             // 
@@ -488,6 +489,7 @@
             this.tb_phone.Size = new System.Drawing.Size(145, 24);
             this.tb_phone.TabIndex = 4;
             this.tb_phone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_phone_KeyPress);
             // 
             // label2
             // 

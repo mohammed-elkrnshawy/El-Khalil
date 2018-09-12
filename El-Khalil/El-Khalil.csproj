@@ -132,6 +132,18 @@
     <Compile Include="Bank.Designer.cs">
       <DependentUpon>Bank.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer Account Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer Account Print.Designer.cs">
+      <DependentUpon>Customer Account Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer Account Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Customer Account Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Customer Account.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -373,6 +385,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Bank.resx">
       <DependentUpon>Bank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer Account Print.resx">
+      <DependentUpon>Customer Account Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer Account Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Customer Account Report.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer Account.resx">
       <DependentUpon>Customer Account.cs</DependentUpon>

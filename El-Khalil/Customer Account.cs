@@ -126,5 +126,19 @@ namespace El_Khalil
                 BillDetails.ShowDialog();
             }
         }
+
+        private void bt_Print_Click(object sender, EventArgs e)
+        {
+            Customer_Account_Print print = new Customer_Account_Print(
+                dateTimePicker1.Value,
+                dateTimePicker2.Value,
+                (int)combo_Customer.SelectedValue,
+                double.Parse(label5.Text),
+                double.Parse(label1.Text),
+                double.Parse(label11.Text),
+                combo_Customer.Text
+                );
+            print.ShowDialog();
+        }
     }
 }
