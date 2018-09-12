@@ -71,7 +71,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -86,6 +85,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.combo_Materials = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -138,6 +138,7 @@
             this.tb_price.TabIndex = 38;
             this.tb_price.Text = "0.00";
             this.tb_price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Discount_KeyPress);
             // 
             // tb_quantity
             // 
@@ -149,6 +150,7 @@
             this.tb_quantity.TabIndex = 33;
             this.tb_quantity.Text = "0";
             this.tb_quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_quantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Discount_KeyPress);
             // 
             // Column4
             // 
@@ -334,6 +336,7 @@
             this.tb_number.TabIndex = 80;
             this.tb_number.Text = "0";
             this.tb_number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_number.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Discount_KeyPress);
             // 
             // label14
             // 
@@ -418,6 +421,7 @@
             this.tb_payment.Text = "0.00";
             this.tb_payment.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_payment.TextChanged += new System.EventHandler(this.tb_payment_TextChanged);
+            this.tb_payment.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Discount_KeyPress);
             // 
             // label10
             // 
@@ -535,6 +539,7 @@
             this.tb_Discount.Text = "0.00";
             this.tb_Discount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_Discount.TextChanged += new System.EventHandler(this.tb_Discount_TextChanged);
+            this.tb_Discount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Discount_KeyPress);
             // 
             // tb_BillTotal
             // 
@@ -591,25 +596,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1306, 600);
             this.panel1.TabIndex = 44;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(84)))), ((int)(((byte)(102)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::El_Khalil.Properties.Resources.print_black_printer_tool_symbol;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(177, 560);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 37);
-            this.button1.TabIndex = 45;
-            this.button1.Text = "طباعة";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel9
             // 
@@ -745,7 +731,7 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = global::El_Khalil.Properties.Resources.cancel__1_;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(258, 560);
+            this.button2.Location = new System.Drawing.Point(304, 560);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 37);
             this.button2.TabIndex = 46;
@@ -798,6 +784,25 @@
             this.label3.TabIndex = 34;
             this.label3.Text = "الكمية";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(84)))), ((int)(((byte)(102)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::El_Khalil.Properties.Resources.print_black_printer_tool_symbol;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(177, 560);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 37);
+            this.button1.TabIndex = 47;
+            this.button1.Text = "حفظ و طباعة";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Customer_Returned
             // 
@@ -870,7 +875,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.RichTextBox richTextBox1;
@@ -897,5 +901,6 @@
         private System.Windows.Forms.TextBox tb_number;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox combo_Bank;
+        private System.Windows.Forms.Button button1;
     }
 }

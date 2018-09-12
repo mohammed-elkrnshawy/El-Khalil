@@ -386,6 +386,7 @@
             this.tb_quantity.Size = new System.Drawing.Size(154, 23);
             this.tb_quantity.TabIndex = 33;
             this.tb_quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_quantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_payment_KeyPress);
             // 
             // tb_price
             // 
@@ -397,6 +398,7 @@
             this.tb_price.TabIndex = 38;
             this.tb_price.Text = "0.00";
             this.tb_price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_payment_KeyPress);
             // 
             // label3
             // 
@@ -624,6 +626,7 @@
             this.tb_number.TabIndex = 76;
             this.tb_number.Text = "0";
             this.tb_number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_number.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_payment_KeyPress);
             // 
             // label14
             // 

@@ -150,16 +150,16 @@
     <Compile Include="Customer Account.Designer.cs">
       <DependentUpon>Customer Account.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer Bill Report Returning.cs">
+    <Compile Include="Customer Returned Report.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Customer Bill Report Returning.rpt</DependentUpon>
+      <DependentUpon>Customer Returned Report.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Customer Bill Rport.cs">
+    <Compile Include="Customer Purchasing Rport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Customer Bill Rport.rpt</DependentUpon>
+      <DependentUpon>Customer Purchasing Rport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Customer BillDetails.cs">
@@ -396,13 +396,13 @@
     <EmbeddedResource Include="Customer Account.resx">
       <DependentUpon>Customer Account.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer Bill Report Returning.rpt">
+    <EmbeddedResource Include="Customer Returned Report.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Customer Bill Report Returning.cs</LastGenOutput>
+      <LastGenOutput>Customer Returned Report.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer Bill Rport.rpt">
+    <EmbeddedResource Include="Customer Purchasing Rport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Customer Bill Rport.cs</LastGenOutput>
+      <LastGenOutput>Customer Purchasing Rport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer BillDetails.resx">
       <DependentUpon>Customer BillDetails.cs</DependentUpon>

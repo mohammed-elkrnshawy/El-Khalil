@@ -42,7 +42,9 @@ namespace El_Khalil
             }
 
             panel3.Visible=panel6.Visible = false;
-            tb_Number.Text = richTextBox1.Text = "";
+            tb_Number.Text = "";
+
+            richTextBox1.Text = "لا يوجد ملاحظات";
 
             tb_AfterPayment.Text = tb_OldMoney.Text = tb_payment.Text = "0.00";
 
@@ -65,6 +67,7 @@ namespace El_Khalil
                 label2.Text = (((int)o) + 1) + "";
             panel3.Visible = false;
             panel6.Visible = true;
+            radioButton2.Checked = true;
         }
 
         private void LoadDiscount()
@@ -100,6 +103,7 @@ namespace El_Khalil
             }
 
             panel6.Visible = true;
+            radioButton2.Checked = true;
         }
 
         private void combo_Supliers_SelectedIndexChanged(object sender, EventArgs e)
@@ -154,46 +158,55 @@ namespace El_Khalil
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if(radioButton1.Checked)
+            if(comboBox1.SelectedIndex>=0&&combo_Supliers.SelectedIndex>=0)
             {
-                if(textBox1.Text!="")
+                if (comboBox1.SelectedIndex == 0)
                 {
-                    if (comboBox1.SelectedIndex == 1)
-                    {
-                        SavePaypack();
-                    }
-                    else if (comboBox1.SelectedIndex == 2)
-                    {
-                        SaveBank();
-                    }
-                    else if (comboBox1.SelectedIndex == 0)
-                    {
-                        SaveDiscount();
-                    }
-                    ChangeCreditLimit();
+                    SaveDiscount();
                     RefreshForm();
                 }
-                else
+                else if(comboBox1.SelectedIndex == 1)
                 {
-                    MessageBox.Show("اختار فاتورة حد ائتمان");
+                    if(radioButton1.Checked&&textBox1.Text!="")
+                    {
+                        SavePaypack();
+                        ChangeCreditLimit();
+                        RefreshForm();
+                    }
+                    else if(radioButton2.Checked)
+                    {
+                        SavePaypack();
+                        RefreshForm();
+                    }
+                    else
+                    {
+                        MessageBox.Show(Shared_Class.Check_Message);
+                    }
+                }
+                else if(comboBox1.SelectedIndex == 2)
+                {
+                    if (radioButton1.Checked && textBox1.Text != ""&&combo_Bank.SelectedIndex>=0&&tb_Number.Text!="")
+                    {
+                        SaveBank();
+                        ChangeCreditLimit();
+                        RefreshForm();
+                    }
+                    else if (radioButton2.Checked && combo_Bank.SelectedIndex >= 0 && tb_Number.Text != "")
+                    {
+                        SaveBank();
+                        RefreshForm();
+                    }
+                    else
+                    {
+                        MessageBox.Show(Shared_Class.Check_Message);
+                    }
                 }
             }
             else
             {
-                if (comboBox1.SelectedIndex == 1)
-                {
-                    SavePaypack();
-                }
-                else if (comboBox1.SelectedIndex == 2)
-                {
-                    SaveBank();
-                }
-                else if (comboBox1.SelectedIndex == 0)
-                {
-                    SaveDiscount();
-                }
-                RefreshForm();
-            }   
+                MessageBox.Show(Shared_Class.Check_Message);
+            }
+   
         }
 
         private void ChangeCreditLimit()
@@ -382,47 +395,58 @@ namespace El_Khalil
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (radioButton1.Checked)
+            if (comboBox1.SelectedIndex >= 0 && combo_Supliers.SelectedIndex >= 0)
             {
-                if (textBox1.Text != "")
+                if (comboBox1.SelectedIndex == 0)
                 {
-                    if (comboBox1.SelectedIndex == 1)
-                    {
-                        SavePaypack();
-                    }
-                    else if (comboBox1.SelectedIndex == 2)
-                    {
-                        SaveBank();
-                    }
-                    else if (comboBox1.SelectedIndex == 0)
-                    {
-                        SaveDiscount();
-                    }
-                    ChangeCreditLimit();
+                    SaveDiscount();
                     openPrinter();
                     RefreshForm();
                 }
-                else
+                else if (comboBox1.SelectedIndex == 1)
                 {
-                    MessageBox.Show("اختار فاتورة حد ائتمان");
+                    if (radioButton1.Checked && textBox1.Text != "")
+                    {
+                        SavePaypack();
+                        ChangeCreditLimit();
+                        openPrinter();
+                        RefreshForm();
+                    }
+                    else if (radioButton2.Checked)
+                    {
+                        SavePaypack();
+                        openPrinter();
+                        RefreshForm();
+                    }
+                    else
+                    {
+                        MessageBox.Show(Shared_Class.Check_Message);
+                    }
+                }
+                else if (comboBox1.SelectedIndex == 2)
+                {
+                    if (radioButton1.Checked && textBox1.Text != "" && combo_Bank.SelectedIndex >= 0 && tb_Number.Text != "")
+                    {
+                        SaveBank();
+                        ChangeCreditLimit();
+                        openPrinter();
+                        RefreshForm();
+                    }
+                    else if (radioButton2.Checked && combo_Bank.SelectedIndex >= 0 && tb_Number.Text != "")
+                    {
+                        SaveBank();
+                        openPrinter();
+                        RefreshForm();
+                    }
+                    else
+                    {
+                        MessageBox.Show(Shared_Class.Check_Message);
+                    }
                 }
             }
             else
             {
-                if (comboBox1.SelectedIndex == 1)
-                {
-                    SavePaypack();
-                }
-                else if (comboBox1.SelectedIndex == 2)
-                {
-                    SaveBank();
-                }
-                else if (comboBox1.SelectedIndex == 0)
-                {
-                    SaveDiscount();
-                }
-                openPrinter();
-                RefreshForm();
+                MessageBox.Show(Shared_Class.Check_Message);
             }
         }
 

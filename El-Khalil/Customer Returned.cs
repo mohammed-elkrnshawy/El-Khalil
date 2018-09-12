@@ -430,7 +430,7 @@ namespace El_Khalil
                     }
                 }
                 MessageBox.Show(Shared_Class.Successful_Message);
-
+                
                 Customer_Print print = new Customer_Print(int.Parse(label2.Text),
                                                           combo_Customer.Text,
                                                           richTextBox1.Text,
@@ -446,6 +446,18 @@ namespace El_Khalil
             else
             {
                 MessageBox.Show(Shared_Class.Check_Message);
+            }
+        }
+
+        private void tb_Discount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (tb_payment.Text.Contains('.') && e.KeyChar == '.')
+            {
+                e.Handled = true;
+            }
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
             }
         }
 

@@ -16,14 +16,14 @@ namespace El_Khalil {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class Customer_Bill_Rport : ReportClass {
+    public class Customer_Returned_Report : ReportClass {
         
-        public Customer_Bill_Rport() {
+        public Customer_Returned_Report() {
         }
         
         public override string ResourceName {
             get {
-                return "Customer Bill Rport.rpt";
+                return "Customer Returned Report.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace El_Khalil {
         
         public override string FullResourceName {
             get {
-                return "El_Khalil.Customer Bill Rport.rpt";
+                return "El_Khalil.Customer Returned Report.rpt";
             }
             set {
                 // Do nothing
@@ -162,9 +162,9 @@ namespace El_Khalil {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCustomer_Bill_Rport : Component, ICachedReport {
+    public class CachedCustomer_Returned_Report : Component, ICachedReport {
         
-        public CachedCustomer_Bill_Rport() {
+        public CachedCustomer_Returned_Report() {
         }
         
         [Browsable(false)]
@@ -201,7 +201,7 @@ namespace El_Khalil {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            Customer_Bill_Rport rpt = new Customer_Bill_Rport();
+            Customer_Returned_Report rpt = new Customer_Returned_Report();
             rpt.Site = this.Site;
             return rpt;
         }
