@@ -37,7 +37,7 @@ namespace El_Khalil
             if (Bill_Type.ToString().Contains("بيع"))
             {
                 panel4.Visible = false;
-                using (dataSet = Ezzat.GetDataSet("select_Customer_BillDetails", "X",
+                using (dataSet = Ezzat.GetDataSet("select_Customer_BillDetails2", "X",
                     new SqlParameter("@Bill_ID", Bill_ID),
                     new SqlParameter("@Bill_Type", false)))
                 {
@@ -130,7 +130,7 @@ namespace El_Khalil
                         tb_after.Text = dataReader[6].ToString();
                         richTextBox2.Text = dataReader[7].ToString();
                         textBox4.Text = dataReader[8].ToString();
-                        textBox3.Text = dataReader[9].ToString();
+                        textBox3.Text = dataReader[10].ToString();
                     }
                 }
 
@@ -156,7 +156,7 @@ namespace El_Khalil
                         tb_after.Text = dataReader[6].ToString();
                         richTextBox2.Text = dataReader[7].ToString();
                         textBox4.Visible = label24.Visible = false;
-                        textBox3.Text = dataReader[9].ToString();
+                        textBox3.Text = dataReader[10].ToString();
                     }
                 }
 

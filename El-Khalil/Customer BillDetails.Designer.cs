@@ -123,6 +123,8 @@
             // 
             this.richTextBox1.Location = new System.Drawing.Point(555, 155);
             this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.richTextBox1.Size = new System.Drawing.Size(496, 96);
             this.richTextBox1.TabIndex = 65;
             this.richTextBox1.Text = "";
@@ -633,6 +635,8 @@
             // 
             this.richTextBox2.Location = new System.Drawing.Point(377, 99);
             this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.ReadOnly = true;
+            this.richTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.richTextBox2.Size = new System.Drawing.Size(342, 114);
             this.richTextBox2.TabIndex = 90;
             this.richTextBox2.Text = "";
@@ -746,7 +750,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Customer_BillDetails";
-            this.Text = "Customer_BillDetails";
+            this.Text = "عرض تفاصيل البيان";
             this.Load += new System.EventHandler(this.Customer_BillDetails_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
