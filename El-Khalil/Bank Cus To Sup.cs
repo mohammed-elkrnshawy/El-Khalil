@@ -227,5 +227,15 @@ namespace El_Khalil
                 new SqlParameter("@Check_Number", tb_Number_Cus.Text)
                 );
         }
+
+        private void tb_Number_Cus_TextChanged(object sender, EventArgs e)
+        {
+            tb_Number_Sup.Text = tb_Number_Cus.Text;
+        }
+
+        private void tb_Number_Sup_TextChanged(object sender, EventArgs e)
+        {
+            tb_Number_Cus.Text = tb_Number_Sup.Text;
+        }
     }
 }

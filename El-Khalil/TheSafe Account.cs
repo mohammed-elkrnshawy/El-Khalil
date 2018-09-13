@@ -82,5 +82,11 @@ namespace El_Khalil
 
 
         }
+
+        private void bt_Print_Click(object sender, EventArgs e)
+        {
+            TheSafe_Account_Print print = new TheSafe_Account_Print(dateTimePicker1.Value, dateTimePicker2.Value);
+            print.ShowDialog();
+        }
     }
 }

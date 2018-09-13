@@ -31,6 +31,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.bt_Print = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -53,29 +61,21 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.combo_Supliers = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
             this.pn_during = new System.Windows.Forms.Panel();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.combo_Supliers = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.pn_Return.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.pn_during.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,6 +106,7 @@
             this.bt_Print.TabIndex = 38;
             this.bt_Print.Text = "طباعة تقارير";
             this.bt_Print.UseVisualStyleBackColor = false;
+            this.bt_Print.Click += new System.EventHandler(this.bt_Print_Click);
             // 
             // panel2
             // 
@@ -125,6 +126,90 @@
             this.panel2.Size = new System.Drawing.Size(1160, 607);
             this.panel2.TabIndex = 22;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.panel9);
+            this.panel1.Location = new System.Drawing.Point(375, 517);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(119, 85);
+            this.panel1.TabIndex = 67;
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label13.Location = new System.Drawing.Point(3, 41);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(113, 30);
+            this.label13.TabIndex = 75;
+            this.label13.Text = "0.00";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label15.Location = new System.Drawing.Point(3, 13);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(113, 17);
+            this.label15.TabIndex = 74;
+            this.label15.Text = "الرصيد نهاية الفترة";
+            // 
+            // panel9
+            // 
+            this.panel9.Location = new System.Drawing.Point(122, 517);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(200, 85);
+            this.panel9.TabIndex = 73;
+            // 
+            // panel8
+            // 
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.label14);
+            this.panel8.Controls.Add(this.label16);
+            this.panel8.Controls.Add(this.panel10);
+            this.panel8.Location = new System.Drawing.Point(500, 517);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(119, 85);
+            this.panel8.TabIndex = 66;
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.White;
+            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label14.Location = new System.Drawing.Point(3, 41);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(113, 30);
+            this.label14.TabIndex = 75;
+            this.label14.Text = "0.00";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label16.Location = new System.Drawing.Point(3, 13);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(112, 17);
+            this.label16.TabIndex = 74;
+            this.label16.Text = "الرصيد بداية الفترة";
+            // 
+            // panel10
+            // 
+            this.panel10.Location = new System.Drawing.Point(122, 517);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(200, 85);
+            this.panel10.TabIndex = 73;
             // 
             // panel6
             // 
@@ -356,118 +441,6 @@
             this.panel3.Size = new System.Drawing.Size(1154, 45);
             this.panel3.TabIndex = 35;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::El_Khalil.Properties.Resources.document;
-            this.button1.Location = new System.Drawing.Point(5, 8);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(41, 31);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // combo_Supliers
-            // 
-            this.combo_Supliers.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.combo_Supliers.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.combo_Supliers.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combo_Supliers.FormattingEnabled = true;
-            this.combo_Supliers.Location = new System.Drawing.Point(57, 11);
-            this.combo_Supliers.Name = "combo_Supliers";
-            this.combo_Supliers.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.combo_Supliers.Size = new System.Drawing.Size(182, 24);
-            this.combo_Supliers.TabIndex = 53;
-            this.combo_Supliers.Tag = "";
-            this.combo_Supliers.Text = "اختار اسم المورد";
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.panel9);
-            this.panel1.Location = new System.Drawing.Point(375, 517);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(119, 85);
-            this.panel1.TabIndex = 67;
-            // 
-            // label13
-            // 
-            this.label13.BackColor = System.Drawing.Color.White;
-            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label13.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label13.Location = new System.Drawing.Point(3, 41);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(113, 30);
-            this.label13.TabIndex = 75;
-            this.label13.Text = "0.00";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label15.Location = new System.Drawing.Point(3, 13);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(113, 17);
-            this.label15.TabIndex = 74;
-            this.label15.Text = "الرصيد نهاية الفترة";
-            // 
-            // panel9
-            // 
-            this.panel9.Location = new System.Drawing.Point(122, 517);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(200, 85);
-            this.panel9.TabIndex = 73;
-            // 
-            // panel8
-            // 
-            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.Controls.Add(this.label14);
-            this.panel8.Controls.Add(this.label16);
-            this.panel8.Controls.Add(this.panel10);
-            this.panel8.Location = new System.Drawing.Point(500, 517);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(119, 85);
-            this.panel8.TabIndex = 66;
-            // 
-            // label14
-            // 
-            this.label14.BackColor = System.Drawing.Color.White;
-            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label14.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label14.Location = new System.Drawing.Point(3, 41);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(113, 30);
-            this.label14.TabIndex = 75;
-            this.label14.Text = "0.00";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label16.Location = new System.Drawing.Point(3, 13);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(112, 17);
-            this.label16.TabIndex = 74;
-            this.label16.Text = "الرصيد بداية الفترة";
-            // 
-            // panel10
-            // 
-            this.panel10.Location = new System.Drawing.Point(122, 517);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(200, 85);
-            this.panel10.TabIndex = 73;
-            // 
             // pn_during
             // 
             this.pn_during.Controls.Add(this.dateTimePicker2);
@@ -517,6 +490,34 @@
             this.label2.Text = "من تاريخ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::El_Khalil.Properties.Resources.document;
+            this.button1.Location = new System.Drawing.Point(5, 8);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(41, 31);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // combo_Supliers
+            // 
+            this.combo_Supliers.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.combo_Supliers.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.combo_Supliers.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combo_Supliers.FormattingEnabled = true;
+            this.combo_Supliers.Location = new System.Drawing.Point(57, 11);
+            this.combo_Supliers.Name = "combo_Supliers";
+            this.combo_Supliers.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.combo_Supliers.Size = new System.Drawing.Size(182, 24);
+            this.combo_Supliers.TabIndex = 53;
+            this.combo_Supliers.Tag = "";
+            this.combo_Supliers.Text = "اختار اسم المورد";
+            // 
             // Supplier_Account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -530,6 +531,10 @@
             this.Text = "Supplier_Account";
             this.Load += new System.EventHandler(this.Supplier_Account_Load);
             this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -537,10 +542,6 @@
             this.pn_Return.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gv)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
             this.pn_during.ResumeLayout(false);
             this.ResumeLayout(false);
 

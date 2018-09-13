@@ -110,5 +110,11 @@ namespace El_Khalil
                 BillDetails.ShowDialog();
             }
         }
+
+        private void bt_Print_Click(object sender, EventArgs e)
+        {
+            Supplier_Account_Print print = new Supplier_Account_Print(dateTimePicker1.Value,dateTimePicker2.Value,(int)combo_Supliers.SelectedValue);
+            print.ShowDialog();
+        }
     }
 }

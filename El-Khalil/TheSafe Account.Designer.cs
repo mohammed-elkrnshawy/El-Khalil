@@ -29,8 +29,27 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pn_during = new System.Windows.Forms.Panel();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.pn_Return = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,32 +62,13 @@
             this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.bt_Print = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.pn_during = new System.Windows.Forms.Panel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
+            this.pn_during.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.pn_Return.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel5.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.pn_during.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -81,6 +81,55 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1154, 45);
             this.panel3.TabIndex = 35;
+            // 
+            // pn_during
+            // 
+            this.pn_during.Controls.Add(this.dateTimePicker2);
+            this.pn_during.Controls.Add(this.dateTimePicker1);
+            this.pn_during.Controls.Add(this.label3);
+            this.pn_during.Controls.Add(this.label2);
+            this.pn_during.Location = new System.Drawing.Point(317, 10);
+            this.pn_during.Name = "pn_during";
+            this.pn_during.Size = new System.Drawing.Size(520, 24);
+            this.pn_during.TabIndex = 65;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(21, 4);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(154, 20);
+            this.dateTimePicker2.TabIndex = 59;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(272, 4);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(154, 20);
+            this.dateTimePicker1.TabIndex = 57;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(181, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 24);
+            this.label3.TabIndex = 58;
+            this.label3.Text = "الى تاريخ";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(432, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 24);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "من تاريخ";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
@@ -112,6 +161,172 @@
             this.panel2.Size = new System.Drawing.Size(1160, 607);
             this.panel2.TabIndex = 65;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Location = new System.Drawing.Point(225, 548);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(456, 54);
+            this.panel1.TabIndex = 65;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.label5.Location = new System.Drawing.Point(42, 24);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(92, 30);
+            this.label5.TabIndex = 84;
+            this.label5.Text = "0.00";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Red;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.label6.Location = new System.Drawing.Point(185, 24);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(92, 30);
+            this.label6.TabIndex = 83;
+            this.label6.Text = "0.00";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.Lime;
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.label11.Location = new System.Drawing.Point(327, 24);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(92, 30);
+            this.label11.TabIndex = 82;
+            this.label11.Text = "0.00";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label12.Location = new System.Drawing.Point(45, -1);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(88, 17);
+            this.label12.TabIndex = 81;
+            this.label12.Text = "الرصيد الحالى";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label15.Location = new System.Drawing.Point(318, -2);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(106, 17);
+            this.label15.TabIndex = 80;
+            this.label15.Text = "الرصيد قبل الفترة";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label16.Location = new System.Drawing.Point(178, -2);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(104, 17);
+            this.label16.TabIndex = 79;
+            this.label16.Text = "الرصيد بعد الفترة";
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel5.Controls.Add(this.label10);
+            this.panel5.Controls.Add(this.label9);
+            this.panel5.Controls.Add(this.label8);
+            this.panel5.Controls.Add(this.label7);
+            this.panel5.Controls.Add(this.label13);
+            this.panel5.Controls.Add(this.label14);
+            this.panel5.Location = new System.Drawing.Point(701, 548);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(456, 54);
+            this.panel5.TabIndex = 64;
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.label10.Location = new System.Drawing.Point(42, 24);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(92, 30);
+            this.label10.TabIndex = 84;
+            this.label10.Text = "0.00";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Red;
+            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.label9.Location = new System.Drawing.Point(185, 24);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(92, 30);
+            this.label9.TabIndex = 83;
+            this.label9.Text = "0.00";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Lime;
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.label8.Location = new System.Drawing.Point(327, 24);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(92, 30);
+            this.label8.TabIndex = 82;
+            this.label8.Text = "0.00";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label7.Location = new System.Drawing.Point(58, -1);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 17);
+            this.label7.TabIndex = 81;
+            this.label7.Text = "الصافي";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label13.Location = new System.Drawing.Point(324, -1);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(90, 17);
+            this.label13.TabIndex = 80;
+            this.label13.Text = "اجمالى الايداع";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label14.Location = new System.Drawing.Point(182, -2);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(91, 17);
+            this.label14.TabIndex = 79;
+            this.label14.Text = "اجمالى الصرف";
             // 
             // pn_Return
             // 
@@ -222,6 +437,7 @@
             this.bt_Print.TabIndex = 38;
             this.bt_Print.Text = "طباعة تقارير";
             this.bt_Print.UseVisualStyleBackColor = false;
+            this.bt_Print.Click += new System.EventHandler(this.bt_Print_Click);
             // 
             // label4
             // 
@@ -235,221 +451,6 @@
             this.label4.Text = "تعاملات الخزنة الايراد";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel5
-            // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel5.Controls.Add(this.label10);
-            this.panel5.Controls.Add(this.label9);
-            this.panel5.Controls.Add(this.label8);
-            this.panel5.Controls.Add(this.label7);
-            this.panel5.Controls.Add(this.label13);
-            this.panel5.Controls.Add(this.label14);
-            this.panel5.Location = new System.Drawing.Point(701, 548);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(456, 54);
-            this.panel5.TabIndex = 64;
-            // 
-            // label10
-            // 
-            this.label10.BackColor = System.Drawing.Color.White;
-            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.label10.Location = new System.Drawing.Point(42, 24);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(92, 30);
-            this.label10.TabIndex = 84;
-            this.label10.Text = "0.00";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label9
-            // 
-            this.label9.BackColor = System.Drawing.Color.Red;
-            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.label9.Location = new System.Drawing.Point(185, 24);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(92, 30);
-            this.label9.TabIndex = 83;
-            this.label9.Text = "0.00";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.Color.Lime;
-            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.label8.Location = new System.Drawing.Point(327, 24);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 30);
-            this.label8.TabIndex = 82;
-            this.label8.Text = "0.00";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label7.Location = new System.Drawing.Point(58, -1);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 17);
-            this.label7.TabIndex = 81;
-            this.label7.Text = "الصافي";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label13.Location = new System.Drawing.Point(324, -1);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(90, 17);
-            this.label13.TabIndex = 80;
-            this.label13.Text = "اجمالى الايداع";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label14.Location = new System.Drawing.Point(182, -2);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(91, 17);
-            this.label14.TabIndex = 79;
-            this.label14.Text = "اجمالى الصرف";
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.label16);
-            this.panel1.Location = new System.Drawing.Point(225, 548);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(456, 54);
-            this.panel1.TabIndex = 65;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.label5.Location = new System.Drawing.Point(42, 24);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 30);
-            this.label5.TabIndex = 84;
-            this.label5.Text = "0.00";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.Red;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.label6.Location = new System.Drawing.Point(185, 24);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 30);
-            this.label6.TabIndex = 83;
-            this.label6.Text = "0.00";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.Color.Lime;
-            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.label11.Location = new System.Drawing.Point(327, 24);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 30);
-            this.label11.TabIndex = 82;
-            this.label11.Text = "0.00";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label12.Location = new System.Drawing.Point(45, -1);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(88, 17);
-            this.label12.TabIndex = 81;
-            this.label12.Text = "الرصيد الحالى";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label15.Location = new System.Drawing.Point(318, -2);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(106, 17);
-            this.label15.TabIndex = 80;
-            this.label15.Text = "الرصيد قبل الفترة";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label16.Location = new System.Drawing.Point(178, -2);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(104, 17);
-            this.label16.TabIndex = 79;
-            this.label16.Text = "الرصيد بعد الفترة";
-            // 
-            // pn_during
-            // 
-            this.pn_during.Controls.Add(this.dateTimePicker2);
-            this.pn_during.Controls.Add(this.dateTimePicker1);
-            this.pn_during.Controls.Add(this.label3);
-            this.pn_during.Controls.Add(this.label2);
-            this.pn_during.Location = new System.Drawing.Point(317, 10);
-            this.pn_during.Name = "pn_during";
-            this.pn_during.Size = new System.Drawing.Size(520, 24);
-            this.pn_during.TabIndex = 65;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(21, 4);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(154, 20);
-            this.dateTimePicker2.TabIndex = 59;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(272, 4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(154, 20);
-            this.dateTimePicker1.TabIndex = 57;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(181, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 24);
-            this.label3.TabIndex = 58;
-            this.label3.Text = "الى تاريخ";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(432, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 24);
-            this.label2.TabIndex = 42;
-            this.label2.Text = "من تاريخ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // The_InSafe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -462,14 +463,14 @@
             this.Name = "The_InSafe";
             this.Text = "The_InSafe";
             this.panel3.ResumeLayout(false);
+            this.pn_during.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.pn_Return.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.pn_during.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.pn_Return.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

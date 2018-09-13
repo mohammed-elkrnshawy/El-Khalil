@@ -313,11 +313,35 @@
     <Compile Include="Store.Designer.cs">
       <DependentUpon>Store.cs</DependentUpon>
     </Compile>
+    <Compile Include="StoreTransaction Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoreTransaction Print.Designer.cs">
+      <DependentUpon>StoreTransaction Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoreTransaction Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StoreTransaction Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="StoreTransaction.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StoreTransaction.Designer.cs">
       <DependentUpon>StoreTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier Account Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier Account Print.Designer.cs">
+      <DependentUpon>Supplier Account Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier Account Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Supplier Account Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Supplier BillDetails.cs">
       <SubType>Form</SubType>
@@ -368,6 +392,18 @@
     </Compile>
     <Compile Include="Supplier Payback.Designer.cs">
       <DependentUpon>Supplier Payback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TheSafe Account Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TheSafe Account Print.Designer.cs">
+      <DependentUpon>TheSafe Account Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TheSafe Account Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TheSafe Account Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="TheSafe Account.cs">
       <SubType>Form</SubType>
@@ -519,8 +555,22 @@
     <EmbeddedResource Include="Store.resx">
       <DependentUpon>Store.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StoreTransaction Print.resx">
+      <DependentUpon>StoreTransaction Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreTransaction Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StoreTransaction Report.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="StoreTransaction.resx">
       <DependentUpon>StoreTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier Account Print.resx">
+      <DependentUpon>Supplier Account Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier Account Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Supplier Account Report.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier BillDetails.resx">
       <DependentUpon>Supplier BillDetails.cs</DependentUpon>
@@ -547,6 +597,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier_Purchasing.resx">
       <DependentUpon>Supplier_Purchasing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TheSafe Account Print.resx">
+      <DependentUpon>TheSafe Account Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TheSafe Account Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TheSafe Account Report.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="TheSafe Account.resx">
       <DependentUpon>TheSafe Account.cs</DependentUpon>

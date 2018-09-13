@@ -157,6 +157,11 @@ namespace El_Khalil
                 store_.ShowDialog();
             }
         }
-        
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            StoreTransaction_Print print = new StoreTransaction_Print(dateTimePicker1.Value, dateTimePicker2.Value);
+            print.ShowDialog();
+        }
     }
 }
