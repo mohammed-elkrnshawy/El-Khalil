@@ -102,6 +102,18 @@
     <Compile Include="Add Users.Designer.cs">
       <DependentUpon>Add Users.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bank Account Printcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bank Account Printcs.Designer.cs">
+      <DependentUpon>Bank Account Printcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bank Account Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bank Account Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Bank BillDetaails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +138,18 @@
     <Compile Include="Bank Account.Designer.cs">
       <DependentUpon>Bank Account.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bank Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bank Print.Designer.cs">
+      <DependentUpon>Bank Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bank Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bank Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Bank.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +173,18 @@
     </Compile>
     <Compile Include="Customer Account.Designer.cs">
       <DependentUpon>Customer Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer Print.Designer.cs">
+      <DependentUpon>Customer Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Customer Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Customer Returned Report.cs">
       <AutoGen>True</AutoGen>
@@ -180,11 +216,11 @@
     <Compile Include="Customer Payback.Designer.cs">
       <DependentUpon>Customer Payback.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer Print.cs">
+    <Compile Include="Customer Purchasing Print.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer Print.Designer.cs">
-      <DependentUpon>Customer Print.cs</DependentUpon>
+    <Compile Include="Customer Purchasing Print.Designer.cs">
+      <DependentUpon>Customer Purchasing Print.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer Purchasing.cs">
       <SubType>Form</SubType>
@@ -371,6 +407,13 @@
     <EmbeddedResource Include="Add Users.resx">
       <DependentUpon>Add Users.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Bank Account Printcs.resx">
+      <DependentUpon>Bank Account Printcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bank Account Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Bank Account Report.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Bank BillDetaails.resx">
       <DependentUpon>Bank BillDetaails.cs</DependentUpon>
     </EmbeddedResource>
@@ -382,6 +425,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Bank Account.resx">
       <DependentUpon>Bank Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bank Print.resx">
+      <DependentUpon>Bank Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bank Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Bank Report.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Bank.resx">
       <DependentUpon>Bank.cs</DependentUpon>
@@ -395,6 +445,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customer Account.resx">
       <DependentUpon>Customer Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer Print.resx">
+      <DependentUpon>Customer Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Customer Report.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer Returned Report.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -414,8 +471,8 @@
     <EmbeddedResource Include="Customer Payback.resx">
       <DependentUpon>Customer Payback.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer Print.resx">
-      <DependentUpon>Customer Print.cs</DependentUpon>
+    <EmbeddedResource Include="Customer Purchasing Print.resx">
+      <DependentUpon>Customer Purchasing Print.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer Purchasing.resx">
       <DependentUpon>Customer Purchasing.cs</DependentUpon>

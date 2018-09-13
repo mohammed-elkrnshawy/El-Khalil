@@ -29,18 +29,17 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.bt_edit = new System.Windows.Forms.Button();
             this.bt_Save = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.tb_phone2 = new System.Windows.Forms.TextBox();
             this.tb_phone = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,14 +49,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tb_name = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -70,62 +70,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1306, 600);
             this.panel1.TabIndex = 0;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(1034, 24);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(247, 27);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "اضافة بنك جديد و تعديل";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(215)))), ((int)(((byte)(160)))));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1306, 535);
-            this.panel2.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.tb_phone2);
-            this.panel3.Controls.Add(this.tb_phone);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.tb_address);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.tb_number);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.tb_name);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(645, 535);
-            this.panel3.TabIndex = 22;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Controls.Add(this.textBox2);
-            this.panel4.Location = new System.Drawing.Point(661, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(645, 535);
-            this.panel4.TabIndex = 0;
             // 
             // panel9
             // 
@@ -194,25 +138,28 @@
             this.bt_Save.UseVisualStyleBackColor = false;
             this.bt_Save.Click += new System.EventHandler(this.bt_Save_Click);
             // 
-            // pictureBox2
+            // panel2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.BackgroundImage = global::El_Khalil.Properties.Resources.search__1_;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.InitialImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(435, 14);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(215)))), ((int)(((byte)(160)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1306, 535);
+            this.panel2.TabIndex = 0;
             // 
-            // textBox2
+            // panel4
             // 
-            this.textBox2.Location = new System.Drawing.Point(185, 18);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(245, 20);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Controls.Add(this.pictureBox2);
+            this.panel4.Controls.Add(this.textBox2);
+            this.panel4.Location = new System.Drawing.Point(661, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(645, 535);
+            this.panel4.TabIndex = 0;
             // 
             // panel5
             // 
@@ -237,6 +184,47 @@
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellDoubleClick);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.BackgroundImage = global::El_Khalil.Properties.Resources.search__1_;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.InitialImage = null;
+            this.pictureBox2.Location = new System.Drawing.Point(435, 14);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(185, 18);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(245, 20);
+            this.textBox2.TabIndex = 5;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.tb_phone2);
+            this.panel3.Controls.Add(this.tb_phone);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.tb_address);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.tb_number);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.tb_name);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(645, 535);
+            this.panel3.TabIndex = 22;
+            // 
             // tb_phone2
             // 
             this.tb_phone2.Font = new System.Drawing.Font("Tahoma", 10F);
@@ -245,6 +233,7 @@
             this.tb_phone2.Size = new System.Drawing.Size(166, 24);
             this.tb_phone2.TabIndex = 37;
             this.tb_phone2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_phone2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_phone2_KeyPress);
             // 
             // tb_phone
             // 
@@ -254,6 +243,7 @@
             this.tb_phone.Size = new System.Drawing.Size(164, 24);
             this.tb_phone.TabIndex = 36;
             this.tb_phone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_phone_KeyPress);
             // 
             // label1
             // 
@@ -300,6 +290,7 @@
             this.tb_number.Size = new System.Drawing.Size(371, 24);
             this.tb_number.TabIndex = 34;
             this.tb_number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_number.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_phone_KeyPress);
             // 
             // label6
             // 
@@ -338,6 +329,18 @@
             this.label7.Text = "اسم البنك كامل";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(1034, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(247, 27);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "اضافة بنك جديد و تعديل";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Add_bank
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -351,15 +354,15 @@
             this.Text = "Add_bank";
             this.Load += new System.EventHandler(this.Add_bank_Load);
             this.panel1.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }

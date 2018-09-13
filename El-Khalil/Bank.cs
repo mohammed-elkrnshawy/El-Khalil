@@ -132,23 +132,11 @@ namespace El_Khalil
 
         }
 
+        private void cb_kilo_Click(object sender, EventArgs e)
+        {
+            Bank_Print print = new Bank_Print(dateTimePicker1.Value,dateTimePicker2.Value);
+            print.ShowDialog();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        }
     }
 }

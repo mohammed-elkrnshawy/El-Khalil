@@ -558,7 +558,7 @@ namespace El_Khalil
                 {
                     SaveLater();
                 }
-                Customer_Print print = new Customer_Print(int.Parse(label2.Text),
+                Customer_Purcahsing_Print print = new Customer_Purcahsing_Print(int.Parse(label2.Text),
                                                       combo_Customer.Text,
                                                       richTextBox1.Text,
                                                       double.Parse(tb_BillTotal.Text),

@@ -36,13 +36,14 @@
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column16 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pn_during = new System.Windows.Forms.Panel();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,8 +64,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.cb_kilo = new System.Windows.Forms.Button();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -148,6 +149,18 @@
             this.Column16.ToolTipText = "عرض";
             this.Column16.Width = 70;
             // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "رصيد بدايه الفترة";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column17
+            // 
+            this.Column17.HeaderText = "رصيد نهاية الفترة";
+            this.Column17.Name = "Column17";
+            this.Column17.ReadOnly = true;
+            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -206,20 +219,6 @@
             this.label2.TabIndex = 42;
             this.label2.Text = "من تاريخ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::El_Khalil.Properties.Resources.document;
-            this.button1.Location = new System.Drawing.Point(92, -1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 30);
-            this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel4
             // 
@@ -323,6 +322,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cb_kilo);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -424,17 +424,35 @@
             this.panel3.Size = new System.Drawing.Size(1306, 505);
             this.panel3.TabIndex = 1;
             // 
-            // Column10
+            // button1
             // 
-            this.Column10.HeaderText = "رصيد بدايه الفترة";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::El_Khalil.Properties.Resources.document;
+            this.button1.Location = new System.Drawing.Point(92, -1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 30);
+            this.button1.TabIndex = 3;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Column17
+            // cb_kilo
             // 
-            this.Column17.HeaderText = "رصيد نهاية الفترة";
-            this.Column17.Name = "Column17";
-            this.Column17.ReadOnly = true;
+            this.cb_kilo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
+            this.cb_kilo.FlatAppearance.BorderSize = 0;
+            this.cb_kilo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(84)))), ((int)(((byte)(102)))));
+            this.cb_kilo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_kilo.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.cb_kilo.ForeColor = System.Drawing.Color.White;
+            this.cb_kilo.Location = new System.Drawing.Point(3, 556);
+            this.cb_kilo.Name = "cb_kilo";
+            this.cb_kilo.Size = new System.Drawing.Size(75, 39);
+            this.cb_kilo.TabIndex = 85;
+            this.cb_kilo.Text = "طباعة";
+            this.cb_kilo.UseVisualStyleBackColor = false;
+            this.cb_kilo.Click += new System.EventHandler(this.cb_kilo_Click);
             // 
             // Bank
             // 
@@ -498,5 +516,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn Column16;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
+        private System.Windows.Forms.Button cb_kilo;
     }
 }

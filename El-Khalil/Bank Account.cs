@@ -35,25 +35,7 @@ namespace El_Khalil
         {
             RefreshForm();
         }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton1.Checked)
-            {
-                pn_today.Visible = true;
-                pn_during.Visible = false;
-            }
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButton2.Checked)
-            {
-                pn_today.Visible = false;
-                pn_during.Visible = true;
-            }
-        }
-
+     
         private void button1_Click(object sender, EventArgs e)
         {
             if(combo_Bank.SelectedIndex>=0)
@@ -77,39 +59,6 @@ namespace El_Khalil
 
         private void All_Transaction()
         {
-
-
-            if (radioButton1.Checked)
-            {
-                SqlConnection con;
-
-                SqlDataReader dataReader = Ezzat.GetDataReader("_BankTransaction_During", out con,
-                new SqlParameter("@Day", DateTime.Parse(dateTimePicker3.Value.ToString())),
-                new SqlParameter("@Day2", DateTime.Parse(dateTimePicker3.Value.ToString())),
-                new SqlParameter("@BankID", combo_Bank.SelectedValue));
-
-
-                if (dataReader.HasRows)
-                {
-                    while (dataReader.Read())
-                    {
-                        dataGridView1.Rows.Add();
-                        dataGridView1[0, dataGridView1.Rows.Count - 1].Value = dataReader[0].ToString();
-                        dataGridView1[1, dataGridView1.Rows.Count - 1].Value = dataReader[1].ToString();
-                        dataGridView1[2, dataGridView1.Rows.Count - 1].Value = dataReader[2].ToString();
-                        dataGridView1[3, dataGridView1.Rows.Count - 1].Value = (double.Parse(dataReader[1].ToString()) - double.Parse(dataReader[2].ToString()));
-                        dataGridView1[4, dataGridView1.Rows.Count - 1].Value = dataReader[3].ToString();
-                        dataGridView1[5, dataGridView1.Rows.Count - 1].Value = dataReader[5].ToString();
-                        dataGridView1[6, dataGridView1.Rows.Count - 1].Value = dataReader[4].ToString();
-                    }
-                }
-
-                con.Close();
-
-
-            }
-            else if (radioButton2.Checked)
-            {
                 SqlConnection con;
 
                 SqlDataReader dataReader = Ezzat.GetDataReader("_BankTransaction_During", out con,
@@ -134,11 +83,6 @@ namespace El_Khalil
                 }
 
                 con.Close();
-
-
-            }
-           
-
 
         }
 
@@ -168,6 +112,20 @@ namespace El_Khalil
                                                                                  );
                     BillDetails.ShowDialog();
                 }
+            }
+        }
+
+        private void bt_Print_Click(object sender, EventArgs e)
+        {
+            if(combo_Bank.SelectedIndex>=0)
+            {
+                Bank_Account_Printcs print = new Bank_Account_Printcs(
+                dateTimePicker1.Value,
+                dateTimePicker2.Value,
+                (int)combo_Bank.SelectedValue,
+            combo_Bank.Text
+                );
+                print.ShowDialog();
             }
         }
     }

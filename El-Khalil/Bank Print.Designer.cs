@@ -1,6 +1,6 @@
 ﻿namespace El_Khalil
 {
-    partial class Customer_Print
+    partial class Bank_Print
     {
         /// <summary>
         /// Required designer variable.
@@ -39,19 +39,20 @@
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1253, 536);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1249, 535);
             this.crystalReportViewer1.TabIndex = 0;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
-            // Customer_Print
+            // Bank_Print
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1253, 536);
+            this.ClientSize = new System.Drawing.Size(1249, 535);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Name = "Customer_Print";
-            this.Text = "Customer_Print";
-            this.Load += new System.EventHandler(this.Customer_Print_Load);
+            this.Name = "Bank_Print";
+            this.Text = "Bank_Print";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Bank_Print_Load);
             this.ResumeLayout(false);
 
         }

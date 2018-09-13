@@ -12,20 +12,20 @@ using System.Windows.Forms;
 
 namespace El_Khalil
 {
-    public partial class Customer_Print : Form
+    public partial class Bank_Print : Form
     {
         DateTime Day, Day2;
-        public Customer_Print(DateTime day,DateTime day2)
+        public Bank_Print(DateTime day,DateTime day2)
         {
             InitializeComponent();
             this.Day = day;
             this.Day2 = day2;
         }
 
-        private void Customer_Print_Load(object sender, EventArgs e)
+        private void Bank_Print_Load(object sender, EventArgs e)
         {
             ReportDocument cryRpt = new ReportDocument();
-            cryRpt.Load(@"C:\Users\3ZT\source\repos\El-Khalil\El-Khalil\Customer Report.rpt");
+            cryRpt.Load(@"C:\Users\3ZT\source\repos\El-Khalil\El-Khalil\Bank Report.rpt");
 
             ParameterFieldDefinitions crParameterFieldDefinitions;
             ParameterFieldDefinition crParameterFieldDefinition;
