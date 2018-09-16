@@ -210,20 +210,12 @@ namespace El_Khalil
 
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
-            Graphics v = e.Graphics;
-            DrawRoundRect(v, Pens.Black, e.ClipRectangle.Left, e.ClipRectangle.Top, e.ClipRectangle.Width - 1, e.ClipRectangle.Height - 1, 10);
-            //Without rounded corners
-            //e.Graphics.DrawRectangle(Pens.Blue, e.ClipRectangle.Left, e.ClipRectangle.Top, e.ClipRectangle.Width - 1, e.ClipRectangle.Height - 1);
-            base.OnPaint(e);
+
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
-            Graphics v = e.Graphics;
-            DrawRoundRect(v, Pens.Black, e.ClipRectangle.Left, e.ClipRectangle.Top, e.ClipRectangle.Width - 1, e.ClipRectangle.Height - 1, 10);
-            //Without rounded corners
-            //e.Graphics.DrawRectangle(Pens.Blue, e.ClipRectangle.Left, e.ClipRectangle.Top, e.ClipRectangle.Width - 1, e.ClipRectangle.Height - 1);
-            base.OnPaint(e);
+
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
@@ -237,29 +229,17 @@ namespace El_Khalil
 
         private void panel6_Paint(object sender, PaintEventArgs e)
         {
-            Graphics v = e.Graphics;
-            DrawRoundRect(v, Pens.Black, e.ClipRectangle.Left, e.ClipRectangle.Top, e.ClipRectangle.Width - 1, e.ClipRectangle.Height - 1, 10);
-            //Without rounded corners
-            //e.Graphics.DrawRectangle(Pens.Blue, e.ClipRectangle.Left, e.ClipRectangle.Top, e.ClipRectangle.Width - 1, e.ClipRectangle.Height - 1);
-            base.OnPaint(e);
+
         }
 
         private void panel7_Paint(object sender, PaintEventArgs e)
         {
-            Graphics v = e.Graphics;
-            DrawRoundRect(v, Pens.Black, e.ClipRectangle.Left, e.ClipRectangle.Top, e.ClipRectangle.Width - 1, e.ClipRectangle.Height - 1, 10);
-            //Without rounded corners
-            //e.Graphics.DrawRectangle(Pens.Blue, e.ClipRectangle.Left, e.ClipRectangle.Top, e.ClipRectangle.Width - 1, e.ClipRectangle.Height - 1);
-            base.OnPaint(e);
+
         }
 
         private void panel8_Paint(object sender, PaintEventArgs e)
         {
-            Graphics v = e.Graphics;
-            DrawRoundRect(v, Pens.Black, e.ClipRectangle.Left, e.ClipRectangle.Top, e.ClipRectangle.Width - 1, e.ClipRectangle.Height - 1, 10);
-            //Without rounded corners
-            //e.Graphics.DrawRectangle(Pens.Blue, e.ClipRectangle.Left, e.ClipRectangle.Top, e.ClipRectangle.Width - 1, e.ClipRectangle.Height - 1);
-            base.OnPaint(e);
+
         }
 
         private void DrawRoundRect(Graphics g, Pen p, float X, float Y, float width, float height, float radius)
@@ -618,6 +598,36 @@ namespace El_Khalil
         private void button27_Click_1(object sender, EventArgs e)
         {
             Add_Tab("حساب البنوك", new Bank());
+        }
+
+        private void عرضالطلباتToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowOrder show = new ShowOrder();
+            show.ShowDialog();
+        }
+
+        private void اضافةطلبToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Order add_ = new Add_Order();
+            add_.ShowDialog();
+        }
+
+        private void نسحاحتياطىToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Backup backup = new Backup();
+            backup.ShowDialog();
+        }
+
+        private void استعادةالنسخToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Restore restore = new Restore();
+            restore.ShowDialog();
+        }
+
+        private void ايداعميلغفالخزنةToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Owner_IMMoney _IMMoney = new Owner_IMMoney();
+            _IMMoney.ShowDialog();
         }
 
         private void Add_Tab(string Name,Form form)

@@ -90,6 +90,12 @@
     <Compile Include="Add Materials.Designer.cs">
       <DependentUpon>Add Materials.cs</DependentUpon>
     </Compile>
+    <Compile Include="Add Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Order.Designer.cs">
+      <DependentUpon>Add Order.cs</DependentUpon>
+    </Compile>
     <Compile Include="Add Supplier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,12 @@
     </Compile>
     <Compile Include="Add Users.Designer.cs">
       <DependentUpon>Add Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backup.Designer.cs">
+      <DependentUpon>Backup.cs</DependentUpon>
     </Compile>
     <Compile Include="Bank Account Printcs.cs">
       <SubType>Form</SubType>
@@ -277,6 +289,7 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="More.cs" />
     <Compile Include="Outlay Account.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -289,6 +302,12 @@
     <Compile Include="Outlay.Designer.cs">
       <DependentUpon>Outlay.cs</DependentUpon>
     </Compile>
+    <Compile Include="Owner IMMoney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Owner IMMoney.Designer.cs">
+      <DependentUpon>Owner IMMoney.cs</DependentUpon>
+    </Compile>
     <Compile Include="Product Account.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -300,6 +319,18 @@
     </Compile>
     <Compile Include="Productivity Product.Designer.cs">
       <DependentUpon>Productivity Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Restore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Restore.Designer.cs">
+      <DependentUpon>Restore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowOrder.Designer.cs">
+      <DependentUpon>ShowOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Store BillDetails.cs">
       <SubType>Form</SubType>
@@ -443,11 +474,17 @@
     <EmbeddedResource Include="Add Materials.resx">
       <DependentUpon>Add Materials.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Add Order.resx">
+      <DependentUpon>Add Order.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Add Supplier.resx">
       <DependentUpon>Add Supplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Add Users.resx">
       <DependentUpon>Add Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backup.resx">
+      <DependentUpon>Backup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Bank Account Printcs.resx">
       <DependentUpon>Bank Account Printcs.cs</DependentUpon>
@@ -549,11 +586,20 @@
     <EmbeddedResource Include="Outlay.resx">
       <DependentUpon>Outlay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Owner IMMoney.resx">
+      <DependentUpon>Owner IMMoney.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Product Account.resx">
       <DependentUpon>Product Account.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Productivity Product.resx">
       <DependentUpon>Productivity Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Restore.resx">
+      <DependentUpon>Restore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowOrder.resx">
+      <DependentUpon>ShowOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Store BillDetails.resx">
       <DependentUpon>Store BillDetails.cs</DependentUpon>

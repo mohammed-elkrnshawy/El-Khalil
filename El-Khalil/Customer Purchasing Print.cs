@@ -14,11 +14,12 @@ namespace El_Khalil
 {
     public partial class Customer_Purcahsing_Print : Form
     {
+        double Trana;
         bool typep;
         int Bill_ID;
         string custome_name, Bill_Details;
         double Bill_Total, Discout, old, payment;
-        public Customer_Purcahsing_Print(int bill_ID,string customername,string BillDetails,double billtotal,double discount,double old,double payment,bool type)
+        public Customer_Purcahsing_Print(int bill_ID,string customername,string BillDetails,double billtotal,double discount,double old,double payment,bool type,double tran)
         {
             InitializeComponent();
             this.Bill_ID = bill_ID;
@@ -29,6 +30,7 @@ namespace El_Khalil
             this.old = old;
             this.payment = payment;
             this.typep = type;
+            this.Trana = tran;
         }
 
         private void Customer_Print_Load(object sender, EventArgs e)
@@ -136,6 +138,17 @@ namespace El_Khalil
                 crParameterValues.Clear();
                 crParameterValues.Add(crParameterDiscreteValue);
                 crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
+
+
+
+                crParameterDiscreteValue.Value = Trana;
+                crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
+                crParameterFieldDefinition = crParameterFieldDefinitions["Trana"];
+                crParameterValues = crParameterFieldDefinition.CurrentValues;
+                crParameterValues.Clear();
+                crParameterValues.Add(crParameterDiscreteValue);
+                crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
+
 
 
                 crystalReportViewer1.ReportSource = cryRpt;

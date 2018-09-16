@@ -149,9 +149,10 @@ namespace El_Khalil
         }
         private void Calcolate()
         {
+
             tb_BillTotal.Text = String.Format("{0:0.00}", Bill_Total);
             tb_AfterDiscount.Text = String.Format("{0:0.00}", (double.Parse(tb_BillTotal.Text) - double.Parse(tb_Discount.Text)));
-            tb_Total.Text = String.Format("{0:0.00}", (double.Parse(tb_AfterDiscount.Text) + double.Parse(tb_OldMoney.Text)));
+            tb_Total.Text = String.Format("{0:0.00}", (double.Parse(tb_AfterDiscount.Text) + double.Parse(tb_OldMoney.Text))+double.Parse(textBox1.Text));
             tb_render.Text = String.Format("{0:0.00}", (double.Parse(tb_Total.Text) - double.Parse(tb_payment.Text)));
 
             //if (double.Parse(tb_render.Text) > MaxLimit)
@@ -565,7 +566,8 @@ namespace El_Khalil
                                                       double.Parse(tb_Discount.Text),
                                                       double.Parse(tb_OldMoney.Text),
                                                       double.Parse(tb_payment.Text),
-                                                      false
+                                                      false,
+                                                      double.Parse(textBox1.Text)
                                                       );
                 print.ShowDialog();
                 RefreshForm();
@@ -573,6 +575,11 @@ namespace El_Khalil
             else
                 MessageBox.Show(Shared_Class.Check_Message);
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            Calcolate();
         }
 
         private void tb_payment_KeyPress(object sender, KeyPressEventArgs e)

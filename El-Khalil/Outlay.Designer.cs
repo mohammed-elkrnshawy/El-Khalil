@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.bt_Print = new System.Windows.Forms.Button();
-            this.bt_Save = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -40,8 +40,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tb_OldMoney = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -49,11 +49,11 @@
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.richTextBox1);
-            this.panel1.Controls.Add(this.bt_Print);
-            this.panel1.Controls.Add(this.bt_Save);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.tb_OldMoney);
@@ -63,6 +63,26 @@
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(127, 136);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(307, 21);
+            this.comboBox1.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(465, 132);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 27);
+            this.label3.TabIndex = 57;
+            this.label3.Text = "اختار البند";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // richTextBox1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(127, 237);
@@ -70,39 +90,6 @@
             this.richTextBox1.Size = new System.Drawing.Size(444, 197);
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "لا يوجد ملاحظات";
-            // 
-            // bt_Print
-            // 
-            this.bt_Print.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.bt_Print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
-            this.bt_Print.FlatAppearance.BorderSize = 0;
-            this.bt_Print.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(84)))), ((int)(((byte)(102)))));
-            this.bt_Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_Print.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.bt_Print.ForeColor = System.Drawing.Color.White;
-            this.bt_Print.Location = new System.Drawing.Point(211, 509);
-            this.bt_Print.Name = "bt_Print";
-            this.bt_Print.Size = new System.Drawing.Size(182, 28);
-            this.bt_Print.TabIndex = 40;
-            this.bt_Print.Text = "حفظ و طباعة";
-            this.bt_Print.UseVisualStyleBackColor = false;
-            // 
-            // bt_Save
-            // 
-            this.bt_Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.bt_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
-            this.bt_Save.FlatAppearance.BorderSize = 0;
-            this.bt_Save.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(84)))), ((int)(((byte)(102)))));
-            this.bt_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_Save.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.bt_Save.ForeColor = System.Drawing.Color.White;
-            this.bt_Save.Location = new System.Drawing.Point(109, 509);
-            this.bt_Save.Name = "bt_Save";
-            this.bt_Save.Size = new System.Drawing.Size(75, 28);
-            this.bt_Save.TabIndex = 4;
-            this.bt_Save.Text = "حفظ";
-            this.bt_Save.UseVisualStyleBackColor = false;
-            this.bt_Save.Click += new System.EventHandler(this.bt_Save_Click);
             // 
             // panel3
             // 
@@ -215,25 +202,43 @@
             this.label4.Text = "بيان مصاريف";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // button1
             // 
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(465, 132);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 27);
-            this.label3.TabIndex = 57;
-            this.label3.Text = "اختار البند";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(84)))), ((int)(((byte)(102)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::El_Khalil.Properties.Resources.print_black_printer_tool_symbol;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(208, 471);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 37);
+            this.button1.TabIndex = 59;
+            this.button1.Text = "حفظ و طباعة";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.bt_Print_Click);
             // 
-            // comboBox1
+            // button3
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(127, 136);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(307, 21);
-            this.comboBox1.TabIndex = 1;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(84)))), ((int)(((byte)(102)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = global::El_Khalil.Properties.Resources.save_disk__2_;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(127, 471);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 37);
+            this.button3.TabIndex = 58;
+            this.button3.Text = "حفظ";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.bt_Save_Click);
             // 
             // Outlay
             // 
@@ -258,8 +263,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button bt_Print;
-        private System.Windows.Forms.Button bt_Save;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
@@ -270,5 +273,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
     }
 }

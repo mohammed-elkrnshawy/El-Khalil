@@ -66,6 +66,7 @@
             this.تحويلمنعميلالىالبنكToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.تحويلالىموردمنالبنكToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.تقاريرعنالبنكToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.فواتيرحدالائتمانToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.الاصنافToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.موادخامToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.اضافةموادخامToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -80,6 +81,21 @@
             this.الاضافاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.اضافةبندمصروفاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.اضافةمسميوظيفيToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.الطلباتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.اضافةطلبToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.عرضالطلباتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.النسخالاحتياطىToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.نسحاحتياطىToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.استعادةالنسخToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.تعاملاترأسالمالToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ايداعمبالغToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ايداعميلغفالخزنةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.صرفمبلغمنالخزنةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ايداعمنتجاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.صرفمبالغToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.توريدبضاعةالىالمخزنToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.صرفبضاعهمنالمخزنToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.الحساباتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
@@ -87,6 +103,7 @@
             this.button27 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button26 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.button32 = new System.Windows.Forms.Button();
@@ -136,11 +153,11 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -150,7 +167,6 @@
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -163,9 +179,13 @@
             this.الموToolStripMenuItem,
             this.المخازنToolStripMenuItem,
             this.الخزنةالبنكToolStripMenuItem,
+            this.فواتيرحدالائتمانToolStripMenuItem,
             this.الاصنافToolStripMenuItem,
             this.المستخدمToolStripMenuItem,
-            this.الاضافاتToolStripMenuItem});
+            this.الاضافاتToolStripMenuItem,
+            this.الطلباتToolStripMenuItem,
+            this.النسخالاحتياطىToolStripMenuItem,
+            this.تعاملاترأسالمالToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -465,6 +485,12 @@
             this.تقاريرعنالبنكToolStripMenuItem.Size = new System.Drawing.Size(228, 24);
             this.تقاريرعنالبنكToolStripMenuItem.Text = "تقارير عن البنك";
             // 
+            // فواتيرحدالائتمانToolStripMenuItem
+            // 
+            this.فواتيرحدالائتمانToolStripMenuItem.Name = "فواتيرحدالائتمانToolStripMenuItem";
+            this.فواتيرحدالائتمانToolStripMenuItem.Size = new System.Drawing.Size(102, 23);
+            this.فواتيرحدالائتمانToolStripMenuItem.Text = "فواتير حد الائتمان";
+            // 
             // الاصنافToolStripMenuItem
             // 
             this.الاصنافToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -574,6 +600,118 @@
             this.اضافةمسميوظيفيToolStripMenuItem.Text = "اضافة مسمي وظيفي";
             this.اضافةمسميوظيفيToolStripMenuItem.Click += new System.EventHandler(this.اضافةمسميوظيفيToolStripMenuItem_Click);
             // 
+            // الطلباتToolStripMenuItem
+            // 
+            this.الطلباتToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.اضافةطلبToolStripMenuItem,
+            this.عرضالطلباتToolStripMenuItem});
+            this.الطلباتToolStripMenuItem.Name = "الطلباتToolStripMenuItem";
+            this.الطلباتToolStripMenuItem.Size = new System.Drawing.Size(58, 23);
+            this.الطلباتToolStripMenuItem.Text = "الطلبات";
+            // 
+            // اضافةطلبToolStripMenuItem
+            // 
+            this.اضافةطلبToolStripMenuItem.Name = "اضافةطلبToolStripMenuItem";
+            this.اضافةطلبToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.اضافةطلبToolStripMenuItem.Text = "اضافة طلب";
+            this.اضافةطلبToolStripMenuItem.Click += new System.EventHandler(this.اضافةطلبToolStripMenuItem_Click);
+            // 
+            // عرضالطلباتToolStripMenuItem
+            // 
+            this.عرضالطلباتToolStripMenuItem.Name = "عرضالطلباتToolStripMenuItem";
+            this.عرضالطلباتToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.عرضالطلباتToolStripMenuItem.Text = "عرض الطلبات";
+            this.عرضالطلباتToolStripMenuItem.Click += new System.EventHandler(this.عرضالطلباتToolStripMenuItem_Click);
+            // 
+            // النسخالاحتياطىToolStripMenuItem
+            // 
+            this.النسخالاحتياطىToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.نسحاحتياطىToolStripMenuItem,
+            this.استعادةالنسخToolStripMenuItem});
+            this.النسخالاحتياطىToolStripMenuItem.Name = "النسخالاحتياطىToolStripMenuItem";
+            this.النسخالاحتياطىToolStripMenuItem.Size = new System.Drawing.Size(98, 23);
+            this.النسخالاحتياطىToolStripMenuItem.Text = "النسخ الاحتياطى";
+            // 
+            // نسحاحتياطىToolStripMenuItem
+            // 
+            this.نسحاحتياطىToolStripMenuItem.Name = "نسحاحتياطىToolStripMenuItem";
+            this.نسحاحتياطىToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.نسحاحتياطىToolStripMenuItem.Text = "نسح احتياطى";
+            this.نسحاحتياطىToolStripMenuItem.Click += new System.EventHandler(this.نسحاحتياطىToolStripMenuItem_Click);
+            // 
+            // استعادةالنسخToolStripMenuItem
+            // 
+            this.استعادةالنسخToolStripMenuItem.Name = "استعادةالنسخToolStripMenuItem";
+            this.استعادةالنسخToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.استعادةالنسخToolStripMenuItem.Text = "استعادة النسخ";
+            this.استعادةالنسخToolStripMenuItem.Click += new System.EventHandler(this.استعادةالنسخToolStripMenuItem_Click);
+            // 
+            // تعاملاترأسالمالToolStripMenuItem
+            // 
+            this.تعاملاترأسالمالToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ايداعمبالغToolStripMenuItem,
+            this.صرفمبالغToolStripMenuItem,
+            this.ايداعمنتجاتToolStripMenuItem,
+            this.الحساباتToolStripMenuItem});
+            this.تعاملاترأسالمالToolStripMenuItem.Name = "تعاملاترأسالمالToolStripMenuItem";
+            this.تعاملاترأسالمالToolStripMenuItem.Size = new System.Drawing.Size(110, 23);
+            this.تعاملاترأسالمالToolStripMenuItem.Text = "تعاملات رأس المال";
+            // 
+            // ايداعمبالغToolStripMenuItem
+            // 
+            this.ايداعمبالغToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ايداعميلغفالخزنةToolStripMenuItem,
+            this.صرفمبلغمنالخزنةToolStripMenuItem});
+            this.ايداعمبالغToolStripMenuItem.Name = "ايداعمبالغToolStripMenuItem";
+            this.ايداعمبالغToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ايداعمبالغToolStripMenuItem.Text = "الاموال";
+            // 
+            // ايداعميلغفالخزنةToolStripMenuItem
+            // 
+            this.ايداعميلغفالخزنةToolStripMenuItem.Name = "ايداعميلغفالخزنةToolStripMenuItem";
+            this.ايداعميلغفالخزنةToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.ايداعميلغفالخزنةToolStripMenuItem.Text = "ايداع ميلغ ف الخزنة";
+            this.ايداعميلغفالخزنةToolStripMenuItem.Click += new System.EventHandler(this.ايداعميلغفالخزنةToolStripMenuItem_Click);
+            // 
+            // صرفمبلغمنالخزنةToolStripMenuItem
+            // 
+            this.صرفمبلغمنالخزنةToolStripMenuItem.Name = "صرفمبلغمنالخزنةToolStripMenuItem";
+            this.صرفمبلغمنالخزنةToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.صرفمبلغمنالخزنةToolStripMenuItem.Text = "صرف مبلغ من الخزنة";
+            // 
+            // ايداعمنتجاتToolStripMenuItem
+            // 
+            this.ايداعمنتجاتToolStripMenuItem.Name = "ايداعمنتجاتToolStripMenuItem";
+            this.ايداعمنتجاتToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ايداعمنتجاتToolStripMenuItem.Text = "ايداع منتجات";
+            // 
+            // صرفمبالغToolStripMenuItem
+            // 
+            this.صرفمبالغToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.توريدبضاعةالىالمخزنToolStripMenuItem,
+            this.صرفبضاعهمنالمخزنToolStripMenuItem});
+            this.صرفمبالغToolStripMenuItem.Name = "صرفمبالغToolStripMenuItem";
+            this.صرفمبالغToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.صرفمبالغToolStripMenuItem.Text = "المنتجات";
+            // 
+            // توريدبضاعةالىالمخزنToolStripMenuItem
+            // 
+            this.توريدبضاعةالىالمخزنToolStripMenuItem.Name = "توريدبضاعةالىالمخزنToolStripMenuItem";
+            this.توريدبضاعةالىالمخزنToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.توريدبضاعةالىالمخزنToolStripMenuItem.Text = "توريد بضاعة الى المخزن";
+            // 
+            // صرفبضاعهمنالمخزنToolStripMenuItem
+            // 
+            this.صرفبضاعهمنالمخزنToolStripMenuItem.Name = "صرفبضاعهمنالمخزنToolStripMenuItem";
+            this.صرفبضاعهمنالمخزنToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.صرفبضاعهمنالمخزنToolStripMenuItem.Text = "صرف بضاعه من المخزن";
+            // 
+            // الحساباتToolStripMenuItem
+            // 
+            this.الحساباتToolStripMenuItem.Name = "الحساباتToolStripMenuItem";
+            this.الحساباتToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.الحساباتToolStripMenuItem.Text = "الحسابات";
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -639,7 +777,8 @@
             // 
             // panel9
             // 
-            this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(166)))), ((int)(((byte)(132)))));
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel9.Controls.Add(this.button27);
             this.panel9.Controls.Add(this.button13);
             this.panel9.Controls.Add(this.button26);
@@ -651,12 +790,12 @@
             // 
             // button27
             // 
-            this.button27.BackColor = System.Drawing.Color.White;
+            this.button27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(166)))), ((int)(((byte)(132)))));
             this.button27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button27.FlatAppearance.BorderSize = 0;
             this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button27.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button27.ForeColor = System.Drawing.Color.Black;
+            this.button27.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button27.ForeColor = System.Drawing.Color.White;
             this.button27.Location = new System.Drawing.Point(3, 95);
             this.button27.Name = "button27";
             this.button27.Size = new System.Drawing.Size(391, 33);
@@ -667,12 +806,12 @@
             // 
             // button13
             // 
-            this.button13.BackColor = System.Drawing.Color.White;
+            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(166)))), ((int)(((byte)(132)))));
             this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button13.FlatAppearance.BorderSize = 0;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.ForeColor = System.Drawing.Color.Black;
+            this.button13.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.ForeColor = System.Drawing.Color.White;
             this.button13.Location = new System.Drawing.Point(3, 50);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(391, 33);
@@ -683,12 +822,12 @@
             // 
             // button26
             // 
-            this.button26.BackColor = System.Drawing.Color.White;
+            this.button26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(166)))), ((int)(((byte)(132)))));
             this.button26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button26.FlatAppearance.BorderSize = 0;
             this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button26.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button26.ForeColor = System.Drawing.Color.Black;
+            this.button26.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button26.ForeColor = System.Drawing.Color.White;
             this.button26.Location = new System.Drawing.Point(3, 11);
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(391, 33);
@@ -696,6 +835,17 @@
             this.button26.Text = "حسابات العملاء";
             this.button26.UseVisualStyleBackColor = false;
             this.button26.Click += new System.EventHandler(this.button26_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = global::El_Khalil.Properties.Resources._212011110_copy;
+            this.pictureBox1.Location = new System.Drawing.Point(471, 183);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(400, 302);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
             // 
             // label8
             // 
@@ -711,23 +861,23 @@
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(108)))), ((int)(((byte)(117)))));
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.button32);
             this.panel8.Controls.Add(this.addMaterial);
             this.panel8.Location = new System.Drawing.Point(12, 378);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(397, 106);
             this.panel8.TabIndex = 19;
-            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // button32
             // 
-            this.button32.BackColor = System.Drawing.Color.White;
+            this.button32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(108)))), ((int)(((byte)(117)))));
             this.button32.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button32.FlatAppearance.BorderSize = 0;
             this.button32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button32.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button32.ForeColor = System.Drawing.Color.Black;
+            this.button32.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button32.ForeColor = System.Drawing.Color.BlanchedAlmond;
             this.button32.Location = new System.Drawing.Point(3, 50);
             this.button32.Name = "button32";
             this.button32.Size = new System.Drawing.Size(391, 33);
@@ -738,12 +888,12 @@
             // 
             // addMaterial
             // 
-            this.addMaterial.BackColor = System.Drawing.Color.White;
+            this.addMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(108)))), ((int)(((byte)(117)))));
             this.addMaterial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.addMaterial.FlatAppearance.BorderSize = 0;
             this.addMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addMaterial.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addMaterial.ForeColor = System.Drawing.Color.Black;
+            this.addMaterial.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addMaterial.ForeColor = System.Drawing.Color.BlanchedAlmond;
             this.addMaterial.Location = new System.Drawing.Point(3, 11);
             this.addMaterial.Name = "addMaterial";
             this.addMaterial.Size = new System.Drawing.Size(391, 33);
@@ -766,7 +916,8 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.button28);
             this.panel7.Controls.Add(this.button11);
             this.panel7.Controls.Add(this.button31);
@@ -774,15 +925,14 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(397, 130);
             this.panel7.TabIndex = 17;
-            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // button28
             // 
-            this.button28.BackColor = System.Drawing.Color.White;
-            this.button28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.button28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button28.FlatAppearance.BorderSize = 0;
             this.button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button28.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button28.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button28.ForeColor = System.Drawing.Color.Black;
             this.button28.Location = new System.Drawing.Point(3, 89);
             this.button28.Name = "button28";
@@ -794,11 +944,11 @@
             // 
             // button11
             // 
-            this.button11.BackColor = System.Drawing.Color.White;
+            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.Color.Black;
             this.button11.Location = new System.Drawing.Point(3, 50);
             this.button11.Name = "button11";
@@ -810,11 +960,11 @@
             // 
             // button31
             // 
-            this.button31.BackColor = System.Drawing.Color.White;
+            this.button31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.button31.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button31.FlatAppearance.BorderSize = 0;
             this.button31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button31.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button31.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button31.ForeColor = System.Drawing.Color.Black;
             this.button31.Location = new System.Drawing.Point(3, 11);
             this.button31.Name = "button31";
@@ -838,7 +988,8 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(145)))), ((int)(((byte)(133)))));
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel6.Controls.Add(this.button25);
             this.panel6.Controls.Add(this.button22);
             this.panel6.Controls.Add(this.button23);
@@ -847,15 +998,14 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(397, 171);
             this.panel6.TabIndex = 15;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // button25
             // 
-            this.button25.BackColor = System.Drawing.Color.White;
+            this.button25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(145)))), ((int)(((byte)(133)))));
             this.button25.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button25.FlatAppearance.BorderSize = 0;
             this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button25.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button25.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button25.ForeColor = System.Drawing.Color.Black;
             this.button25.Location = new System.Drawing.Point(3, 128);
             this.button25.Name = "button25";
@@ -867,11 +1017,11 @@
             // 
             // button22
             // 
-            this.button22.BackColor = System.Drawing.Color.White;
+            this.button22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(145)))), ((int)(((byte)(133)))));
             this.button22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button22.FlatAppearance.BorderSize = 0;
             this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button22.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button22.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button22.ForeColor = System.Drawing.Color.Black;
             this.button22.Location = new System.Drawing.Point(3, 89);
             this.button22.Name = "button22";
@@ -883,11 +1033,11 @@
             // 
             // button23
             // 
-            this.button23.BackColor = System.Drawing.Color.White;
+            this.button23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(145)))), ((int)(((byte)(133)))));
             this.button23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button23.FlatAppearance.BorderSize = 0;
             this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button23.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button23.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button23.ForeColor = System.Drawing.Color.Black;
             this.button23.Location = new System.Drawing.Point(3, 50);
             this.button23.Name = "button23";
@@ -899,11 +1049,11 @@
             // 
             // button24
             // 
-            this.button24.BackColor = System.Drawing.Color.White;
+            this.button24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(145)))), ((int)(((byte)(133)))));
             this.button24.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button24.FlatAppearance.BorderSize = 0;
             this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button24.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button24.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button24.ForeColor = System.Drawing.Color.Black;
             this.button24.Location = new System.Drawing.Point(3, 11);
             this.button24.Name = "button24";
@@ -999,7 +1149,8 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(225)))), ((int)(((byte)(142)))));
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.button21);
             this.panel5.Controls.Add(this.button18);
             this.panel5.Controls.Add(this.button20);
@@ -1008,15 +1159,14 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(397, 173);
             this.panel5.TabIndex = 11;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // button21
             // 
-            this.button21.BackColor = System.Drawing.Color.White;
+            this.button21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(225)))), ((int)(((byte)(142)))));
             this.button21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button21.FlatAppearance.BorderSize = 0;
             this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button21.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button21.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button21.ForeColor = System.Drawing.Color.Black;
             this.button21.Location = new System.Drawing.Point(3, 12);
             this.button21.Name = "button21";
@@ -1028,11 +1178,11 @@
             // 
             // button18
             // 
-            this.button18.BackColor = System.Drawing.Color.White;
+            this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(225)))), ((int)(((byte)(142)))));
             this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button18.FlatAppearance.BorderSize = 0;
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button18.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button18.ForeColor = System.Drawing.Color.Black;
             this.button18.Location = new System.Drawing.Point(3, 90);
             this.button18.Name = "button18";
@@ -1044,11 +1194,11 @@
             // 
             // button20
             // 
-            this.button20.BackColor = System.Drawing.Color.White;
+            this.button20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(225)))), ((int)(((byte)(142)))));
             this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button20.FlatAppearance.BorderSize = 0;
             this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button20.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button20.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button20.ForeColor = System.Drawing.Color.Black;
             this.button20.Location = new System.Drawing.Point(3, 129);
             this.button20.Name = "button20";
@@ -1060,11 +1210,11 @@
             // 
             // button19
             // 
-            this.button19.BackColor = System.Drawing.Color.White;
+            this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(225)))), ((int)(((byte)(142)))));
             this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button19.FlatAppearance.BorderSize = 0;
             this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button19.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button19.ForeColor = System.Drawing.Color.Black;
             this.button19.Location = new System.Drawing.Point(3, 51);
             this.button19.Name = "button19";
@@ -1194,23 +1344,24 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(227)))), ((int)(((byte)(114)))));
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.button29);
             this.panel3.Controls.Add(this.button14);
             this.panel3.Controls.Add(this.button15);
+            this.panel3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(474, 509);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(400, 139);
             this.panel3.TabIndex = 7;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // button29
             // 
-            this.button29.BackColor = System.Drawing.Color.White;
+            this.button29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(227)))), ((int)(((byte)(114)))));
             this.button29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button29.FlatAppearance.BorderSize = 0;
             this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button29.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button29.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button29.ForeColor = System.Drawing.Color.Black;
             this.button29.Location = new System.Drawing.Point(3, 95);
             this.button29.Name = "button29";
@@ -1222,11 +1373,11 @@
             // 
             // button14
             // 
-            this.button14.BackColor = System.Drawing.Color.White;
+            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(227)))), ((int)(((byte)(114)))));
             this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button14.FlatAppearance.BorderSize = 0;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.Color.Black;
             this.button14.Location = new System.Drawing.Point(3, 56);
             this.button14.Name = "button14";
@@ -1238,11 +1389,11 @@
             // 
             // button15
             // 
-            this.button15.BackColor = System.Drawing.Color.White;
+            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(227)))), ((int)(((byte)(114)))));
             this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button15.FlatAppearance.BorderSize = 0;
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.Color.Black;
             this.button15.Location = new System.Drawing.Point(3, 17);
             this.button15.Name = "button15";
@@ -1390,17 +1541,6 @@
             this.toolStripStatusLabel3.Size = new System.Drawing.Size(73, 17);
             this.toolStripStatusLabel3.Text = "الحالة :  ادمن ";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Image = global::El_Khalil.Properties.Resources._212011110_copy;
-            this.pictureBox1.Location = new System.Drawing.Point(471, 183);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(400, 302);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1419,6 +1559,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
@@ -1429,7 +1570,6 @@
             this.panel1.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1546,5 +1686,21 @@
         private System.Windows.Forms.Button button27;
         private System.Windows.Forms.Button button28;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem الطلباتToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem اضافةطلبToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem عرضالطلباتToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem النسخالاحتياطىToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem نسحاحتياطىToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem استعادةالنسخToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem فواتيرحدالائتمانToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem تعاملاترأسالمالToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ايداعمبالغToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem صرفمبالغToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ايداعمنتجاتToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ايداعميلغفالخزنةToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem توريدبضاعةالىالمخزنToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem صرفبضاعهمنالمخزنToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem صرفمبلغمنالخزنةToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem الحساباتToolStripMenuItem;
     }
 }

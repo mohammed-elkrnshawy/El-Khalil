@@ -118,5 +118,19 @@ namespace El_Khalil
                 tb_OldMoney.Text = "0.00";
             }
         }
+
+        private void bt_Print_Click(object sender, EventArgs e)
+        {
+            if (tb_OldMoney.Text != "0.00" && comboBox1.SelectedIndex >= 0)
+            {
+                Save();
+                EditSafe();
+                Clear();
+            }
+            else
+            {
+                MessageBox.Show(Shared_Class.Check_Message);
+            }
+        }
     }
 }
