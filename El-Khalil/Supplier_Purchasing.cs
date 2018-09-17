@@ -552,5 +552,54 @@ namespace El_Khalil
 
             return true;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (combo_Supliers.SelectedIndex >= 0 && dataGridView1.Rows.Count > 0)
+            {
+
+
+                if (tb_PaymentMethod.Text.Contains("نقدى او شيك"))
+                {
+                    if (radioButton1.Checked)
+                    {
+                        // دفع نقدى
+                        SaveCash();
+                    }
+                    else if (radioButton2.Checked)
+                    {
+                        // دفع شيك
+                        SaveCheck();
+                    }
+                }
+                else if (tb_PaymentMethod.Text.Contains("حد ائتمان"))
+                {
+                    SaveCreditLimit();
+                }
+                else if (tb_PaymentMethod.Text.Contains("دفع اجل"))
+                {
+                    SaveLater();
+                }
+                Printer();
+                RefreshForm();
+            }
+            else
+                MessageBox.Show(Shared_Class.Check_Message);
+        }
+
+        private void Printer()
+        {
+            Supplier_Purchasing_Print print = new Supplier_Purchasing_Print(
+                int.Parse(label2.Text),
+                                                      combo_Supliers.Text,
+                                                      richTextBox1.Text,
+                                                      double.Parse(tb_BillTotal.Text),
+                                                      double.Parse(tb_Discount.Text),
+                                                      double.Parse(tb_OldMoney.Text),
+                                                      double.Parse(tb_payment.Text),
+                                                      true
+                );
+            print.ShowDialog();
+        }
     }
 }

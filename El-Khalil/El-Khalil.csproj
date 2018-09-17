@@ -296,6 +296,18 @@
     <Compile Include="Outlay Account.Designer.cs">
       <DependentUpon>Outlay Account.cs</DependentUpon>
     </Compile>
+    <Compile Include="Outlay Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outlay Print.Designer.cs">
+      <DependentUpon>Outlay Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outlay Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Outlay Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Outlay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -404,6 +416,24 @@
     </Compile>
     <Compile Include="Supplier Print.Designer.cs">
       <DependentUpon>Supplier Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier Purcahsing Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Supplier Purcahsing Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Supplier Purchasing Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier Purchasing Print.Designer.cs">
+      <DependentUpon>Supplier Purchasing Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier Returned Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Supplier Returned Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Supplier.cs">
       <SubType>Form</SubType>
@@ -583,6 +613,13 @@
     <EmbeddedResource Include="Outlay Account.resx">
       <DependentUpon>Outlay Account.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Outlay Print.resx">
+      <DependentUpon>Outlay Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outlay Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Outlay Report.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Outlay.resx">
       <DependentUpon>Outlay.cs</DependentUpon>
     </EmbeddedResource>
@@ -643,6 +680,17 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier Print.resx">
       <DependentUpon>Supplier Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier Purcahsing Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Supplier Purcahsing Report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier Purchasing Print.resx">
+      <DependentUpon>Supplier Purchasing Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier Returned Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Supplier Returned Report.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier.resx">
       <DependentUpon>Supplier.cs</DependentUpon>

@@ -125,12 +125,24 @@ namespace El_Khalil
             {
                 Save();
                 EditSafe();
+                Print();
                 Clear();
             }
             else
             {
                 MessageBox.Show(Shared_Class.Check_Message);
             }
+        }
+        private void Print()
+        {
+            Outlay_Print print = new Outlay_Print(
+                int.Parse(label2.Text),
+                DateTime.Parse(DateTime.Now.ToString()),
+                comboBox1.Text,
+                richTextBox1.Text,
+                double.Parse(tb_OldMoney.Text)
+                );
+            print.ShowDialog();
         }
     }
 }

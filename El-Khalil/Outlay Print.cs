@@ -13,32 +13,33 @@ using System.Windows.Forms;
 
 namespace El_Khalil
 {
-    public partial class TheSafe_Account_Print : Form
+    public partial class Outlay_Print : Form
     {
-        DateTime Day, Day2;
-        double After, Before, Now;
-        public TheSafe_Account_Print(DateTime day,DateTime day2,double after,double before,double now)
+        int Bill_ID;
+        DateTime dateTime;
+        string Band, Details;
+        double money;
+        public Outlay_Print(int id,DateTime date,string band,string details,double money)
         {
             InitializeComponent();
-            this.Day = day;
-            this.Day2 = day2;
-            this.After = after;
-            this.Before = before;
-            this.Now = now;
+            this.Bill_ID = id;
+            this.dateTime = date;
+            this.Band = band;
+            this.Details = details;
+            this.money = money;
         }
 
-        private void TheSafe_Account_Print_Load(object sender, EventArgs e)
+        private void Outlay_Print_Load(object sender, EventArgs e)
         {
-
             string path = Application.StartupPath;
             string directory = Path.GetDirectoryName(path); //without file name
             string oneUp = Path.GetDirectoryName(directory); // Temp folder
 
 
             ReportDocument cryRpt = new ReportDocument();
-            cryRpt.Load(oneUp + @"\TheSafe Account Report.rpt");
+            cryRpt.Load(oneUp + @"\Outlay Report.rpt");
 
-           
+
 
             ParameterFieldDefinitions crParameterFieldDefinitions;
             ParameterFieldDefinition crParameterFieldDefinition;
@@ -48,9 +49,9 @@ namespace El_Khalil
 
 
 
-            crParameterDiscreteValue.Value = Day;
+            crParameterDiscreteValue.Value = Bill_ID;
             crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
-            crParameterFieldDefinition = crParameterFieldDefinitions["@Day"];
+            crParameterFieldDefinition = crParameterFieldDefinitions["Bill_ID"];
             crParameterValues = crParameterFieldDefinition.CurrentValues;
             crParameterValues.Clear();
             crParameterValues.Add(crParameterDiscreteValue);
@@ -59,28 +60,18 @@ namespace El_Khalil
 
 
 
-            crParameterDiscreteValue.Value = Day2;
+            crParameterDiscreteValue.Value = dateTime;
             crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
-            crParameterFieldDefinition = crParameterFieldDefinitions["@Day2"];
+            crParameterFieldDefinition = crParameterFieldDefinitions["dateTime"];
             crParameterValues = crParameterFieldDefinition.CurrentValues;
             crParameterValues.Clear();
             crParameterValues.Add(crParameterDiscreteValue);
             crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
 
 
-            crParameterDiscreteValue.Value = Now;
+            crParameterDiscreteValue.Value = Band;
             crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
-            crParameterFieldDefinition = crParameterFieldDefinitions["now"];
-            crParameterValues = crParameterFieldDefinition.CurrentValues;
-            crParameterValues.Clear();
-            crParameterValues.Add(crParameterDiscreteValue);
-            crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
-
-
-
-            crParameterDiscreteValue.Value = Before;
-            crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
-            crParameterFieldDefinition = crParameterFieldDefinitions["before"];
+            crParameterFieldDefinition = crParameterFieldDefinitions["Band"];
             crParameterValues = crParameterFieldDefinition.CurrentValues;
             crParameterValues.Clear();
             crParameterValues.Add(crParameterDiscreteValue);
@@ -88,9 +79,19 @@ namespace El_Khalil
 
 
 
-            crParameterDiscreteValue.Value = After;
+            crParameterDiscreteValue.Value = Details;
             crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
-            crParameterFieldDefinition = crParameterFieldDefinitions["after"];
+            crParameterFieldDefinition = crParameterFieldDefinitions["Details"];
+            crParameterValues = crParameterFieldDefinition.CurrentValues;
+            crParameterValues.Clear();
+            crParameterValues.Add(crParameterDiscreteValue);
+            crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
+
+
+
+            crParameterDiscreteValue.Value = money;
+            crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
+            crParameterFieldDefinition = crParameterFieldDefinitions["money"];
             crParameterValues = crParameterFieldDefinition.CurrentValues;
             crParameterValues.Clear();
             crParameterValues.Add(crParameterDiscreteValue);

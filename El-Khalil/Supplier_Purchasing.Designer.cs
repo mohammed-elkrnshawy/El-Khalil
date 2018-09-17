@@ -154,12 +154,13 @@
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(142, 560);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 37);
+            this.button1.Size = new System.Drawing.Size(122, 37);
             this.button1.TabIndex = 11;
-            this.button1.Text = "طباعة";
+            this.button1.Text = "حفظ و طباعة";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -170,7 +171,7 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = global::El_Khalil.Properties.Resources.cancel__1_;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(223, 560);
+            this.button2.Location = new System.Drawing.Point(270, 560);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 37);
             this.button2.TabIndex = 12;

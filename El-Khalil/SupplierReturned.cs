@@ -286,6 +286,8 @@ namespace El_Khalil
                 if (combo_Supliers.SelectedIndex >= 0 && dataGridView1.Rows.Count > 0)
                 {
                     Save();
+                    MessageBox.Show(Shared_Class.Successful_Message);
+                    RefreshForm();
                 }
                 else
                     MessageBox.Show(Shared_Class.Check_Message);
@@ -299,6 +301,40 @@ namespace El_Khalil
         private void button2_Click(object sender, EventArgs e)
         {
             RefreshForm();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (double.Parse(tb_Total.Text) >= 0)
+            {
+                if (combo_Supliers.SelectedIndex >= 0 && dataGridView1.Rows.Count > 0)
+                {
+                    Save();
+                    MessageBox.Show(Shared_Class.Successful_Message);
+                    Printer();
+                    RefreshForm();
+                }
+                else
+                    MessageBox.Show(Shared_Class.Check_Message);
+            }
+            else
+            {
+                MessageBox.Show("المرتجع اكبر من حساب المورد");
+            }
+        }
+        private void Printer()
+        {
+            Supplier_Purchasing_Print print = new Supplier_Purchasing_Print(
+                int.Parse(label2.Text),
+                                                      combo_Supliers.Text,
+                                                      richTextBox1.Text,
+                                                      double.Parse(tb_BillTotal.Text),
+                                                      double.Parse(tb_Discount.Text),
+                                                      double.Parse(tb_OldMoney.Text),
+                                                      double.Parse("0"),
+                                                      false
+                );
+            print.ShowDialog();
         }
     }
 }
