@@ -630,6 +630,18 @@ namespace El_Khalil
             _IMMoney.ShowDialog();
         }
 
+        private void حدائتمانالعميلToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Show_Limit show = new Show_Limit(false);
+            show.ShowDialog();
+        }
+
+        private void حدائتمانالموردToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Show_Limit show = new Show_Limit(true);
+            show.ShowDialog();
+        }
+
         private void Add_Tab(string Name,Form form)
         {
             TabPage tp = new TabPage(Name);

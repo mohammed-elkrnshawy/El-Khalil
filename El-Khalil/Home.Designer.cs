@@ -91,10 +91,10 @@
             this.ايداعمبالغToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ايداعميلغفالخزنةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.صرفمبلغمنالخزنةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ايداعمنتجاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.صرفمبالغToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.توريدبضاعةالىالمخزنToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.صرفبضاعهمنالمخزنToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ايداعمنتجاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.الحساباتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -103,7 +103,6 @@
             this.button27 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button26 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.button32 = new System.Windows.Forms.Button();
@@ -153,11 +152,14 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.فواتيرحدالائتمانToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.حدائتمانالعميلToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.حدائتمانالموردToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -167,6 +169,7 @@
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -185,7 +188,8 @@
             this.الاضافاتToolStripMenuItem,
             this.الطلباتToolStripMenuItem,
             this.النسخالاحتياطىToolStripMenuItem,
-            this.تعاملاترأسالمالToolStripMenuItem});
+            this.تعاملاترأسالمالToolStripMenuItem,
+            this.فواتيرحدالائتمانToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -663,7 +667,7 @@
             this.ايداعميلغفالخزنةToolStripMenuItem,
             this.صرفمبلغمنالخزنةToolStripMenuItem});
             this.ايداعمبالغToolStripMenuItem.Name = "ايداعمبالغToolStripMenuItem";
-            this.ايداعمبالغToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ايداعمبالغToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.ايداعمبالغToolStripMenuItem.Text = "الاموال";
             // 
             // ايداعميلغفالخزنةToolStripMenuItem
@@ -679,19 +683,13 @@
             this.صرفمبلغمنالخزنةToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.صرفمبلغمنالخزنةToolStripMenuItem.Text = "صرف مبلغ من الخزنة";
             // 
-            // ايداعمنتجاتToolStripMenuItem
-            // 
-            this.ايداعمنتجاتToolStripMenuItem.Name = "ايداعمنتجاتToolStripMenuItem";
-            this.ايداعمنتجاتToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ايداعمنتجاتToolStripMenuItem.Text = "ايداع منتجات";
-            // 
             // صرفمبالغToolStripMenuItem
             // 
             this.صرفمبالغToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.توريدبضاعةالىالمخزنToolStripMenuItem,
             this.صرفبضاعهمنالمخزنToolStripMenuItem});
             this.صرفمبالغToolStripMenuItem.Name = "صرفمبالغToolStripMenuItem";
-            this.صرفمبالغToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.صرفمبالغToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.صرفمبالغToolStripMenuItem.Text = "المنتجات";
             // 
             // توريدبضاعةالىالمخزنToolStripMenuItem
@@ -706,10 +704,16 @@
             this.صرفبضاعهمنالمخزنToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.صرفبضاعهمنالمخزنToolStripMenuItem.Text = "صرف بضاعه من المخزن";
             // 
+            // ايداعمنتجاتToolStripMenuItem
+            // 
+            this.ايداعمنتجاتToolStripMenuItem.Name = "ايداعمنتجاتToolStripMenuItem";
+            this.ايداعمنتجاتToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.ايداعمنتجاتToolStripMenuItem.Text = "ايداع منتجات";
+            // 
             // الحساباتToolStripMenuItem
             // 
             this.الحساباتToolStripMenuItem.Name = "الحساباتToolStripMenuItem";
-            this.الحساباتToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.الحساباتToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.الحساباتToolStripMenuItem.Text = "الحسابات";
             // 
             // tabControl1
@@ -835,17 +839,6 @@
             this.button26.Text = "حسابات العملاء";
             this.button26.UseVisualStyleBackColor = false;
             this.button26.Click += new System.EventHandler(this.button26_Click_1);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Image = global::El_Khalil.Properties.Resources._212011110_copy;
-            this.pictureBox1.Location = new System.Drawing.Point(471, 183);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(400, 302);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
             // 
             // label8
             // 
@@ -1541,6 +1534,40 @@
             this.toolStripStatusLabel3.Size = new System.Drawing.Size(73, 17);
             this.toolStripStatusLabel3.Text = "الحالة :  ادمن ";
             // 
+            // فواتيرحدالائتمانToolStripMenuItem1
+            // 
+            this.فواتيرحدالائتمانToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.حدائتمانالعميلToolStripMenuItem,
+            this.حدائتمانالموردToolStripMenuItem});
+            this.فواتيرحدالائتمانToolStripMenuItem1.Name = "فواتيرحدالائتمانToolStripMenuItem1";
+            this.فواتيرحدالائتمانToolStripMenuItem1.Size = new System.Drawing.Size(102, 23);
+            this.فواتيرحدالائتمانToolStripMenuItem1.Text = "فواتير حد الائتمان";
+            // 
+            // حدائتمانالعميلToolStripMenuItem
+            // 
+            this.حدائتمانالعميلToolStripMenuItem.Name = "حدائتمانالعميلToolStripMenuItem";
+            this.حدائتمانالعميلToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.حدائتمانالعميلToolStripMenuItem.Text = "حد ائتمان العميل";
+            this.حدائتمانالعميلToolStripMenuItem.Click += new System.EventHandler(this.حدائتمانالعميلToolStripMenuItem_Click);
+            // 
+            // حدائتمانالموردToolStripMenuItem
+            // 
+            this.حدائتمانالموردToolStripMenuItem.Name = "حدائتمانالموردToolStripMenuItem";
+            this.حدائتمانالموردToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.حدائتمانالموردToolStripMenuItem.Text = "حد ائتمان المورد";
+            this.حدائتمانالموردToolStripMenuItem.Click += new System.EventHandler(this.حدائتمانالموردToolStripMenuItem_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = global::El_Khalil.Properties.Resources._212011110_copy;
+            this.pictureBox1.Location = new System.Drawing.Point(471, 183);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(400, 302);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1559,7 +1586,6 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
@@ -1570,6 +1596,7 @@
             this.panel1.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1702,5 +1729,8 @@
         private System.Windows.Forms.ToolStripMenuItem صرفبضاعهمنالمخزنToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem صرفمبلغمنالخزنةToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem الحساباتToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem فواتيرحدالائتمانToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem حدائتمانالعميلToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem حدائتمانالموردToolStripMenuItem;
     }
 }
