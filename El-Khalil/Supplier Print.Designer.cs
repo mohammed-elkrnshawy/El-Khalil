@@ -52,6 +52,7 @@
             this.Name = "Supplier_Print";
             this.Text = "Supplier_Print";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Supplier_Print_Load);
             this.ResumeLayout(false);
 
         }

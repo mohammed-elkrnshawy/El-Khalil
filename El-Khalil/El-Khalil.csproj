@@ -441,6 +441,12 @@
     <Compile Include="Supplier Purchasing Print.Designer.cs">
       <DependentUpon>Supplier Purchasing Print.cs</DependentUpon>
     </Compile>
+    <Compile Include="Supplier Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Supplier Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Supplier Returned Report.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -705,6 +711,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier Purchasing Print.resx">
       <DependentUpon>Supplier Purchasing Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Supplier Report.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier Returned Report.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

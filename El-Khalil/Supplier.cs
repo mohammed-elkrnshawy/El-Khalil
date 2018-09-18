@@ -133,5 +133,14 @@ namespace El_Khalil
                 BillDetails.ShowDialog();
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Supplier_Print print = new Supplier_Print(
+                                dateTimePicker1.Value,
+                                dateTimePicker2.Value
+                );
+            print.ShowDialog();
+        }
     }
 }
