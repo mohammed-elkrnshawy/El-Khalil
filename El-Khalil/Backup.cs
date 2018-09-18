@@ -33,7 +33,7 @@ namespace El_Khalil
         {
             try
             {
-                String path = string.Format("{0}\\Clothes_DB {1}{2}.bak", textBox1.Text, DateTime.Now.ToShortDateString().Replace('/', '-'), DateTime.Now.ToShortTimeString().Replace(':', '-'));
+                String path = string.Format("{0}\\El-khalil {1}{2}.bak", textBox1.Text, DateTime.Now.ToShortDateString().Replace('/', '-'), DateTime.Now.ToShortTimeString().Replace(':', '-'));
 
                 More.Backup(path);
                 MessageBox.Show("Test");

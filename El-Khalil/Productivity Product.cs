@@ -197,6 +197,10 @@ namespace El_Khalil
 
             // تعديل كمية المواد الخام ف المخازن 
             editStore();
+
+            Productivity_Product_Print print = new Productivity_Product_Print((int)combo_Products.SelectedValue,combo_Products.Text);
+            print.ShowDialog();
+
         }
 
         private void Add_ProductionTransaction()

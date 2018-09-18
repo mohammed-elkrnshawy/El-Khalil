@@ -326,6 +326,18 @@
     <Compile Include="Product Account.Designer.cs">
       <DependentUpon>Product Account.cs</DependentUpon>
     </Compile>
+    <Compile Include="Productivity Product Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productivity Product Print.Designer.cs">
+      <DependentUpon>Productivity Product Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productivity Product Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Productivity Product Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Productivity Product.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -646,6 +658,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Product Account.resx">
       <DependentUpon>Product Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productivity Product Print.resx">
+      <DependentUpon>Productivity Product Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productivity Product Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Productivity Product Report.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Productivity Product.resx">
       <DependentUpon>Productivity Product.cs</DependentUpon>
