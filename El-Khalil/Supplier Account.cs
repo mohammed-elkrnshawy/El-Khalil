@@ -113,7 +113,14 @@ namespace El_Khalil
 
         private void bt_Print_Click(object sender, EventArgs e)
         {
-            Supplier_Account_Print print = new Supplier_Account_Print(dateTimePicker1.Value,dateTimePicker2.Value,(int)combo_Supliers.SelectedValue);
+            Supplier_Account_Print print = new Supplier_Account_Print(dateTimePicker1.Value
+                                                                     ,dateTimePicker2.Value
+                                                                     ,(int)combo_Supliers.SelectedValue
+                                                                     ,combo_Supliers.Text
+                                                                     ,double.Parse(label13.Text)  
+                                                                     ,double.Parse(label14.Text)  
+                                                                     ,double.Parse(label11.Text)  
+                                                                     );
             print.ShowDialog();
         }
     }
