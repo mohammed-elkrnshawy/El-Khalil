@@ -13,12 +13,12 @@ using System.Windows.Forms;
 
 namespace El_Khalil
 {
-    public partial class Customrt_Payback_Print : Form
+    public partial class Supplier_Payback_Print : Form
     {
-        string custome_name, Bill_Details,ReportType;
+        string custome_name, Bill_Details, ReportType;
         double Old, Payment;
         int Bill_ID;
-        public Customrt_Payback_Print(string CusName,string BiDetails,double old,double payment,int BiID,string reportType)
+        public Supplier_Payback_Print(string CusName, string BiDetails, double old, double payment, int BiID, string reportType)
         {
             InitializeComponent();
             this.custome_name = CusName;
@@ -29,8 +29,9 @@ namespace El_Khalil
             this.ReportType = reportType;
         }
 
-        private void Customrt_Payback_Print_Load(object sender, EventArgs e)
+        private void Supplier_Payback_Print_Load(object sender, EventArgs e)
         {
+
             string path = Application.StartupPath;
             string directory = Path.GetDirectoryName(path); //without file name
             string oneUp = Path.GetDirectoryName(directory); // Temp folder
@@ -38,6 +39,7 @@ namespace El_Khalil
 
             ReportDocument cryRpt = new ReportDocument();
             cryRpt.Load(oneUp + @"\Customer Payback Report.rpt");
+
 
             ParameterFieldDefinitions crParameterFieldDefinitions;
             ParameterFieldDefinition crParameterFieldDefinition;

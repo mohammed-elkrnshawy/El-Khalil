@@ -240,7 +240,6 @@ namespace El_Khalil
 
         private void button3_Click(object sender, EventArgs e)
         {
-
             if (radioButton1.Checked)
             {
                 if (textBox2.Text != "")
@@ -395,6 +394,63 @@ namespace El_Khalil
         {
             textBox2.Text = dataGridView1.CurrentRow.Cells[0].Value + "";
             panel7.Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked)
+            {
+                if (textBox2.Text != "")
+                {
+                    if (comboBox1.SelectedIndex == 1)
+                    {
+                        SavePaypack();
+                    }
+                    else if (comboBox1.SelectedIndex == 2)
+                    {
+                        SaveBank();
+                    }
+                    else if (comboBox1.SelectedIndex == 0)
+                    {
+                        SaveDiscount();
+                    }
+                    ChangeCreditLimit();
+                    Print();
+                    RefreshForm();
+                }
+                else
+                {
+                    MessageBox.Show("اختار فاتورة حد ائتمان");
+                }
+            }
+            else
+            {
+                if (comboBox1.SelectedIndex == 1)
+                {
+                    SavePaypack();
+                }
+                else if (comboBox1.SelectedIndex == 2)
+                {
+                    SaveBank();
+                }
+                else if (comboBox1.SelectedIndex == 0)
+                {
+                    SaveDiscount();
+                }
+                Print();
+                RefreshForm();
+            }
+        }
+
+        private void Print()
+        {
+            Supplier_Payback_Print print = new Supplier_Payback_Print(combo_Supliers.Text,richTextBox1.Text
+                ,double.Parse(tb_OldMoney.Text),
+                double.Parse(tb_payment.Text),
+                int.Parse(label2.Text),
+                comboBox1.Text
+                );
+            print.ShowDialog();
         }
     }
 }

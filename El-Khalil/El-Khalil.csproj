@@ -417,6 +417,12 @@
     <Compile Include="Supplier Account.Designer.cs">
       <DependentUpon>Supplier Account.cs</DependentUpon>
     </Compile>
+    <Compile Include="Supplier Payback Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier Payback Print.Designer.cs">
+      <DependentUpon>Supplier Payback Print.cs</DependentUpon>
+    </Compile>
     <Compile Include="Supplier Print.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -683,6 +689,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier Account.resx">
       <DependentUpon>Supplier Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier Payback Print.resx">
+      <DependentUpon>Supplier Payback Print.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier Payback.resx">
       <DependentUpon>Supplier Payback.cs</DependentUpon>

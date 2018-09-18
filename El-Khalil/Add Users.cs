@@ -53,6 +53,10 @@ namespace El_Khalil
                 AddPerson();
                 RefreshForm();
             }
+            else
+            {
+                MessageBox.Show(Shared_Class.Check_Message);
+            }
         }
 
         private void AddPerson()
