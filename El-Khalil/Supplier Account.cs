@@ -106,8 +106,15 @@ namespace El_Khalil
         {
             if(gv.CurrentCell==gv.CurrentRow.Cells[7])
             {
-                Form1 BillDetails=new Form1(int.Parse(gv.CurrentRow.Cells[0].Value.ToString()), gv.CurrentRow.Cells[6].Value);
-                BillDetails.ShowDialog();
+                if(gv.CurrentRow.Cells[6].Value.ToString()!="تحويل من عميل")
+                {
+                    Form1 BillDetails = new Form1(int.Parse(gv.CurrentRow.Cells[0].Value.ToString()), gv.CurrentRow.Cells[6].Value);
+                    BillDetails.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("لا يمكن عرض التفاصيل");
+                }
             }
         }
 

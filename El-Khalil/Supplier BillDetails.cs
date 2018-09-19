@@ -124,7 +124,7 @@ namespace El_Khalil
                         richTextBox1.Text = dataReader[7].ToString();
                         textBox5.Text = dataReader[8].ToString();
                         textBox4.Text = dataReader[9].ToString();
-                        textBox3.Text = dataReader[10].ToString();
+                        textBox3.Text = dataReader[11].ToString();
                     }
                 }
 
@@ -151,7 +151,7 @@ namespace El_Khalil
                         richTextBox1.Text = dataReader[7].ToString();
                         textBox5.Text = dataReader[8].ToString();
                         textBox4.Visible = label24.Visible = false;
-                        textBox3.Text = dataReader[10].ToString();
+                        textBox3.Text = dataReader[11].ToString();
                     }
                 }
 
