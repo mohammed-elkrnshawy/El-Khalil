@@ -86,5 +86,11 @@ namespace El_Khalil
                 k.ShowDialog();
             } 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Employee_Account_Print print = new Employee_Account_Print((int)combo_Employee.SelectedValue);
+            print.ShowDialog();
+        }
     }
 }

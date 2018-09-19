@@ -32,10 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.combo_Employee = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +40,11 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.combo_Employee = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -95,56 +96,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(717, 482);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.combo_Employee);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Location = new System.Drawing.Point(3, 27);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(717, 45);
-            this.panel2.TabIndex = 0;
-            // 
-            // combo_Employee
-            // 
-            this.combo_Employee.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.combo_Employee.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.combo_Employee.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combo_Employee.FormattingEnabled = true;
-            this.combo_Employee.Location = new System.Drawing.Point(108, 11);
-            this.combo_Employee.Name = "combo_Employee";
-            this.combo_Employee.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.combo_Employee.Size = new System.Drawing.Size(295, 24);
-            this.combo_Employee.TabIndex = 58;
-            this.combo_Employee.Tag = "";
-            this.combo_Employee.SelectedIndexChanged += new System.EventHandler(this.combo_Employee_SelectedIndexChanged);
-            // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.Color.White;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(409, 9);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(147, 27);
-            this.label11.TabIndex = 57;
-            this.label11.Text = "اسم الموظف";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(732, 48);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(249, 27);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "بيان حساب موظفين";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Column1
             // 
@@ -207,6 +158,76 @@
             this.Column4.ToolTipText = "قبض شهرية";
             this.Column4.Width = 50;
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.combo_Employee);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Location = new System.Drawing.Point(3, 27);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(717, 45);
+            this.panel2.TabIndex = 0;
+            // 
+            // combo_Employee
+            // 
+            this.combo_Employee.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.combo_Employee.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.combo_Employee.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combo_Employee.FormattingEnabled = true;
+            this.combo_Employee.Location = new System.Drawing.Point(108, 11);
+            this.combo_Employee.Name = "combo_Employee";
+            this.combo_Employee.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.combo_Employee.Size = new System.Drawing.Size(295, 24);
+            this.combo_Employee.TabIndex = 58;
+            this.combo_Employee.Tag = "";
+            this.combo_Employee.SelectedIndexChanged += new System.EventHandler(this.combo_Employee_SelectedIndexChanged);
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.White;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(409, 9);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(147, 27);
+            this.label11.TabIndex = 57;
+            this.label11.Text = "اسم الموظف";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(732, 48);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(249, 27);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "بيان حساب موظفين";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(84)))), ((int)(((byte)(102)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::El_Khalil.Properties.Resources.print_black_printer_tool_symbol;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(3, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(76, 37);
+            this.button2.TabIndex = 46;
+            this.button2.Text = "طباعة";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Employee_Account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,5 +265,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column3;
         private System.Windows.Forms.DataGridViewButtonColumn Column4;
+        private System.Windows.Forms.Button button2;
     }
 }
