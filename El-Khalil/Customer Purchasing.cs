@@ -152,7 +152,7 @@ namespace El_Khalil
 
             tb_BillTotal.Text = String.Format("{0:0.00}", Bill_Total);
             tb_AfterDiscount.Text = String.Format("{0:0.00}", (double.Parse(tb_BillTotal.Text) - double.Parse(tb_Discount.Text)));
-            tb_Total.Text = String.Format("{0:0.00}", (double.Parse(tb_AfterDiscount.Text) + double.Parse(tb_OldMoney.Text))+double.Parse(textBox1.Text));
+            tb_Total.Text = String.Format("{0:0.00}", (double.Parse(tb_AfterDiscount.Text) + double.Parse(tb_OldMoney.Text)));
             tb_render.Text = String.Format("{0:0.00}", (double.Parse(tb_Total.Text) - double.Parse(tb_payment.Text)));
 
             //if (double.Parse(tb_render.Text) > MaxLimit)
@@ -566,8 +566,7 @@ namespace El_Khalil
                                                       double.Parse(tb_Discount.Text),
                                                       double.Parse(tb_OldMoney.Text),
                                                       double.Parse(tb_payment.Text),
-                                                      false,
-                                                      double.Parse(textBox1.Text)
+                                                      false
                                                       );
                 print.ShowDialog();
                 RefreshForm();

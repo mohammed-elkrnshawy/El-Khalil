@@ -438,8 +438,7 @@ namespace El_Khalil
                                                           double.Parse(tb_Discount.Text),
                                                           double.Parse(tb_OldMoney.Text),
                                                           double.Parse(tb_payment.Text),
-                                                          true,
-                                                          double.Parse("0")
+                                                          true
                                                           );
                 print.ShowDialog();
                 RefreshForm();
