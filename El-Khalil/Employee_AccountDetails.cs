@@ -78,6 +78,12 @@ namespace El_Khalil
             print.ShowDialog();
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Employee_Transaction_Print print = new Employee_Transaction_Print(label12.Text, Employee_ID.ToString());
+            print.ShowDialog();
+        }
+
         private void bt_Save_Click(object sender, EventArgs e)
         {
             Save();
@@ -140,8 +146,9 @@ namespace El_Khalil
         {
             if (button1.Text == "اخفاء التفاصيل")
             {
+
                 pn_P.Visible = true;
-                pn_S.Visible = false;
+                button3.Visible=pn_S.Visible = false;
                 button1.Text = "تعاملات الشهر";
             }
             else
@@ -153,7 +160,7 @@ namespace El_Khalil
                     dataGridView1.DataSource = dataSet.Tables["X"];
                 }
                 pn_P.Visible = false;
-                pn_S.Visible = true;
+                button3.Visible=pn_S.Visible = true;
                 button1.Text = "اخفاء التفاصيل";
             }
         }

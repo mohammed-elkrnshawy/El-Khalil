@@ -312,6 +312,18 @@
     <Compile Include="Employee Sanctions.Designer.cs">
       <DependentUpon>Employee Sanctions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employee Transaction Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee Transaction Print.Designer.cs">
+      <DependentUpon>Employee Transaction Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee Transaction.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Employee Transaction.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Employee_AccountDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -702,6 +714,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Employee Sanctions.resx">
       <DependentUpon>Employee Sanctions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee Transaction Print.resx">
+      <DependentUpon>Employee Transaction Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee Transaction.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Employee Transaction.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee_AccountDetails.resx">
       <DependentUpon>Employee_AccountDetails.cs</DependentUpon>
