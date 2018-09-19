@@ -276,6 +276,18 @@
     <Compile Include="Employee Account.Designer.cs">
       <DependentUpon>Employee Account.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employee AccountDetails Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee AccountDetails Print.Designer.cs">
+      <DependentUpon>Employee AccountDetails Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee AccountDetails Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Employee AccountDetails Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Employee Salaries.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -670,6 +682,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Employee Account.resx">
       <DependentUpon>Employee Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee AccountDetails Print.resx">
+      <DependentUpon>Employee AccountDetails Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee AccountDetails Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Employee AccountDetails Report.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee Salaries.resx">
       <DependentUpon>Employee Salaries.cs</DependentUpon>

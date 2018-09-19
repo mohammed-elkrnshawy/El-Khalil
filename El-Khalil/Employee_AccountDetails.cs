@@ -35,7 +35,7 @@ namespace El_Khalil
         private void Employee_AccountDetails_Load(object sender, EventArgs e)
         {
             if (Pure)
-                bt_Save.Enabled=richTextBox1.Enabled = false;
+                button2.Enabled=richTextBox1.Enabled = false;
 
 
             label12.Text = date;
@@ -58,18 +58,41 @@ namespace El_Khalil
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Save();
+            Print();
+        }
+
+        private void Print()
+        {
+            Employee_AccountDetails_Print print = new Employee_AccountDetails_Print(
+                int.Parse(label8.Text)
+                , tb_name.Text
+                , richTextBox1.Text
+                , double.Parse(tb_salary.Text)
+                , double.Parse(tb_reword.Text)
+                , double.Parse(tb_san.Text)
+                , double.Parse(tb_render.Text)
+                );
+            print.ShowDialog();
+        }
+
         private void bt_Save_Click(object sender, EventArgs e)
         {
-            
+            Save();
+        }
 
+        private void Save()
+        {
             // اضافة تعامل موظف
             Ezzat.ExecutedNoneQuery("insertEmployee_Transaction",
-                new SqlParameter("@Employee_ID",Employee_ID),
+                new SqlParameter("@Employee_ID", Employee_ID),
                 new SqlParameter("@Month", label12.Text),
                 new SqlParameter("@Money", double.Parse(tb_after.Text)),
                 new SqlParameter("@Report_Notes", richTextBox1.Text),
                 new SqlParameter("@Report_Date", DateTime.Parse(DateTime.Now.ToString())),
-                new SqlParameter("@Report_Type","قبض الشهر")
+                new SqlParameter("@Report_Type", "قبض الشهر")
                 );
 
 
@@ -81,7 +104,7 @@ namespace El_Khalil
 
             MessageBox.Show(Shared_Class.Successful_Message);
 
-            bt_Save.Enabled = false;
+            button2.Enabled = false;
         }
 
         private void Edit_Account()
