@@ -224,5 +224,45 @@ namespace El_Khalil
             //e.Graphics.DrawRectangle(Pens.Blue, e.ClipRectangle.Left, e.ClipRectangle.Top, e.ClipRectangle.Width - 1, e.ClipRectangle.Height - 1);
             base.OnPaint(e);
         }
+
+        private void cb_kilo_Click(object sender, EventArgs e)
+        {
+            if (Bill_Type.ToString().Contains("تحويل بنكى") || (Bill_Type.ToString().Contains("تسديد") || Bill_Type.ToString().Contains("خصم")))
+            {
+                Supplier_Payback_Print report = new Supplier_Payback_Print
+                    (textBox3.Text, richTextBox1.Text, double.Parse(tb_old.Text), double.Parse(tb_pay.Text), int.Parse(label21.Text), Bill_Type.ToString());
+                report.ShowDialog();
+            }
+        }
+
+        private void bt_Print_Click(object sender, EventArgs e)
+        {
+            if (Bill_Type.ToString().Contains("شراء"))
+            {
+                Supplier_Purchasing_Print print = new Supplier_Purchasing_Print(int.Parse(label2.Text),
+                                                                 tb_owner.Text,
+                                                                 richTextBox1.Text,
+                                                                 double.Parse(tb_BillTotal.Text),
+                                                                 double.Parse(tb_Discount.Text),
+                                                                 double.Parse(tb_OldMoney.Text),
+                                                                 double.Parse(tb_payment.Text),
+                                                                 true
+                                                                 );
+                print.ShowDialog();
+            }
+            else if (Bill_Type.ToString().Contains("مرتجع"))
+            {
+                Supplier_Purchasing_Print print = new Supplier_Purchasing_Print(int.Parse(label2.Text),
+                                                                 tb_owner.Text,
+                                                                 richTextBox1.Text,
+                                                                 double.Parse(tb_BillTotal.Text),
+                                                                 double.Parse(tb_Discount.Text),
+                                                                 double.Parse(tb_OldMoney.Text),
+                                                                 double.Parse(tb_payment.Text),
+                                                                 false
+                                                                 );
+                print.ShowDialog();
+            }
+        }
     }
 }

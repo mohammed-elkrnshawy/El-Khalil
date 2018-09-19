@@ -61,10 +61,9 @@ namespace El_Khalil
                 print.ShowDialog();
             }
         }
-
         private void cb_kilo_Click(object sender, EventArgs e)
         {
-            if (Bill_Type.ToString().Contains("تحويل بنكى") || (Bill_Type.ToString().Contains("تسديد")|| Bill_Type.ToString().Contains("خصم")))
+            if (Bill_Type.ToString().Contains("تحويل بنكى") || (Bill_Type.ToString().Contains("تسديد") || Bill_Type.ToString().Contains("خصم")))
             {
                 Customrt_Payback_Print report = new Customrt_Payback_Print
                     (textBox3.Text, richTextBox1.Text, double.Parse(tb_old.Text), double.Parse(tb_pay.Text), int.Parse(label21.Text), Bill_Type.ToString());

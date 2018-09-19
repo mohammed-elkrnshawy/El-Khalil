@@ -32,6 +32,10 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tb_number = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.tb_owner = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.bt_Print = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,10 +59,6 @@
             this.tb_BillTotal = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tb_Discount = new System.Windows.Forms.TextBox();
-            this.tb_owner = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tb_number = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.tb_after = new System.Windows.Forms.TextBox();
@@ -155,6 +155,53 @@
             this.panel2.Size = new System.Drawing.Size(1054, 254);
             this.panel2.TabIndex = 0;
             // 
+            // tb_number
+            // 
+            this.tb_number.Enabled = false;
+            this.tb_number.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.tb_number.Location = new System.Drawing.Point(679, 176);
+            this.tb_number.Name = "tb_number";
+            this.tb_number.ReadOnly = true;
+            this.tb_number.Size = new System.Drawing.Size(229, 24);
+            this.tb_number.TabIndex = 66;
+            this.tb_number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label15
+            // 
+            this.label15.BackColor = System.Drawing.Color.White;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(927, 174);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(93, 27);
+            this.label15.TabIndex = 65;
+            this.label15.Text = "رقم الفاتورة";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tb_owner
+            // 
+            this.tb_owner.Enabled = false;
+            this.tb_owner.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.tb_owner.Location = new System.Drawing.Point(24, 12);
+            this.tb_owner.Name = "tb_owner";
+            this.tb_owner.ReadOnly = true;
+            this.tb_owner.Size = new System.Drawing.Size(229, 24);
+            this.tb_owner.TabIndex = 64;
+            this.tb_owner.Text = "0.00";
+            this.tb_owner.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(292, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(101, 27);
+            this.label4.TabIndex = 63;
+            this.label4.Text = "اسم المورد";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // bt_Print
             // 
             this.bt_Print.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -170,6 +217,7 @@
             this.bt_Print.TabIndex = 39;
             this.bt_Print.Text = "طباعة";
             this.bt_Print.UseVisualStyleBackColor = false;
+            this.bt_Print.Click += new System.EventHandler(this.bt_Print_Click);
             // 
             // textBox2
             // 
@@ -449,53 +497,6 @@
             this.tb_Discount.Text = "0.00";
             this.tb_Discount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // tb_owner
-            // 
-            this.tb_owner.Enabled = false;
-            this.tb_owner.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.tb_owner.Location = new System.Drawing.Point(24, 12);
-            this.tb_owner.Name = "tb_owner";
-            this.tb_owner.ReadOnly = true;
-            this.tb_owner.Size = new System.Drawing.Size(229, 24);
-            this.tb_owner.TabIndex = 64;
-            this.tb_owner.Text = "0.00";
-            this.tb_owner.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(292, 12);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 27);
-            this.label4.TabIndex = 63;
-            this.label4.Text = "اسم المورد";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tb_number
-            // 
-            this.tb_number.Enabled = false;
-            this.tb_number.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.tb_number.Location = new System.Drawing.Point(679, 176);
-            this.tb_number.Name = "tb_number";
-            this.tb_number.ReadOnly = true;
-            this.tb_number.Size = new System.Drawing.Size(229, 24);
-            this.tb_number.TabIndex = 66;
-            this.tb_number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label15
-            // 
-            this.label15.BackColor = System.Drawing.Color.White;
-            this.label15.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(927, 174);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(93, 27);
-            this.label15.TabIndex = 65;
-            this.label15.Text = "رقم الفاتورة";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.panel5);
@@ -503,7 +504,7 @@
             this.panel4.Location = new System.Drawing.Point(12, 12);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1060, 526);
-            this.panel4.TabIndex = 7;
+            this.panel4.TabIndex = 8;
             // 
             // panel5
             // 
@@ -586,6 +587,7 @@
             this.cb_kilo.TabIndex = 84;
             this.cb_kilo.Text = "طباعة";
             this.cb_kilo.UseVisualStyleBackColor = false;
+            this.cb_kilo.Click += new System.EventHandler(this.cb_kilo_Click);
             // 
             // tb_pay
             // 
@@ -634,7 +636,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(725, 463);
             this.panel6.TabIndex = 68;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // label24
             // 

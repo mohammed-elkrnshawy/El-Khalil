@@ -571,6 +571,7 @@
             this.cb_kilo.TabIndex = 84;
             this.cb_kilo.Text = "طباعة";
             this.cb_kilo.UseVisualStyleBackColor = false;
+            this.cb_kilo.Click += new System.EventHandler(this.cb_kilo_Click);
             // 
             // tb_pay
             // 
@@ -751,6 +752,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Customer_BillDetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "عرض تفاصيل البيان";
             this.Load += new System.EventHandler(this.Customer_BillDetails_Load);
             this.panel2.ResumeLayout(false);
