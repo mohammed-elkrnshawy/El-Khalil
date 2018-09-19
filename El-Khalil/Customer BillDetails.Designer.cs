@@ -150,7 +150,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 27);
             this.label4.TabIndex = 63;
-            this.label4.Text = "اسم المورد";
+            this.label4.Text = "اسم العميل";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bt_Print
@@ -168,6 +168,7 @@
             this.bt_Print.TabIndex = 39;
             this.bt_Print.Text = "طباعة";
             this.bt_Print.UseVisualStyleBackColor = false;
+            this.bt_Print.Click += new System.EventHandler(this.bt_Print_Click);
             // 
             // textBox2
             // 
@@ -487,7 +488,7 @@
             this.panel4.Location = new System.Drawing.Point(12, 12);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1060, 526);
-            this.panel4.TabIndex = 13;
+            this.panel4.TabIndex = 16;
             // 
             // panel5
             // 
@@ -680,7 +681,7 @@
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(117, 27);
             this.label22.TabIndex = 85;
-            this.label22.Text = "اسم المورد";
+            this.label22.Text = "اسم العميل";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label17

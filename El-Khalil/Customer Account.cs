@@ -119,11 +119,19 @@ namespace El_Khalil
         {
             if (dataGridView1.CurrentCell == dataGridView1.CurrentRow.Cells[7])
             {
-                Customer_BillDetails BillDetails = new Customer_BillDetails(int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString())
-                                                                             , dataGridView1.CurrentRow.Cells[6].Value
-                                                                             , dataGridView1.CurrentRow.Cells[5].Value
-                                                                             );
-                BillDetails.ShowDialog();
+                if(dataGridView1.CurrentRow.Cells[6].Value.ToString() == "تحويل الى مورد")
+                {
+                    MessageBox.Show("لا يمكن عرض التفاصيل");
+                }
+                else
+                {
+                    Customer_BillDetails BillDetails = new Customer_BillDetails(int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString())
+                                                                            , dataGridView1.CurrentRow.Cells[6].Value
+                                                                            , dataGridView1.CurrentRow.Cells[5].Value
+                                                                            );
+                    BillDetails.ShowDialog();
+                }
+               
             }
         }
 

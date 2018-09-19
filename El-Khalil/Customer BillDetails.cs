@@ -15,13 +15,13 @@ namespace El_Khalil
     {
         DataSet dataSet;
         private int Bill_ID;
-        private object Bill_Type,Bill_Details;
-        public Customer_BillDetails(int Bill_ID, object Bill_Type,object Bill_Details)
+        private object Bill_Type, Bill_Details;
+        public Customer_BillDetails(int Bill_ID, object Bill_Type, object Bill_Details)
         {
             InitializeComponent();
             this.Bill_ID = Bill_ID;
             this.Bill_Type = Bill_Type;
-            this.Bill_Details =Bill_Details;
+            this.Bill_Details = Bill_Details;
         }
         private void panel6_Paint(object sender, PaintEventArgs e)
         {
@@ -30,6 +30,46 @@ namespace El_Khalil
             //Without rounded corners
             //e.Graphics.DrawRectangle(Pens.Blue, e.ClipRectangle.Left, e.ClipRectangle.Top, e.ClipRectangle.Width - 1, e.ClipRectangle.Height - 1);
             base.OnPaint(e);
+        }
+
+        private void bt_Print_Click(object sender, EventArgs e)
+        {
+            if (Bill_Type.ToString().Contains("بيع"))
+            {
+                Customer_Purcahsing_Print print = new Customer_Purcahsing_Print(int.Parse(label2.Text),
+                                                                 tb_owner.Text,
+                                                                 richTextBox1.Text,
+                                                                 double.Parse(tb_BillTotal.Text),
+                                                                 double.Parse(tb_Discount.Text),
+                                                                 double.Parse(tb_OldMoney.Text),
+                                                                 double.Parse(tb_payment.Text),
+                                                                 false
+                                                                 );
+                print.ShowDialog();
+            }
+            else if (Bill_Type.ToString().Contains("مرتجع"))
+            {
+                Customer_Purcahsing_Print print = new Customer_Purcahsing_Print(int.Parse(label2.Text),
+                                                                 tb_owner.Text,
+                                                                 richTextBox1.Text,
+                                                                 double.Parse(tb_BillTotal.Text),
+                                                                 double.Parse(tb_Discount.Text),
+                                                                 double.Parse(tb_OldMoney.Text),
+                                                                 double.Parse(tb_payment.Text),
+                                                                 true
+                                                                 );
+                print.ShowDialog();
+            }
+        }
+
+        private void cb_kilo_Click(object sender, EventArgs e)
+        {
+            if (Bill_Type.ToString().Contains("تحويل بنكى") || (Bill_Type.ToString().Contains("تسديد")|| Bill_Type.ToString().Contains("خصم")))
+            {
+                Customrt_Payback_Print report = new Customrt_Payback_Print
+                    (textBox3.Text, richTextBox1.Text, double.Parse(tb_old.Text), double.Parse(tb_pay.Text), int.Parse(label21.Text), Bill_Type.ToString());
+                report.ShowDialog();
+            }
         }
 
         private void Customer_BillDetails_Load(object sender, EventArgs e)
@@ -83,6 +123,8 @@ namespace El_Khalil
                      new SqlParameter("@Bill_Type", true)))
                 {
                     dataGridView1.DataSource = dataSet.Tables["X"];
+                    dataGridView1.Columns[7].Visible = false;
+                    dataGridView1.Columns[8].Visible = false;
                 }
 
                 SqlConnection con;
