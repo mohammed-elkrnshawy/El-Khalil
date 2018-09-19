@@ -49,36 +49,36 @@ namespace El_Khalil
         {
 
 
-           
-                SqlConnection con;
 
-                SqlDataReader dataReader = Ezzat.GetDataReader("_Customer_SupplierTransaction_During", out con,
-                new SqlParameter("@Day", DateTime.Parse(dateTimePicker1.Value.ToString())),
-                new SqlParameter("@Day2", DateTime.Parse(dateTimePicker2.Value.ToString())),
-                new SqlParameter("@Supplier_ID", combo_Customer.SelectedValue));
+            SqlConnection con;
+
+            SqlDataReader dataReader = Ezzat.GetDataReader("_Customer_SupplierTransaction_During", out con,
+            new SqlParameter("@Day", DateTime.Parse(dateTimePicker1.Value.ToString())),
+            new SqlParameter("@Day2", DateTime.Parse(dateTimePicker2.Value.ToString())),
+            new SqlParameter("@Supplier_ID", combo_Customer.SelectedValue));
 
 
-                if (dataReader.HasRows)
+            if (dataReader.HasRows)
+            {
+                while (dataReader.Read())
                 {
-                    while (dataReader.Read())
-                    {
-                        dataGridView1.Rows.Add();
-                        dataGridView1[0, dataGridView1.Rows.Count - 1].Value = dataReader[0].ToString();
-                        dataGridView1[1, dataGridView1.Rows.Count - 1].Value = dataReader[1].ToString();
-                        dataGridView1[2, dataGridView1.Rows.Count - 1].Value = dataReader[2].ToString();
-                        dataGridView1[3, dataGridView1.Rows.Count - 1].Value = (double.Parse(dataReader[2].ToString()) - double.Parse(dataReader[1].ToString()));
-                        dataGridView1[4, dataGridView1.Rows.Count - 1].Value = dataReader[3].ToString();
-                        dataGridView1[5, dataGridView1.Rows.Count - 1].Value = dataReader[5].ToString();
-                        dataGridView1[6, dataGridView1.Rows.Count - 1].Value = dataReader[4].ToString();
-                    }
+                    dataGridView1.Rows.Add();
+                    dataGridView1[0, dataGridView1.Rows.Count - 1].Value = dataReader[0].ToString();
+                    dataGridView1[1, dataGridView1.Rows.Count - 1].Value = dataReader[1].ToString();
+                    dataGridView1[2, dataGridView1.Rows.Count - 1].Value = dataReader[2].ToString();
+                    dataGridView1[3, dataGridView1.Rows.Count - 1].Value = (double.Parse(dataReader[2].ToString()) - double.Parse(dataReader[1].ToString()));
+                    dataGridView1[4, dataGridView1.Rows.Count - 1].Value = dataReader[3].ToString();
+                    dataGridView1[5, dataGridView1.Rows.Count - 1].Value = dataReader[5].ToString();
+                    dataGridView1[6, dataGridView1.Rows.Count - 1].Value = dataReader[4].ToString();
                 }
+            }
 
-                con.Close();
+            con.Close();
 
 
-           
 
-            
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -91,7 +91,7 @@ namespace El_Khalil
                 object o = Ezzat.ExecutedScalar("selectTotalMoney_Customer", new SqlParameter("@Supplier_ID", (int)combo_Customer.SelectedValue));
                 if ((o + "").Length == 0) o = 0;
                 label11.Text = String.Format("{0:0.00}", o);
-                o = Ezzat.ExecutedScalar("customer_Start", new SqlParameter("@Customer_ID", (int)combo_Customer.SelectedValue),new SqlParameter("@Day",dateTimePicker1.Value));
+                o = Ezzat.ExecutedScalar("customer_Start", new SqlParameter("@Customer_ID", (int)combo_Customer.SelectedValue), new SqlParameter("@Day", dateTimePicker1.Value));
                 if ((o + "").Length == 0) o = 0;
                 label5.Text = String.Format("{0:0.00}", o);
                 o = Ezzat.ExecutedScalar("customer_End", new SqlParameter("@Customer_ID", (int)combo_Customer.SelectedValue), new SqlParameter("@Day", dateTimePicker2.Value));
@@ -117,11 +117,11 @@ namespace El_Khalil
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(dataGridView1.CurrentCell==dataGridView1.CurrentRow.Cells[7])
+            if (dataGridView1.CurrentCell == dataGridView1.CurrentRow.Cells[7])
             {
                 Customer_BillDetails BillDetails = new Customer_BillDetails(int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString())
                                                                              , dataGridView1.CurrentRow.Cells[6].Value
-                                                                             ,dataGridView1.CurrentRow.Cells[5].Value
+                                                                             , dataGridView1.CurrentRow.Cells[5].Value
                                                                              );
                 BillDetails.ShowDialog();
             }
@@ -129,16 +129,19 @@ namespace El_Khalil
 
         private void bt_Print_Click(object sender, EventArgs e)
         {
-            Customer_Account_Print print = new Customer_Account_Print(
-                dateTimePicker1.Value,
-                dateTimePicker2.Value,
-                (int)combo_Customer.SelectedValue,
-                double.Parse(label5.Text),
-                double.Parse(label1.Text),
-                double.Parse(label11.Text),
-                combo_Customer.Text
-                );
-            print.ShowDialog();
+            if (combo_Customer.SelectedIndex >= 0)
+            {
+                Customer_Account_Print print = new Customer_Account_Print(
+                    dateTimePicker1.Value,
+                    dateTimePicker2.Value,
+                    (int)combo_Customer.SelectedValue,
+                    double.Parse(label5.Text),
+                    double.Parse(label1.Text),
+                    double.Parse(label11.Text),
+                    combo_Customer.Text
+                    );
+                print.ShowDialog();
+            }
         }
     }
 }

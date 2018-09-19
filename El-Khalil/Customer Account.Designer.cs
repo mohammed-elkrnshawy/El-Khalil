@@ -176,10 +176,10 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.bt_Print);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.pn_Return);
-            this.panel2.Controls.Add(this.bt_Print);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(88, 42);
             this.panel2.Name = "panel2";
@@ -278,7 +278,7 @@
             this.panel6.Controls.Add(this.label11);
             this.panel6.Controls.Add(this.label12);
             this.panel6.Controls.Add(this.panel7);
-            this.panel6.Location = new System.Drawing.Point(127, 518);
+            this.panel6.Location = new System.Drawing.Point(131, 517);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(119, 85);
             this.panel6.TabIndex = 63;
@@ -500,11 +500,15 @@
             this.bt_Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Print.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.bt_Print.ForeColor = System.Drawing.Color.White;
-            this.bt_Print.Location = new System.Drawing.Point(6, 531);
+            this.bt_Print.Image = global::El_Khalil.Properties.Resources.print_black_printer_tool_symbol;
+            this.bt_Print.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_Print.ImageKey = "(none)";
+            this.bt_Print.Location = new System.Drawing.Point(20, 559);
             this.bt_Print.Name = "bt_Print";
-            this.bt_Print.Size = new System.Drawing.Size(99, 58);
+            this.bt_Print.Size = new System.Drawing.Size(105, 43);
             this.bt_Print.TabIndex = 38;
-            this.bt_Print.Text = "طباعة تقارير";
+            this.bt_Print.Text = "طباعه";
+            this.bt_Print.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.bt_Print.UseVisualStyleBackColor = false;
             this.bt_Print.Click += new System.EventHandler(this.bt_Print_Click);
             // 
