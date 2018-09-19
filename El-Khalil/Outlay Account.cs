@@ -75,5 +75,11 @@ namespace El_Khalil
                 dataGridView1.DataSource = dataSet.Tables["x"];
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Outlay_Account_Print print = new Outlay_Account_Print(dateTimePicker1.Value,dateTimePicker2.Value);
+            print.ShowDialog();
+        }
     }
 }

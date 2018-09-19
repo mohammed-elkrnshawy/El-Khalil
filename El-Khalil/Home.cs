@@ -14,11 +14,14 @@ namespace El_Khalil
 {
     public partial class Home : Form
     {
-        int i = 1;
+        string name;
+        bool flag;
         Image closeImage, closeImageAct;
-        public Home()
+        public Home(string name,bool flag)
         {
             InitializeComponent();
+            this.name = name;
+            this.flag = flag;
         }
 
         private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
@@ -78,6 +81,12 @@ namespace El_Khalil
 
         private void Home_Load(object sender, EventArgs e)
         {
+
+            toolStripStatusLabel1.Text = "اسم المستخدم : " + name;
+            if (flag)
+                toolStripStatusLabel3.Text = "الحالة : ادمن للنظام";
+            else
+                toolStripStatusLabel3.Text = "الحالة : مستخدم للنظام";
 
             StartQuantity();
             StartBankMoney();
@@ -640,6 +649,11 @@ namespace El_Khalil
         {
             Show_Limit show = new Show_Limit(true);
             show.ShowDialog();
+        }
+
+        private void بياناسعاربيعToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("جزاءات الموظفين", new Employee_Sanctions());
         }
 
         private void Add_Tab(string Name,Form form)

@@ -290,6 +290,18 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="More.cs" />
+    <Compile Include="Outlay Account Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outlay Account Print.Designer.cs">
+      <DependentUpon>Outlay Account Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outlay Account Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Outlay Account Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Outlay Account.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -639,6 +651,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outlay Account Print.resx">
+      <DependentUpon>Outlay Account Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outlay Account Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Outlay Account Report.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Outlay Account.resx">
       <DependentUpon>Outlay Account.cs</DependentUpon>

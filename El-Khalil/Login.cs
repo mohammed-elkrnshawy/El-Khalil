@@ -39,7 +39,7 @@ namespace El_Khalil
 
         private void OpenHome()
         {
-            Home home = new Home();
+            Home home = new Home(textBox1.Text,radioButton1.Checked);
             home.ShowDialog();
             this.Close();
         }
