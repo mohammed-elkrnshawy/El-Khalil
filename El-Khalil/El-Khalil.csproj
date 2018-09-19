@@ -270,6 +270,18 @@
     <Compile Include="Employee Salaries.Designer.cs">
       <DependentUpon>Employee Salaries.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employee Sanctions Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee Sanctions Print.Designer.cs">
+      <DependentUpon>Employee Sanctions Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee Sanctions Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Employee Sanctions Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Employee Sanctions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -642,6 +654,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Employee Salaries.resx">
       <DependentUpon>Employee Salaries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee Sanctions Print.resx">
+      <DependentUpon>Employee Sanctions Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee Sanctions Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Employee Sanctions Report.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee Sanctions.resx">
       <DependentUpon>Employee Sanctions.cs</DependentUpon>

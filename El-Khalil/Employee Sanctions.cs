@@ -68,6 +68,7 @@ namespace El_Khalil
                     if(IsFinish()&& IsValid())
                     {
                         Save();
+                        RefreshForm();
                     }
                 }
                 else
@@ -145,7 +146,7 @@ namespace El_Khalil
             }
 
             MessageBox.Show(Shared_Class.Successful_Message);
-            RefreshForm();
+           
         }
 
         private string checkType()
@@ -164,6 +165,41 @@ namespace El_Khalil
             {
                 ReadData();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (combo_Employee.SelectedIndex >= 0 && tb_Money.Text != "")
+            {
+                if (IsExsisted())
+                {
+                    if (IsFinish() && IsValid())
+                    {
+                        Save();
+                        Printer();
+                        RefreshForm();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("هذا الموظف غير موجود ف السجلات هذا الشهر");
+                }
+            }
+            else
+                MessageBox.Show("من فضلك راجع البيانات");
+        }
+
+        private void Printer()
+        {
+            Employee_Sanctions_Print print = new Employee_Sanctions_Print(
+                                label2.Text,
+                                DateTime.Parse(label12.Text),
+                                combo_Employee.Text,
+                                richTextBox1.Text,
+                                double.Parse(tb_Money.Text),
+                                type()
+                );
+            print.ShowDialog();
         }
 
         private bool IsExsisted()
@@ -230,6 +266,16 @@ namespace El_Khalil
             }
             else
                 return true;
+        }
+
+        private string type()
+        {
+            if (radioButton1.Checked)
+                return radioButton1.Text;
+            else if (radioButton2.Checked)
+                return radioButton2.Text;
+            else
+                return radioButton3.Text;
         }
     }
 }

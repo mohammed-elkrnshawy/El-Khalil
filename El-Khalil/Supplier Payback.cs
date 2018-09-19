@@ -452,5 +452,10 @@ namespace El_Khalil
                 );
             print.ShowDialog();
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Shared_Class.KeyPress(textBox1, e);
+        }
     }
 }
