@@ -662,6 +662,12 @@ namespace El_Khalil
             product.ShowDialog();
         }
 
+        private void الحساباتToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Owner_Account account = new Owner_Account();
+            account.ShowDialog();
+        }
+
         private void Add_Tab(string Name,Form form)
         {
             TabPage tp = new TabPage(Name);

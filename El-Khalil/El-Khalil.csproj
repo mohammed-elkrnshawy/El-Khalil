@@ -374,6 +374,12 @@
     <Compile Include="Outlay.Designer.cs">
       <DependentUpon>Outlay.cs</DependentUpon>
     </Compile>
+    <Compile Include="Owner Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Owner Account.Designer.cs">
+      <DependentUpon>Owner Account.cs</DependentUpon>
+    </Compile>
     <Compile Include="Owner IMMoney.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -753,6 +759,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Outlay.resx">
       <DependentUpon>Outlay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Owner Account.resx">
+      <DependentUpon>Owner Account.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Owner IMMoney.resx">
       <DependentUpon>Owner IMMoney.cs</DependentUpon>

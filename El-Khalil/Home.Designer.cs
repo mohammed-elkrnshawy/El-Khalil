@@ -90,11 +90,8 @@
             this.تعاملاترأسالمالToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ايداعمبالغToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ايداعميلغفالخزنةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.صرفمبلغمنالخزنةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.صرفمبالغToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.توريدبضاعةالىالمخزنToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.صرفبضاعهمنالمخزنToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ايداعمنتجاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.الحساباتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.فواتيرحدالائتمانToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.حدائتمانالعميلToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -656,7 +653,6 @@
             this.تعاملاترأسالمالToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ايداعمبالغToolStripMenuItem,
             this.صرفمبالغToolStripMenuItem,
-            this.ايداعمنتجاتToolStripMenuItem,
             this.الحساباتToolStripMenuItem});
             this.تعاملاترأسالمالToolStripMenuItem.Name = "تعاملاترأسالمالToolStripMenuItem";
             this.تعاملاترأسالمالToolStripMenuItem.Size = new System.Drawing.Size(110, 23);
@@ -665,8 +661,7 @@
             // ايداعمبالغToolStripMenuItem
             // 
             this.ايداعمبالغToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ايداعميلغفالخزنةToolStripMenuItem,
-            this.صرفمبلغمنالخزنةToolStripMenuItem});
+            this.ايداعميلغفالخزنةToolStripMenuItem});
             this.ايداعمبالغToolStripMenuItem.Name = "ايداعمبالغToolStripMenuItem";
             this.ايداعمبالغToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ايداعمبالغToolStripMenuItem.Text = "الاموال";
@@ -674,21 +669,14 @@
             // ايداعميلغفالخزنةToolStripMenuItem
             // 
             this.ايداعميلغفالخزنةToolStripMenuItem.Name = "ايداعميلغفالخزنةToolStripMenuItem";
-            this.ايداعميلغفالخزنةToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.ايداعميلغفالخزنةToolStripMenuItem.Text = "ايداع ميلغ ف الخزنة";
+            this.ايداعميلغفالخزنةToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ايداعميلغفالخزنةToolStripMenuItem.Text = "ايداع و صرف مبالغ";
             this.ايداعميلغفالخزنةToolStripMenuItem.Click += new System.EventHandler(this.ايداعميلغفالخزنةToolStripMenuItem_Click);
-            // 
-            // صرفمبلغمنالخزنةToolStripMenuItem
-            // 
-            this.صرفمبلغمنالخزنةToolStripMenuItem.Name = "صرفمبلغمنالخزنةToolStripMenuItem";
-            this.صرفمبلغمنالخزنةToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.صرفمبلغمنالخزنةToolStripMenuItem.Text = "صرف مبلغ من الخزنة";
             // 
             // صرفمبالغToolStripMenuItem
             // 
             this.صرفمبالغToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.توريدبضاعةالىالمخزنToolStripMenuItem,
-            this.صرفبضاعهمنالمخزنToolStripMenuItem});
+            this.توريدبضاعةالىالمخزنToolStripMenuItem});
             this.صرفمبالغToolStripMenuItem.Name = "صرفمبالغToolStripMenuItem";
             this.صرفمبالغToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.صرفمبالغToolStripMenuItem.Text = "المنتجات";
@@ -696,27 +684,16 @@
             // توريدبضاعةالىالمخزنToolStripMenuItem
             // 
             this.توريدبضاعةالىالمخزنToolStripMenuItem.Name = "توريدبضاعةالىالمخزنToolStripMenuItem";
-            this.توريدبضاعةالىالمخزنToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.توريدبضاعةالىالمخزنToolStripMenuItem.Text = "توريد بضاعة الى المخزن";
+            this.توريدبضاعةالىالمخزنToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.توريدبضاعةالىالمخزنToolStripMenuItem.Text = "توريد و صرف اصناف";
             this.توريدبضاعةالىالمخزنToolStripMenuItem.Click += new System.EventHandler(this.توريدبضاعةالىالمخزنToolStripMenuItem_Click);
-            // 
-            // صرفبضاعهمنالمخزنToolStripMenuItem
-            // 
-            this.صرفبضاعهمنالمخزنToolStripMenuItem.Name = "صرفبضاعهمنالمخزنToolStripMenuItem";
-            this.صرفبضاعهمنالمخزنToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.صرفبضاعهمنالمخزنToolStripMenuItem.Text = "صرف بضاعه من المخزن";
-            // 
-            // ايداعمنتجاتToolStripMenuItem
-            // 
-            this.ايداعمنتجاتToolStripMenuItem.Name = "ايداعمنتجاتToolStripMenuItem";
-            this.ايداعمنتجاتToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ايداعمنتجاتToolStripMenuItem.Text = "ايداع منتجات";
             // 
             // الحساباتToolStripMenuItem
             // 
             this.الحساباتToolStripMenuItem.Name = "الحساباتToolStripMenuItem";
             this.الحساباتToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.الحساباتToolStripMenuItem.Text = "الحسابات";
+            this.الحساباتToolStripMenuItem.Click += new System.EventHandler(this.الحساباتToolStripMenuItem_Click);
             // 
             // فواتيرحدالائتمانToolStripMenuItem1
             // 
@@ -1725,11 +1702,8 @@
         private System.Windows.Forms.ToolStripMenuItem تعاملاترأسالمالToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ايداعمبالغToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem صرفمبالغToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ايداعمنتجاتToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ايداعميلغفالخزنةToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem توريدبضاعةالىالمخزنToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem صرفبضاعهمنالمخزنToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem صرفمبلغمنالخزنةToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem الحساباتToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem فواتيرحدالائتمانToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem حدائتمانالعميلToolStripMenuItem;
