@@ -656,6 +656,12 @@ namespace El_Khalil
             Add_Tab("جزاءات الموظفين", new Employee_Sanctions());
         }
 
+        private void توريدبضاعةالىالمخزنToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Owner_IMProduct product = new Owner_IMProduct();
+            product.ShowDialog();
+        }
+
         private void Add_Tab(string Name,Form form)
         {
             TabPage tp = new TabPage(Name);

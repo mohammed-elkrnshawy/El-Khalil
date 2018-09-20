@@ -380,6 +380,12 @@
     <Compile Include="Owner IMMoney.Designer.cs">
       <DependentUpon>Owner IMMoney.cs</DependentUpon>
     </Compile>
+    <Compile Include="Owner IMProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Owner IMProduct.Designer.cs">
+      <DependentUpon>Owner IMProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Product Account.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -750,6 +756,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Owner IMMoney.resx">
       <DependentUpon>Owner IMMoney.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Owner IMProduct.resx">
+      <DependentUpon>Owner IMProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Product Account.resx">
       <DependentUpon>Product Account.cs</DependentUpon>

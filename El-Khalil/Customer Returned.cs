@@ -106,7 +106,7 @@ namespace El_Khalil
         {
 
             SqlConnection con;
-            SqlDataReader dr = Ezzat.GetDataReader("selectSpasificProduct", out con, new SqlParameter("@Product_ID", ID));
+            SqlDataReader dr = Ezzat.GetDataReader("selectSpasificProduct2", out con, new SqlParameter("@Product_ID", ID));
 
             if (dr.HasRows)
             {

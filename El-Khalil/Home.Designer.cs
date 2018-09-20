@@ -234,7 +234,7 @@
             // بياناسعاربيعToolStripMenuItem
             // 
             this.بياناسعاربيعToolStripMenuItem.Name = "بياناسعاربيعToolStripMenuItem";
-            this.بياناسعاربيعToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.بياناسعاربيعToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
             this.بياناسعاربيعToolStripMenuItem.Text = "بيان موظفين";
             this.بياناسعاربيعToolStripMenuItem.Click += new System.EventHandler(this.بياناسعاربيعToolStripMenuItem_Click);
             // 
@@ -668,7 +668,7 @@
             this.ايداعميلغفالخزنةToolStripMenuItem,
             this.صرفمبلغمنالخزنةToolStripMenuItem});
             this.ايداعمبالغToolStripMenuItem.Name = "ايداعمبالغToolStripMenuItem";
-            this.ايداعمبالغToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.ايداعمبالغToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ايداعمبالغToolStripMenuItem.Text = "الاموال";
             // 
             // ايداعميلغفالخزنةToolStripMenuItem
@@ -690,7 +690,7 @@
             this.توريدبضاعةالىالمخزنToolStripMenuItem,
             this.صرفبضاعهمنالمخزنToolStripMenuItem});
             this.صرفمبالغToolStripMenuItem.Name = "صرفمبالغToolStripMenuItem";
-            this.صرفمبالغToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.صرفمبالغToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.صرفمبالغToolStripMenuItem.Text = "المنتجات";
             // 
             // توريدبضاعةالىالمخزنToolStripMenuItem
@@ -698,6 +698,7 @@
             this.توريدبضاعةالىالمخزنToolStripMenuItem.Name = "توريدبضاعةالىالمخزنToolStripMenuItem";
             this.توريدبضاعةالىالمخزنToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.توريدبضاعةالىالمخزنToolStripMenuItem.Text = "توريد بضاعة الى المخزن";
+            this.توريدبضاعةالىالمخزنToolStripMenuItem.Click += new System.EventHandler(this.توريدبضاعةالىالمخزنToolStripMenuItem_Click);
             // 
             // صرفبضاعهمنالمخزنToolStripMenuItem
             // 
@@ -708,13 +709,13 @@
             // ايداعمنتجاتToolStripMenuItem
             // 
             this.ايداعمنتجاتToolStripMenuItem.Name = "ايداعمنتجاتToolStripMenuItem";
-            this.ايداعمنتجاتToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.ايداعمنتجاتToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ايداعمنتجاتToolStripMenuItem.Text = "ايداع منتجات";
             // 
             // الحساباتToolStripMenuItem
             // 
             this.الحساباتToolStripMenuItem.Name = "الحساباتToolStripMenuItem";
-            this.الحساباتToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.الحساباتToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.الحساباتToolStripMenuItem.Text = "الحسابات";
             // 
             // فواتيرحدالائتمانToolStripMenuItem1
