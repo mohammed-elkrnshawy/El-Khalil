@@ -153,7 +153,26 @@ namespace El_Khalil
                     ShowDetails_Bank_Customer showDetails = new ShowDetails_Bank_Customer(dataGridView1.CurrentRow.Cells[0].Value);
                     showDetails.ShowDialog();
                 }
+                else if (dataGridView1.CurrentRow.Cells[7].Value.ToString() == "ايراد من بيع")
+                {
+                    Show_Details_Purchasing_Customer showDetails = new Show_Details_Purchasing_Customer(dataGridView1.CurrentRow.Cells[0].Value,false);
+                    showDetails.ShowDialog();
+                }
+                else if (dataGridView1.CurrentRow.Cells[7].Value.ToString() == "دفع من شراء")
+                {
+                    ShowDetails_Purchasing_Supplier showDetails = new ShowDetails_Purchasing_Supplier(dataGridView1.CurrentRow.Cells[0].Value, true);
+                    showDetails.ShowDialog();
+                }
+                else if (dataGridView1.CurrentRow.Cells[7].Value.ToString() == "ايراد")
+                {
+                  
+                }
             }
+        }
+
+        private void Bank_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

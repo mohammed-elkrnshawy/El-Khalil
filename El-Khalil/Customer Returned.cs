@@ -55,10 +55,8 @@ namespace El_Khalil
 
             object o = Ezzat.ExecutedScalar("selectReturning_Bill_ID_Customer");
 
-            if (o == null)
-                label2.Text = "1";
-            else
-                label2.Text = (((int)o) + 1) + "";
+
+            label2.Text = o + "";
 
             panel7.Visible=panel5.Visible= tb_payment.Visible = label10.Visible = false;
             dataGridView1.Rows.Clear();

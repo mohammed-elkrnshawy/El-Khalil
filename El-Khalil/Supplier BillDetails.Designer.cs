@@ -501,7 +501,7 @@
             // 
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.panel6);
-            this.panel4.Location = new System.Drawing.Point(12, 12);
+            this.panel4.Location = new System.Drawing.Point(682, 544);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1060, 526);
             this.panel4.TabIndex = 8;

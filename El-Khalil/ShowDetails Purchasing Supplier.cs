@@ -11,24 +11,23 @@ using System.Windows.Forms;
 
 namespace El_Khalil
 {
-    public partial class Show_Details_Purchasing_Customer : Form
+    public partial class ShowDetails_Purchasing_Supplier : Form
     {
-        object id;
-        bool Bill_Type;
         private DataSet dataSet;
-
-        public Show_Details_Purchasing_Customer(object ID,bool bt)
+        private object id;
+        private bool Ty;
+        public ShowDetails_Purchasing_Supplier(object ID,bool ty)
         {
             InitializeComponent();
             id = ID;
-            Bill_Type = bt;
+            Ty = ty;
         }
 
-        private void Show_Details_Purchasing_Customer_Load(object sender, EventArgs e)
+        private void ShowDetails_Purchasing_Supplier_Load(object sender, EventArgs e)
         {
-            using (dataSet = Ezzat.GetDataSet("select_Customer_BillDetails2", "X",
+            using (dataSet = Ezzat.GetDataSet("select_Supplier_BillDetails", "X",
                     new SqlParameter("@Bill_ID", id),
-                    new SqlParameter("@Bill_Type", false)))
+                    new SqlParameter("@Bill_Type", true)))
             {
                 dataGridView1.DataSource = dataSet.Tables["X"];
             }
@@ -36,7 +35,7 @@ namespace El_Khalil
 
             SqlConnection con;
 
-            SqlDataReader dataReader = Ezzat.GetDataReader("select_EXBillDeteils_Purchasing", out con,
+            SqlDataReader dataReader = Ezzat.GetDataReader("select_IMBillDeteils_Purchasing", out con,
             new SqlParameter("@Bill_ID", id));
 
             if (dataReader.HasRows)
@@ -53,33 +52,21 @@ namespace El_Khalil
                     tb_payment.Text = dataReader[9].ToString();
                     tb_render.Text = dataReader[10].ToString();
                     textBox1.Text = dataReader[3].ToString();
-                    textBox2.Text = dataReader[12].ToString();
+                    textBox2.Text = dataReader[11].ToString();
+                    tb_number.Text = dataReader[12].ToString();
                     tb_owner.Text = dataReader[13].ToString();
-                    richTextBox1.Text = dataReader[14].ToString();
                 }
             }
 
             con.Close();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (Bill_Type==false)
+            if (Ty)
             {
-                Customer_Purcahsing_Print print = new Customer_Purcahsing_Print(int.Parse(label2.Text),
-                                                                 tb_owner.Text,
-                                                                 richTextBox1.Text,
-                                                                 double.Parse(tb_BillTotal.Text),
-                                                                 double.Parse(tb_Discount.Text),
-                                                                 double.Parse(tb_OldMoney.Text),
-                                                                 double.Parse(tb_payment.Text),
-                                                                 false
-                                                                 );
-                print.ShowDialog();
-            }
-            else if (Bill_Type==true)
-            {
-                Customer_Purcahsing_Print print = new Customer_Purcahsing_Print(int.Parse(label2.Text),
+                Supplier_Purchasing_Print print = new Supplier_Purchasing_Print(int.Parse(label2.Text),
                                                                  tb_owner.Text,
                                                                  richTextBox1.Text,
                                                                  double.Parse(tb_BillTotal.Text),
@@ -87,6 +74,19 @@ namespace El_Khalil
                                                                  double.Parse(tb_OldMoney.Text),
                                                                  double.Parse(tb_payment.Text),
                                                                  true
+                                                                 );
+                print.ShowDialog();
+            }
+            else if (Ty==false)
+            {
+                Supplier_Purchasing_Print print = new Supplier_Purchasing_Print(int.Parse(label2.Text),
+                                                                 tb_owner.Text,
+                                                                 richTextBox1.Text,
+                                                                 double.Parse(tb_BillTotal.Text),
+                                                                 double.Parse(tb_Discount.Text),
+                                                                 double.Parse(tb_OldMoney.Text),
+                                                                 double.Parse(tb_payment.Text),
+                                                                 false
                                                                  );
                 print.ShowDialog();
             }

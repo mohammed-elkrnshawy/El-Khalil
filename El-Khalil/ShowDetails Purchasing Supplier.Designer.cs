@@ -1,6 +1,6 @@
 ﻿namespace El_Khalil
 {
-    partial class Customer_BillDetails
+    partial class ShowDetails_Purchasing_Supplier
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.tb_owner = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.bt_Print = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -58,66 +57,33 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.tb_pay = new System.Windows.Forms.TextBox();
-            this.cb_kilo = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.tb_old = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.tb_after = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel2.SuspendLayout();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tb_number = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel2
+            // button2
             // 
-            this.panel2.Controls.Add(this.richTextBox1);
-            this.panel2.Controls.Add(this.tb_owner);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.bt_Print);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.tb_OldMoney);
-            this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.tb_render);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.tb_AfterDiscount);
-            this.panel2.Controls.Add(this.tb_payment);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.tb_Total);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.tb_BillTotal);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.tb_Discount);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1054, 254);
-            this.panel2.TabIndex = 0;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(84)))), ((int)(((byte)(102)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::El_Khalil.Properties.Resources.print_black_printer_tool_symbol;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(9, 214);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(76, 37);
+            this.button2.TabIndex = 86;
+            this.button2.Text = "طباعة";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // richTextBox1
             // 
@@ -150,31 +116,14 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 27);
             this.label4.TabIndex = 63;
-            this.label4.Text = "اسم العميل";
+            this.label4.Text = "اسم المورد";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bt_Print
-            // 
-            this.bt_Print.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.bt_Print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
-            this.bt_Print.FlatAppearance.BorderSize = 0;
-            this.bt_Print.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(84)))), ((int)(((byte)(102)))));
-            this.bt_Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_Print.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.bt_Print.ForeColor = System.Drawing.Color.White;
-            this.bt_Print.Location = new System.Drawing.Point(3, 223);
-            this.bt_Print.Name = "bt_Print";
-            this.bt_Print.Size = new System.Drawing.Size(101, 28);
-            this.bt_Print.TabIndex = 39;
-            this.bt_Print.Text = "طباعة";
-            this.bt_Print.UseVisualStyleBackColor = false;
-            this.bt_Print.Click += new System.EventHandler(this.bt_Print_Click);
             // 
             // textBox2
             // 
             this.textBox2.Enabled = false;
             this.textBox2.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBox2.Location = new System.Drawing.Point(24, 173);
+            this.textBox2.Location = new System.Drawing.Point(194, 175);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(229, 24);
@@ -187,9 +136,9 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10F);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(259, 171);
+            this.label3.Location = new System.Drawing.Point(429, 175);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 27);
+            this.label3.Size = new System.Drawing.Size(120, 27);
             this.label3.TabIndex = 61;
             this.label3.Text = "رقم الشيك";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -474,308 +423,98 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(-2, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1060, 526);
-            this.panel1.TabIndex = 8;
+            this.panel1.TabIndex = 10;
             // 
-            // panel6
+            // panel2
             // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Controls.Add(this.label24);
-            this.panel6.Controls.Add(this.richTextBox2);
-            this.panel6.Controls.Add(this.textBox4);
-            this.panel6.Controls.Add(this.label16);
-            this.panel6.Controls.Add(this.label22);
-            this.panel6.Controls.Add(this.label17);
-            this.panel6.Controls.Add(this.textBox3);
-            this.panel6.Controls.Add(this.label21);
-            this.panel6.Controls.Add(this.label23);
-            this.panel6.Location = new System.Drawing.Point(173, 33);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(725, 463);
-            this.panel6.TabIndex = 68;
+            this.panel2.Controls.Add(this.tb_number);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.label15);
+            this.panel2.Controls.Add(this.richTextBox1);
+            this.panel2.Controls.Add(this.tb_owner);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.tb_OldMoney);
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.tb_render);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.tb_AfterDiscount);
+            this.panel2.Controls.Add(this.tb_payment);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label13);
+            this.panel2.Controls.Add(this.tb_Total);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.tb_BillTotal);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.tb_Discount);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1054, 254);
+            this.panel2.TabIndex = 0;
             // 
-            // label23
+            // tb_number
             // 
-            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label23.BackColor = System.Drawing.Color.White;
-            this.label23.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(609, 14);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(113, 29);
-            this.label23.TabIndex = 22;
-            this.label23.Text = "رقم البيان";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tb_number.Enabled = false;
+            this.tb_number.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.tb_number.Location = new System.Drawing.Point(194, 216);
+            this.tb_number.Name = "tb_number";
+            this.tb_number.ReadOnly = true;
+            this.tb_number.Size = new System.Drawing.Size(229, 24);
+            this.tb_number.TabIndex = 68;
+            this.tb_number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label21
+            // label15
             // 
-            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label21.BackColor = System.Drawing.Color.White;
-            this.label21.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(502, 14);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(94, 29);
-            this.label21.TabIndex = 39;
-            this.label21.Text = "000000000";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label15.BackColor = System.Drawing.Color.White;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(429, 214);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(120, 27);
+            this.label15.TabIndex = 67;
+            this.label15.Text = "رقم فاتورة المورد";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox3
-            // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBox3.Location = new System.Drawing.Point(9, 17);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(212, 24);
-            this.textBox3.TabIndex = 84;
-            this.textBox3.Text = "0.00";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label17
-            // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.BackColor = System.Drawing.Color.White;
-            this.label17.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(609, 67);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(113, 29);
-            this.label17.TabIndex = 54;
-            this.label17.Text = "تاريج البيان";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label22
-            // 
-            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label22.BackColor = System.Drawing.Color.White;
-            this.label22.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(227, 14);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(117, 27);
-            this.label22.TabIndex = 85;
-            this.label22.Text = "اسم العميل";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label16
-            // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.BackColor = System.Drawing.Color.White;
-            this.label16.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(383, 67);
-            this.label16.Name = "label16";
-            this.label16.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label16.Size = new System.Drawing.Size(213, 29);
-            this.label16.TabIndex = 55;
-            this.label16.Text = "14 / 10 / 1995 20:04:42 ";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.textBox4.Location = new System.Drawing.Point(11, 70);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(212, 24);
-            this.textBox4.TabIndex = 91;
-            this.textBox4.Text = "0";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Location = new System.Drawing.Point(377, 99);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.richTextBox2.Size = new System.Drawing.Size(342, 114);
-            this.richTextBox2.TabIndex = 90;
-            this.richTextBox2.Text = "";
-            // 
-            // label24
-            // 
-            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label24.BackColor = System.Drawing.Color.White;
-            this.label24.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(229, 68);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(117, 27);
-            this.label24.TabIndex = 92;
-            this.label24.Text = "رقم الشيك";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel5
-            // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.tb_after);
-            this.panel5.Controls.Add(this.label18);
-            this.panel5.Controls.Add(this.tb_old);
-            this.panel5.Controls.Add(this.label19);
-            this.panel5.Controls.Add(this.cb_kilo);
-            this.panel5.Controls.Add(this.tb_pay);
-            this.panel5.Controls.Add(this.label20);
-            this.panel5.Location = new System.Drawing.Point(173, 255);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(725, 241);
-            this.panel5.TabIndex = 90;
-            // 
-            // label20
-            // 
-            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label20.BackColor = System.Drawing.Color.White;
-            this.label20.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(381, 55);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(179, 27);
-            this.label20.TabIndex = 90;
-            this.label20.Text = "المبلغ المراد ايداعه";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tb_pay
-            // 
-            this.tb_pay.Enabled = false;
-            this.tb_pay.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.tb_pay.Location = new System.Drawing.Point(163, 59);
-            this.tb_pay.Name = "tb_pay";
-            this.tb_pay.ReadOnly = true;
-            this.tb_pay.Size = new System.Drawing.Size(212, 24);
-            this.tb_pay.TabIndex = 89;
-            this.tb_pay.Text = "0.00";
-            this.tb_pay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // cb_kilo
-            // 
-            this.cb_kilo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
-            this.cb_kilo.FlatAppearance.BorderSize = 0;
-            this.cb_kilo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(84)))), ((int)(((byte)(102)))));
-            this.cb_kilo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_kilo.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.cb_kilo.ForeColor = System.Drawing.Color.White;
-            this.cb_kilo.Location = new System.Drawing.Point(3, 197);
-            this.cb_kilo.Name = "cb_kilo";
-            this.cb_kilo.Size = new System.Drawing.Size(75, 39);
-            this.cb_kilo.TabIndex = 84;
-            this.cb_kilo.Text = "طباعة";
-            this.cb_kilo.UseVisualStyleBackColor = false;
-            this.cb_kilo.Click += new System.EventHandler(this.cb_kilo_Click);
-            // 
-            // label19
-            // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label19.BackColor = System.Drawing.Color.White;
-            this.label19.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(381, 10);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(179, 27);
-            this.label19.TabIndex = 86;
-            this.label19.Text = "المبلغ القديم";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tb_old
-            // 
-            this.tb_old.Enabled = false;
-            this.tb_old.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.tb_old.Location = new System.Drawing.Point(163, 14);
-            this.tb_old.Name = "tb_old";
-            this.tb_old.ReadOnly = true;
-            this.tb_old.Size = new System.Drawing.Size(212, 24);
-            this.tb_old.TabIndex = 85;
-            this.tb_old.Text = "0.00";
-            this.tb_old.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label18
-            // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.BackColor = System.Drawing.Color.White;
-            this.label18.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(381, 101);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(179, 27);
-            this.label18.TabIndex = 88;
-            this.label18.Text = "الباقي بعد الايداع";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tb_after
-            // 
-            this.tb_after.Enabled = false;
-            this.tb_after.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.tb_after.Location = new System.Drawing.Point(163, 105);
-            this.tb_after.Name = "tb_after";
-            this.tb_after.ReadOnly = true;
-            this.tb_after.Size = new System.Drawing.Size(212, 24);
-            this.tb_after.TabIndex = 87;
-            this.tb_after.Text = "0.00";
-            this.tb_after.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Controls.Add(this.panel6);
-            this.panel4.Location = new System.Drawing.Point(12, 12);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1060, 526);
-            this.panel4.TabIndex = 16;
-            // 
-            // Customer_BillDetails
+            // ShowDetails_Purchasing_Supplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1084, 550);
-            this.Controls.Add(this.panel4);
+            this.ClientSize = new System.Drawing.Size(1057, 527);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "Customer_BillDetails";
+            this.Name = "ShowDetails_Purchasing_Supplier";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "عرض تفاصيل البيان";
-            this.Load += new System.EventHandler(this.Customer_BillDetails_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.Text = "عرض بيان شراء";
+            this.Load += new System.EventHandler(this.ShowDetails_Purchasing_Supplier_Load);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.TextBox tb_owner;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button bt_Print;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
@@ -801,24 +540,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox tb_after;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox tb_old;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Button cb_kilo;
-        private System.Windows.Forms.TextBox tb_pay;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox tb_number;
+        private System.Windows.Forms.Label label15;
     }
 }
