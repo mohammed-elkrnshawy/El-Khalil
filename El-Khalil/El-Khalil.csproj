@@ -422,11 +422,29 @@
     <Compile Include="Restore.Designer.cs">
       <DependentUpon>Restore.cs</DependentUpon>
     </Compile>
+    <Compile Include="Show Details Purchasing Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Show Details Purchasing Customer.Designer.cs">
+      <DependentUpon>Show Details Purchasing Customer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Show Limit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Show Limit.Designer.cs">
       <DependentUpon>Show Limit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowDetails Bank Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowDetails Bank Customer.Designer.cs">
+      <DependentUpon>ShowDetails Bank Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowDetails Bank Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowDetails Bank Supplier.Designer.cs">
+      <DependentUpon>ShowDetails Bank Supplier.cs</DependentUpon>
     </Compile>
     <Compile Include="ShowOrder.cs">
       <SubType>Form</SubType>
@@ -785,8 +803,17 @@
     <EmbeddedResource Include="Restore.resx">
       <DependentUpon>Restore.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Show Details Purchasing Customer.resx">
+      <DependentUpon>Show Details Purchasing Customer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Show Limit.resx">
       <DependentUpon>Show Limit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowDetails Bank Customer.resx">
+      <DependentUpon>ShowDetails Bank Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowDetails Bank Supplier.resx">
+      <DependentUpon>ShowDetails Bank Supplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ShowOrder.resx">
       <DependentUpon>ShowOrder.cs</DependentUpon>

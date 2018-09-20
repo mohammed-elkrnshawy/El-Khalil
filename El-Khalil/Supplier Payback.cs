@@ -83,10 +83,8 @@ namespace El_Khalil
             panel6.Visible = true;
             object o = Ezzat.ExecutedScalar("selectBayback_Bill_ID");
 
-            if (o == null)
-                label2.Text = "1";
-            else
-                label2.Text = (((int)o) + 1) + "";
+            label2.Text = o + "";
+          
 
             panel3.Visible = true;
             using (dataSet = Ezzat.GetDataSet("select_Banks", "X"))

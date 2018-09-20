@@ -138,5 +138,22 @@ namespace El_Khalil
             print.ShowDialog();
 
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dataGridView1.CurrentCell==dataGridView1.CurrentRow.Cells[8])
+            {
+                if(dataGridView1.CurrentRow.Cells[7].Value.ToString()=="تسديد الى مورد")
+                {
+                    ShowDetails_Bank_Supplier showDetails = new ShowDetails_Bank_Supplier(dataGridView1.CurrentRow.Cells[0].Value);
+                    showDetails.ShowDialog();
+                }
+                else if (dataGridView1.CurrentRow.Cells[7].Value.ToString() == "تسديد من عميل")
+                {
+                    ShowDetails_Bank_Customer showDetails = new ShowDetails_Bank_Customer(dataGridView1.CurrentRow.Cells[0].Value);
+                    showDetails.ShowDialog();
+                }
+            }
+        }
     }
 }
