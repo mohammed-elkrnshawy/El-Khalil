@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,8 +25,14 @@ namespace El_Khalil
 
         private void Bank_Print_Load(object sender, EventArgs e)
         {
+            string path = Application.StartupPath;
+            string directory = Path.GetDirectoryName(path); //without file name
+            string oneUp = Path.GetDirectoryName(directory); // Temp folder
+
+
             ReportDocument cryRpt = new ReportDocument();
-            cryRpt.Load(@"C:\Users\3ZT\source\repos\El-Khalil\El-Khalil\Bank Report.rpt");
+            cryRpt.Load(oneUp + @"\Bank Report.rpt");
+
 
             ParameterFieldDefinitions crParameterFieldDefinitions;
             ParameterFieldDefinition crParameterFieldDefinition;
