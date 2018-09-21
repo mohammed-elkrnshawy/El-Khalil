@@ -32,6 +32,8 @@ namespace El_Khalil
         }
         private void RefreshForm()
         {
+            pictureBox1.Enabled = true;
+
             tb_details.Text = "اكتب بيان الصنف";
             richTextBox1.Text = "اكتب بيان الفاتورة ";
             richTextBox2.Text = "لا يوجد ملاحظات";
@@ -582,6 +584,21 @@ namespace El_Khalil
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             Calcolate();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Add();
+            dataGridView1[0, dataGridView1.Rows.Count - 1].Value =0;
+            dataGridView1[1, dataGridView1.Rows.Count - 1].Value = "قيمة الناولون";
+            dataGridView1[2, dataGridView1.Rows.Count - 1].Value = double.Parse(String.Format("{0:0.00}", textBox1.Text))+ "/ "+"اجمالى الناولون";
+            dataGridView1[3, dataGridView1.Rows.Count - 1].Value = 0;
+            dataGridView1[4, dataGridView1.Rows.Count - 1].Value = 0;
+            dataGridView1[5, dataGridView1.Rows.Count - 1].Value = double.Parse(String.Format("{0:0.00}", textBox1.Text));
+            dataGridView1[6, dataGridView1.Rows.Count - 1].Value = "اضافة قيمة مبلغ الناولون";
+            Bill_Total += double.Parse(dataGridView1[5, dataGridView1.Rows.Count - 1].Value.ToString());
+            Calcolate();
+            pictureBox1.Enabled = false;
         }
 
         private void tb_payment_KeyPress(object sender, KeyPressEventArgs e)

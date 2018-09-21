@@ -91,6 +91,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -105,6 +109,8 @@
             this.panel1.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -306,6 +312,7 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.panel9);
             this.panel3.Controls.Add(this.tb_details);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.panel10);
@@ -889,6 +896,54 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // panel9
+            // 
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.pictureBox2);
+            this.panel9.Controls.Add(this.textBox1);
+            this.panel9.Controls.Add(this.label18);
+            this.panel9.Location = new System.Drawing.Point(3, 3);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(136, 104);
+            this.panel9.TabIndex = 24;
+            // 
+            // label18
+            // 
+            this.label18.BackColor = System.Drawing.Color.White;
+            this.label18.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.label18.ForeColor = System.Drawing.Color.Black;
+            this.label18.Location = new System.Drawing.Point(3, 4);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(130, 24);
+            this.label18.TabIndex = 41;
+            this.label18.Text = "الناولون";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.textBox1.Location = new System.Drawing.Point(3, 38);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textBox1.Size = new System.Drawing.Size(130, 23);
+            this.textBox1.TabIndex = 42;
+            this.textBox1.Text = "0.00";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_payment_KeyPress);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.BackgroundImage = global::El_Khalil.Properties.Resources.addition_sign__1_;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.InitialImage = null;
+            this.pictureBox2.Location = new System.Drawing.Point(56, 69);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 24);
+            this.pictureBox2.TabIndex = 43;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // Customer_Purchasing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -922,6 +977,9 @@
             this.panel1.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -990,5 +1048,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label18;
     }
 }
