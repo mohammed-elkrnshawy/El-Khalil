@@ -25,40 +25,72 @@ namespace El_Khalil
 
         private void ShowDetails_Purchasing_Supplier_Load(object sender, EventArgs e)
         {
+            SqlConnection con;
             using (dataSet = Ezzat.GetDataSet("select_Supplier_BillDetails", "X",
-                    new SqlParameter("@Bill_ID", id),
-                    new SqlParameter("@Bill_Type", true)))
+                 new SqlParameter("@Bill_ID", id),
+                 new SqlParameter("@Bill_Type", Ty)))
             {
                 dataGridView1.DataSource = dataSet.Tables["X"];
             }
 
-
-            SqlConnection con;
-
-            SqlDataReader dataReader = Ezzat.GetDataReader("select_IMBillDeteils_Purchasing", out con,
-            new SqlParameter("@Bill_ID", id));
-
-            if (dataReader.HasRows)
+            if (Ty)
             {
-                while (dataReader.Read())
-                {
-                    label2.Text = dataReader[0].ToString();
-                    label12.Text = dataReader[2].ToString();
-                    tb_BillTotal.Text = dataReader[4].ToString();
-                    tb_Discount.Text = dataReader[5].ToString();
-                    tb_AfterDiscount.Text = dataReader[6].ToString();
-                    tb_OldMoney.Text = dataReader[7].ToString();
-                    tb_Total.Text = dataReader[8].ToString();
-                    tb_payment.Text = dataReader[9].ToString();
-                    tb_render.Text = dataReader[10].ToString();
-                    textBox1.Text = dataReader[3].ToString();
-                    textBox2.Text = dataReader[11].ToString();
-                    tb_number.Text = dataReader[12].ToString();
-                    tb_owner.Text = dataReader[13].ToString();
-                }
-            }
+                SqlDataReader dataReader = Ezzat.GetDataReader("select_IMBillDeteils_Purchasing", out con,
+                                                              new SqlParameter("@Bill_ID", id));
 
-            con.Close();
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                    {
+                        label2.Text = dataReader[0].ToString();
+                        label12.Text = dataReader[2].ToString();
+                        tb_BillTotal.Text = dataReader[4].ToString();
+                        tb_Discount.Text = dataReader[5].ToString();
+                        tb_AfterDiscount.Text = dataReader[6].ToString();
+                        tb_OldMoney.Text = dataReader[7].ToString();
+                        tb_Total.Text = dataReader[8].ToString();
+                        tb_payment.Text = dataReader[9].ToString();
+                        tb_render.Text = dataReader[10].ToString();
+                        textBox1.Text = dataReader[3].ToString();
+                        textBox2.Text = dataReader[11].ToString();
+                        tb_number.Text = dataReader[12].ToString();
+                        tb_owner.Text = dataReader[13].ToString();
+                    }
+                }
+
+                con.Close();
+            }
+            else if(!Ty)
+            {
+                SqlDataReader dataReader = Ezzat.GetDataReader("select_IMBillDeteils_Returning", out con,
+                                                     new SqlParameter("@Bill_ID", id));
+
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                    {
+                        label2.Text = dataReader[0].ToString();
+                        label12.Text = dataReader[2].ToString();
+                        tb_BillTotal.Text = dataReader[4].ToString();
+                        tb_Discount.Text = dataReader[5].ToString();
+                        tb_AfterDiscount.Text = dataReader[6].ToString();
+                        tb_OldMoney.Text = dataReader[7].ToString();
+                        tb_Total.Text = dataReader[8].ToString();
+                        tb_payment.Text = dataReader[9].ToString();
+                        textBox1.Text = dataReader[3].ToString();
+                        tb_number.Text = dataReader[10].ToString();
+                        tb_owner.Text = dataReader[11].ToString();
+                    }
+                }
+
+                con.Close();
+            }
+         
+
+
+            
+
+            
 
         }
 

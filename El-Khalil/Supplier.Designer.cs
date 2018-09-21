@@ -40,18 +40,8 @@
             this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -67,11 +57,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -103,7 +101,7 @@
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dataGridView1.Size = new System.Drawing.Size(1306, 350);
             this.dataGridView1.TabIndex = 5;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Column1
             // 
@@ -202,59 +200,6 @@
             this.dataGridView2.Size = new System.Drawing.Size(1306, 150);
             this.dataGridView2.TabIndex = 0;
             // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "رقم العميل";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "اسم العميل";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "اجمالى المدين";
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "اجمالى الداين";
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
-            // 
-            // Column15
-            // 
-            this.Column15.HeaderText = "اجمالى الرصيد";
-            this.Column15.Name = "Column15";
-            this.Column15.ReadOnly = true;
-            // 
-            // Column16
-            // 
-            this.Column16.DataPropertyName = "عرض";
-            this.Column16.FillWeight = 70F;
-            this.Column16.HeaderText = "عرض";
-            this.Column16.Name = "Column16";
-            this.Column16.ReadOnly = true;
-            this.Column16.Text = "عرض";
-            this.Column16.ToolTipText = "عرض";
-            this.Column16.Width = 70;
-            // 
-            // Column17
-            // 
-            this.Column17.HeaderText = "رصيد بداية المدة";
-            this.Column17.Name = "Column17";
-            this.Column17.ReadOnly = true;
-            // 
-            // Column18
-            // 
-            this.Column18.HeaderText = "رصيد نهاية المدة";
-            this.Column18.Name = "Column18";
-            this.Column18.ReadOnly = true;
-            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.dataGridView2);
@@ -266,8 +211,13 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(40, 40);
@@ -275,43 +225,15 @@
             this.panel1.Size = new System.Drawing.Size(1306, 600);
             this.panel1.TabIndex = 1;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::El_Khalil.Properties.Resources.document;
-            this.button2.Location = new System.Drawing.Point(3, 565);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(40, 30);
-            this.button2.TabIndex = 64;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel5.Controls.Add(this.label10);
-            this.panel5.Controls.Add(this.label9);
-            this.panel5.Controls.Add(this.label8);
-            this.panel5.Controls.Add(this.label7);
-            this.panel5.Controls.Add(this.label13);
-            this.panel5.Controls.Add(this.label14);
-            this.panel5.Location = new System.Drawing.Point(386, 541);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(532, 54);
-            this.panel5.TabIndex = 63;
-            // 
             // label10
             // 
             this.label10.BackColor = System.Drawing.Color.White;
             this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label10.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.label10.Location = new System.Drawing.Point(78, 26);
+            this.label10.Location = new System.Drawing.Point(907, 562);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(92, 28);
+            this.label10.Size = new System.Drawing.Size(133, 28);
             this.label10.TabIndex = 78;
             this.label10.Text = "0.00";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -322,9 +244,9 @@
             this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label9.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.label9.Location = new System.Drawing.Point(219, 26);
+            this.label9.Location = new System.Drawing.Point(1046, 561);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(92, 30);
+            this.label9.Size = new System.Drawing.Size(118, 30);
             this.label9.TabIndex = 77;
             this.label9.Text = "0.00";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -335,9 +257,9 @@
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label8.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.label8.Location = new System.Drawing.Point(360, 26);
+            this.label8.Location = new System.Drawing.Point(1177, 561);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 30);
+            this.label8.Size = new System.Drawing.Size(124, 30);
             this.label8.TabIndex = 76;
             this.label8.Text = "0.00";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -346,7 +268,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label7.Location = new System.Drawing.Point(95, -2);
+            this.label7.Location = new System.Drawing.Point(948, 541);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 17);
             this.label7.TabIndex = 75;
@@ -356,7 +278,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label13.Location = new System.Drawing.Point(385, -2);
+            this.label13.Location = new System.Drawing.Point(1214, 541);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(47, 17);
             this.label13.TabIndex = 74;
@@ -366,7 +288,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label14.Location = new System.Drawing.Point(242, -2);
+            this.label14.Location = new System.Drawing.Point(1082, 541);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(41, 17);
             this.label14.TabIndex = 73;
@@ -463,6 +385,79 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(84)))), ((int)(((byte)(102)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = global::El_Khalil.Properties.Resources.print_black_printer_tool_symbol;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(3, 558);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(76, 37);
+            this.button3.TabIndex = 88;
+            this.button3.Text = "طباعة";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "رقم العميل";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "اسم العميل";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "اجمالى المدين";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "اجمالى الداين";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "اجمالى الرصيد";
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            // 
+            // Column16
+            // 
+            this.Column16.DataPropertyName = "عرض";
+            this.Column16.FillWeight = 70F;
+            this.Column16.HeaderText = "عرض";
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
+            this.Column16.Text = "عرض";
+            this.Column16.ToolTipText = "عرض";
+            this.Column16.Visible = false;
+            this.Column16.Width = 70;
+            // 
+            // Column17
+            // 
+            this.Column17.HeaderText = "رصيد بداية المدة";
+            this.Column17.Name = "Column17";
+            this.Column17.ReadOnly = true;
+            // 
+            // Column18
+            // 
+            this.Column18.HeaderText = "رصيد نهاية المدة";
+            this.Column18.Name = "Column18";
+            this.Column18.ReadOnly = true;
+            // 
             // Supplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -477,8 +472,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -501,15 +495,8 @@
         private System.Windows.Forms.DataGridViewButtonColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
-        private System.Windows.Forms.DataGridViewButtonColumn Column16;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -525,8 +512,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.DataGridViewButtonColumn Column16;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
-        private System.Windows.Forms.Button button2;
     }
 }

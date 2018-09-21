@@ -125,15 +125,6 @@ namespace El_Khalil
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dataGridView1.CurrentCell == dataGridView1.CurrentRow.Cells[8])
-            {
-                Form1 BillDetails = new Form1(int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()), dataGridView1.CurrentRow.Cells[7].Value);
-                BillDetails.ShowDialog();
-            }
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             Supplier_Print print = new Supplier_Print(
@@ -141,6 +132,42 @@ namespace El_Khalil
                                 dateTimePicker2.Value
                 );
             print.ShowDialog();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.CurrentCell == dataGridView1.CurrentRow.Cells[8])
+            {
+                if(dataGridView1.CurrentRow.Cells[7].Value.ToString().Contains("شراء"))
+                {
+                    ShowDetails_Purchasing_Supplier showDetails = new ShowDetails_Purchasing_Supplier(dataGridView1.CurrentRow.Cells[0].Value, true);
+                    showDetails.ShowDialog();
+                }
+                else if(dataGridView1.CurrentRow.Cells[7].Value.ToString().Contains("مرتجع"))
+                {
+                    ShowDetails_Purchasing_Supplier showDetails = new ShowDetails_Purchasing_Supplier(dataGridView1.CurrentRow.Cells[0].Value, false);
+                    showDetails.ShowDialog();
+                }
+                else if (dataGridView1.CurrentRow.Cells[7].Value.ToString() == "تحويل بنكى")
+                {
+                    ShowDetails_Bank_Supplier showDetails = new ShowDetails_Bank_Supplier(dataGridView1.CurrentRow.Cells[0].Value);
+                    showDetails.ShowDialog();
+                }
+                else if (dataGridView1.CurrentRow.Cells[7].Value.ToString() == "تسديد نقدى")
+                {
+                    ShowDetails_Payback_Supplier showDetails = new ShowDetails_Payback_Supplier(dataGridView1.CurrentRow.Cells[0].Value, dataGridView1.CurrentRow.Cells[7].Value);
+                    showDetails.ShowDialog();
+                }
+                else if (dataGridView1.CurrentRow.Cells[7].Value.ToString() == "خصم")
+                {
+                    ShowDetails_Payback_Supplier showDetails = new ShowDetails_Payback_Supplier(dataGridView1.CurrentRow.Cells[0].Value, dataGridView1.CurrentRow.Cells[7].Value);
+                    showDetails.ShowDialog();
+                }
+
+
+
+
+            }
         }
     }
 }
