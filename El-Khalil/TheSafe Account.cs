@@ -92,5 +92,33 @@ namespace El_Khalil
                 );
             print.ShowDialog();
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dataGridView1.CurrentCell == dataGridView1.CurrentRow.Cells[7])
+            {
+                if (dataGridView1.CurrentRow.Cells[6].Value.ToString().Contains("ايراد من عميل"))
+                {
+                    Show_Details_Purchasing_Customer showDetails = new Show_Details_Purchasing_Customer(dataGridView1.CurrentRow.Cells[0].Value, false);
+                    showDetails.ShowDialog();
+                }
+                else if (dataGridView1.CurrentRow.Cells[6].Value.ToString() == "تسديد من عميل")
+                {
+                    ShowDetails_Payback_Customer showDetails = new ShowDetails_Payback_Customer(dataGridView1.CurrentRow.Cells[0].Value, "تسديد نقدى");
+                    showDetails.ShowDialog();
+                }
+                else if (dataGridView1.CurrentRow.Cells[6].Value.ToString().Contains("صرف الى مورد"))
+                {
+                    ShowDetails_Purchasing_Supplier showDetails = new ShowDetails_Purchasing_Supplier(dataGridView1.CurrentRow.Cells[0].Value, true);
+                    showDetails.ShowDialog();
+                }
+                else if (dataGridView1.CurrentRow.Cells[6].Value.ToString() == "تسديد الى مورد")
+                {
+                    ShowDetails_Payback_Supplier showDetails = new ShowDetails_Payback_Supplier(dataGridView1.CurrentRow.Cells[0].Value, "تسديد نقدى");
+                    showDetails.ShowDialog();
+                }
+              
+            }
+        }
     }
 }

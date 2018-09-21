@@ -102,17 +102,46 @@ namespace El_Khalil
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.CurrentRow.Cells[7] == dataGridView1.CurrentCell)
+
+            if (dataGridView1.CurrentCell == dataGridView1.CurrentRow.Cells[7])
             {
-                if (dataGridView1.CurrentRow.Cells[6].Value.ToString() != "ايداع الى البنك")
+                if (dataGridView1.CurrentRow.Cells[6].Value.ToString() == "تسديد الى مورد")
                 {
-                    Bank_BillDetaails BillDetails = new Bank_BillDetaails(int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString())
-                                                                                 , dataGridView1.CurrentRow.Cells[6].Value
-                                                                                 , dataGridView1.CurrentRow.Cells[5].Value
-                                                                                 );
-                    BillDetails.ShowDialog();
+                    ShowDetails_Bank_Supplier showDetails = new ShowDetails_Bank_Supplier(dataGridView1.CurrentRow.Cells[0].Value);
+                    showDetails.ShowDialog();
+                }
+                else if (dataGridView1.CurrentRow.Cells[6].Value.ToString() == "تسديد من عميل")
+                {
+                    ShowDetails_Bank_Customer showDetails = new ShowDetails_Bank_Customer(dataGridView1.CurrentRow.Cells[0].Value);
+                    showDetails.ShowDialog();
+                }
+                else if (dataGridView1.CurrentRow.Cells[6].Value.ToString() == "ايراد من بيع")
+                {
+                    Show_Details_Purchasing_Customer showDetails = new Show_Details_Purchasing_Customer(dataGridView1.CurrentRow.Cells[0].Value, false);
+                    showDetails.ShowDialog();
+                }
+                else if (dataGridView1.CurrentRow.Cells[6].Value.ToString() == "دفع من شراء")
+                {
+                    ShowDetails_Purchasing_Supplier showDetails = new ShowDetails_Purchasing_Supplier(dataGridView1.CurrentRow.Cells[0].Value, true);
+                    showDetails.ShowDialog();
+                }
+                else if (dataGridView1.CurrentRow.Cells[6].Value.ToString() == "ايراد")
+                {
+
                 }
             }
+
+
+            
+                //if (dataGridView1.CurrentRow.Cells[6].Value.ToString() != "ايداع الى البنك")
+                //{
+                //    Bank_BillDetaails BillDetails = new Bank_BillDetaails(int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString())
+                //                                                                 , dataGridView1.CurrentRow.Cells[6].Value
+                //                                                                 , dataGridView1.CurrentRow.Cells[5].Value
+                //                                                                 );
+                //    BillDetails.ShowDialog();
+                //}
+            
         }
 
         private void bt_Print_Click(object sender, EventArgs e)

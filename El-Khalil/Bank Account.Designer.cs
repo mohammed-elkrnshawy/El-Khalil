@@ -58,8 +58,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bt_Print = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pn_Return.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -89,9 +89,9 @@
             this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label10.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.label10.Location = new System.Drawing.Point(80, 41);
+            this.label10.Location = new System.Drawing.Point(119, 41);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(92, 30);
+            this.label10.Size = new System.Drawing.Size(124, 30);
             this.label10.TabIndex = 72;
             this.label10.Text = "0.00";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -102,9 +102,9 @@
             this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label9.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.label9.Location = new System.Drawing.Point(219, 41);
+            this.label9.Location = new System.Drawing.Point(266, 41);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(92, 30);
+            this.label9.Size = new System.Drawing.Size(123, 30);
             this.label9.TabIndex = 71;
             this.label9.Text = "0.00";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -115,9 +115,9 @@
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label8.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.label8.Location = new System.Drawing.Point(360, 41);
+            this.label8.Location = new System.Drawing.Point(411, 41);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 30);
+            this.label8.Size = new System.Drawing.Size(118, 30);
             this.label8.TabIndex = 70;
             this.label8.Text = "0.00";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -125,7 +125,7 @@
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label7.Location = new System.Drawing.Point(80, 13);
+            this.label7.Location = new System.Drawing.Point(131, 7);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 28);
             this.label7.TabIndex = 69;
@@ -135,7 +135,7 @@
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label13.Location = new System.Drawing.Point(360, 13);
+            this.label13.Location = new System.Drawing.Point(419, 7);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(92, 28);
             this.label13.TabIndex = 68;
@@ -145,7 +145,7 @@
             // label14
             // 
             this.label14.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label14.Location = new System.Drawing.Point(219, 13);
+            this.label14.Location = new System.Drawing.Point(275, 7);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(92, 28);
             this.label14.TabIndex = 67;
@@ -383,33 +383,16 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.pn_Return);
-            this.panel2.Controls.Add(this.bt_Print);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(113, 47);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1160, 607);
             this.panel2.TabIndex = 61;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // bt_Print
-            // 
-            this.bt_Print.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.bt_Print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
-            this.bt_Print.FlatAppearance.BorderSize = 0;
-            this.bt_Print.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(84)))), ((int)(((byte)(102)))));
-            this.bt_Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_Print.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.bt_Print.ForeColor = System.Drawing.Color.White;
-            this.bt_Print.Location = new System.Drawing.Point(6, 531);
-            this.bt_Print.Name = "bt_Print";
-            this.bt_Print.Size = new System.Drawing.Size(99, 58);
-            this.bt_Print.TabIndex = 38;
-            this.bt_Print.Text = "طباعة تقارير";
-            this.bt_Print.UseVisualStyleBackColor = false;
-            this.bt_Print.Click += new System.EventHandler(this.bt_Print_Click);
             // 
             // panel3
             // 
@@ -422,6 +405,25 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1154, 45);
             this.panel3.TabIndex = 35;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(84)))), ((int)(((byte)(102)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::El_Khalil.Properties.Resources.print_black_printer_tool_symbol;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(6, 559);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(76, 37);
+            this.button2.TabIndex = 87;
+            this.button2.Text = "طباعة";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.bt_Print_Click);
             // 
             // Bank_Account
             // 
@@ -471,7 +473,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button bt_Print;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -481,5 +482,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewButtonColumn Column6;
+        private System.Windows.Forms.Button button2;
     }
 }

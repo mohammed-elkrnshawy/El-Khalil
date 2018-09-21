@@ -50,10 +50,8 @@ namespace El_Khalil
 
             object o = Ezzat.ExecutedScalar("selectEmployeeTransaction_Bill_ID");
 
-            if (o == null)
-                label8.Text = "1";
-            else
-                label8.Text = (((int)o) + 1) + "";
+
+            label8.Text = o + "";
 
 
         }

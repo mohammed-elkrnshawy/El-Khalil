@@ -104,17 +104,48 @@ namespace El_Khalil
 
         private void gv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(gv.CurrentCell==gv.CurrentRow.Cells[7])
+
+            if (gv.CurrentCell == gv.CurrentRow.Cells[7])
             {
-                if(gv.CurrentRow.Cells[6].Value.ToString()!="تحويل من عميل")
+                if (gv.CurrentRow.Cells[6].Value.ToString().Contains("شراء"))
                 {
-                    Form1 BillDetails = new Form1(int.Parse(gv.CurrentRow.Cells[0].Value.ToString()), gv.CurrentRow.Cells[6].Value);
-                    BillDetails.ShowDialog();
+                    ShowDetails_Purchasing_Supplier showDetails = new ShowDetails_Purchasing_Supplier(gv.CurrentRow.Cells[0].Value, true);
+                    showDetails.ShowDialog();
                 }
-                else
+                else if (gv.CurrentRow.Cells[6].Value.ToString().Contains("مرتجع"))
                 {
-                    MessageBox.Show("لا يمكن عرض التفاصيل");
+                    ShowDetails_Purchasing_Supplier showDetails = new ShowDetails_Purchasing_Supplier(gv.CurrentRow.Cells[0].Value, false);
+                    showDetails.ShowDialog();
                 }
+                else if (gv.CurrentRow.Cells[6].Value.ToString() == "تحويل بنكى")
+                {
+                    ShowDetails_Bank_Supplier showDetails = new ShowDetails_Bank_Supplier(gv.CurrentRow.Cells[0].Value);
+                    showDetails.ShowDialog();
+                }
+                else if (gv.CurrentRow.Cells[6].Value.ToString() == "تسديد نقدى")
+                {
+                    ShowDetails_Payback_Supplier showDetails = new ShowDetails_Payback_Supplier(gv.CurrentRow.Cells[0].Value, gv.CurrentRow.Cells[6].Value);
+                    showDetails.ShowDialog();
+                }
+                else if (gv.CurrentRow.Cells[6].Value.ToString() == "خصم")
+                {
+                    ShowDetails_Payback_Supplier showDetails = new ShowDetails_Payback_Supplier(gv.CurrentRow.Cells[0].Value, gv.CurrentRow.Cells[6].Value);
+                    showDetails.ShowDialog();
+                }
+
+
+                //if(gv.CurrentCell==gv.CurrentRow.Cells[7])
+                //{
+                //    if(gv.CurrentRow.Cells[6].Value.ToString()!="تحويل من عميل")
+                //    {
+                //        Form1 BillDetails = new Form1(int.Parse(gv.CurrentRow.Cells[0].Value.ToString()), gv.CurrentRow.Cells[6].Value);
+                //        BillDetails.ShowDialog();
+                //    }
+                //    else
+                //    {
+                //        MessageBox.Show("لا يمكن عرض التفاصيل");
+                //    }
+                //}
             }
         }
 

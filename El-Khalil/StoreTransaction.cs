@@ -47,6 +47,7 @@ namespace El_Khalil
                    new SqlParameter("@Day2", DateTime.Parse(dateTimePicker2.Value.ToString()))))
             {
                 dataGridView1.DataSource = dataSet.Tables["X"];
+                dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 Add_GridButtun();
             }
 
@@ -149,12 +150,34 @@ namespace El_Khalil
         {
             if(dataGridView1.CurrentCell==dataGridView1.CurrentRow.Cells[5])
             {
-                Store_BillDetails store_ = new Store_BillDetails(dataGridView1.CurrentRow.Cells[0].Value.ToString(),
-                                                                 dataGridView1.CurrentRow.Cells[1].Value.ToString(),
-                                                                 dataGridView1.CurrentRow.Cells[3].Value.ToString(),
-                                                                 dataGridView1.CurrentRow.Cells[4].Value.ToString()
-                    );
-                store_.ShowDialog();
+
+                if (dataGridView1.CurrentRow.Cells[3].Value.ToString().Contains("بيع"))
+                {
+                    Show_Details_Purchasing_Customer showDetails = new Show_Details_Purchasing_Customer(dataGridView1.CurrentRow.Cells[0].Value, false);
+                    showDetails.ShowDialog();
+                }
+                else if (dataGridView1.CurrentRow.Cells[3].Value.ToString().Contains("مرتجع من عميل"))
+                {
+                    Show_Details_Purchasing_Customer showDetails = new Show_Details_Purchasing_Customer(dataGridView1.CurrentRow.Cells[0].Value, true);
+                    showDetails.ShowDialog();
+                }
+                else if (dataGridView1.CurrentRow.Cells[3].Value.ToString().Contains("شراء"))
+                {
+                    ShowDetails_Purchasing_Supplier showDetails = new ShowDetails_Purchasing_Supplier(dataGridView1.CurrentRow.Cells[0].Value, true);
+                    showDetails.ShowDialog();
+                }
+                else if (dataGridView1.CurrentRow.Cells[3].Value.ToString().Contains("مرتجع الى مورد"))
+                {
+                    ShowDetails_Purchasing_Supplier showDetails = new ShowDetails_Purchasing_Supplier(dataGridView1.CurrentRow.Cells[0].Value, false);
+                    showDetails.ShowDialog();
+                }
+
+                //Store_BillDetails store_ = new Store_BillDetails(dataGridView1.CurrentRow.Cells[0].Value.ToString(),
+                //                                                 dataGridView1.CurrentRow.Cells[1].Value.ToString(),
+                //                                                 dataGridView1.CurrentRow.Cells[3].Value.ToString(),
+                //                                                 dataGridView1.CurrentRow.Cells[4].Value.ToString()
+                //    );
+                //store_.ShowDialog();
             }
         }
 
