@@ -16,14 +16,14 @@ namespace El_Khalil {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class Productivity_Product_Report : ReportClass {
+    public class Exit_Report : ReportClass {
         
-        public Productivity_Product_Report() {
+        public Exit_Report() {
         }
         
         public override string ResourceName {
             get {
-                return "Productivity Product Report.rpt";
+                return "Exit Report.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace El_Khalil {
         
         public override string FullResourceName {
             get {
-                return "El_Khalil.Productivity Product Report.rpt";
+                return "El_Khalil.Exit Report.rpt";
             }
             set {
                 // Do nothing
@@ -90,7 +90,7 @@ namespace El_Khalil {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Prpduct_ID {
+        public CrystalDecisions.Shared.IParameterField Parameter_Bill_ID {
             get {
                 return this.DataDefinition.ParameterFields[0];
             }
@@ -98,7 +98,7 @@ namespace El_Khalil {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_name {
+        public CrystalDecisions.Shared.IParameterField Parameter_Bill_Type {
             get {
                 return this.DataDefinition.ParameterFields[1];
             }
@@ -106,17 +106,33 @@ namespace El_Khalil {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_num {
+        public CrystalDecisions.Shared.IParameterField Parameter_Customer_Name {
             get {
                 return this.DataDefinition.ParameterFields[2];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_Bill_Details {
+            get {
+                return this.DataDefinition.ParameterFields[3];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_ID {
+            get {
+                return this.DataDefinition.ParameterFields[4];
             }
         }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedProductivity_Product_Report : Component, ICachedReport {
+    public class CachedExit_Report : Component, ICachedReport {
         
-        public CachedProductivity_Product_Report() {
+        public CachedExit_Report() {
         }
         
         [Browsable(false)]
@@ -153,7 +169,7 @@ namespace El_Khalil {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            Productivity_Product_Report rpt = new Productivity_Product_Report();
+            Exit_Report rpt = new Exit_Report();
             rpt.Site = this.Site;
             return rpt;
         }

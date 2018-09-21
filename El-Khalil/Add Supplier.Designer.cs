@@ -386,7 +386,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(65, 25);
             this.label8.TabIndex = 25;
-            this.label8.Text = "يوما";
+            this.label8.Text = "يوم";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tb_day

@@ -614,14 +614,14 @@
             // اضافةطلبToolStripMenuItem
             // 
             this.اضافةطلبToolStripMenuItem.Name = "اضافةطلبToolStripMenuItem";
-            this.اضافةطلبToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.اضافةطلبToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.اضافةطلبToolStripMenuItem.Text = "اضافة طلب";
             this.اضافةطلبToolStripMenuItem.Click += new System.EventHandler(this.اضافةطلبToolStripMenuItem_Click);
             // 
             // عرضالطلباتToolStripMenuItem
             // 
             this.عرضالطلباتToolStripMenuItem.Name = "عرضالطلباتToolStripMenuItem";
-            this.عرضالطلباتToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.عرضالطلباتToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.عرضالطلباتToolStripMenuItem.Text = "عرض الطلبات";
             this.عرضالطلباتToolStripMenuItem.Click += new System.EventHandler(this.عرضالطلباتToolStripMenuItem_Click);
             // 
@@ -663,13 +663,13 @@
             this.ايداعمبالغToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ايداعميلغفالخزنةToolStripMenuItem});
             this.ايداعمبالغToolStripMenuItem.Name = "ايداعمبالغToolStripMenuItem";
-            this.ايداعمبالغToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ايداعمبالغToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.ايداعمبالغToolStripMenuItem.Text = "الاموال";
             // 
             // ايداعميلغفالخزنةToolStripMenuItem
             // 
             this.ايداعميلغفالخزنةToolStripMenuItem.Name = "ايداعميلغفالخزنةToolStripMenuItem";
-            this.ايداعميلغفالخزنةToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ايداعميلغفالخزنةToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.ايداعميلغفالخزنةToolStripMenuItem.Text = "ايداع و صرف مبالغ";
             this.ايداعميلغفالخزنةToolStripMenuItem.Click += new System.EventHandler(this.ايداعميلغفالخزنةToolStripMenuItem_Click);
             // 
@@ -678,20 +678,20 @@
             this.صرفمبالغToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.توريدبضاعةالىالمخزنToolStripMenuItem});
             this.صرفمبالغToolStripMenuItem.Name = "صرفمبالغToolStripMenuItem";
-            this.صرفمبالغToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.صرفمبالغToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.صرفمبالغToolStripMenuItem.Text = "المنتجات";
             // 
             // توريدبضاعةالىالمخزنToolStripMenuItem
             // 
             this.توريدبضاعةالىالمخزنToolStripMenuItem.Name = "توريدبضاعةالىالمخزنToolStripMenuItem";
-            this.توريدبضاعةالىالمخزنToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.توريدبضاعةالىالمخزنToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.توريدبضاعةالىالمخزنToolStripMenuItem.Text = "توريد و صرف اصناف";
             this.توريدبضاعةالىالمخزنToolStripMenuItem.Click += new System.EventHandler(this.توريدبضاعةالىالمخزنToolStripMenuItem_Click);
             // 
             // الحساباتToolStripMenuItem
             // 
             this.الحساباتToolStripMenuItem.Name = "الحساباتToolStripMenuItem";
-            this.الحساباتToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.الحساباتToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.الحساباتToolStripMenuItem.Text = "الحسابات";
             this.الحساباتToolStripMenuItem.Click += new System.EventHandler(this.الحساباتToolStripMenuItem_Click);
             // 

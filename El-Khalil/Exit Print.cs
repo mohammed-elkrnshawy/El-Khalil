@@ -13,30 +13,25 @@ using System.Windows.Forms;
 
 namespace El_Khalil
 {
-    public partial class Productivity_Product_Print : Form
+    public partial class Exit_Print : Form
     {
-        int Prpduct_ID;
-        string name;
-        string num;
-        public Productivity_Product_Print(int Prpduct_ID,string name,string num)
+        object Bill_ID, custome_name, Bill_Details;
+        public Exit_Print(object o,object cus,object det)
         {
             InitializeComponent();
-            this.Prpduct_ID = Prpduct_ID;
-            this.name = name;
-            this.num = num;
+            Bill_ID = o;
+            custome_name = cus;
+            Bill_Details = det;
         }
 
-        private void Productivity_Product_Print_Load(object sender, EventArgs e)
+        private void Exit_Print_Load(object sender, EventArgs e)
         {
-
-
             string path = Application.StartupPath;
             string directory = Path.GetDirectoryName(path); //without file name
             string oneUp = Path.GetDirectoryName(directory); // Temp folder
-
-
             ReportDocument cryRpt = new ReportDocument();
-            cryRpt.Load(oneUp + @"\Productivity Product Report.rpt");
+            cryRpt.Load(oneUp + @"\Exit Report.rpt");
+
 
             ParameterFieldDefinitions crParameterFieldDefinitions;
             ParameterFieldDefinition crParameterFieldDefinition;
@@ -46,9 +41,9 @@ namespace El_Khalil
 
 
 
-            crParameterDiscreteValue.Value = Prpduct_ID;
+            crParameterDiscreteValue.Value = Bill_ID;
             crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
-            crParameterFieldDefinition = crParameterFieldDefinitions["@Prpduct_ID"];
+            crParameterFieldDefinition = crParameterFieldDefinitions["@Bill_ID"];
             crParameterValues = crParameterFieldDefinition.CurrentValues;
             crParameterValues.Clear();
             crParameterValues.Add(crParameterDiscreteValue);
@@ -57,24 +52,50 @@ namespace El_Khalil
 
 
 
-            crParameterDiscreteValue.Value = name;
+            crParameterDiscreteValue.Value = false;
             crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
-            crParameterFieldDefinition = crParameterFieldDefinitions["name"];
+            crParameterFieldDefinition = crParameterFieldDefinitions["@Bill_Type"];
             crParameterValues = crParameterFieldDefinition.CurrentValues;
             crParameterValues.Clear();
             crParameterValues.Add(crParameterDiscreteValue);
             crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
 
 
-            crParameterDiscreteValue.Value = num;
+
+            crParameterDiscreteValue.Value = custome_name;
             crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
-            crParameterFieldDefinition = crParameterFieldDefinitions["num"];
+            crParameterFieldDefinition = crParameterFieldDefinitions["Customer_Name"];
             crParameterValues = crParameterFieldDefinition.CurrentValues;
             crParameterValues.Clear();
             crParameterValues.Add(crParameterDiscreteValue);
             crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
 
 
+
+
+            crParameterDiscreteValue.Value = Bill_Details;
+            crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
+            crParameterFieldDefinition = crParameterFieldDefinitions["Bill_Details"];
+            crParameterValues = crParameterFieldDefinition.CurrentValues;
+            crParameterValues.Clear();
+            crParameterValues.Add(crParameterDiscreteValue);
+            crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
+
+
+
+
+            crParameterDiscreteValue.Value = Bill_ID;
+            crParameterFieldDefinitions = cryRpt.DataDefinition.ParameterFields;
+            crParameterFieldDefinition = crParameterFieldDefinitions["ID"];
+            crParameterValues = crParameterFieldDefinition.CurrentValues;
+            crParameterValues.Clear();
+            crParameterValues.Add(crParameterDiscreteValue);
+            crParameterFieldDefinition.ApplyCurrentValues(crParameterValues);
+
+
+
+
+          
 
             crystalReportViewer1.ReportSource = cryRpt;
             crystalReportViewer1.Refresh();

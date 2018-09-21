@@ -330,6 +330,18 @@
     <Compile Include="Employee_AccountDetails.Designer.cs">
       <DependentUpon>Employee_AccountDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Exit Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exit Print.Designer.cs">
+      <DependentUpon>Exit Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exit Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Exit Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Ezzat.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -470,11 +482,23 @@
     <Compile Include="ShowOrder.Designer.cs">
       <DependentUpon>ShowOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Store BillDetails.cs">
+    <Compile Include="Store Material Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Store Material Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Store Print.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Store BillDetails.Designer.cs">
-      <DependentUpon>Store BillDetails.cs</DependentUpon>
+    <Compile Include="Store Print.Designer.cs">
+      <DependentUpon>Store Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store Product Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Store Product Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Store.cs">
       <SubType>Form</SubType>
@@ -499,6 +523,12 @@
     </Compile>
     <Compile Include="StoreTransaction.Designer.cs">
       <DependentUpon>StoreTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Strore Material Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strore Material Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Supplier Account Print.cs">
       <SubType>Form</SubType>
@@ -773,6 +803,13 @@
     <EmbeddedResource Include="Employee_AccountDetails.resx">
       <DependentUpon>Employee_AccountDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Exit Print.resx">
+      <DependentUpon>Exit Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exit Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Exit Report.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -845,8 +882,16 @@
     <EmbeddedResource Include="ShowOrder.resx">
       <DependentUpon>ShowOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Store BillDetails.resx">
-      <DependentUpon>Store BillDetails.cs</DependentUpon>
+    <EmbeddedResource Include="Store Material Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Store Material Report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Store Print.resx">
+      <DependentUpon>Store Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Store Product Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Store Product Report.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Store.resx">
       <DependentUpon>Store.cs</DependentUpon>
@@ -860,6 +905,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StoreTransaction.resx">
       <DependentUpon>StoreTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strore Material Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Strore Material Report.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier Account Print.resx">
       <DependentUpon>Supplier Account Print.cs</DependentUpon>

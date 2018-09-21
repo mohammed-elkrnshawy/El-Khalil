@@ -16,14 +16,14 @@ namespace El_Khalil {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class Productivity_Product_Report : ReportClass {
+    public class Store_Material_Report : ReportClass {
         
-        public Productivity_Product_Report() {
+        public Store_Material_Report() {
         }
         
         public override string ResourceName {
             get {
-                return "Productivity Product Report.rpt";
+                return "Store Material Report.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace El_Khalil {
         
         public override string FullResourceName {
             get {
-                return "El_Khalil.Productivity Product Report.rpt";
+                return "El_Khalil.Store Material Report.rpt";
             }
             set {
                 // Do nothing
@@ -87,36 +87,12 @@ namespace El_Khalil {
                 return this.ReportDefinition.Sections[4];
             }
         }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Prpduct_ID {
-            get {
-                return this.DataDefinition.ParameterFields[0];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_name {
-            get {
-                return this.DataDefinition.ParameterFields[1];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_num {
-            get {
-                return this.DataDefinition.ParameterFields[2];
-            }
-        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedProductivity_Product_Report : Component, ICachedReport {
+    public class CachedStore_Material_Report : Component, ICachedReport {
         
-        public CachedProductivity_Product_Report() {
+        public CachedStore_Material_Report() {
         }
         
         [Browsable(false)]
@@ -153,7 +129,7 @@ namespace El_Khalil {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            Productivity_Product_Report rpt = new Productivity_Product_Report();
+            Store_Material_Report rpt = new Store_Material_Report();
             rpt.Site = this.Site;
             return rpt;
         }

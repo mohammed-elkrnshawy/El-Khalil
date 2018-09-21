@@ -101,7 +101,7 @@ namespace El_Khalil
                     dataGridView2[0, dataGridView2.Rows.Count - 1].Value = combo_Products.SelectedValue;
                     dataGridView2[1, dataGridView2.Rows.Count - 1].Value = combo_Products.Text;
                     dataGridView2[2, dataGridView2.Rows.Count - 1].Value = Product_PerUnit + "/" + "كجم";
-                    dataGridView2[3, dataGridView2.Rows.Count - 1].Value = tb_quantity.Text;
+                    dataGridView2[3, dataGridView2.Rows.Count - 1].Value = (double.Parse(tb_quantity.Text) * 750).ToString() ;
                     dataGridView2[4, dataGridView2.Rows.Count - 1].Value = "كجم";
                 }
 
@@ -134,7 +134,7 @@ namespace El_Khalil
 
             List<z_Product_Component> componentList = new List<z_Product_Component>();
 
-            double p = double.Parse(tb_quantity.Text) / Product_PerUnit;
+            double p = double.Parse(tb_quantity.Text)*750 / Product_PerUnit;
 
 
             foreach (DataGridViewRow item in dataGridView1.Rows)
@@ -196,7 +196,7 @@ namespace El_Khalil
             // تعديل كمية المواد الخام ف المخازن 
             editStore();
 
-            Productivity_Product_Print print = new Productivity_Product_Print((int)combo_Products.SelectedValue,combo_Products.Text);
+            Productivity_Product_Print print = new Productivity_Product_Print((int)combo_Products.SelectedValue,combo_Products.Text,tb_quantity.Text);
             print.ShowDialog();
 
         }

@@ -64,8 +64,8 @@ namespace El_Khalil
                 {
                     dataGridView1.Rows.Add();
                     dataGridView1[0, dataGridView1.Rows.Count - 1].Value = dataReader[0].ToString();
-                    dataGridView1[1, dataGridView1.Rows.Count - 1].Value = dataReader[1].ToString();
-                    dataGridView1[2, dataGridView1.Rows.Count - 1].Value = dataReader[2].ToString();
+                    dataGridView1[1, dataGridView1.Rows.Count - 1].Value = dataReader[2].ToString();
+                    dataGridView1[2, dataGridView1.Rows.Count - 1].Value = dataReader[1].ToString();
                     dataGridView1[3, dataGridView1.Rows.Count - 1].Value = (double.Parse(dataReader[2].ToString()) - double.Parse(dataReader[1].ToString()));
                     dataGridView1[4, dataGridView1.Rows.Count - 1].Value = dataReader[3].ToString();
                     dataGridView1[5, dataGridView1.Rows.Count - 1].Value = dataReader[5].ToString();

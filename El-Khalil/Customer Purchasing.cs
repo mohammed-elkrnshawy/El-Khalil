@@ -567,6 +567,11 @@ namespace El_Khalil
                                                       false
                                                       );
                 print.ShowDialog();
+
+                Exit_Print exit_ = new Exit_Print(label2.Text, combo_Customer.Text,
+                                                      richTextBox1.Text);
+                exit_.ShowDialog();
+
                 RefreshForm();
             }
             else

@@ -165,7 +165,7 @@ namespace El_Khalil
                 if (tb_name.Text != "" && tb_per.Text != "" && tb_price.Text != "" && tb_sell.Text != ""&&dataGridView1.Rows.Count>0)
                 {
                     Add();
-                    Product_ID=(int)Ezzat.ExecutedScalar("selectProduct_ID");
+                    Product_ID=int.Parse(Ezzat.ExecutedScalar("selectProduct_ID").ToString());
                     AddComponents(Product_ID);
                     MessageBox.Show(Shared_Class.Add_Message);
                 }

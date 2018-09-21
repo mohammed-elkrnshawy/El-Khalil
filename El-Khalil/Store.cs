@@ -46,5 +46,19 @@ namespace El_Khalil
                 dataGridView1.DataSource = dataSet.Tables["X"];
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(radioButton1.Checked)
+            {
+                Store_Print print = new Store_Print(true);
+                print.ShowDialog();
+            }
+            else
+            {
+                Store_Print print = new Store_Print(false);
+                print.ShowDialog();
+            }
+        }
     }
 }

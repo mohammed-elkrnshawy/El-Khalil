@@ -115,7 +115,7 @@ namespace El_Khalil
                 new SqlParameter("@Payment_Method", PaymentMethod()),
                 new SqlParameter("@Day_Number", tb_day.Text)
                 );
-            Supplier_ID =(int) Ezzat.ExecutedScalar("select_SupplierID");
+            Supplier_ID =int.Parse(Ezzat.ExecutedScalar("select_SupplierID").ToString());
             if (dataGridView1.Rows.Count > 0)
                 Add_Account();
 
