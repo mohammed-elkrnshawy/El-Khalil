@@ -61,10 +61,8 @@ namespace El_Khalil
         {
             object o = Ezzat.ExecutedScalar("selectBayback_Bill_ID_Customer");
 
-            if (o == null)
-                label2.Text = "1";
-            else
-                label2.Text = (((int)o) + 1) + "";
+            label2.Text = o + "";
+
             panel3.Visible = false;
             panel6.Visible = true;
             radioButton2.Checked = true;
@@ -74,10 +72,8 @@ namespace El_Khalil
         {
             object o = Ezzat.ExecutedScalar("selectEXDiscount_Bill_ID");
 
-            if (o == null)
-                label2.Text = "1";
-            else
-                label2.Text = (((int)o) + 1) + "";
+
+            label2.Text = o + "";
 
             radioButton2.Checked = true;
             panel6.Visible = false;

@@ -38,10 +38,8 @@ namespace El_Khalil
 
             object o = Ezzat.ExecutedScalar("selectProduction_Bill_ID");
 
-            if (o == null)
-                label6.Text = "1";
-            else
-                label6.Text = (((int)o) + 1) + "";
+
+            label6.Text = o + "";
 
             using (ds=Ezzat.GetDataSet("selectAllProducts", "X"))
             {

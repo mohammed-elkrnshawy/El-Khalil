@@ -458,6 +458,12 @@
     <Compile Include="ShowDetails Purchasing Supplier.Designer.cs">
       <DependentUpon>ShowDetails Purchasing Supplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShowDetails_Payback Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowDetails_Payback Customer.Designer.cs">
+      <DependentUpon>ShowDetails_Payback Customer.cs</DependentUpon>
+    </Compile>
     <Compile Include="ShowOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -832,6 +838,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ShowDetails Purchasing Supplier.resx">
       <DependentUpon>ShowDetails Purchasing Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowDetails_Payback Customer.resx">
+      <DependentUpon>ShowDetails_Payback Customer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ShowOrder.resx">
       <DependentUpon>ShowOrder.cs</DependentUpon>

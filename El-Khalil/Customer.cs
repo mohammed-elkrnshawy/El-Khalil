@@ -128,20 +128,49 @@ namespace El_Khalil
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.CurrentCell == dataGridView1.CurrentRow.Cells[8])
-            {
-                Customer_BillDetails BillDetails = new Customer_BillDetails(int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString())
-                                                                             , dataGridView1.CurrentRow.Cells[7].Value
-                                                                             , dataGridView1.CurrentRow.Cells[6].Value
-                                                                             );
-                BillDetails.ShowDialog();
-            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Customer_Print print = new Customer_Print(dateTimePicker1.Value, dateTimePicker2.Value);
             print.ShowDialog();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.CurrentCell == dataGridView1.CurrentRow.Cells[8])
+            {
+                if (dataGridView1.CurrentRow.Cells[7].Value.ToString().Contains("بيع"))
+                {
+                    Show_Details_Purchasing_Customer showDetails = new Show_Details_Purchasing_Customer(dataGridView1.CurrentRow.Cells[0].Value, false);
+                    showDetails.ShowDialog();
+                }
+                else if (dataGridView1.CurrentRow.Cells[7].Value.ToString().Contains("مرتجع"))
+                {
+                    Show_Details_Purchasing_Customer showDetails = new Show_Details_Purchasing_Customer(dataGridView1.CurrentRow.Cells[0].Value, true);
+                    showDetails.ShowDialog();
+                }
+                else if (dataGridView1.CurrentRow.Cells[7].Value.ToString() == "تحويل بنكى")
+                {
+                    ShowDetails_Bank_Customer showDetails = new ShowDetails_Bank_Customer(dataGridView1.CurrentRow.Cells[0].Value);
+                    showDetails.ShowDialog();
+                }
+                else if (dataGridView1.CurrentRow.Cells[7].Value.ToString() == "تسديد نقدى")
+                {
+                    ShowDetails_Payback_Customer showDetails = new ShowDetails_Payback_Customer(dataGridView1.CurrentRow.Cells[0].Value, dataGridView1.CurrentRow.Cells[7].Value);
+                    showDetails.ShowDialog();
+                }
+                else if (dataGridView1.CurrentRow.Cells[7].Value.ToString() == "خصم")
+                {
+                    ShowDetails_Payback_Customer showDetails = new ShowDetails_Payback_Customer(dataGridView1.CurrentRow.Cells[0].Value, dataGridView1.CurrentRow.Cells[7].Value);
+                    showDetails.ShowDialog();
+                }
+
+
+
+
+            }
         }
     }
 }
