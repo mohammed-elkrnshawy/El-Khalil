@@ -668,6 +668,56 @@ namespace El_Khalil
             account.ShowDialog();
         }
 
+        private void ايراداتToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("حساب المصروفات", new Outlay_Account());
+        }
+
+        private void موادخامToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("أضافة مادة خام", new Add_Materials());
+        }
+
+        private void تركيباتToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("انتاج منتج نهائى", new Productivity_Product());
+        }
+
+        private void اضافةبنكToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("اضافة بنك", new Add_bank());
+        }
+
+        private void ايداعToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("ايداع ف حساباتى", new Bank_InAccount());
+        }
+
+        private void تحويلمنعميلالىموردToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("تحويل من عميل الى مورد", new Bank_Cus_To_Sup());
+        }
+
+        private void تقاريرعنالبنكToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("تعاملات البنك", new Bank_Account());
+        }
+
+        private void تقاريرالخازنةToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("تعاملات الخزنة اليوم", new The_InSafe());
+        }
+
+        private void مصاريفToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("اجمالى الربح", new Total_Profit());
+        }
+
+        private void حركةالمنتاجاتToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("حساب الصنف", new Product_Account());
+        }
+
         private void Add_Tab(string Name,Form form)
         {
             TabPage tp = new TabPage(Name);
