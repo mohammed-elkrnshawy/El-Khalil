@@ -369,7 +369,7 @@
             this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label9.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.label9.Location = new System.Drawing.Point(375, 40);
+            this.label9.Location = new System.Drawing.Point(234, 42);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(92, 30);
             this.label9.TabIndex = 71;
@@ -382,7 +382,7 @@
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label8.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.label8.Location = new System.Drawing.Point(236, 42);
+            this.label8.Location = new System.Drawing.Point(376, 40);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(92, 30);
             this.label8.TabIndex = 70;

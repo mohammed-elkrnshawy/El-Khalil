@@ -30,15 +30,16 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboProduct = new System.Windows.Forms.ComboBox();
             this.pn_during = new System.Windows.Forms.Panel();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboProduct = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pn_during.SuspendLayout();
@@ -66,6 +67,16 @@
             this.panel2.Size = new System.Drawing.Size(1306, 30);
             this.panel2.TabIndex = 1;
             // 
+            // comboProduct
+            // 
+            this.comboProduct.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboProduct.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboProduct.FormattingEnabled = true;
+            this.comboProduct.Location = new System.Drawing.Point(95, 4);
+            this.comboProduct.Name = "comboProduct";
+            this.comboProduct.Size = new System.Drawing.Size(196, 21);
+            this.comboProduct.TabIndex = 62;
+            // 
             // pn_during
             // 
             this.pn_during.Controls.Add(this.dateTimePicker2);
@@ -76,6 +87,13 @@
             this.pn_during.Name = "pn_during";
             this.pn_during.Size = new System.Drawing.Size(520, 24);
             this.pn_during.TabIndex = 61;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(23, 2);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(154, 20);
+            this.dateTimePicker2.TabIndex = 60;
             // 
             // dateTimePicker1
             // 
@@ -122,25 +140,9 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // comboProduct
-            // 
-            this.comboProduct.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboProduct.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboProduct.FormattingEnabled = true;
-            this.comboProduct.Location = new System.Drawing.Point(95, 4);
-            this.comboProduct.Name = "comboProduct";
-            this.comboProduct.Size = new System.Drawing.Size(196, 21);
-            this.comboProduct.TabIndex = 62;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(23, 2);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(154, 20);
-            this.dateTimePicker2.TabIndex = 60;
-            // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Location = new System.Drawing.Point(30, 73);
             this.panel3.Name = "panel3";
@@ -160,6 +162,25 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1306, 567);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(84)))), ((int)(((byte)(102)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::El_Khalil.Properties.Resources.print_black_printer_tool_symbol;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(4, 526);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(76, 37);
+            this.button2.TabIndex = 46;
+            this.button2.Text = "طباعة";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Product_Account
             // 
@@ -196,5 +217,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button2;
     }
 }

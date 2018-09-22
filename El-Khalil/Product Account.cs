@@ -61,5 +61,11 @@ namespace El_Khalil
                 dataGridView1.Columns[7].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Product_Account_Print print = new Product_Account_Print(dateTimePicker1.Value,dateTimePicker2.Value,comboProduct.SelectedValue);
+            print.ShowDialog();
+        }
     }
 }
