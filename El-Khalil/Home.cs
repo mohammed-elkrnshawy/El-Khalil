@@ -718,6 +718,16 @@ namespace El_Khalil
             Add_Tab("حساب الصنف", new Product_Account());
         }
 
+        private void اضافةسلفةجديدةToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("اضافة سلفة جديدة", new Employee_Add_Solva());
+        }
+
+        private void تسديدسلفهقديمةToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("تسديد سلفة قديمة", new Emloyee_Bro());
+        }
+
         private void Add_Tab(string Name,Form form)
         {
             TabPage tp = new TabPage(Name);

@@ -15,10 +15,10 @@ namespace El_Khalil
     {
         DataSet dataSet;
         bool Pure;
-        double Employee_Salary,Reword,San,Render,After;
+        double Employee_Salary,Reword,San,Render,After,Solva;
         string Employee_Name,date;
         int Employee_ID;
-        public Employee_AccountDetails(bool Pure,string Date, int EmployeeId,string EmployeeName,double salary,double Reword,double San, double Render, double After)
+        public Employee_AccountDetails(bool Pure,string Date, int EmployeeId,string EmployeeName,double salary,double Reword,double San, double Render, double After,double Solva)
         {
             InitializeComponent();
             this.date = Date;
@@ -30,6 +30,7 @@ namespace El_Khalil
             this.San = San;
             this.Render = Render;
             this.After = After;
+            this.Solva = Solva;
         }
 
         private void Employee_AccountDetails_Load(object sender, EventArgs e)
@@ -45,7 +46,7 @@ namespace El_Khalil
             tb_san.Text = String.Format("{0:0.00}", San);
             tb_render.Text = String.Format("{0:0.00}", Render);
             tb_after.Text = String.Format("{0:0.00}", After);
-
+            textBox1.Text = String.Format("{0:0.00}", Solva);
 
 
             object o = Ezzat.ExecutedScalar("selectEmployeeTransaction_Bill_ID");

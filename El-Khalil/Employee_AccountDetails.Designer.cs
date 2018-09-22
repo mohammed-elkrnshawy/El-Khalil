@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pn_S = new System.Windows.Forms.Panel();
@@ -53,7 +54,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pn_S.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -71,6 +73,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(683, 98);
             this.panel1.TabIndex = 94;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(84)))), ((int)(((byte)(102)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = global::El_Khalil.Properties.Resources.print_black_printer_tool_symbol;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(22, 65);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(172, 31);
+            this.button3.TabIndex = 73;
+            this.button3.Text = "طباعة";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Visible = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -137,6 +159,8 @@
             // pn_P
             // 
             this.pn_P.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pn_P.Controls.Add(this.textBox1);
+            this.pn_P.Controls.Add(this.label10);
             this.pn_P.Controls.Add(this.panel2);
             this.pn_P.Controls.Add(this.panel3);
             this.pn_P.Controls.Add(this.tb_after);
@@ -254,7 +278,7 @@
             // 
             this.tb_after.Enabled = false;
             this.tb_after.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.tb_after.Location = new System.Drawing.Point(151, 306);
+            this.tb_after.Location = new System.Drawing.Point(151, 313);
             this.tb_after.Name = "tb_after";
             this.tb_after.Size = new System.Drawing.Size(199, 24);
             this.tb_after.TabIndex = 105;
@@ -264,7 +288,7 @@
             // 
             this.tb_render.Enabled = false;
             this.tb_render.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.tb_render.Location = new System.Drawing.Point(151, 265);
+            this.tb_render.Location = new System.Drawing.Point(151, 242);
             this.tb_render.Name = "tb_render";
             this.tb_render.Size = new System.Drawing.Size(199, 24);
             this.tb_render.TabIndex = 104;
@@ -278,7 +302,7 @@
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Tahoma", 10F);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(371, 303);
+            this.label6.Location = new System.Drawing.Point(371, 310);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label6.Size = new System.Drawing.Size(159, 27);
@@ -294,7 +318,7 @@
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Tahoma", 10F);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(371, 262);
+            this.label7.Location = new System.Drawing.Point(371, 239);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label7.Size = new System.Drawing.Size(159, 27);
@@ -306,7 +330,7 @@
             // 
             this.tb_name.Enabled = false;
             this.tb_name.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.tb_name.Location = new System.Drawing.Point(151, 96);
+            this.tb_name.Location = new System.Drawing.Point(151, 81);
             this.tb_name.Name = "tb_name";
             this.tb_name.Size = new System.Drawing.Size(199, 24);
             this.tb_name.TabIndex = 101;
@@ -320,7 +344,7 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Tahoma", 10F);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(371, 93);
+            this.label5.Location = new System.Drawing.Point(371, 78);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label5.Size = new System.Drawing.Size(159, 27);
@@ -332,7 +356,7 @@
             // 
             this.tb_san.Enabled = false;
             this.tb_san.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.tb_san.Location = new System.Drawing.Point(151, 221);
+            this.tb_san.Location = new System.Drawing.Point(151, 206);
             this.tb_san.Name = "tb_san";
             this.tb_san.Size = new System.Drawing.Size(199, 24);
             this.tb_san.TabIndex = 99;
@@ -342,7 +366,7 @@
             // 
             this.tb_reword.Enabled = false;
             this.tb_reword.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.tb_reword.Location = new System.Drawing.Point(151, 180);
+            this.tb_reword.Location = new System.Drawing.Point(151, 165);
             this.tb_reword.Name = "tb_reword";
             this.tb_reword.Size = new System.Drawing.Size(199, 24);
             this.tb_reword.TabIndex = 98;
@@ -352,7 +376,7 @@
             // 
             this.tb_salary.Enabled = false;
             this.tb_salary.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.tb_salary.Location = new System.Drawing.Point(151, 138);
+            this.tb_salary.Location = new System.Drawing.Point(151, 123);
             this.tb_salary.Name = "tb_salary";
             this.tb_salary.Size = new System.Drawing.Size(199, 24);
             this.tb_salary.TabIndex = 97;
@@ -366,7 +390,7 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10F);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(371, 218);
+            this.label3.Location = new System.Drawing.Point(371, 203);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label3.Size = new System.Drawing.Size(159, 27);
@@ -382,7 +406,7 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Tahoma", 10F);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(371, 177);
+            this.label2.Location = new System.Drawing.Point(371, 162);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label2.Size = new System.Drawing.Size(159, 27);
@@ -398,7 +422,7 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Tahoma", 10F);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(371, 135);
+            this.label1.Location = new System.Drawing.Point(371, 120);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(159, 27);
@@ -406,25 +430,31 @@
             this.label1.Text = "الراتب الشهرى";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button3
+            // textBox1
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(189)))), ((int)(((byte)(212)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(84)))), ((int)(((byte)(102)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::El_Khalil.Properties.Resources.print_black_printer_tool_symbol;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(22, 65);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(172, 31);
-            this.button3.TabIndex = 73;
-            this.button3.Text = "طباعة";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Visible = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.textBox1.Location = new System.Drawing.Point(151, 280);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(199, 24);
+            this.textBox1.TabIndex = 108;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(371, 277);
+            this.label10.Name = "label10";
+            this.label10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label10.Size = new System.Drawing.Size(159, 27);
+            this.label10.TabIndex = 107;
+            this.label10.Text = "اجمالى سلف";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Employee_AccountDetails
             // 
@@ -478,5 +508,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label10;
     }
 }

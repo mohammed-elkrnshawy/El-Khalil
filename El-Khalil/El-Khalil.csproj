@@ -258,6 +258,12 @@
     <Compile Include="Customer Payback Print.Designer.cs">
       <DependentUpon>Customer Payback Print.cs</DependentUpon>
     </Compile>
+    <Compile Include="Emloyee Bro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emloyee Bro.Designer.cs">
+      <DependentUpon>Emloyee Bro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee Account Print.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,6 +293,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Employee AccountDetails Report.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Employee Add_Solva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee Add_Solva.Designer.cs">
+      <DependentUpon>Employee Add_Solva.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee Salaries.cs">
       <SubType>Form</SubType>
@@ -775,6 +787,9 @@
     <EmbeddedResource Include="Customer Payback Print.resx">
       <DependentUpon>Customer Payback Print.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Emloyee Bro.resx">
+      <DependentUpon>Emloyee Bro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Employee Account Print.resx">
       <DependentUpon>Employee Account Print.cs</DependentUpon>
     </EmbeddedResource>
@@ -791,6 +806,9 @@
     <EmbeddedResource Include="Employee AccountDetails Report.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Employee AccountDetails Report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee Add_Solva.resx">
+      <DependentUpon>Employee Add_Solva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee Salaries.resx">
       <DependentUpon>Employee Salaries.cs</DependentUpon>

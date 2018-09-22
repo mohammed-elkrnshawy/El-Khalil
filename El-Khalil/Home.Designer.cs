@@ -51,6 +51,9 @@
             this.بيانحسابموظفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.رواتبالشهرToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.جزاءاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.السلفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.اضافةسلفةجديدةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.تسديدسلفهقديمةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.المخازنToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.مخزونموادخامToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.مخزونتركيباتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -145,9 +148,6 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.السلفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.اضافةسلفةجديدةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.تسديدسلفهقديمةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -370,6 +370,29 @@
             this.جزاءاتToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
             this.جزاءاتToolStripMenuItem.Text = "جزاءات";
             this.جزاءاتToolStripMenuItem.Click += new System.EventHandler(this.جزاءاتToolStripMenuItem_Click);
+            // 
+            // السلفToolStripMenuItem
+            // 
+            this.السلفToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.اضافةسلفةجديدةToolStripMenuItem,
+            this.تسديدسلفهقديمةToolStripMenuItem});
+            this.السلفToolStripMenuItem.Name = "السلفToolStripMenuItem";
+            this.السلفToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
+            this.السلفToolStripMenuItem.Text = "السلف";
+            // 
+            // اضافةسلفةجديدةToolStripMenuItem
+            // 
+            this.اضافةسلفةجديدةToolStripMenuItem.Name = "اضافةسلفةجديدةToolStripMenuItem";
+            this.اضافةسلفةجديدةToolStripMenuItem.Size = new System.Drawing.Size(187, 24);
+            this.اضافةسلفةجديدةToolStripMenuItem.Text = "اضافة سلفة جديدة";
+            this.اضافةسلفةجديدةToolStripMenuItem.Click += new System.EventHandler(this.اضافةسلفةجديدةToolStripMenuItem_Click);
+            // 
+            // تسديدسلفهقديمةToolStripMenuItem
+            // 
+            this.تسديدسلفهقديمةToolStripMenuItem.Name = "تسديدسلفهقديمةToolStripMenuItem";
+            this.تسديدسلفهقديمةToolStripMenuItem.Size = new System.Drawing.Size(187, 24);
+            this.تسديدسلفهقديمةToolStripMenuItem.Text = "تسديد سلفه قديمة";
+            this.تسديدسلفهقديمةToolStripMenuItem.Click += new System.EventHandler(this.تسديدسلفهقديمةToolStripMenuItem_Click);
             // 
             // المخازنToolStripMenuItem
             // 
@@ -1495,27 +1518,6 @@
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
             this.toolStripStatusLabel3.Size = new System.Drawing.Size(73, 17);
             this.toolStripStatusLabel3.Text = "الحالة :  ادمن ";
-            // 
-            // السلفToolStripMenuItem
-            // 
-            this.السلفToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.اضافةسلفةجديدةToolStripMenuItem,
-            this.تسديدسلفهقديمةToolStripMenuItem});
-            this.السلفToolStripMenuItem.Name = "السلفToolStripMenuItem";
-            this.السلفToolStripMenuItem.Size = new System.Drawing.Size(211, 24);
-            this.السلفToolStripMenuItem.Text = "السلف";
-            // 
-            // اضافةسلفةجديدةToolStripMenuItem
-            // 
-            this.اضافةسلفةجديدةToolStripMenuItem.Name = "اضافةسلفةجديدةToolStripMenuItem";
-            this.اضافةسلفةجديدةToolStripMenuItem.Size = new System.Drawing.Size(187, 24);
-            this.اضافةسلفةجديدةToolStripMenuItem.Text = "اضافة سلفة جديدة";
-            // 
-            // تسديدسلفهقديمةToolStripMenuItem
-            // 
-            this.تسديدسلفهقديمةToolStripMenuItem.Name = "تسديدسلفهقديمةToolStripMenuItem";
-            this.تسديدسلفهقديمةToolStripMenuItem.Size = new System.Drawing.Size(187, 24);
-            this.تسديدسلفهقديمةToolStripMenuItem.Text = "تسديد سلفه قديمة";
             // 
             // Home
             // 

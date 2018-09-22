@@ -213,6 +213,11 @@ namespace El_Khalil
                 return (bool)o;
         }
 
+        private void tb_Money_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Shared_Class.KeyPress(tb_Money, e);
+        }
+
         private void ReadData()
         {
 
