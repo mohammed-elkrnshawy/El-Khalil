@@ -30,7 +30,7 @@ namespace El_Khalil
             string directory = Path.GetDirectoryName(path); //without file name
             string oneUp = Path.GetDirectoryName(directory); // Temp folder
             ReportDocument cryRpt = new ReportDocument();
-            cryRpt.Load(oneUp + @"\Exit Report.rpt");
+            cryRpt.Load(Application.StartupPath + @"\Exit Report.rpt");
 
 
             ParameterFieldDefinitions crParameterFieldDefinitions;

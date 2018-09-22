@@ -33,7 +33,7 @@ namespace El_Khalil
 
 
             ReportDocument cryRpt = new ReportDocument();
-            cryRpt.Load(oneUp + @"\Product Account Report.rpt");
+            cryRpt.Load(Application.StartupPath + @"\Product Account Report.rpt");
 
 
             ParameterFieldDefinitions crParameterFieldDefinitions;

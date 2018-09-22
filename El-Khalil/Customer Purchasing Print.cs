@@ -37,11 +37,9 @@ namespace El_Khalil
             if (typep)
             {
 
-                string path = Application.StartupPath;
-                string directory = Path.GetDirectoryName(path); //without file name
-                string oneUp = Path.GetDirectoryName(directory); // Temp folder
+                
                 ReportDocument cryRpt = new ReportDocument();
-                cryRpt.Load(oneUp + @"\Customer Returned Report.rpt");
+                cryRpt.Load(Application.StartupPath + @"\Customer Returned Report.rpt");
 
 
                 ParameterFieldDefinitions crParameterFieldDefinitions;
@@ -156,7 +154,7 @@ namespace El_Khalil
                 string directory = Path.GetDirectoryName(path); //without file name
                 string oneUp = Path.GetDirectoryName(directory); // Temp folder
                 ReportDocument cryRpt = new ReportDocument();
-                cryRpt.Load(oneUp + @"\Customer Purchasing Rport.rpt");
+                cryRpt.Load(Application.StartupPath + @"\Customer Purchasing Rport.rpt");
 
 
                 ParameterFieldDefinitions crParameterFieldDefinitions;

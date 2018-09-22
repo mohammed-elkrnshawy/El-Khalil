@@ -25,7 +25,7 @@ namespace El_Khalil
         private void Customer_Print_Load(object sender, EventArgs e)
         {
             ReportDocument cryRpt = new ReportDocument();
-            cryRpt.Load(@"C:\Users\3ZT\source\repos\El-Khalil\El-Khalil\Customer Report.rpt");
+            cryRpt.Load(Application.StartupPath + @"\Customer Report.rpt");
 
             ParameterFieldDefinitions crParameterFieldDefinitions;
             ParameterFieldDefinition crParameterFieldDefinition;

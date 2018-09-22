@@ -30,13 +30,11 @@ namespace El_Khalil
         private void TheSafe_Account_Print_Load(object sender, EventArgs e)
         {
 
-            string path = Application.StartupPath;
-            string directory = Path.GetDirectoryName(path); //without file name
-            string oneUp = Path.GetDirectoryName(directory); // Temp folder
+          
 
 
             ReportDocument cryRpt = new ReportDocument();
-            cryRpt.Load(oneUp + @"\TheSafe Account Report.rpt");
+            cryRpt.Load(Application.StartupPath + @"\TheSafe Account Report.rpt");
 
            
 

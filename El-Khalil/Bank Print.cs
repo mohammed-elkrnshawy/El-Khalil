@@ -25,13 +25,11 @@ namespace El_Khalil
 
         private void Bank_Print_Load(object sender, EventArgs e)
         {
-            string path = Application.StartupPath;
-            string directory = Path.GetDirectoryName(path); //without file name
-            string oneUp = Path.GetDirectoryName(directory); // Temp folder
+
 
 
             ReportDocument cryRpt = new ReportDocument();
-            cryRpt.Load(oneUp + @"\Bank Report.rpt");
+            cryRpt.Load( Application.StartupPath+@"\Bank Report.rpt");
 
 
             ParameterFieldDefinitions crParameterFieldDefinitions;

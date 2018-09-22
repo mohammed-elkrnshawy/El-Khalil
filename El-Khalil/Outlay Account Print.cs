@@ -33,7 +33,7 @@ namespace El_Khalil
 
 
             ReportDocument cryRpt = new ReportDocument();
-            cryRpt.Load(oneUp + @"\Outlay Account Report.rpt");
+            cryRpt.Load(Application.StartupPath + @"\Outlay Account Report.rpt");
 
 
 

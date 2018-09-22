@@ -38,7 +38,7 @@ namespace El_Khalil
 
 
             ReportDocument cryRpt = new ReportDocument();
-            cryRpt.Load(oneUp + @"\Customer Payback Report.rpt");
+            cryRpt.Load(Application.StartupPath + @"\Customer Payback Report.rpt");
 
 
             ParameterFieldDefinitions crParameterFieldDefinitions;

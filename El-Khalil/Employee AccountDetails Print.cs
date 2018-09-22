@@ -38,13 +38,9 @@ namespace El_Khalil
 
         private void Employee_AccountDetails_Print_Load(object sender, EventArgs e)
         {
-            string path = Application.StartupPath;
-            string directory = Path.GetDirectoryName(path); //without file name
-            string oneUp = Path.GetDirectoryName(directory); // Temp folder
-
-
+            
             ReportDocument cryRpt = new ReportDocument();
-            cryRpt.Load(oneUp + @"\Employee AccountDetails Report.rpt");
+            cryRpt.Load(Application.StartupPath + @"\Employee AccountDetails Report.rpt");
 
 
             ParameterFieldDefinitions crParameterFieldDefinitions;
