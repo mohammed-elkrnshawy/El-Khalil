@@ -125,7 +125,9 @@ namespace El_Khalil
                 );
 
 
-            Customer_ID = int.Parse(Ezzat.ExecutedScalar("select_CustomerID").ToString());
+            Customer_ID = int.Parse(Ezzat.ExecutedScalar("select_CustomerID_BYNAME",new SqlParameter("@Customer_Name", tb_name.Text)).ToString());
+
+
             if (dataGridView1.Rows.Count > 0)
                 Add_Account();
 

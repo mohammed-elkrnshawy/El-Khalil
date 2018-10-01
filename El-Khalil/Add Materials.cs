@@ -143,6 +143,8 @@ namespace El_Khalil
                        new SqlParameter("@Product_PerUnit", float.Parse(tb_per.Text)),
                        new SqlParameter("@Product_Type", comboBox1.SelectedIndex)
                        );
+
+
         }
 
         private void cb_kilo_Click(object sender, EventArgs e)
@@ -165,7 +167,7 @@ namespace El_Khalil
                 if (tb_name.Text != "" && tb_per.Text != "" && tb_price.Text != "" && tb_sell.Text != ""&&dataGridView1.Rows.Count>0)
                 {
                     Add();
-                    Product_ID=int.Parse(Ezzat.ExecutedScalar("selectProduct_ID").ToString());
+                    Product_ID = int.Parse(Ezzat.ExecutedScalar("selectProduct_ID_BYNAME", new SqlParameter("@product_name", tb_name.Text)).ToString());
                     AddComponents(Product_ID);
                     MessageBox.Show(Shared_Class.Add_Message);
                 }

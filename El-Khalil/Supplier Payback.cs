@@ -41,8 +41,8 @@ namespace El_Khalil
             }
 
             panel3.Visible=panel6.Visible = false;
-            textBox1.Text = tb_Number.Text=richTextBox1.Text = "";
-
+             tb_Number.Text=richTextBox1.Text = "";
+            textBox1.Text = "0";
             tb_AfterPayment.Text = tb_OldMoney.Text = tb_payment.Text = "0.00";
 
             radioButton2.Checked = true;

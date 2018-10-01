@@ -279,7 +279,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(205, 27);
             this.label3.TabIndex = 40;
-            this.label3.Text = "عنوان الشركة";
+            this.label3.Text = "عنوان البنك";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tb_number
